@@ -160,6 +160,10 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   transform: translateY(-50%);
   pointer-events: none;
 }
+.sb-lang select option {
+  background: #08080d !important;
+  color: #f0ece4 !important;
+}
 </style></head><body>
 <aside class="sb">
 <div class="sb-brand">
@@ -663,19 +667,53 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <section id="feat-collection">
 <h2><span class="ic">📋</span>مجموعة مميزة</h2>
 <span class="pb g">الصفحة الرئيسية</span>
-<p>يعرض شبكة سريعة الاستجابة من المنتجات من مجموعة مختارة. مثالية لعرض أفضل البائعين أو الوافدين الجدد على صفحتك الرئيسية.</p>
+<p>يتم عرض مجموعاتك كبطاقات مميزة ثلاثية الأبعاد. يؤدي التمرير إلى إمالة كل بطاقة نحو المؤشر، وإظهار أقواس ركنية ذهبية، وتشغيل مسح وميض عبر السطح. ترتبط كل بطاقة بمجموعة. (تتطابق مع تخطيط قائمة المجموعات / قبو المجموعة).</p>
+<h3>رأس القسم</h3>
 <table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
-<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>مميز</td><td>نص علامة صغيرة فوق العنوان.</td></tr>
-<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>مجموعة مميزة</td><td>عنوان القسم الرئيسي.</td></tr>
-<tr><td>عنوان فرعي</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>فقرة وصفية قصيرة معروضة أسفل العنوان.</td></tr>
-<tr><td>المجموعة</td><td><span class="tb tt">مجموعة</span></td><td>—</td><td>Shopify منتقي المجموعة لملء المنتجات.</td></tr>
-<tr><td>الحد الأقصى من المنتجات للعرض</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>عدد المنتجات المعروضة في الشبكة (النطاق: 2-12).</td></tr>
-<tr><td>الأعمدة على سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>أعمدة الشبكة المعروضة على طرق عرض سطح المكتب (النطاق: 2-5).</td></tr>
-<tr><td>الأعمدة على الهاتف المحمول</td><td><span class="tb ts">حدد</span></td><td>2</td><td>الأعمدة في إطارات العرض المحمولة: <strong>1</strong> أو <strong>2</strong>.</td></tr>
-<tr><td>إظهار زر الإضافة السريعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يضيف زر سلة الإضافة السريعة داخل بطاقات المنتج.</td></tr>
-<tr><td>عرض البائع</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>يعرض تسميات بائع المنتج على البطاقات.</td></tr>
-<tr><td>إظهار زر "عرض الكل".</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يظهر زرًا سفليًا يرتبط بصفحة المجموعة إذا كانت تحتوي على المزيد من العناصر.</td></tr>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>القبو</td><td>تسمية بأحرف كبيرة صغيرة أعلى عنوان القسم.</td></tr>
+<tr><td>العنوان - السطر 1</td><td><span class="tb tt">نص</span></td><td>اكتشف لدينا</td><td>السطر الأول من العنوان الرئيسي.</td></tr>
+<tr><td>العنوان - السطر 2</td><td><span class="tb tt">نص</span></td><td>المجموعات</td><td>السطر الثاني. التفاف الكلمات في <code>&lt;em&gt;&lt;/em&gt;</code> للتصميم الذهبي المائل، على سبيل المثال. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>النص الفرعي</td><td><span class="tb ta">منطقة النص</span></td><td>كل ساعة تحكي قصة...</td><td>فقرة قصيرة معروضة أسفل العنوان.</td></tr>
+<tr><td>محاذاة الرأس</td><td><span class="tb ts">حدد</span></td><td>اليسار</td><td>محاذاة نص رأس القسم: لليسار أو للوسط أو لليمين.</td></tr>
 </tbody></table>
+<h3>التخطيط</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>الأعمدة - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>3</td><td>بطاقات لكل صف على سطح المكتب. النطاق: 2-5.</td></tr>
+<tr><td>أعمدة – قرص</td><td><span class="tb tr">النطاق</span></td><td>2</td><td>بطاقات لكل صف على الجهاز اللوحي.</td></tr>
+<tr><td>الأعمدة – متنقلة</td><td><span class="tb tr">النطاق</span></td><td>1</td><td>بطاقات لكل صف على الهاتف المحمول. 1 يوصى به للحصول على أفضل تجربة للهاتف المحمول.</td></tr>
+<tr><td>فجوة الشبكة</td><td><span class="tb tr">النطاق</span></td><td>24 بيكسل</td><td>فجوة البكسل بين البطاقات. النطاق: 8-48 بكسل.</td></tr>
+<tr><td>نسبة أبعاد البطاقة</td><td><span class="tb ts">حدد</span></td><td>صورة 3:4</td><td>صورة 3:4 • صورة 4:5 • مربع 1:1 • منظر طبيعي 16:9.</td></tr>
+<tr><td>نصف قطر حدود البطاقة</td><td><span class="tb tr">النطاق</span></td><td>12 بكسل</td><td>نصف قطر الزاوية المستديرة لكل بطاقة. النطاق: 0–32 بكسل.</td></tr>
+<tr><td>تناسب الصورة</td><td><span class="tb ts">حدد</span></td><td>الغلاف</td><td><strong>الغلاف</strong> المحاصيل لملء البطاقة. <strong>تحتوي</strong> يناسب الصورة بأكملها دون اقتصاص.</td></tr>
+</tbody></table>
+<h3>الألوان</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>الخلفية</td><td><span class="tb tc">اللون</span></td><td>#0a0906</td><td>خلفية القسم خلف شبكة البطاقة.</td></tr>
+<tr><td>لون الحاجب</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون علامة الحاجب فوق العنوان.</td></tr>
+<tr><td>لون العنوان</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون عنوان القسم الرئيسي.</td></tr>
+<tr><td>لون النص الفرعي</td><td><span class="tb tc">اللون</span></td><td>#6ب6660</td><td>لون فقرة النص الفرعي.</td></tr>
+<tr><td>لهجة (الذهب)</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون اللمسات الذهبية، وتوهج الحدود، والأجزاء المائلة، وكشف الزوايا عند التمرير.</td></tr>
+<tr><td>لون اسم البطاقة</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون اسم المجموعة على كل بطاقة.</td></tr>
+<tr><td>لون وصف البطاقة</td><td><span class="tb tc">اللون</span></td><td>#8c8680</td><td>لون نص وصف المجموعة على كل بطاقة.</td></tr>
+</tbody></table>
+<h3>زر عرض الكل</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>إظهار زر "عرض الكل"</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>تبديل زر الاستدعاء للإجراء أسفل المجموعات.</td></tr>
+<tr><td>نص الزر</td><td><span class="tb tt">نص</span></td><td>عرض جميع المجموعات</td><td>النص المعروض داخل الزر.</td></tr>
+<tr><td>رابط الزر</td><td><span class="tb tu">رابط</span></td><td>—</td><td>الرابط المستهدف (مثل /collections).</td></tr>
+<tr><td>لون CTA</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون تمييز الزر.</td></tr>
+</tbody></table>
+<h3>كتل المجموعة (حتى 12)</h3>
+<p>ترتبط كل كتلة بطاقة بمجموعة Shopify. حقول الكتلة التالية قابلة للتخصيص:</p>
+<table class="st st-blocks"><thead><tr><th>حقل الكتلة</th><th>اكتب</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td><strong>المجموعة</strong></td><td>مجموعة</td><td>حدد المجموعة لعرضها. صورة البطاقة الافتراضية هي صورة المجموعة.</td></tr>
+<tr><td><strong>تجاوز العنوان</strong></td><td>نص</td><td>عنوان مخصص اختياري لعرضه على البطاقة بدلاً من اسم المجموعة الأصلي.</td></tr>
+<tr><td><strong>تجاوز الوصف</strong></td><td>منطقة النص</td><td>وصف مخصص اختياري لعرضه على البطاقة بدلاً من وصف المجموعة الأصلي.</td></tr>
+<tr><td><strong>تسمية الزر</strong></td><td>نص</td><td>النص المعروض على رابط استكشاف البطاقة (الافتراضي: <code>Explore Collection</code>).</td></tr>
+<tr><td><strong>صورة مخصصة</strong></td><td>صورة</td><td>صورة بؤرية مخصصة اختيارية لتجاوز صورة المجموعة الأصلية.</td></tr>
+</tbody></table>
+</section>
+
 <section id="featured-product-doc">
 <h2><span class="ic">🕐</span>مميز <em>المنتج</em></h2>
 <span class="pb g">الصفحة الرئيسية</span>
@@ -683,7 +721,9 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h3>الإعدادات الأساسية</h3>
 <table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
 <tr><td>المنتج</td><td><span class="tb tt">المنتج</span></td><td>—</td><td>حدد المنتج الذي تريد عرضه في هذا القسم.</td></tr>
-<tr><td>عرض الصور المصغرة للمعرض</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>قم بالتشغيل لعرض الصور المصغرة للوسائط أسفل مربع الصورة الرئيسي.</td></tr>
+<tr><td>تخطيط الصورة المصغرة للمعرض</td><td><span class="tb ts">حدد</span></td><td>عمودي (يسار)</td><td><strong>عمودي (يسار)</strong> &mdash; الصور المصغرة في عمود بجوار الصورة الرئيسية. <strong>أسفل</strong> &mdash; شريط أفقي أدناه. <strong>دوائر التراكب</strong> &mdash; مؤشرات النقاط متراكبة.</td></tr>
+<tr><td>عرض الصور المصغرة للمعرض</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>تبديل شريط الصور المصغرة للمعرض على أو إيقاف.</td></tr>
+<tr><td>تمكين معرض المنتجات اللاصقة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يحافظ على المعرض ثابتاً أثناء تمرير صندوق الشراء على سطح المكتب.</td></tr>
 <tr><td>نصف قطر زاوية المعرض</td><td><span class="tb tr">النطاق</span></td><td>8 بيكسل</td><td>يقوم بتقريب زوايا صور معرض المنتجات. النطاق: 0-40 بكسل.</td></tr>
 <tr><td>عتبة المخزون منخفضة</td><td><span class="tb tr">النطاق</span></td><td>10</td><td>كمية المخزون التي تظهر أسفلها شارة تحذير انخفاض المخزون. النطاق: 2-20.</td></tr>
 <tr><td>إظهار علامات المنتج</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتبديل ما إذا كنت تريد إظهار علامات المنتج الخام أم لا.</td></tr>
