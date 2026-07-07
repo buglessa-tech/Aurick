@@ -149,6 +149,10 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   border-color: rgba(201, 169, 110, 0.3);
   color: #fff;
 }
+.sb-lang select option {
+  background: #08080d;
+  color: #f0ece4;
+}
 .sb-lang::after {
   content: "▼";
   font-size: 8px;
@@ -158,6 +162,10 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+}
+.sb-lang select option {
+  background: #08080d !important;
+  color: #f0ece4 !important;
 }
 </style></head><body>
 <aside class="sb">
@@ -694,19 +702,53 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <section id="feat-collection">
 <h2><span class="ic">&#128203;</span>Featured Collection</h2>
 <span class="pb g">Homepage</span>
-<p>Displays a responsive grid of products from a chosen collection. Ideal for showcasing best sellers or new arrivals on your home page.</p>
+<p>Your collections displayed as premium 3D-tilt cards. Hovering tilts each card toward the cursor, reveals gold corner brackets, and plays a shimmer sweep across the surface. Each card links to a collection. (Matches the block-based Collection List / Collection Vault layout).</p>
+<h3>Section Header</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
-<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Featured</td><td>Small tag text above the title.</td></tr>
-<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>Featured collection</td><td>Main section title.</td></tr>
-<tr><td>Subheading</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Short descriptive paragraph displayed below the heading.</td></tr>
-<tr><td>Collection</td><td><span class="tb tt">collection</span></td><td>&mdash;</td><td>Shopify collection picker to populate products.</td></tr>
-<tr><td>Maximum products to show</td><td><span class="tb tr">range</span></td><td>4</td><td>Count of products displayed in the grid (Range: 2&ndash;12).</td></tr>
-<tr><td>Columns on desktop</td><td><span class="tb tr">range</span></td><td>4</td><td>Grid columns displayed on desktop views (Range: 2&ndash;5).</td></tr>
-<tr><td>Columns on mobile</td><td><span class="tb ts">select</span></td><td>2</td><td>Columns on mobile viewports: <strong>1</strong> or <strong>2</strong>.</td></tr>
-<tr><td>Show Quick Add button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Adds a quick-add cart button inside product cards.</td></tr>
-<tr><td>Show vendor</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Displays product vendor labels on the cards.</td></tr>
-<tr><td>Show "View all" button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Shows a bottom button linking to the collection page if it has more items.</td></tr>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>The Vault</td><td>Small uppercase label above the section headline.</td></tr>
+<tr><td>Headline &mdash; line 1</td><td><span class="tb tt">text</span></td><td>Explore Our</td><td>First line of the main heading.</td></tr>
+<tr><td>Headline &mdash; line 2</td><td><span class="tb tt">text</span></td><td>Collections</td><td>Second line. Wrap words in <code>&lt;em&gt;&lt;/em&gt;</code> for italic gold styling, e.g. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Sub-text</td><td><span class="tb ta">textarea</span></td><td>Every timepiece tells a story&hellip;</td><td>Short paragraph displayed below the headline.</td></tr>
+<tr><td>Header alignment</td><td><span class="tb ts">select</span></td><td>Left</td><td>Alignment of section header text: Left, Center, or Right.</td></tr>
 </tbody></table>
+<h3>Layout</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Columns &mdash; desktop</td><td><span class="tb tr">range</span></td><td>3</td><td>Cards per row on desktop. Range: 2&ndash;5.</td></tr>
+<tr><td>Columns &mdash; tablet</td><td><span class="tb tr">range</span></td><td>2</td><td>Cards per row on tablet.</td></tr>
+<tr><td>Columns &mdash; mobile</td><td><span class="tb tr">range</span></td><td>1</td><td>Cards per row on mobile. 1 is recommended for best mobile experience.</td></tr>
+<tr><td>Grid gap</td><td><span class="tb tr">range</span></td><td>24 px</td><td>Pixel gap between cards. Range: 8&ndash;48 px.</td></tr>
+<tr><td>Card aspect ratio</td><td><span class="tb ts">select</span></td><td>Portrait 3:4</td><td>Portrait 3:4 &bull; Portrait 4:5 &bull; Square 1:1 &bull; Landscape 16:9.</td></tr>
+<tr><td>Card border radius</td><td><span class="tb tr">range</span></td><td>12 px</td><td>Rounded corner radius of each card. Range: 0&ndash;32 px.</td></tr>
+<tr><td>Image fit</td><td><span class="tb ts">select</span></td><td>Cover</td><td><strong>Cover</strong> crops to fill the card. <strong>Contain</strong> fits the whole image without cropping.</td></tr>
+</tbody></table>
+<h3>Colors</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Background</td><td><span class="tb tc">color</span></td><td>#0a0906</td><td>Section background behind the card grid.</td></tr>
+<tr><td>Eyebrow color</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of the eyebrow label above the headline.</td></tr>
+<tr><td>Headline color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the main section headline.</td></tr>
+<tr><td>Subtext color</td><td><span class="tb tc">color</span></td><td>#6b6660</td><td>Color of the sub-text paragraph.</td></tr>
+<tr><td>Accent (gold)</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of gold accents, border glows, italic portions, and corner reveals on hover.</td></tr>
+<tr><td>Card name color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the collection name on each card.</td></tr>
+<tr><td>Card description color</td><td><span class="tb tc">color</span></td><td>#8c8680</td><td>Color of the collection description text on each card.</td></tr>
+</tbody></table>
+<h3>View All Button</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Show "View All" button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle the bottom collections archive CTA button.</td></tr>
+<tr><td>Button text</td><td><span class="tb tt">text</span></td><td>View All Collections</td><td>Label shown inside the button.</td></tr>
+<tr><td>Button URL</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Destination link (e.g. /collections).</td></tr>
+<tr><td>CTA color</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Accent color for the button.</td></tr>
+</tbody></table>
+<h3>Collection Blocks (Up to 12)</h3>
+<p>Each card block is linked to a Shopify collection. The following block fields are customizable:</p>
+<table class="st st-blocks"><thead><tr><th>Block Field</th><th>Type</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><strong>Collection</strong></td><td>Collection</td><td>Select the collection to feature. The card background image defaults to the Collection Image.</td></tr>
+<tr><td><strong>Title override</strong></td><td>Text</td><td>Optional custom title to show on the card instead of the collection title.</td></tr>
+<tr><td><strong>Description override</strong></td><td>Textarea</td><td>Optional custom description to show on the card instead of the collection description.</td></tr>
+<tr><td><strong>Button label</strong></td><td>Text</td><td>Text shown on the card's explore link (Default: <code>Explore Collection</code>).</td></tr>
+<tr><td><strong>Custom image</strong></td><td>Image</td><td>Optional custom focal image to override the collection image.</td></tr>
+</tbody></table>
+</section>
+
 <section id="featured-product-doc">
 <h2><span class="ic">&#128336;</span>Featured <em>Product</em></h2>
 <span class="pb g">Homepage</span>
@@ -714,7 +756,9 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h3>Core Settings</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
 <tr><td>Product</td><td><span class="tb tt">product</span></td><td>&mdash;</td><td>Select the product to showcase in this section.</td></tr>
-<tr><td>Show gallery thumbnails</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Turn on to display media thumbnails below the main image box.</td></tr>
+<tr><td>Gallery thumbnail layout</td><td><span class="tb ts">select</span></td><td>Vertical (Left)</td><td><strong>Vertical (Left)</strong> &mdash; thumbnails beside main image. <strong>Bottom</strong> &mdash; strip below. <strong>Overlay circles</strong> &mdash; dots overlaid.</td></tr>
+<tr><td>Show gallery thumbnails</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle the thumbnail row on or off.</td></tr>
+<tr><td>Enable sticky product gallery</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Keeps the gallery fixed while scrolling on desktop.</td></tr>
 <tr><td>Gallery corner radius</td><td><span class="tb tr">range</span></td><td>8 px</td><td>Rounds the corners of product gallery images. Range: 0&ndash;40 px.</td></tr>
 <tr><td>Low stock threshold</td><td><span class="tb tr">range</span></td><td>10</td><td>Stock quantity below which a low-inventory warning badge is shown. Range: 2&ndash;20.</td></tr>
 <tr><td>Show product tags</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle whether to show raw product tags.</td></tr>
