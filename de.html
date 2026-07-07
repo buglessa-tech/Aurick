@@ -1,1 +1,1423 @@
+<!DOCTYPE html>
 
+<html dir="ltr" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Einrichtungsanleitung für Aurick Store-Besitzer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#050508;--sb:#08080d;--card:rgba(255,255,255,.023);--border:rgba(201,169,110,.11);--bhi:rgba(201,169,110,.32);--gold:#c9a96e;--gd:#8b7245;--gl:#e8d5b0;--tx:#f0ece4;--td:rgba(240,236,228,.63);--tm:rgba(240,236,228,.38);--green:#5dba7d;--blue:#5fa4e6;--amber:#e6b25f;--red:#e66c5f;--teal:#2dd4bf;--purple:#c084fc;--r:12px;--rs:8px;--sw:284px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
+aside.sb{width:var(--sw);background:var(--sb);border-right:1px solid var(--border);position:fixed;top:0;left:0;bottom:0;overflow-y:auto;display:flex;flex-direction:column;z-index:100;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sb-brand{padding:1.9rem 1.6rem 1.3rem;border-bottom:1px solid var(--border)}
+.sb-name{font-family:"Cormorant Garamond",serif;font-size:1.78rem;font-weight:600;letter-spacing:.08em;color:#fff}.sb-name span{color:var(--gold)}
+.sb-sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tm);margin-top:.18rem}
+.sb-ver{display:inline-block;margin-top:.48rem;background:rgba(201,169,110,.07);color:var(--gl);border:.5px solid var(--bhi);border-radius:20px;font-size:.58rem;padding:.13rem .5rem}
+.sb-search{padding:1rem 1.3rem .7rem;border-bottom:1px solid var(--border);position:relative}
+.sb-search svg{position:absolute;left:2.1rem;top:50%;transform:translateY(-50%);color:var(--tm);pointer-events:none}
+.sb-search input{width:100%;background:rgba(0,0,0,.28);border:1px solid var(--border);border-radius:var(--rs);color:var(--tx);font-family:inherit;font-size:.76rem;padding:.52rem .7rem .52rem 2rem;outline:none;transition:border-color .2s}
+.sb-search input:focus{border-color:var(--gold)}.sb-search input::placeholder{color:var(--tm)}
+.sb-nav{padding:.7rem .85rem 2rem;flex:1}
+.sb-cat{font-size:.59rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--gd);padding:1.1rem .6rem .32rem}
+.sb-a{display:flex;align-items:center;gap:.5rem;padding:.38rem .6rem;border-radius:var(--rs);color:var(--td);font-size:.77rem;text-decoration:none;cursor:pointer;transition:all .18s}
+.sb-a:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sb-a.on{color:var(--gl);background:rgba(201,169,110,.07);font-weight:500;border-left:1.5px solid var(--gold);border-radius:0 var(--rs) var(--rs) 0;padding-left:.55rem}
+.dot{width:3.5px;height:3.5px;border-radius:50%;background:var(--bhi);flex-shrink:0}.sb-a.on .dot{background:var(--gold)}
+main.main{margin-left:var(--sw);flex:1;min-width:0;padding:3.5rem 4.5rem 6rem}
+.wrap{max-width:900px;margin:0 auto}
+h2{font-family:"Cormorant Garamond",serif;font-size:1.82rem;font-weight:500;color:#fff;margin-top:4.5rem;margin-bottom:1.3rem;padding-bottom:.7rem;border-bottom:.5px solid var(--border);display:flex;align-items:center;gap:.7rem}
+h2 .ic{width:30px;height:30px;background:rgba(201,169,110,.07);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}h2 em{font-style:italic;color:var(--gold)}
+h3{font-family:"Cormorant Garamond",serif;font-size:1.22rem;font-weight:600;color:#fff;margin-top:2rem;margin-bottom:.7rem}
+h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-top:1.5rem;margin-bottom:.65rem}
+p{color:var(--td);font-size:.86rem;margin-bottom:.9rem;line-height:1.72}a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gl)}
+ul,ol{padding-left:1.35rem;margin-bottom:1rem}li{color:var(--td);font-size:.86rem;margin-bottom:.4rem;line-height:1.5}
+strong{color:#fff;font-weight:500}
+code{font-family:"JetBrains Mono",monospace;font-size:.78em;background:#010103;border:.5px solid var(--border);border-radius:4px;padding:.1em .42em;color:var(--gl)}
+table.st{width:100%;border-collapse:collapse;margin:.9rem 0 1.8rem;font-size:.79rem;border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden}
+table.st thead tr{background:rgba(0,0,0,.28)}
+table.st th{padding:.62rem .9rem;font-size:.61rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--tm);border-bottom:.5px solid var(--border);text-align:left;white-space:nowrap}
+table.st th:nth-child(2),table.st th:nth-child(3){text-align:center}
+table.st tbody tr{border-bottom:.5px solid var(--border);transition:background .14s}
+table.st tbody tr:last-child{border-bottom:none}table.st tbody tr:hover{background:rgba(201,169,110,.022)}
+table.st td{padding:.7rem .9rem;vertical-align:top}
+table.st td:first-child{color:#fff;font-weight:600;font-size:.81rem;white-space:nowrap;min-width:172px}
+table.st td:nth-child(2){text-align:center;width:90px}
+table.st td:nth-child(3){text-align:center;font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--tm);width:82px;white-space:nowrap}
+table.st td:last-child{color:var(--td);line-height:1.6}
+table.st-blocks td:nth-child(2){text-align:left;width:290px}
+table.st-blocks td:nth-child(2) ul{padding-left:1.1rem;margin-bottom:0}
+table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
+.tb{display:inline-block;font-size:.57rem;font-weight:700;padding:.13rem .45rem;border-radius:20px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.ti{background:rgba(45,212,191,.1);color:var(--teal);border:.5px solid rgba(45,212,191,.2)}.tr{background:rgba(95,164,230,.1);color:var(--blue);border:.5px solid rgba(95,164,230,.2)}.ts{background:rgba(230,178,95,.1);color:var(--amber);border:.5px solid rgba(230,178,95,.2)}.tt{background:rgba(192,132,252,.1);color:var(--purple);border:.5px solid rgba(192,132,252,.2)}.tc{background:rgba(230,108,95,.1);color:var(--red);border:.5px solid rgba(230,108,95,.2)}.tk{background:rgba(93,186,125,.1);color:var(--green);border:.5px solid rgba(93,186,125,.2)}.ta{background:rgba(192,132,252,.08);color:#d8b4fe;border:.5px solid rgba(192,132,252,.18)}.tu{background:rgba(95,164,230,.08);color:#93c5fd;border:.5px solid rgba(95,164,230,.18)}
+.note{display:flex;gap:.8rem;padding:1rem 1.3rem;border-radius:var(--rs);margin-bottom:1.3rem;border:.5px solid}
+.note .ni{flex-shrink:0;margin-top:1px}.note .nb p{margin:0;font-size:.82rem;line-height:1.62}.note .nt{font-weight:600;margin-bottom:.22rem;font-size:.83rem}
+.note p{font-size:.82rem}
+.note.info{background:rgba(95,164,230,.04);border-color:rgba(95,164,230,.2);color:#c7dff8}
+.note.tip{background:rgba(93,186,125,.04);border-color:rgba(93,186,125,.2);color:#c5f0d4}
+.note.warn{background:rgba(230,178,95,.04);border-color:rgba(230,178,95,.2);color:#f5e0c0}
+.note.crit{background:rgba(230,108,95,.04);border-color:rgba(230,108,95,.2);color:#f5c9c5}
+.steps{list-style:none;padding:0;counter-reset:s}.steps li{counter-increment:s;position:relative;padding:0 0 1.6rem 2.8rem;margin:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:700;color:var(--gl);line-height:1.75rem;text-align:center}
+.steps li::after{content:"";position:absolute;left:.875rem;top:1.75rem;bottom:0;width:.5px;background:var(--border)}
+.steps li:last-child{padding-bottom:0}.steps li:last-child::after{display:none}
+.steps li>strong{color:#fff;display:block;margin-bottom:.3rem;font-size:.88rem}.steps li p{margin:.14rem 0 0;font-size:.84rem}
+.path{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem;font-size:.74rem}
+.pc{background:rgba(201,169,110,.05);border:.5px solid var(--border);border-radius:5px;padding:.1rem .48rem;color:var(--td);font-weight:500;white-space:nowrap;font-size:.71rem}
+.pc.r{background:rgba(255,255,255,.025);color:var(--tm);font-weight:400}.ps{color:var(--gd);font-size:.6rem;opacity:.7}
+.pb{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600;background:rgba(95,164,230,.07);color:#93c5fd;border:.5px solid rgba(95,164,230,.18);border-radius:20px;padding:.2rem .58rem;margin:.15rem .3rem .15rem 0}
+.pb.g{background:rgba(201,169,110,.07);color:var(--gl);border-color:var(--bhi)}.pb.gr{background:rgba(93,186,125,.07);color:#86efac;border-color:rgba(93,186,125,.2)}
+.card{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.8rem;margin-bottom:1.6rem;transition:border-color .25s}.card:hover{border-color:rgba(201,169,110,.2)}.card h3{margin-top:0}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1.9rem}
+.fi{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.3rem;display:flex;gap:.8rem;align-items:flex-start;transition:border-color .18s}.fi:hover{border-color:var(--bhi)}
+.fi-ic{width:33px;height:33px;background:rgba(201,169,110,.06);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.fi-t{font-weight:600;font-size:.85rem;color:#fff;margin-bottom:.2rem}.fi-d{font-size:.74rem;color:var(--td);line-height:1.5}
+.ic-c{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:.8rem 1.1rem;display:flex;align-items:center;gap:1.1rem;margin-bottom:.48rem;flex-wrap:wrap;transition:border-color .2s}.ic-c:hover{border-color:var(--bhi)}
+.ic-n{font-weight:600;font-size:.82rem;color:#fff;min-width:205px}.ic-d{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--gold);min-width:148px}.ic-f{font-size:.73rem;color:var(--tm)}
+.faq{border:.5px solid var(--border);border-radius:var(--rs);margin-bottom:.55rem;overflow:hidden;transition:border-color .2s}.faq:hover{border-color:rgba(201,169,110,.2)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.3rem;cursor:pointer;background:var(--card);gap:1rem;user-select:none}
+.fqt{font-weight:500;font-size:.86rem;color:#fff;line-height:1.5}
+.fch{color:var(--gd);flex-shrink:0;transition:transform .22s;font-size:.75rem}
+.faq.open .fch{transform:rotate(180deg);color:var(--gold)}
+.fa{max-height:0;overflow:hidden;transition:max-height .32s ease;background:rgba(0,0,0,.14)}.faq.open .fa{max-height:700px}
+.fai{padding:.88rem 1.3rem 1.1rem;border-top:.5px solid var(--border)}.fai p{margin-bottom:.55rem;font-size:.84rem}.fai p:last-child{margin-bottom:0}
+.hbox{margin-bottom:3.8rem;padding-bottom:2.8rem;border-bottom:.5px solid var(--border)}
+.hbadge{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gl);background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:20px;padding:.22rem .65rem;margin-bottom:1.1rem}
+.h1x{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,3.7rem);font-weight:300;color:#fff;line-height:1.07;margin-bottom:.7rem}.h1x em{font-style:italic;color:var(--gold)}
+.hlead{color:var(--td);font-size:1rem;font-weight:300;max-width:700px;line-height:1.78;margin-bottom:2.2rem}
+.hg{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.hs{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.2rem 1rem;text-align:center}
+.hs-n{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;color:var(--gold);display:block;line-height:1;margin-bottom:.3rem}.hs-l{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tm)}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--gold);color:#050508;padding:.55rem 1.1rem;border-radius:40px;font-size:.74rem;font-weight:600;opacity:0;transform:translateY(12px);transition:all .28s;pointer-events:none;z-index:9999}.toast.show{opacity:1;transform:translateY(0)}
+.doc-footer{margin-top:6rem;padding-top:1.8rem;border-top:.5px solid var(--border);text-align:center;font-size:.72rem;color:var(--tm)}
+@media(max-width:1024px){aside.sb{display:none}main.main{margin-left:0;padding:2rem}h2{margin-top:2.5rem}.feat{grid-template-columns:1fr}}
+@media(max-width:640px){.h1x{font-size:2rem}main.main{padding:1.2rem 1rem 4rem}.hg{grid-template-columns:1fr 1fr}}
+
+.prompt-wrap{position:relative;margin:1.2rem 0 1.6rem}
+.prompt-code{background:#010103;border:.5px solid var(--border);border-radius:var(--r);padding:1.5rem 1.5rem 1.5rem;font-family:"JetBrains Mono",monospace;font-size:.72rem;color:#c5d5e8;line-height:1.75;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;counter-reset:none}
+.prompt-copy{position:absolute;top:.7rem;right:.7rem;background:rgba(201,169,110,.08);border:.5px solid var(--bhi);border-radius:var(--rs);color:var(--gl);font-family:"DM Sans",sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.32rem .75rem;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:.35rem}
+.prompt-copy:hover{background:rgba(201,169,110,.14);color:#fff}
+.prompt-copy.copied{background:rgba(93,186,125,.1);border-color:rgba(93,186,125,.3);color:#86efac}
+.prompt-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--gd);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+.prompt-label::after{content:"";flex:1;height:.5px;background:var(--border)}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.4rem 0}
+.ai-card{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:1rem .9rem;text-align:center;transition:border-color .18s}.ai-card:hover{border-color:var(--bhi)}
+.ai-ic{font-size:1.4rem;display:block;margin-bottom:.4rem}
+.ai-n{font-weight:600;font-size:.76rem;color:#fff;margin-bottom:.2rem}
+.ai-d{font-size:.67rem;color:var(--tm);line-height:1.45}
+@media(max-width:640px){.ai-grid{grid-template-columns:1fr 1fr}}
+.sup-card{background:linear-gradient(135deg,rgba(201,169,110,.06) 0%,rgba(201,169,110,.02) 100%);border:.5px solid var(--bhi);border-radius:var(--r);padding:2.8rem 2.4rem;text-align:center;margin:2rem 0;position:relative;overflow:hidden}
+.sup-card::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,169,110,.08) 0%,transparent 65%);pointer-events:none}
+.sup-icon{font-size:2.5rem;margin-bottom:1rem;display:block;line-height:1}
+.sup-title{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:500;color:#fff;margin-bottom:.6rem;line-height:1.15}
+.sup-title em{font-style:italic;color:var(--gold)}
+.sup-lead{color:var(--td);font-size:.9rem;max-width:520px;margin:0 auto 2rem;line-height:1.72}
+.sup-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:#050508;font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 2rem;border-radius:40px;text-decoration:none;transition:all .22s;box-shadow:0 0 0 0 rgba(201,169,110,.3)}
+.sup-btn:hover{background:var(--gl);color:#050508;box-shadow:0 0 0 6px rgba(201,169,110,.14);transform:translateY(-1px)}
+.sup-btn svg{flex-shrink:0;transition:transform .18s}
+.sup-btn:hover svg{transform:translateX(3px)}
+.sup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.sup-tip{background:rgba(255,255,255,.02);border:.5px solid var(--border);border-radius:var(--rs);padding:1.1rem 1rem;text-align:center;transition:border-color .2s}
+.sup-tip:hover{border-color:var(--bhi)}
+.sup-tip-ic{font-size:1.25rem;display:block;margin-bottom:.5rem}
+.sup-tip-t{font-weight:600;font-size:.78rem;color:#fff;margin-bottom:.25rem}
+.sup-tip-d{font-size:.72rem;color:var(--tm);line-height:1.5}
+@media(max-width:640px){.sup-grid{grid-template-columns:1fr}}
+.sb-lang {
+  margin: 1.1rem 0;
+  position: relative;
+  width: 100%;
+}
+.sb-lang select {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #a0a0a0;
+  font-size: 0.72rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sb-lang select:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  color: #fff;
+}
+.sb-lang::after {
+  content: "▼";
+  font-size: 8px;
+  color: #666;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+</style></head><body>
+<aside class="sb">
+<div class="sb-brand">
+<div class="sb-name">AURICK<span>.</span></div>
+<div class="sb-sub">Leitfaden für Ladenbesitzer</div>
+<div class="sb-ver">v1.0 · OS 2.0</div>
+</div>
+<div class="sb-lang">
+<select onchange="location = this.value;">
+<option value="index.html">English (EN)</option>
+<option value="ar.html">العربية (AR)</option>
+<option value="es.html">Español (ES)</option>
+<option value="fr.html">Français (FR)</option>
+<option selected="selected" value="de.html">Deutsch (DE)</option>
+</select>
+</div>
+<div class="sb-search">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input id="sq" oninput="searchDocs(this.value)" placeholder="Suchen..." type="text"/>
+</div>
+<nav class="sb-nav">
+<div class="sb-cat">Erste Schritte</div>
+<a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>Übersicht</a>
+<a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>Installation</a>
+<div class="sb-cat">Globale Einstellungen</div>
+<a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>Loader-Bildschirm</a>
+<a class="sb-a" href="#header" onclick="nav(event,'#header')"><span class="dot"></span>Kopfzeile und Navigation</a>
+<a class="sb-a" href="#menus-submenus" onclick="nav(event,'#menus-submenus')"><span class="dot"></span>Menüs und Untermenüs</a>
+<a class="sb-a" href="#announce" onclick="nav(event,'#announce')"><span class="dot"></span>Ankündigungsleiste</a>
+<a class="sb-a" href="#search" onclick="nav(event,'#search')"><span class="dot"></span>Suchschublade</a>
+<a class="sb-a" href="#cart-drawer-doc" onclick="nav(event,'#cart-drawer-doc')"><span class="dot"></span>Wagenschublade</a>
+<a class="sb-a" href="#quick-view-doc" onclick="nav(event,'#quick-view-doc')"><span class="dot"></span>Schnellansicht Modal</a>
+<a class="sb-a" href="#pickup-availability-doc" onclick="nav(event,'#pickup-availability-doc')"><span class="dot"></span>Abholmöglichkeit</a>
+<a class="sb-a" href="#footer" onclick="nav(event,'#footer')"><span class="dot"></span>Fußzeile</a>
+<div class="sb-cat">Homepage-Bereiche</div>
+<a class="sb-a" href="#hero" onclick="nav(event,'#hero')"><span class="dot"></span>Heldenbox-Schieberegler</a>
+<a class="sb-a" href="#features" onclick="nav(event,'#features')"><span class="dot"></span>Features Showcase</a>
+<a class="sb-a" href="#horizontal-gallery" onclick="nav(event,'#horizontal-gallery')"><span class="dot"></span>Horizontale Galerie</a>
+<a class="sb-a" href="#marquee" onclick="nav(event,'#marquee')"><span class="dot"></span>Festzelt-Ticker</a>
+<a class="sb-a" href="#vault" onclick="nav(event,'#vault')"><span class="dot"></span>Sammlungstresor</a>
+<a class="sb-a" href="#lifestyle" onclick="nav(event,'#lifestyle')"><span class="dot"></span>Lifestyle-Schaufenster</a>
+<a class="sb-a" href="#brand-story-doc" onclick="nav(event,'#brand-story-doc')"><span class="dot"></span>Markengeschichte</a>
+<a class="sb-a" href="#feat-collection" onclick="nav(event,'#feat-collection')"><span class="dot"></span>Ausgewählte Sammlung</a>
+<a class="sb-a" href="#featured-product-doc" onclick="nav(event,'#featured-product-doc')"><span class="dot"></span>Empfohlenes Produkt</a>
+<a class="sb-a" href="#blog-posts" onclick="nav(event,'#blog-posts')"><span class="dot"></span>Blogbeiträge</a>
+<a class="sb-a" href="#testimonials" onclick="nav(event,'#testimonials')"><span class="dot"></span>Schieberegler für Erfahrungsberichte</a>
+<a class="sb-a" href="#trusted" onclick="nav(event,'#trusted')"><span class="dot"></span>Vertrauenswürdig von</a>
+<a class="sb-a" href="#social" onclick="nav(event,'#social')"><span class="dot"></span>Soziale Galerie</a>
+<a class="sb-a" href="#newsletter-doc" onclick="nav(event,'#newsletter-doc')"><span class="dot"></span>Newsletter</a>
+<a class="sb-a" href="#custom-liquid-doc" onclick="nav(event,'#custom-liquid-doc')"><span class="dot"></span>Kundenspezifische Flüssigkeit</a>
+<div class="sb-cat">Sammlungsseite</div>
+<a class="sb-a" href="#coll-page" onclick="nav(event,'#coll-page')"><span class="dot"></span>Sammlungseinstellungen</a>
+<a class="sb-a" href="#filters" onclick="nav(event,'#filters')"><span class="dot"></span>Produktfilter</a>
+<div class="sb-cat">Produktseite</div>
+<a class="sb-a" href="#product" onclick="nav(event,'#product')"><span class="dot"></span>Produkteinstellungen</a>
+<a class="sb-a" href="#size-guide" onclick="nav(event,'#size-guide')"><span class="dot"></span>Größentabelle</a>
+<a class="sb-a" href="#complete-look" onclick="nav(event,'#complete-look')"><span class="dot"></span>Vervollständigen Sie Ihren Look</a>
+<a class="sb-a" href="#prod-recommendations" onclick="nav(event,'#prod-recommendations')"><span class="dot"></span>Produktempfehlungen</a>
+<div class="sb-cat">Seitenvorlagen</div>
+<a class="sb-a" href="#about" onclick="nav(event,'#about')"><span class="dot"></span>Über / Erbe</a>
+<a class="sb-a" href="#contact" onclick="nav(event,'#contact')"><span class="dot"></span>Kontakt / Atelier</a>
+<div class="sb-cat">Richtlinienvorlagen</div>
+<a class="sb-a" href="#shipping-policy" onclick="nav(event,'#shipping-policy')"><span class="dot"></span>Versandbedingungen</a>
+<a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>Rückgabebedingungen</a>
+<a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>Datenschutzrichtlinie</a>
+<div class="sb-cat">Store-Einstellungen</div>
+<a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Übersetzen und anpassen</a>
+<a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>Bildgrößen</a>
+<a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>FAQ</a>
+<a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Sehen Sie sich die SVG-Eingabeaufforderung an</a>
+<a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>Holen Sie sich Unterstützung</a>
+</nav>
+</aside>
+<main class="main"><div class="wrap">
+<section id="overview">
+<div class="hbox">
+<div class="hbadge">◆  Premium Shopify OS 2.0</div>
+<h1 class="h1x">Aurick <em>Thema</em><br/>Setup-Anleitung</h1>
+<p class="hlead">Aurick ist ein luxuriöses Shopify-Theme, das für Uhrenboutiquen entwickelt wurde. Filmische Animationen, erstklassige Typografie und ein komplettes Konvertierungs-Toolkit – vom ersten Tag an integriert. Dieser Leitfaden deckt jeden Abschnitt, jede Einstellung und jede native Shopify-Funktion ab, die Sie zum Betrieb Ihres Shops benötigen.</p>
+<div class="hg">
+<div class="hs"><span class="hs-n">58</span><span class="hs-l">Gesamtabschnitte</span></div>
+<div class="hs"><span class="hs-n">0</span><span class="hs-l">Fehler bei der Themenprüfung</span></div>
+<div class="hs"><span class="hs-n">Betriebssystem 2.0</span><span class="hs-l">Architektur</span></div>
+</div>
+</div>
+<div class="feat">
+<div class="fi"><div class="fi-ic">🎥</div><div><div class="fi-t">GSAP-Animationen</div><div class="fi-d">ScrollTrigger, Pin+Scrub, Word-Reveal, 3D-Neigung – auf jeder Seite. Keine Apps erforderlich.</div></div></div>
+<div class="fi"><div class="fi-ic">⌛</div><div><div class="fi-t">3D-Uhrenbox-Schieberegler</div><div class="fi-d">Animierter 3D-Uhrenbox-Held im Vollbildmodus mit bis zu 3 anpassbaren Folien pro Geschäft.</div></div></div>
+<div class="fi"><div class="fi-ic">🔍</div><div><div class="fi-t">Intelligente Suche und Filter</div><div class="fi-d">Integrierte Schubladensysteme auf Basis von Shopify Search &amp; Discovery für umfassende Suchsynonyme und Filter.</div></div></div>
+<div class="fi"><div class="fi-ic">🛍</div><div><div class="fi-t">Vervollständigen Sie Ihren Look</div><div class="fi-d">Cross-Selling-Zubehör auf der Produktseite und in der ausziehbaren Einkaufswagenschublade. Keine App erforderlich.</div></div></div>
+<div class="fi"><div class="fi-ic">📏</div><div><div class="fi-t">Größentabelle</div><div class="fi-d">Öffnet ein Bild-Popup pro Produkt – eingestellt über Metafeld oder Bild-Alt-Tag.</div></div></div>
+<div class="fi"><div class="fi-ic">🌐</div><div><div class="fi-t">Mehrsprachig</div><div class="fi-d">Vorgefertigte EN-/ES-/FR-Gebietsschemadateien. Fügen Sie mit Translate &amp; Adapt weitere Sprachen hinzu.</div></div></div>
+</div>
+</section>
+<section id="install">
+<h2><span class="ic">⚙</span>Installation</h2>
+<p>Laden Sie das Aurick-Theme in vier Schritten auf Shopify hoch. Keine technischen Kenntnisse erforderlich.</p>
+<ol class="steps">
+<li><strong>Suchen Sie die Designdatei</strong><p>Finden <code>aurick-theme.zip</code> auf Ihrem Computer. Tun Sie es <em>nicht</em> entpacken Sie es.</p></li>
+<li><strong>Gehen Sie zu Online-Shop → Themen</strong><p>Im Shopify-Adminbereich: <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Themen</span></span></p></li>
+<li><strong>Laden Sie die ZIP-Datei hoch</strong><p>Klicken Sie <strong>Thema hinzufügen</strong> → <strong>ZIP-Datei hochladen</strong>. Wählen Sie die aus <code>.zip</code> und klicken <strong>Datei hochladen</strong>.</p></li>
+<li><strong>Anpassen und veröffentlichen</strong><p>Klicken Sie <strong>Anpassen</strong> , um alle Abschnitte im Theme-Editor zu konfigurieren, oder klicken Sie auf <strong>Veröffentlichen</strong> sofort live zu gehen.</p></li>
+</ol>
+<div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">Laden Sie die ZIP-Datei unverändert hoch</div><p>Extrahieren Sie die Datei nicht vor dem Hochladen. Shopify erfordert das komprimierte Format. Wenn Sie es zuerst extrahieren, schlägt der Upload fehl.</p></div></div>
+</section>
+<section id="loader">
+<h2><span class="ic">🎬</span>Loader-Bildschirm</h2>
+<p>Themeneditor → <strong>Loader-Bildschirm</strong>. Steuert den animierten Eingangs-Preloader, wenn Käufer Ihr Geschäft besuchen.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Loader aktivieren</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Aktivieren Sie diese Option, um die Preloader-Animation beim ersten Laden der Seite anzuzeigen.</td></tr>
+<tr><td>Logobild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Ihr Markenlogo wird in der Mitte des Preloader-Bildschirms angezeigt.</td></tr>
+<tr><td>Logobreite (Desktop)</td><td><span class="tb tr">Reichweite</span></td><td>160 px</td><td>Anzeigebreite des Logos auf Desktop-Bildschirmen (Bereich: 60–400 px).</td></tr>
+<tr><td>Logobreite (mobil)</td><td><span class="tb tr">Reichweite</span></td><td>120 px</td><td>Darstellungsbreite des Logos auf mobilen Bildschirmen (Bereich: 40–300 px).</td></tr>
+<tr><td>Preloader-Textzeile 1</td><td><span class="tb tt">Text</span></td><td>AURICK</td><td>Beim Laden wird die erste Textzeile unterhalb des Logos angezeigt.</td></tr>
+<tr><td>Preloader-Textzeile 2</td><td><span class="tb tt">Text</span></td><td>HAUTE HORLOGERIE</td><td>Zweite Textzeile mit Markeninformationen.</td></tr>
+<tr><td>Animationsdauer</td><td><span class="tb tr">Reichweite</span></td><td>2,5 s</td><td>Gesamtladezeit in Sekunden, bevor es ausgeblendet wird (Bereich: 1,0–5,0 s).</td></tr>
+<tr><td>Schriftfamilie</td><td><span class="tb ts">auswählen</span></td><td>Serife</td><td>Wählen Sie zwischen <strong>Serife</strong> (luxuriöser redaktioneller Look) oder <strong>Ohne Serifen</strong> (modern).</td></tr>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Farbe des vollständigen Preloader-Overlay-Bildschirms.</td></tr>
+<tr><td>Textfarbe</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe der Preloader-Texte.</td></tr>
+<tr><td>Akzentfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe von Details, Punkten oder hervorgehobenen Begriffen.</td></tr>
+</tbody></table>
+</section>
+<section id="header">
+<h2><span class="ic">🧭</span>Kopfzeile &amp; <em>Navigation</em></h2>
+<p>Themeneditor → <strong>Kopfzeile</strong>. Steuert Logo, Navigationslinks, Symbole, Farben, klebriges und transparentes Verhalten.</p>
+<h3>Logo</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Logotyp</td><td><span class="tb ts">auswählen</span></td><td>Text</td><td>Wählen Sie <strong>Text</strong> um Ihren Shopnamen als gestalteten Serifentext anzuzeigen, oder <strong>Bild</strong> um ein von Ihnen hochgeladenes Logo anzuzeigen.</td></tr>
+<tr><td>Logotext</td><td><span class="tb tt">Text</span></td><td>—</td><td>Benutzerdefinierte Textüberschreibung für das Logo. Lassen Sie das Feld leer, um den Namen Ihres Shopify-Shops automatisch zu verwenden.</td></tr>
+<tr><td>Logobild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Ihre Markenlogodatei. Nur sichtbar, wenn der Logotyp „Bild“ ist. Empfohlen: transparentes PNG oder SVG, 300 × 120 Pixel.</td></tr>
+<tr><td>Logo-Position – Desktop</td><td><span class="tb ts">auswählen</span></td><td>Mitte links</td><td><strong>Mitte links</strong> • <strong>Mittlere Mitte</strong> (Logo zentriert, alle Navigation links) • <strong>Oben links</strong> (Logo über der Navigationsleiste) • <strong>Oben in der Mitte</strong>.</td></tr>
+<tr><td>Logo-Position – mobil</td><td><span class="tb ts">auswählen</span></td><td>Mitte</td><td>Zentrierte oder linke Ausrichtung in mobilen Ansichtsfenstern.</td></tr>
+<tr><td>Logogröße – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>140 px</td><td>Maximale Breite des Logos auf dem Desktop. Bereich: 60–260 Pixel.</td></tr>
+<tr><td>Logogröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>100 px</td><td>Maximale Breite auf Mobilgeräten. Bereich: 52–180 Pixel.</td></tr>
+</tbody></table>
+<h3>Typografie und Symbole</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Menütextgröße – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>13 px</td><td>Schriftgröße der Navigationslinks auf dem Desktop. Bereich: 10–18 Pixel.</td></tr>
+<tr><td>Menütextgröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>28 px</td><td>Schriftgröße im mobilen Slideout-Menü. Bereich: 18–40 px.</td></tr>
+<tr><td>Symbolgröße – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>22 px</td><td>Größe der Such-, Warenkorb- und Sprachsymbole auf dem Desktop. Bereich: 16–32 px.</td></tr>
+<tr><td>Symbolgröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>22 px</td><td>Größe der Header-Symbole auf Mobilgeräten. Bereich: 16–32 px.</td></tr>
+</tbody></table>
+<h3>Farben</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Menütext – aktiv / schwebend</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe eines Navigationslinks, wenn es sich um die aktuelle Seite oder den Mauszeiger handelt.</td></tr>
+<tr><td>Menütext – Standard</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Standardfarbe aller Navigationslinks im Ruhezustand.</td></tr>
+<tr><td>Logo-Textfarbe</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Logotextes (gilt nur, wenn der Logotyp „Text“ ist).</td></tr>
+<tr><td>Farbe des Suchsymbols</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Suchsymbols in der Kopfzeile.</td></tr>
+<tr><td>Farbe des Sprachsymbols</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Sprach-/Gebietsschema-Umschaltsymbols. Wird automatisch angezeigt, wenn mehrere Sprachen veröffentlicht werden.</td></tr>
+<tr><td>Farbe des Ländersymbols</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Währungs-/Länderauswahlsymbols.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Das Suchsymbol in der Kopfzeile öffnet die <strong>Suchschublade</strong> Überlagerung. Siehe die <a href="#search" onclick="nav(event,'#search')">Suchschublade</a> Im Abschnitt erfahren Sie, wie Sie mithilfe von Shopify Search &amp; Discovery konfigurieren, was darin angezeigt wird.</p></div></div>
+<h3>Sammlungen Mega-Menü-Einstellungen</h3>
+<p>Kuratiert ein verschiebbares Sammelkartenfeld in voller Breite, das automatisch geöffnet wird, wenn Sie mit der Maus über den entsprechenden Trigger-Link in Ihrem Hauptmenü fahren.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Aktivieren Sie das Mega-Menü „Sammlungen“.</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Aktivieren Sie diese Option, um das Megamenü des horizontalen Schiebereglers für Sammlungen zu aktivieren.</td></tr>
+<tr><td>Titel des Navigationselements auslösen</td><td><span class="tb tt">Text</span></td><td>Sammlungen</td><td>Der Name des Links in Ihrem Hauptmenü (ohne Berücksichtigung der Groß-/Kleinschreibung), der dieses Megamenü auslöst, wenn Sie mit der Maus darüber fahren.</td></tr>
+<tr><td>Sammlungen zur Anzeige</td><td><span class="tb ts">auswählen</span></td><td>—</td><td>Wählen Sie bis zu 12 Sammlungen aus, die als Karten im Mega-Menüraster angezeigt werden sollen.</td></tr>
+<tr><td>Sofort sichtbare Karten (Desktop)</td><td><span class="tb tr">Reichweite</span></td><td>3</td><td>Anzahl der auf dem Desktop angezeigten Sammlungen, bevor Navigationspfeile angezeigt werden. Bereich: 2–6.</td></tr>
+<tr><td>Linktext „Jetzt einkaufen“.</td><td><span class="tb tt">Text</span></td><td>Jetzt einkaufen</td><td>Kursivschrift, die im Hover-Status jeder Sammelkarte angezeigt wird.</td></tr>
+<tr><td>URL der Schaltfläche „Alle anzeigen“.</td><td><span class="tb tu">URL</span></td><td>—</td><td>Ziellink der Schaltfläche „Alle anzeigen“. Fällt zurück auf <code>/collections</code> falls leer.</td></tr>
+<tr><td>Text der Schaltfläche „Alle anzeigen“.</td><td><span class="tb tt">Text</span></td><td>Gesamte Sammlung anzeigen</td><td>Beschriftung der unteren Hauptschaltfläche im Megamenü.</td></tr>
+</tbody></table>
+<h3>Empfohlene Mega-Menü-Einstellungen (Navigation + Karten).</h3>
+<p>Teilt das Dropdown-Feld in eine Navigationsliste auf der linken Seite (bis zu 3 Spalten) und ein Werbefeld auf der rechten Seite (bis zu 6 visuelle Funktionskarten mit gestaffelten Eingangsanimationen).</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Aktivieren Sie das vorgestellte Mega-Menü</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Aktivieren Sie diese Option, um das Multi-Panel-Mega-Menü zu aktivieren.</td></tr>
+<tr><td>Titel des Navigationselements auslösen</td><td><span class="tb tt">Text</span></td><td>Einkaufen</td><td>Der Linktitel in Ihrem Hauptmenü (ohne Berücksichtigung der Groß-/Kleinschreibung), der dieses Menü auslöst.</td></tr>
+<tr><td>Menü Spalte 1 / 2 / 3</td><td><span class="tb ts">auswählen</span></td><td>—</td><td>Wählen Sie bis zu 3 Menüs aus, die links als Navigationsspalten gerendert werden sollen. Als Spaltenüberschrift wird der Menütitel verwendet.</td></tr>
+<tr><td>Karte 1–6 – Bild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Laden Sie Werbebilder für bis zu 6 Karten hoch (Seitenverhältnis 16:10 empfohlen).</td></tr>
+<tr><td>Karte 1–6 – Etikett</td><td><span class="tb tt">Text</span></td><td>—</td><td>Unter jedem Bild angezeigte Titel (z. B. <code>New Arrivals</code>, <code>Best Sellers</code>).</td></tr>
+<tr><td>Karte 1–6 – Link</td><td><span class="tb tu">URL</span></td><td>—</td><td>URL-Ziele für jede Karte. Lassen Sie Bild und Etikett leer, um einen Kartensteckplatz zu verbergen.</td></tr>
+</tbody></table>
+</section>
+<section id="menus-submenus">
+<h2><span class="ic">🔍</span>Menüs &amp; <em>Untermenüs</em></h2>
+<span class="pb g">Shopify-Navigation</span>
+<p>Erfahren Sie, wie Sie Dropdown-Menüs, mehrstufige verschachtelte Menüs und visuelle Mega-Menüs in Shopify erstellen und diese in die Header-Navigation von Aurick integrieren.</p>
+<h3>Schritt 1: Verschachtelte Menüs in Shopify erstellen</h3>
+<p>Shopify unterstützt eine verschachtelte Navigation mit einer Tiefe von bis zu drei Ebenen. So erstellen Sie eine verschachtelte Struktur:</p>
+<ol class="steps">
+<li><strong>Gehen Sie zu den Navigationseinstellungen</strong>
+<p>Navigieren Sie im Shopify-Adminbereich zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Navigation</span></span>.</p>
+</li>
+<li><strong>Wählen Sie ein Menü aus oder erstellen Sie es</strong>
+<p>Klicken Sie auf **Hauptmenü** (oder klicken Sie auf **Menü hinzufügen**, um ein neues zu erstellen).</p>
+</li>
+<li><strong>Menüelemente hinzufügen</strong>
+<p>Klicken Sie auf **Menüelement hinzufügen** und benennen Sie es (z. B. <code>Collections</code>) und verlinken Sie es. Fügen Sie dann darunter untergeordnete Elemente hinzu (z. B. <code>Chronograph</code>, <code>Automatic</code>).</p>
+</li>
+<li><strong>Nest-Elemente (Drag-and-Drop)</strong>
+<p>Klicken Sie auf das Ziehpunktsymbol neben einem untergeordneten Menüelement, halten Sie die Maustaste gedrückt und ziehen Sie es **nach oben und rechts** unter das übergeordnete Element (z. B. nach unten). <code>Collections</code>). Dadurch wird das Element unter dem übergeordneten Element verschachtelt. Wiederholen Sie diesen Vorgang, um Unterelemente unter untergeordneten Elementen hinzuzufügen (bis zu 3 Ebenen).</p>
+</li>
+<li><strong>Klicken Sie auf Menü speichern.</strong></li>
+</ol>
+<h3>Schritt 2: Verknüpfen des Menüs in Auricks Header</h3>
+<p>So zeigen Sie Ihr Menü in der Kopfzeile an:</p>
+<ol class="steps">
+<li><strong>Öffnen Sie den Theme-Editor</strong>
+<p>Navigieren Sie zu **Online-Shop** → **Themen** → klicken Sie beim Aurick-Thema auf **Anpassen**.</p>
+</li>
+<li><strong>Wählen Sie den Kopfzeilenabschnitt aus</strong>
+<p>Klicken Sie in der linken Seitenleiste auf den Abschnitt **Kopfzeile**.</p>
+</li>
+<li><strong>Wählen Sie Menü</strong>
+<p>Suchen Sie die Einstellung **Menü** und klicken Sie auf **Ändern** → **Menü auswählen**. Wählen Sie Ihr Hauptmenü und klicken Sie auf **Speichern**.</p>
+</li>
+</ol>
+</section>
+<section id="announce">
+<h2><span class="ic">📢</span>Ankündigung <em>Bar</em></h2>
+<p>Über der Kopfzeile wird auf jeder Seite eine schmale Leiste angezeigt. Themeneditor → <strong>Ankündigungsleiste</strong>.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Ankündigungsleiste anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Master-Umschaltung. Aktivieren Sie diese Option, um die Leiste über der Kopfzeile auf der gesamten Website anzuzeigen.</td></tr>
+<tr><td>Ankündigungstext</td><td><span class="tb tt">Text</span></td><td>Kostenloser Versand für Bestellungen über 100 $</td><td>Die in der Leiste angezeigte Meldung. Jeder Ankündigungsblock ist eine Nachricht.</td></tr>
+<tr><td>Link (optional)</td><td><span class="tb tu">URL</span></td><td>—</td><td>Wenn sie ausgefüllt ist, führt ein Klick auf eine beliebige Stelle in der Leiste den Käufer zu dieser URL.</td></tr>
+<tr><td>Ankündigungen automatisch drehen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Wenn diese Option aktiviert ist, werden mehrere Ankündigungsblöcke automatisch nacheinander durchlaufen.</td></tr>
+<tr><td>Alle (Sekunden) ändern</td><td><span class="tb tr">Reichweite</span></td><td>5 s</td><td>Wie lange jede Nachricht sichtbar bleibt, bevor zur nächsten gewechselt wird. Bereich: 2–15 s.</td></tr>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#121212</td><td>Hintergrundfarbe des Ankündigungsstreifens.</td></tr>
+<tr><td>Textfarbe</td><td><span class="tb tc">Farbe</span></td><td>#ffffff</td><td>Farbe des Ankündigungstextes.</td></tr>
+<tr><td>Schriftgröße – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>13 px</td><td>Textgröße auf dem Desktop. Bereich: 10–18 Pixel.</td></tr>
+<tr><td>Schriftgröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>11 px</td><td>Textgröße auf Mobilgeräten. Bereich: 9–16 px.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">💡</span><div class="nb"><p>Mehrere hinzufügen <strong>Ankündigung</strong> Blöcke innerhalb dieses Abschnitts und aktivieren <em>Automatisch drehen</em> um ein Fahrradbanner zu erstellen, das nacheinander Versandinformationen, Werbeaktionen und Geschäftsrichtlinien anzeigt.</p></div></div>
+</section>
+<section id="search">
+<h2><span class="ic">🔎</span>Suchen <em>Schublade</em></h2>
+<span class="pb">Siteweit – Header-Suchsymbol</span>
+<p>Wenn ein Käufer auf das Suchsymbol in der Aurick-Kopfzeile klickt, öffnet sich eine bildschirmfüllende Suchschublade. Es zeigt eine Sucheingabe, sofortige Ergebnisse (Produkte, Sammlungen, Seiten) und prädiktive Vorschläge an. All dies wird von der angetrieben <strong>Shopify Search &amp; Discovery</strong> App – kein Theme-Code erforderlich.</p>
+<h3>Schubladeneinstellungen durchsuchen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Titel</td><td><span class="tb tt">Text</span></td><td>Durchsuchen Sie unser Atelier</td><td>Beim Öffnen der Schublade wird eine große Titelüberschrift angezeigt.</td></tr>
+<tr><td>Beschriftung für Suchvorschläge</td><td><span class="tb tt">Text</span></td><td>Vorschläge</td><td>Über den Schlüsselwörtern vor der Suche angezeigtes Label.</td></tr>
+<tr><td>Maximale Vorhersageergebnisse</td><td><span class="tb tr">Reichweite</span></td><td>6</td><td>Maximale Produkt-/Sammlungsergebnisse werden sofort angezeigt. (Bereich: 3–12).</td></tr>
+<tr><td>Vorschläge aktivieren</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigt schnell beliebte Begriffe und Kategorien an, wenn sie leer sind.</td></tr>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Farbe der Hintergrundüberlagerung des Schubladenfelds.</td></tr>
+</tbody></table>
+<h3>Konfigurieren des Suchverhaltens – Search &amp; Discovery-App</h3>
+<ol class="steps">
+<li><strong>Öffnen Sie die App</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Apps</span><span class="ps">›</span><span class="pc">Suche und Entdeckung</span></span>. Wenn es nicht installiert ist, installieren Sie es kostenlos im Shopify App Store.</p>
+</li>
+<li><strong>Legen Sie fest, was in den Suchergebnissen angezeigt wird</strong>
+<p>Klicken Sie in der App <strong>Suchen</strong> → <strong>Produkte</strong>. Sie können festlegen, welche Produktfelder durchsucht werden (Titel, Beschreibung, SKU, Tags, Anbieter, Typ, Varianten). Aktivieren <strong>Metafeldsuche</strong> damit Käufer Uhren nach Gehäusematerial, Marke oder einem anderen von Ihnen definierten Metafeld finden können.</p>
+</li>
+<li><strong>Synonyme konfigurieren</strong>
+<p>Klicken Sie <strong>Synonyme</strong>. Fügen Sie Wortgruppen hinzu, sodass bei der Eingabe von „Chrono“ „Chronograph“-Uhren angezeigt werden und bei „Armband“ „Band“-Produkte gefunden werden. Dies verbessert die Qualität der Suchergebnisse für Luxusvokabeln erheblich.</p>
+</li>
+<li><strong>Produkte aufwerten und vergraben</strong>
+<p>Klicken Sie <strong>Suchergebnisse</strong> → <strong>Produkt-Boosts</strong>. Pinnen Sie bestimmte Produkte ganz oben in den Suchergebnissen für gezielte Keywords an – steigern Sie beispielsweise Ihre Hero-Watch, wenn ein Käufer nach „Signatur“ sucht. Vergraben Sie auf ähnliche Weise nicht vorrätige Artikel ganz unten.</p>
+</li>
+</ol>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">Die Suchqualität verbessert sich mit mehr Produktdaten</div><p>Geben Sie Ihr Produkt ein <strong>Typ</strong>, <strong>Anbieter</strong>, <strong>Schlagworte</strong>, und vor allem Ihre Gewohnheit <strong>Metafelder</strong> auf jedem Produkt. Je strukturierter die Daten von Shopify sind, desto genauer und relevanter sind die Suchergebnisse in der Schublade.</p></div></div>
+</section>
+<section id="cart-drawer-doc">
+<h2><span class="ic">🛍</span>Wagenschublade</h2>
+<p>Themeneditor → <strong>Wagenschublade</strong>. Steuert das Layout des ausziehbaren Warenkorbs, Versandziele und Notizen.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Schwellenwert für kostenlosen Versand</td><td><span class="tb tr">Reichweite</span></td><td>150</td><td>Betrag in der Währung des Shops, der zum Freischalten des kostenlosen Versands erforderlich ist. Zum Deaktivieren auf 0 einstellen (Bereich: 0–1000).</td></tr>
+<tr><td>Kostenlose Versandnachricht</td><td><span class="tb tt">Text</span></td><td>Sie sind noch {{ amount }} vom kostenlosen Versand entfernt</td><td>Meldung wird angezeigt, wenn der Schwellenwert nicht erreicht wird. Benutzen <code>{{ amount }}</code> um den verbleibenden Wert anzuzeigen.</td></tr>
+<tr><td>Erfolgsmeldung</td><td><span class="tb tt">Text</span></td><td>Sie haben den kostenlosen Versand freigeschaltet!</td><td>Feiermeldung wird angezeigt, wenn die Zwischensumme den Schwellenwert überschreitet.</td></tr>
+<tr><td>Notiz anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Fügt einen Textbereich für Dropdown-Notizen hinzu, in dem Kunden Nachrichten zur Geschenkverpackung oder besondere Anweisungen hinzufügen können.</td></tr>
+<tr><td>Hinweisetikett</td><td><span class="tb tt">Text</span></td><td>Bestellnotiz hinzufügen</td><td>Beschriftungstext des Notizen-Dropdown-Blocks.</td></tr>
+<tr><td>Etikett weiter einkaufen</td><td><span class="tb tt">Text</span></td><td>Weiter einkaufen</td><td>Text, der unten auf der Schaltfläche zum Schließen der Schublade angezeigt wird.</td></tr>
+<tr><td>Beschriftung der Checkout-Schaltfläche</td><td><span class="tb tt">Text</span></td><td>Gehen Sie zur Kasse</td><td>Text, der auf der Schaltfläche zum Senden des Bezahlvorgangs angezeigt wird.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Um die Übersichtlichkeit der Einkaufswagenschublade zu maximieren, werden die Preise in gut lesbarer **Outfit (Sans-serif)** und nicht in einer dekorativen Serifenschrift dargestellt. Der Cross-Selling-Schieberegler zeigt verknüpfte Artikel automatisch aus dem an <strong>Vervollständigen Sie Ihren Look</strong> Metafeld-Setup.</p></div></div>
+</section>
+<section id="quick-view-doc">
+<h2><span class="ic">👁</span>Schnellansicht Modal</h2>
+<span class="pb y">Dienstprogramm</span>
+<p>Das modale Overlay „Quick View“ ermöglicht es Kunden, Produktmedien und Optionen anzuzeigen und Produkte in ihren Warenkorb zu legen, ohne ihre aktuelle Seite zu verlassen.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Dieses Modal wird dynamisch mit Shopify geladen <strong>Abschnitt Rendering-API</strong> von <code>sections/quick-view.liquid</code>, um schnelle Seitenladevorgänge zu gewährleisten. Es enthält ein benutzerdefiniertes Akzentfarbsystem, das Produkt-Tags auswertet (z. B. Tag hinzufügen). <code>accent-#c9a96e</code> färbt Optionshervorhebungen für dieses Produkt dynamisch neu).</p></div></div>
+</section>
+<section id="pickup-availability-doc">
+<h2><span class="ic">📍</span>Abholmöglichkeit</h2>
+<span class="pb y">Dienstprogramm</span>
+<p>Dynamischer lokaler Abholindikator, der gemäß den Shopify Theme Store-Standards erforderlich ist. Zeigt an, ob die aktuelle Variante bei nahegelegenen Einzelhandelsstandorten vorrätig ist.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Rendert asynchron mit der Section Rendering API von <code>sections/pickup-availability.liquid</code>. Die Einstellungen werden nativ in Ihrem Shopify-Adminbereich unter verwaltet <strong>Einstellungen → Versand und Lieferung → Abholung vor Ort</strong>.</p></div></div>
+</section>
+<section id="footer">
+<h2><span class="ic">▼</span><em>Fußzeile</em></h2>
+<p>Themeneditor → <strong>Fußzeile</strong>. Steuert den Markenbereich, Navigationsspalten, soziale Symbole und Urheberrechtshinweise.</p>
+<h3>Markeneinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Markenlogo</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Optionales Fußzeilenlogo. Empfohlen: 200 × 60 px transparentes PNG.</td></tr>
+<tr><td>Maximale Logobreite</td><td><span class="tb tr">Reichweite</span></td><td>120 px</td><td>Maximale Anzeigebreite des Footer-Logos. Bereich: 60–300 Pixel.</td></tr>
+<tr><td>Markenname</td><td><span class="tb tt">Text</span></td><td>—</td><td>Textüberschreibung für den Markennamen in der Fußzeile. Lassen Sie das Feld leer, um den Namen Ihres Shopify-Shops zu verwenden.</td></tr>
+<tr><td>Markenslogan</td><td><span class="tb tt">Text</span></td><td>Gemacht für diejenigen, die Zeit verstehen.</td><td>Kursivschrift wird unterhalb des Markennamens in der Fußzeile angezeigt.</td></tr>
+<tr><td>Copyright-Text</td><td><span class="tb tt">Text</span></td><td>© {Jahr} {Marke}. Alle Rechte vorbehalten.</td><td>Benutzen <code>{year}</code> für das laufende Jahr und <code>{brand}</code> automatisch für den Namen Ihres Geschäfts ein.</td></tr>
+</tbody></table>
+<h3>Farben und Layout</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Hintergrund der Fußzeile</td><td><span class="tb tc">Farbe</span></td><td>#030305</td><td>Hintergrundfarbe des gesamten Fußzeilenbereichs.</td></tr>
+<tr><td>Markenfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe des Markennamentextes in der Fußzeile.</td></tr>
+<tr><td>Farbe des Slogans</td><td><span class="tb tc">Farbe</span></td><td>#3a3530</td><td>Farbe des kursiven Slogans unter dem Markennamen.</td></tr>
+<tr><td>Goldene Trennlinie</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe der dekorativen horizontalen Trennlinie.</td></tr>
+<tr><td>Navigationslinks (Standard)</td><td><span class="tb tc">Farbe</span></td><td>#6b6456</td><td>Standardfarbe des Fußzeilen-Navigationslinktextes.</td></tr>
+<tr><td>Navigationslinks (Hover)</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe der Navigationslinks beim Schweben.</td></tr>
+<tr><td>Soziale Symbole (Standard)</td><td><span class="tb tc">Farbe</span></td><td>#6b6456</td><td>Farbe der Social-Media-Symbole im Ruhezustand.</td></tr>
+<tr><td>Soziale Symbole (Hover)</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe der sozialen Symbole, wenn der Mauszeiger darüber bewegt wird.</td></tr>
+<tr><td>Copyright-Text</td><td><span class="tb tc">Farbe</span></td><td>#3a3530</td><td>Farbe des Copyright-Hinweises ganz unten.</td></tr>
+</tbody></table>
+<h3>Fußzeilenblöcke</h3>
+<p>Der Inhalt der Fußzeile ist vollständig blockgesteuert. Klicken Sie im Theme-Editor auf <strong>Block hinzufügen</strong> im Fußzeilenbereich, um Blöcke zu konfigurieren:</p>
+<table class="st st-blocks"><thead><tr><th>Blocktyp</th><th>Einstellungen</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td><strong>Nav-Link</strong></td><td>
+<ul>
+<li><strong>Etikett</strong> (<span class="tb tt">Text</span>): Der Text des Navigationslinks (z. B. <code>About</code>).</li>
+<li><strong>URL</strong> (<span class="tb tu">URL</span>): Linkziel.</li>
+</ul>
+</td><td>Über / —</td><td>Erstellt einen individuellen horizontalen Navigationslink in der Fußzeile. Fügen Sie so viele hinzu, wie nötig.</td></tr>
+<tr><td><strong>Soziale Ikone</strong></td><td>
+<ul>
+<li><strong>Plattform</strong> (<span class="tb ts">auswählen</span>): Wählen Sie Instagram, X/Twitter, Facebook, YouTube, Pinterest, TikTok, Snapchat, LinkedIn oder <code>Custom (SVG / Image)</code>.</li>
+<li><strong>URL überschreiben</strong> (<span class="tb tu">URL</span>): Ziel-URL (überschreibt den Link zu den globalen Designeinstellungen).</li>
+<li><strong>Benutzerdefinierter SVG-Code</strong> (<span class="tb ta">Textbereich</span>): Raw inline einfügen <code>&lt;svg&gt;&lt;/svg&gt;</code> Markup hier, wenn die Plattform auf „Benutzerdefiniert“ eingestellt ist.</li>
+<li><strong>Benutzerdefiniertes Symbolbild</strong> (<span class="tb ti">Bild</span>): Fallback-Bild, wenn der benutzerdefinierte SVG-Code leer ist. Empfohlene Größe: 64×64 Pixel.</li>
+<li><strong>Aria-Label</strong> (<span class="tb tt">Text</span>): Barrierefreier Text für Screenreader.</li>
+</ul>
+</td><td>Instagram / -</td><td>Erstellt einen Social-Media-Link. Bei der Auswahl einer Plattform wird automatisch das entsprechende soziale Symbol angezeigt.</td></tr>
+<tr><td><strong>Zahlungskarte</strong></td><td>
+<ul>
+<li><strong>Kartentyp</strong> (<span class="tb ts">auswählen</span>): Visa, Mastercard, Amex, PayPal, Discover, Apple Pay, Google Pay, Stripe oder <code>Custom (Image/Text)</code>.</li>
+<li><strong>Benutzerdefiniertes Kartenbild</strong> (<span class="tb ti">Bild</span>): Benutzerdefiniertes Zahlungs-Gateway-Logo (60×40 px empfohlen).</li>
+<li><strong>Kartenname</strong> (<span class="tb tt">Text</span>): Text-/Alt-Attribut für Barrierefreiheit.</li>
+<li><strong>Fallback-Textfarbe</strong> (<span class="tb tc">Farbe</span>): Wird für den Fallback von benutzerdefiniertem Kartennamentext verwendet.</li>
+<li><strong>Benutzerdefinierter Hintergrund</strong> (<span class="tb tc">Farbe</span>): Hintergrundfarbe des Zahlungskartensymbols.</li>
+</ul>
+</td><td>Visum / —</td><td>Zeigt unten in der Fußzeile ein Markenlogo für die Zahlung an. Fügen Sie mehrere Karten hinzu, um Ihren Vertrauensausweisbereich zu erstellen.</td></tr>
+</tbody></table>
+</section>
+<section id="hero">
+<h2><span class="ic">🎥</span>Heldenbox <em>Schieberegler</em></h2>
+<span class="pb g">Homepage – Erster Abschnitt</span>
+<p>Ein Vollbild-Slider mit einer 3D-animierten Uhrenbox auf jeder Folie. Der Deckel der Box lässt sich öffnen und gibt beim Betreten die Uhr mit einer filmischen Animation frei. Bis zu 3 Rutschen, jede völlig unabhängig.</p>
+<h3>Einstellungen auf Abschnittsebene</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Desktop-Höhenmodus</td><td><span class="tb ts">auswählen</span></td><td>Vollbild</td><td><strong>Vollbild (100 Vh)</strong> füllt das gesamte Browserfenster aus. <strong>Benutzerdefinierte Höhe</strong> verwendet den Pixelwert, den Sie unten festlegen.</td></tr>
+<tr><td>Desktop-Höhe (px)</td><td><span class="tb tr">Reichweite</span></td><td>700 px</td><td>Gilt nur, wenn „Benutzerdefinierte Höhe“ ausgewählt ist. Mindestens 500 Pixel, um das 3D-Box-Layout zu schützen.</td></tr>
+<tr><td>Mobiler Höhenmodus</td><td><span class="tb ts">auswählen</span></td><td>Vollbild</td><td>Identisch mit Desktop – Vollbild oder eine feste benutzerdefinierte Höhe für mobile Ansichtsfenster.</td></tr>
+<tr><td>Höhe des Mobilgeräts (px)</td><td><span class="tb tr">Reichweite</span></td><td>560 px</td><td>Feste Höhe in Pixel für Mobilgeräte, wenn „Benutzerdefiniert“ ausgewählt ist.</td></tr>
+<tr><td>Automatisches Gleiten</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Blättern Sie automatisch durch die Folien, ohne dass der Benutzer eingreifen muss.</td></tr>
+<tr><td>Automatischer Vorlauf (Sekunden)</td><td><span class="tb tr">Reichweite</span></td><td>6 s</td><td>Wie lange jede Folie sichtbar bleibt, bevor sie fortgesetzt wird. Bereich: 3–12 s.</td></tr>
+<tr><td>Oberer Rand</td><td><span class="tb tr">Reichweite</span></td><td>0 px</td><td>Platz über dem Abschnitt. Nützlich, wenn der Header transparent ist – verwenden Sie dies, um den Hero-Inhalt nach unten zu verschieben.</td></tr>
+<tr><td>Unterer Rand</td><td><span class="tb tr">Reichweite</span></td><td>0 px</td><td>Platz unter dem Abschnitt, bevor der nächste Abschnitt beginnt.</td></tr>
+</tbody></table>
+<h3>Einstellungen pro Folie (Beobachtungsblock)</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Marke (Deckel oben)</td><td><span class="tb tt">Text</span></td><td>ALBA / APEX / AURUM</td><td>Auf der Oberseite des Uhrenboxdeckels ist der Markenname eingraviert. Lassen Sie das Feld leer, um den Standardsteckplatz zu verwenden.</td></tr>
+<tr><td>Modellname (Innendeckel)</td><td><span class="tb tt">Text</span></td><td>Albablau / Purpur / Aurum Reserve</td><td>Der Name des Uhrenmodells befindet sich auf der Innenseite des geöffneten Deckels. Lassen Sie das Feld leer, um den Steckplatz als Standard festzulegen.</td></tr>
+<tr><td>Untertitel der Sammlung</td><td><span class="tb tt">Text</span></td><td>—</td><td>Optionale Untertitelzeile unterhalb des Modellnamens im Deckel.</td></tr>
+<tr><td>Kartonmaterial</td><td><span class="tb ts">auswählen</span></td><td>Obsidianleder</td><td>Visueller Stil der 3D-Box: <strong>Obsidianleder</strong> (blau – Steckplatz 1), <strong>Kohlenstoff-Titan</strong> (rot – Steckplatz 2), <strong>Lackiertes Holz</strong> (Gold – Platz 3).</td></tr>
+<tr><td>Hauptakzent</td><td><span class="tb tc">Farbe</span></td><td>#8ab4f8</td><td>Hauptakzentfarbe für den Rahmen und die Typografie der Folie. Behalten Sie die Slot-Standardeinstellungen bei, um eine optimale visuelle Ausgewogenheit zu erzielen.</td></tr>
+<tr><td>Akzent-Highlight</td><td><span class="tb tc">Farbe</span></td><td>#f5cba7</td><td>Sekundärer hellerer Akzent für Glanzlichter und Verlaufskanten.</td></tr>
+<tr><td>Inneres Leuchten</td><td><span class="tb tc">Farbe</span></td><td>#60a8ff</td><td>Umgebungsleuchtende Farbe im Innenkissenbereich der offenen Box.</td></tr>
+<tr><td>Spotlight RGB</td><td><span class="tb tt">Text</span></td><td>52, 152, 219</td><td>RGB-Werte für die Spotlight-Überlagerung im Inneren der Box (z. B. <code>52, 152, 219</code>). Format: <code>r, g, b</code>.</td></tr>
+<tr><td>Eingebaute Uhr</td><td><span class="tb ts">auswählen</span></td><td>alba-real.svg</td><td>Wählen Sie einen der integrierten High-Fidelity-Uhrenvektoren des Themas aus: <strong>Albablau</strong> (Steckplatz 1), <strong>Crimson Edition</strong>, oder <strong>Aurum-Reserve</strong>.</td></tr>
+<tr><td>Benutzerdefiniertes Uhrenfoto</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Laden Sie Ihr eigenes Uhrenbild hoch. Überschreibt das integrierte SVG. Empfohlen: <strong>400 × 500 Pixel</strong> Porträt mit transparentem Hintergrund (PNG). Wenn Sie einen benutzerdefinierten SVG-Überwachungsvektor verwenden möchten, können Sie ihn mithilfe der KI-Assistenten-Eingabeaufforderung im bereitgestellten generieren <a href="#watch-svg">Bild ansehen → SVG-Eingabeaufforderung</a> Abschnitt unten.</td></tr>
+</tbody></table>
+</section>
+<section id="features">
+<h2><span class="ic">✨</span>Funktionen <em>Vitrine</em></h2>
+<span class="pb g">Homepage</span>
+<p>GSAP-Splitscreen-Bereich. Das Bild Ihrer Uhr verankert den rechten Bereich, während auf der linken Seite animierte Funktionsaufzählungszeichen angezeigt werden. Wenn der Abschnitt „Horizontale Galerie“ unmittelbar folgt, fliegt das Uhrbild beim Scrollen in die erste Galeriekarte (der fliegende Übergang).</p>
+<h3>Abschnittseinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Ohne Kompromisse gefertigt</td><td>Über der Funktionsliste erscheint eine kleine Beschriftung in Großbuchstaben.</td></tr>
+<tr><td>Bild präsentieren</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Das Uhrenbild auf der rechten Seite. Empfohlen: <strong>540 × 540 Pixel</strong> mit transparentem Hintergrund (PNG), damit der fliegende Übergang sauber funktioniert.</td></tr>
+<tr><td>Aktivieren Sie den Flying-Watch-Übergang</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Animiert das Uhrenbild, das beim Scrollen in die erste horizontale Galeriekarte fliegt. Funktioniert nur, wenn der Abschnitt „Galerie“ direkt darunter platziert ist.</td></tr>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Hintergrundfarbe dieses gesamten Abschnitts.</td></tr>
+<tr><td>Akzent / Goldfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe der Funktionsaufzählungssymbole und des hervorgehobenen Texts.</td></tr>
+<tr><td>Textfarbe</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe der Feature-Titel.</td></tr>
+<tr><td>Beschreibungstextfarbe</td><td><span class="tb tc">Farbe</span></td><td>#a8a29e</td><td>Farbe der Absätze der Funktionsbeschreibung.</td></tr>
+</tbody></table>
+<h3>Funktionsblock (einer pro Funktion)</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Feature-Titel</td><td><span class="tb tt">Text</span></td><td>—</td><td>Name der Funktion, z.B. „Saphirkristallglas“.</td></tr>
+<tr><td>Funktionsbeschreibung</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Kurzer Absatz, in dem die Funktion ausführlich erläutert wird.</td></tr>
+</tbody></table>
+<section id="horizontal-gallery">
+<h2><span class="ic">💎</span>Horizontal <em>Galerie</em></h2>
+<span class="pb g">Homepage</span>
+<p>Eine luxuriöse, horizontal scrollende Produktpräsentation. Zeigt Uhrenkarten mit erstklassigen dynamischen Hintergründen, anpassbaren Tags, Inline-Warenkorbschaltflächen „Schnell hinzufügen“ und Punktindikatoren an. Vollständig reaktionsfähig mit reibungslosen Mausrad-Folieninteraktionen, unterstützt von GSAP.</p>
+<h3>Kerneinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Sammlung</td><td><span class="tb tt">Sammlung</span></td><td>—</td><td>Die Shopify-Sammlung zum Abrufen von Produkten.</td></tr>
+<tr><td>Maximale Anzahl an Produkten, die angezeigt werden sollen</td><td><span class="tb tr">Reichweite</span></td><td>6</td><td>Maximale Anzahl an Überwachungskarten, die in der horizontalen Bildlaufliste angezeigt werden sollen. Bereich: 2–12.</td></tr>
+<tr><td>Header-Ausrichtung</td><td><span class="tb ts">auswählen</span></td><td>links</td><td>Horizontale Ausrichtung des Abschnittstitels: Links • Mitte • Rechts.</td></tr>
+</tbody></table>
+<h3>Farben und Kartenstile</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Abschnittshintergrund</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Gesamtabschnittshintergrund.</td></tr>
+<tr><td>Textfarbe / Goldakzent</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#f0ece4 / #c9a96e</td><td>Primärtexte und goldene Akzente.</td></tr>
+<tr><td>Augenbrauen-/Schlagzeilenfarbe</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#c9a96e / #f0ece4</td><td>Die Farbe der Kopfzeilenschriftarten wird überschrieben.</td></tr>
+<tr><td>Preis / Preisfarbe vergleichen</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#f0ece4 / rgba(240,236,228,0,68)</td><td>Farbstile zu normalen und verglichenen Preisen.</td></tr>
+<tr><td>Kartenhintergrund (1, 2, 3)</td><td><span class="tb tc">Farbe</span></td><td>#12111f / #07070d / #050509</td><td>Drei Hintergrundverlaufsstopps für Uhrenkartenoberflächen.</td></tr>
+<tr><td>Hintergrund des Kartenkörpers (1, 2)</td><td><span class="tb tc">Farbe</span></td><td>#07070d / #050508</td><td>Hintergrundfarben der unteren Textbereiche auf den Karten.</td></tr>
+<tr><td>Hintergrund des Kartenbildbereichs</td><td><span class="tb tc">Farbe</span></td><td>#090912</td><td>Hintergrundfarbe des Feldes direkt hinter dem Uhrenbild.</td></tr>
+<tr><td>Farbe des Hover-Rands der Karte</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e (28 %)</td><td>Beim Bewegen des Mauszeigers über eine Karte wird ein schwaches Leuchten des Randes angezeigt.</td></tr>
+</tbody></table>
+<h3>Benutzerdefiniertes Produkt-Tag-Badge</h3>
+<p>Auf jeder Karte können bis zu drei gestaltete Tags basierend auf Produkt-Tags angezeigt werden. Ändern Sie unten ihre Farben, Ränder und Hintergründe, um sie an die Ästhetik Ihres Themas anzupassen:</p>
+<table class="st"><thead><tr><th>Tag-Gruppe</th><th>Textfarbe</th><th>Randfarbe</th><th>Hintergrundfarbe</th></tr></thead><tbody>
+<tr><td>Tag 1 (z. B. <code>New</code>)</td><td><span class="tb tc">Farbe</span> (#e8d5a3)</td><td><span class="tb tc">Farbe</span> (rgba(201,169,110,0,4))</td><td><span class="tb tc">Farbe</span> (rgba(201.169.110,0,08))</td></tr>
+<tr><td>Tag 2 (z. B. <code>Premium</code>)</td><td><span class="tb tc">Farbe</span> (#a1b2c6)</td><td><span class="tb tc">Farbe</span> (rgba(138,149,165,0,4))</td><td><span class="tb tc">Farbe</span> (rgba(138.149.165,0,08))</td></tr>
+<tr><td>Tag 3 (z. B. <code>Limited</code>)</td><td><span class="tb tc">Farbe</span> (#f5c2c6)</td><td><span class="tb tc">Farbe</span> (rgba(232.180.184,0,4))</td><td><span class="tb tc">Farbe</span> (rgba(232.180.184,0,08))</td></tr>
+</tbody></table>
+<h3>Schaltflächen- und Navigationssteuerung</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Ansichtsschaltfläche – Normal</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#c9a96e / transparent</td><td>Text- und Hintergrundfarbe der Schaltfläche „Ansicht“.</td></tr>
+<tr><td>Schaltfläche „Ansicht“ – Bewegen Sie den Mauszeiger</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#f0ece4 / #c9a96e (15 %)</td><td>Text und Hintergrund beim Schweben.</td></tr>
+<tr><td>Schaltfläche „Hinzufügen“ – Normal</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#c9a96e / transparent</td><td>Text/Symbol und Hintergrund der „+“-Schaltfläche „In den Warenkorb“.</td></tr>
+<tr><td>Schaltfläche „Hinzufügen“ – Bewegen Sie den Mauszeiger</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#050508 / #dbbe80</td><td>Bewegen Sie den Mauszeiger über die Zustände für die Schaltfläche „Hinzufügen“.</td></tr>
+<tr><td>Schaltflächengröße hinzufügen</td><td><span class="tb tr">Reichweite</span></td><td>36 px / 32 px</td><td>Schaltflächendurchmesser auf Desktop (24–60 Pixel) und Mobilgerät (24–50 Pixel).</td></tr>
+<tr><td>Größe des Schaltflächensymbols hinzufügen</td><td><span class="tb tr">Reichweite</span></td><td>18 px / 16 px</td><td>Pluszeichen-Symbolgröße auf Desktop (10–30 Pixel) und Mobilgerät (10–30 Pixel).</td></tr>
+<tr><td>Größe der Pfeilnavigation</td><td><span class="tb tr">Reichweite</span></td><td>34 px / 30 px</td><td>Visuelle Größe der Schiebereglerpfeile auf Desktops und Mobilgeräten.</td></tr>
+<tr><td>Punktindikatoren (aktiv/inaktiv)</td><td><span class="tb tc">Farbe</span> / <span class="tb tc">Farbe</span></td><td>#c9a96e / #f0ece4 (25 %)</td><td>Status der Dot-Scroll-Fortschrittsanzeige.</td></tr>
+</tbody></table>
+</section>
+<section id="marquee">
+<h2><span class="ic">📡</span>Festzelt <em>Ticker</em></h2>
+<span class="pb g">Homepage</span>
+<p>Zweireihiges animiertes Textbanner. Zeile 1 scrollt nach links mit großen Serifen-Markennamen. Zeile 2 scrollt nach rechts mit Kapitälchen-Attributen. Reines CSS – kein JavaScript, keine Leistungseinbußen.</p>
+<h3>Typografie</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Größe der Zeile 1 – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>64 px</td><td>Schriftgröße der oberen Reihe mit großen Serifen auf dem Desktop.</td></tr>
+<tr><td>Größe der Zeile 1 – Mobil</td><td><span class="tb tr">Reichweite</span></td><td>38 px</td><td>Schriftgröße der oberen Zeile auf Mobilgeräten.</td></tr>
+<tr><td>Größe der Zeile 2 – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>9 px</td><td>Schriftgröße der unteren Kapitälchenzeile auf dem Desktop.</td></tr>
+<tr><td>Größe der Zeile 2 – Mobil</td><td><span class="tb tr">Reichweite</span></td><td>9 px</td><td>Schriftgröße der Kapitälchenzeile auf Mobilgeräten.</td></tr>
+</tbody></table>
+<h3>Farben</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Hintergrund des Festzeltstreifens.</td></tr>
+<tr><td>Goldene Akzentfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe der Rautentrennzeichen zwischen Phrasen.</td></tr>
+<tr><td>Farbverlauf Zeile 1 – primär</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Startfarbe des Textverlaufs der oberen Zeile.</td></tr>
+<tr><td>Farbverlauf in Zeile 1 – sekundär</td><td><span class="tb tc">Farbe</span></td><td>#e4c882</td><td>Endfarbe des Farbverlaufs – erzeugt einen goldenen Schimmer auf dem Text.</td></tr>
+<tr><td>Textfarbe für Zeile 2</td><td><span class="tb tc">Farbe</span></td><td>rgba(201.169.110,.4)</td><td>Standardfarbe der unteren Zeile für Kapitälchen.</td></tr>
+<tr><td>Text in Zeile 2 schwebend</td><td><span class="tb tc">Farbe</span></td><td>rgba(201.169.110,.72)</td><td>Farbe der unteren Zeile beim Bewegen des Cursors.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">💡</span><div class="nb"><p>Bearbeiten Sie jeweils die tatsächlichen Phrasen <strong>Reihe 1</strong> und <strong>Reihe 2</strong> blockieren. Fügen Sie mehrere Blöcke hinzu, um die Textsequenz mit Markennamen, Materialien oder Attributen zu erweitern.</p></div></div>
+</section>
+<section id="vault">
+<h2><span class="ic">🏛</span>Sammlung <em>Tresor</em></h2>
+<span class="pb g">Homepage</span>
+<p>Ihre Sammlungen werden als Premium-3D-Tilt-Karten angezeigt. Wenn Sie den Mauszeiger bewegen, wird jede Karte in Richtung des Cursors geneigt, goldene Eckklammern werden sichtbar, und ein schimmernder Schwung wird über die Oberfläche gespielt. Jede Karte ist mit einer Sammlung verknüpft.</p>
+<h3>Abschnittsüberschrift</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Der Tresor</td><td>Kleine Beschriftung in Großbuchstaben über der Abschnittsüberschrift.</td></tr>
+<tr><td>Überschrift – Zeile 1</td><td><span class="tb tt">Text</span></td><td>Entdecken Sie unsere</td><td>Erste Zeile der Hauptüberschrift.</td></tr>
+<tr><td>Überschrift – Zeile 2</td><td><span class="tb tt">Text</span></td><td>Sammlungen</td><td>Zweite Zeile. Wickeln Sie Wörter ein <code>&lt;em&gt;&lt;/em&gt;</code> für kursives Gold-Styling, z.B. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Untertext</td><td><span class="tb ta">Textbereich</span></td><td>Jede Uhr erzählt eine Geschichte ...</td><td>Kurzer Absatz, der unter der Überschrift angezeigt wird.</td></tr>
+<tr><td>Header-Ausrichtung</td><td><span class="tb ts">auswählen</span></td><td>Links</td><td>Ausrichtung des Abschnittskopftextes: Links, Mitte oder Rechts.</td></tr>
+</tbody></table>
+<h3>Layout</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Spalten – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>3</td><td>Karten pro Reihe auf dem Desktop. Bereich: 2–5.</td></tr>
+<tr><td>Spalten – Tablet</td><td><span class="tb tr">Reichweite</span></td><td>2</td><td>Karten pro Reihe auf dem Tablet.</td></tr>
+<tr><td>Säulen – mobil</td><td><span class="tb tr">Reichweite</span></td><td>1</td><td>Karten pro Reihe auf dem Handy. Für ein optimales mobiles Erlebnis wird 1 empfohlen.</td></tr>
+<tr><td>Gitterlücke</td><td><span class="tb tr">Reichweite</span></td><td>24 px</td><td>Pixellücke zwischen den Karten. Bereich: 8–48 Pixel.</td></tr>
+<tr><td>Seitenverhältnis der Karte</td><td><span class="tb ts">auswählen</span></td><td>Porträt 3:4</td><td>Hochformat 3:4 • Hochformat 4:5 • Quadratisch 1:1 • Querformat 16:9.</td></tr>
+<tr><td>Kartenrandradius</td><td><span class="tb tr">Reichweite</span></td><td>12 px</td><td>Abgerundeter Eckenradius jeder Karte. Bereich: 0–32 px.</td></tr>
+<tr><td>Bildanpassung</td><td><span class="tb ts">auswählen</span></td><td>Abdeckung</td><td><strong>Abdeckung</strong> Pflanzen, um die Karte zu füllen. <strong>Enthalten</strong> Passt das gesamte Bild an, ohne es zu beschneiden.</td></tr>
+</tbody></table>
+<h3>Farben</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Hintergrund</td><td><span class="tb tc">Farbe</span></td><td>#0a0906</td><td>Abschnittshintergrund hinter dem Kartengitter.</td></tr>
+<tr><td>Augenbrauenfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe der Augenbrauenbeschriftung über der Überschrift.</td></tr>
+<tr><td>Farbe der Überschrift</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe der Überschrift des Hauptabschnitts.</td></tr>
+<tr><td>Subtextfarbe</td><td><span class="tb tc">Farbe</span></td><td>#6b6660</td><td>Farbe des Untertextabsatzes.</td></tr>
+<tr><td>Akzent (Gold)</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe der goldenen Akzente, Randleuchten, kursiven Teile und Eckfreilegungen beim Schweben.</td></tr>
+<tr><td>Farbe des Kartennamens</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Sammlungsnamens auf jeder Karte.</td></tr>
+<tr><td>Farbe der Kartenbeschreibung</td><td><span class="tb tc">Farbe</span></td><td>#8c8680</td><td>Farbe des Sammlungsbeschreibungstextes auf jeder Karte.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Jeder Kartenblock ist mit einer Shopify-Sammlung verknüpft. Das Hintergrundbild der Karte ist das <strong>Sammlungsbild</strong> einsetzen <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Produkte</span><span class="ps">›</span><span class="pc">Sammlungen</span><span class="ps">›</span><span class="pc">Ihre Sammlung</span></span>. Empfohlen: <strong>800 × 1000 Pixel</strong> Porträt.</p></div></div>
+</section>
+<section id="lifestyle">
+<h2><span class="ic">📷</span>Lebensstil <em>Vitrine</em></h2>
+<span class="pb g">Homepage</span>
+<p>Ein gedrehtes Raster aus Porträtfotos, aufgeteilt in zwei Reihen. Jede Zeile wird als Reaktion auf die Mausbewegung in entgegengesetzte Richtungen verschoben, wodurch ein filmischer Parallaxen-Tiefenschärfeeffekt entsteht.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Überschrift des Abschnitts</td><td><span class="tb tt">Text</span></td><td>—</td><td>Über dem Fotoraster wird eine große Überschrift angezeigt.</td></tr>
+<tr><td>Foto (pro Block)</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Das Lifestyle-Bild für jede Karte. Empfohlen: <strong>1000 × 1250 Pixel</strong> (4:5 Hochformat), Motiv zentriert, sodass es beim Drehen der Karte im Bild bleibt.</td></tr>
+<tr><td>Bildunterschrift (pro Block)</td><td><span class="tb tt">Text</span></td><td>—</td><td>Optionales Etikett, das angezeigt wird, wenn Sie mit der Maus über jede Fotokarte fahren.</td></tr>
+</tbody></table>
+</section>
+<section id="brand-story-doc">
+<h2><span class="ic">📖</span>Markengeschichte</h2>
+<span class="pb g">Homepage</span>
+<p>Ein charakteristischer visueller Storytelling-Block mit nebeneinander angeordnetem Rich Text und einem filmischen Parallaxen-Scrolling-Hintergrundbild.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Seit 1947</td><td>Kleines Anmeldeinformations-Tag in Großbuchstaben.</td></tr>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Ein Erbe der Innovation</td><td>Überschrift der Hauptgeschichte. Teile einwickeln <code>&lt;em&gt;</code> für Kursivschrift.</td></tr>
+<tr><td>Beschreibung</td><td><span class="tb ta">Textbereich</span></td><td>Tief im Schweizer Jura-Gebirge...</td><td>Erzählerischer Haupttext, der die Handwerkskunst der Marke erklärt.</td></tr>
+<tr><td>Hintergrundbild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Parallax-Hintergrundbild. Empfohlen: <strong>2000 × 1200 Pixel</strong> Landschaft.</td></tr>
+<tr><td>Textausrichtung</td><td><span class="tb ts">auswählen</span></td><td>Links</td><td>Richtet den Inhaltsfeldtext links, zentriert oder rechts aus.</td></tr>
+<tr><td>Knopfbeschriftung</td><td><span class="tb tt">Text</span></td><td>Entdecken Sie unsere Geschichte</td><td>Text, der in der Call-to-Action-Schaltfläche angezeigt wird.</td></tr>
+<tr><td>Schaltflächenlink</td><td><span class="tb tu">URL</span></td><td>—</td><td>Ziel-URL beim Klicken auf die Schaltfläche.</td></tr>
+</tbody></table>
+</section>
+<section id="feat-collection">
+<h2><span class="ic">📋</span>Ausgewählte Sammlung</h2>
+<span class="pb g">Homepage</span>
+<p>Zeigt ein ansprechendes Raster mit Produkten aus einer ausgewählten Kollektion an. Ideal, um Bestseller oder Neuzugänge auf Ihrer Homepage zu präsentieren.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Hervorgehoben</td><td>Kleiner Tag-Text über dem Titel.</td></tr>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Ausgewählte Sammlung</td><td>Titel des Hauptabschnitts.</td></tr>
+<tr><td>Unterüberschrift</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Kurzer beschreibender Absatz, der unter der Überschrift angezeigt wird.</td></tr>
+<tr><td>Sammlung</td><td><span class="tb tt">Sammlung</span></td><td>—</td><td>Shopify-Sammlungsauswahl zum Auffüllen von Produkten.</td></tr>
+<tr><td>Maximale Anzahl an Produkten, die angezeigt werden sollen</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Anzahl der im Raster angezeigten Produkte (Bereich: 2–12).</td></tr>
+<tr><td>Spalten auf dem Desktop</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>In Desktop-Ansichten angezeigte Rasterspalten (Bereich: 2–5).</td></tr>
+<tr><td>Kolumnen auf Mobilgeräten</td><td><span class="tb ts">auswählen</span></td><td>2</td><td>Spalten in mobilen Ansichtsfenstern: <strong>1</strong> oder <strong>2</strong>.</td></tr>
+<tr><td>Schaltfläche „Schnell hinzufügen“ anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Fügt in den Produktkarten eine Schaltfläche zum schnellen Hinzufügen des Warenkorbs hinzu.</td></tr>
+<tr><td>Anbieter anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Zeigt Produktanbieteretiketten auf den Karten an.</td></tr>
+<tr><td>Schaltfläche „Alle anzeigen“ anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigt eine untere Schaltfläche an, die auf die Sammlungsseite verweist, wenn diese mehr Elemente enthält.</td></tr>
+</tbody></table>
+<section id="featured-product-doc">
+<h2><span class="ic">🕐</span>Hervorgehoben <em>Produkt</em></h2>
+<span class="pb g">Homepage</span>
+<p>Hebt ein einzelnes Produkt direkt auf Ihrer Homepage mit einem vollständigen Kaufformular, einer Mediengalerie und dynamischen Akkordeon-Dropdowns hervor. Perfekt für die Einführung eines Flaggschiff-Uhrenmodells.</p>
+<h3>Kerneinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Produkt</td><td><span class="tb tt">Produkt</span></td><td>—</td><td>Wählen Sie das Produkt aus, das Sie in diesem Abschnitt präsentieren möchten.</td></tr>
+<tr><td>Miniaturansichten der Galerie anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Aktivieren Sie diese Option, um Medienminiaturansichten unterhalb des Hauptbildfelds anzuzeigen.</td></tr>
+<tr><td>Galerieeckenradius</td><td><span class="tb tr">Reichweite</span></td><td>8 px</td><td>Rundet die Ecken von Produktgaleriebildern ab. Bereich: 0–40 px.</td></tr>
+<tr><td>Niedriger Lagerbestandsschwellenwert</td><td><span class="tb tr">Reichweite</span></td><td>10</td><td>Lagerbestandsmenge, unterhalb derer ein Warnschild wegen niedrigem Lagerbestand angezeigt wird. Bereich: 2–20.</td></tr>
+<tr><td>Produkt-Tags anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie um, ob Rohprodukt-Tags angezeigt werden sollen.</td></tr>
+</tbody></table>
+<h3>Typografie und Styling</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Abschnittshintergrund</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Hintergrundfarbe des Abschnitts.</td></tr>
+<tr><td>Farbe des Anbieters/Titels/Preises</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e / #f0ece4 / #f0ece4</td><td>Schriftfarbenüberschreibungen für Elemente.</td></tr>
+<tr><td>Beschreibungstextfarbe</td><td><span class="tb tc">Farbe</span></td><td>#787068</td><td>Farbe der Produktbeschreibung.</td></tr>
+<tr><td>Schriftgröße des Titels – Desktop/Mobil</td><td><span class="tb tr">Reichweite</span></td><td>46 px / 32 px</td><td>Schriftgrößen des Titels. Bereich: 24–72 px / 20–52 px.</td></tr>
+<tr><td>Preisschriftgröße – Desktop/Mobil</td><td><span class="tb tr">Reichweite</span></td><td>32 px / 26 px</td><td>Schriftgrößen des Preises. Bereich: 18–60 px / 16–44 px.</td></tr>
+<tr><td>Beschreibungsgröße – Desktop/Mobil</td><td><span class="tb tr">Reichweite</span></td><td>14 px / 14 px</td><td>Schriftgrößen von Produktbeschreibungen. Bereich: 12–22 px / 12–20 px.</td></tr>
+<tr><td>Eckenradius der Schaltfläche</td><td><span class="tb tr">Reichweite</span></td><td>14 px</td><td>Eckenabrundung für Checkout- und Warenkorb-Buttons. Bereich: 0–40 px.</td></tr>
+</tbody></table>
+<h3>Ausgewählte Produktblöcke</h3>
+<p>Händler können die Kaufspalte strukturieren, indem sie Blöcke per Drag-and-Drop in den Abschnitt ziehen. Folgende Blöcke stehen zur Verfügung:</p>
+<table class="st st-blocks"><thead><tr><th>Blocktyp</th><th>Einstellungen und Optionen</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td><strong>Anbieter</strong></td><td>Keine</td><td>Zeigt den Namen der Produktmarke/des Anbieters an.</td></tr>
+<tr><td><strong>Titel</strong></td><td>Keine</td><td>Zeigt den Produkttitel an.</td></tr>
+<tr><td><strong>Bewertung</strong></td><td><code>rating_score</code> (Standard: 4.9), <code>rating_count</code> (Standard: 47)</td><td>Zeigt Produktsterne und die Anzahl der Bewertungen an.</td></tr>
+<tr><td><strong>Preis</strong></td><td>Keine</td><td>Zeigt Produktpreis und Vergleichspreise an.</td></tr>
+<tr><td><strong>Dringlichkeitsabzeichen</strong></td><td>Keine</td><td>Zeigt Hinweise zur Lagerdringlichkeit an, wenn der Lagerbestand unter dem Schwellenwert liegt.</td></tr>
+<tr><td><strong>Beschreibung</strong></td><td>Keine</td><td>Zeigt den kurzen Produktbeschreibungstext an.</td></tr>
+<tr><td><strong>Teiler</strong></td><td>Keine</td><td>Fügt eine subtile horizontale Trennlinie ein (Limit: 3).</td></tr>
+<tr><td><strong>Variantenauswahl</strong></td><td>Keine</td><td>Zeigt Varianten-Dropdowns oder Pillen an (z. B. Armbandfarbe, Zifferblattgröße).</td></tr>
+<tr><td><strong>Mengenauswahl</strong></td><td>Keine</td><td>Zeigt die Nummernauswahl für die Produktmenge an.</td></tr>
+<tr><td><strong>Knöpfe kaufen</strong></td><td><code>show_dynamic_checkout</code> (Dynamische Checkout-Schaltflächen umschalten)</td><td>Zeigt die Schaltflächen „In den Warenkorb“ und „Jetzt kaufen“ an.</td></tr>
+<tr><td><strong>Vertrauensabzeichen</strong></td><td>Vordefinierte Symbol-Dropdown-Liste (Versand, Rückgabe, Authentizität, Garantie usw.), benutzerdefiniertes Symbol-Upload, Etikett und Untertext (bis zu 3 Abzeichen).</td><td>Zeigt vertrauensbildende Symbole und Texte an.</td></tr>
+<tr><td><strong>Beschreibungsregisterkarten</strong></td><td>Keine</td><td>Zeigt eine zusammenklappbare Tab-Schublade für Beschreibungen an.</td></tr>
+<tr><td><strong>Akkordeon</strong></td><td><code>heading</code> (Text), <code>content</code> (Richtext)</td><td>Zeigt erweiterbare Akkordeonzeilen an (z. B. Spezifikationen, Garantie).</td></tr>
+<tr><td><strong>Schlagworte</strong></td><td>Keine</td><td>Zeigt Produkt-Tags an.</td></tr>
+<tr><td><strong>Kundenspezifische Flüssigkeit</strong></td><td><code>custom_liquid</code> (Flüssiges Textfeld)</td><td>Integrieren Sie benutzerdefinierte Liquid-Codes oder HTML-Blöcke.</td></tr>
+</tbody></table>
+</section>
+<section id="blog-posts">
+<h2><span class="ic">✍</span>Blogbeiträge</h2>
+<span class="pb g">Homepage</span>
+<p>Hebt die neuesten redaktionellen Artikel aus Ihrem Blog auf der Startseite in einem modischen Rasterlayout hervor.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Leitartikel</td><td>Kleiner Tag-Text über der Überschrift.</td></tr>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Neueste Artikel</td><td>Titel des Hauptabschnitts.</td></tr>
+<tr><td>Unterüberschrift</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Kurzer beschreibender Absatz unter dem Titel.</td></tr>
+<tr><td>Blog</td><td><span class="tb tt">Blog</span></td><td>—</td><td>Shopify-Blogauswahl zum Abrufen von Artikeln.</td></tr>
+<tr><td>Maximale Anzahl anzuzeigender Beiträge</td><td><span class="tb tr">Reichweite</span></td><td>3</td><td>Anzahl der anzuzeigenden Artikel (Bereich: 2–6).</td></tr>
+<tr><td>Spalten auf dem Desktop</td><td><span class="tb tr">Reichweite</span></td><td>3</td><td>In Desktop-Ansichtsfenstern angezeigte Spalten (Bereich: 2–4).</td></tr>
+<tr><td>Datum anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigt die Veröffentlichungsdaten des Artikels an.</td></tr>
+<tr><td>Autor anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Zeigt die Namen der Artikelautoren an.</td></tr>
+<tr><td>Auszug anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigt kurze Auszugszusammenfassungen unter den Artikeltiteln an.</td></tr>
+<tr><td>Schaltfläche „Alle anzeigen“ anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigt einen unteren Link zur Hauptseite des Blogs an.</td></tr>
+</tbody></table>
+</section>
+<section id="testimonials">
+<h2><span class="ic">💬</span>Schieberegler für Erfahrungsberichte</h2>
+<span class="pb g">Homepage</span>
+<p>Ein klares horizontales Zitatkarussell zur Präsentation von Kundenrezensionen und Presseausschnitten in einem wunderschönen, luxuriösen Layout.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Abschnittsüberschrift</td><td><span class="tb tt">Text</span></td><td>Kundenstimmen</td><td>Große Abschnittsüberschrift.</td></tr>
+<tr><td>Autoplay-Schieberegler</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Aktivieren Sie diese Option, um Anführungszeichen automatisch wechseln zu lassen.</td></tr>
+<tr><td>Angebot alle ändern</td><td><span class="tb tr">Reichweite</span></td><td>6 s</td><td>Dauer der automatischen Rotation in Sekunden (Bereich: 3–12 s).</td></tr>
+</tbody></table>
+<p>Jedes Zitat wird als **Testimonial-Block** innerhalb des Abschnitts hinzugefügt. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Erfahrungsbericht</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Zitat</td><td><span class="tb ta">Textbereich</span></td><td>Die Handwerkskunst ist außergewöhnlich...</td><td>Der Kundenmeinungs- oder Bewertungstext wird in großen Anführungszeichen angezeigt.</td></tr>
+<tr><td>Name des Autors</td><td><span class="tb tt">Text</span></td><td>James Harrington</td><td>Vollständiger Name des Kunden oder Gutachters.</td></tr>
+<tr><td>Rolle/Titel</td><td><span class="tb tt">Text</span></td><td>CEO, Harrington Group</td><td>Der Untertitel „Firma“, „Titel“ oder „Berechtigungsnachweis“ wird unter dem Namen des Autors angezeigt.</td></tr>
+<tr><td>Bewertung (Sterne)</td><td><span class="tb tr">Reichweite</span></td><td>5</td><td>Sternebewertung zur Anzeige. Wird als goldene SVG-Sterne gerendert (Bereich: 1–5).</td></tr>
+<tr><td>Akzentfarbe der Karte</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Akzentfarbe für die goldene Fortschrittslinie und dekorative Elemente auf dieser speziellen Karte.</td></tr>
+</tbody></table>
+</section>
+<section id="trusted">
+<h2><span class="ic">🤝</span>Vertrauenswürdig von</h2>
+<span class="pb g">Homepage</span>
+<p>Stellt eine Reihe von Marken-, Presse- oder Zertifikatslogos dar, um die Glaubwürdigkeit des Geschäfts zu stärken.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Wie gesehen in</td><td>Kleines Etikett in Großbuchstaben.</td></tr>
+<tr><td>Graustufen-Logos</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Konvertiert Logobilder in Graustufen, um eine erstklassige Designintegration zu gewährleisten.</td></tr>
+</tbody></table>
+<p>Sie können drei Arten von Blöcken hinzufügen, um Ihr Anmeldeinformationsraster aufzubauen: Veröffentlichungen, Statistiken und Zertifizierungen. Klicken Sie <strong>Block hinzufügen</strong> → wählen Sie aus:</p>
+<table class="st st-blocks"><thead><tr><th>Blocktyp</th><th>Einstellungen</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td><strong>Veröffentlichung</strong></td><td>
+<ul>
+<li><strong>Name der Veröffentlichung</strong> (<span class="tb tt">Text</span>): Logo oder Etikettentext (z. B. <code>GQ</code>, <code>Forbes</code>).</li>
+<li><strong>Slogan</strong> (<span class="tb tt">Text</span>): Kurzes Zitat oder Anmeldeinformation, die beim Bewegen des Cursors angezeigt wird (z. B. <code>Watch of the Year</code>).</li>
+</ul>
+</td><td>GQ / Uhr des Jahres</td><td>Erstellt eine Presselogokarte, die beim Bewegen des Mauszeigers ein Zitat anzeigt.</td></tr>
+<tr><td><strong>Stat</strong></td><td>
+<ul>
+<li><strong>Symbol</strong> (<span class="tb tt">Text</span>): Emoji oder Symbol (z. B. <code>â—ˆ</code>, <code>â˜…</code>).</li>
+<li><strong>Wert</strong> (<span class="tb tt">Text</span>): Zahl (z.B. <code>45,000</code>).</li>
+<li><strong>Suffix</strong> (<span class="tb tt">Text</span>): An den Wert angehängtes Symbol (z. B. <code>+</code>, <code>%</code>).</li>
+<li><strong>Beschriftungstext</strong> (<span class="tb tt">Text</span>): Beschreibung (z. B. <code>Timepieces Crafted</code>).</li>
+</ul>
+</td><td>â—ˆ / 45.000 / + / Zeitmesser handgefertigt</td><td>Zeigt eine auffällige KPI-Karte (Key Performance Indicator) an.</td></tr>
+<tr><td><strong>Zertifizierung</strong></td><td>
+<ul>
+<li><strong>Zertifizierungstext</strong> (<span class="tb tt">Text</span>): Autoritätsetikett (z. B. <code>COSC Certified</code>, <code>Swiss Made</code>).</li>
+</ul>
+</td><td>COSC-zertifiziert</td><td>Zeigt ein Sicherheits- oder Zertifizierungsabzeichen in einer sauberen Box mit Goldrand.</td></tr>
+</tbody></table>
+</section>
+<section id="social">
+<h2><span class="ic">📸</span>Soziale Galerie</h2>
+<span class="pb g">Homepage</span>
+<p>Zeigt ein reaktionsfähiges Raster kuratierter Social-Media-Beiträge (z. B. Instagram-Fotos) an, die direkt auf Ihre Profile verweisen.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Folgen Sie der Reise</td><td>Titel des Hauptabschnitts.</td></tr>
+<tr><td>Konto-Handle</td><td><span class="tb tt">Text</span></td><td>@aurick_boutique</td><td>Ihr Social-Handle wird über dem Galerieraster angezeigt.</td></tr>
+<tr><td>Kontoverknüpfung</td><td><span class="tb tu">URL</span></td><td>—</td><td>Profilseiten-URL für den Handle-Link.</td></tr>
+</tbody></table>
+<p>Jeder Beitrag wird als **Beitragsblock** hinzugefügt. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Beitrag</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Bild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Das Social-Media-Foto (z. B. Instagram-Upload). Empfohlen: <strong>800 × 800 Pixel</strong> quadratisches Bild.</td></tr>
+<tr><td>Link (optional)</td><td><span class="tb tu">URL</span></td><td>—</td><td>Ziellink, wenn der Benutzer auf das Foto klickt (z. B. die URL Ihres Instagram-Beitrags).</td></tr>
+<tr><td>Alt-Text</td><td><span class="tb tt">Text</span></td><td>—</td><td>Alternativer Beschreibungstext zur Barrierefreiheit für das Bild.</td></tr>
+<tr><td>Bildanpassung</td><td><span class="tb ts">auswählen</span></td><td>Cover (zuschneiden, um es zu füllen)</td><td><strong>Abdeckung</strong> Pflanzen, um die Gitterzelle zu füllen, <strong>Enthalten</strong> Passt das gesamte Bild an, ohne es zu beschneiden.</td></tr>
+<tr><td>Bildposition</td><td><span class="tb ts">auswählen</span></td><td>Mitte</td><td>Schwerpunkt: Mitte • Oben • Unten • Links • Rechts.</td></tr>
+</tbody></table>
+</section>
+<section id="newsletter-doc">
+<h2><span class="ic">📣</span>Newsletter <em>Anmelden</em></h2>
+<span class="pb g">Homepage</span>
+<p>Ein redaktioneller Abonnementbereich im Vollbildmodus mit Texteingabeanimationen in geteilten Zeilen, Premium-Eingabefeldern und einem großen anpassbaren Markenwasserzeichen (Geisterhintergrundwort), das beim Scrollen dynamisch schimmert.</p>
+<h3>Inhalt &amp; Typografie</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbraue</td><td><span class="tb tt">Text</span></td><td>Exklusiver Zugang</td><td>Über dem Haupttitel wird eine kleine Kategoriebeschriftung angezeigt.</td></tr>
+<tr><td>Überschrift Zeile 1 und 2</td><td><span class="tb tt">Text</span></td><td>Bleib im Kreis.</td><td>Teilt den Überschriftentext in zwei unabhängige Zeilen auf, um gestaffelte Slide-Up-Animationen zu ermöglichen.</td></tr>
+<tr><td>Subtext</td><td><span class="tb ta">Textbereich</span></td><td>Erhalten Sie 10 % Rabatt auf Ihre erste Bestellung...</td><td>Der redaktionelle Absatz wird unter der Überschrift angezeigt.</td></tr>
+<tr><td>Schaltflächentext</td><td><span class="tb tt">Text</span></td><td>Abonnieren</td><td>Beschriftung auf der Übermittlungsschaltfläche. Durch Klicken auf wird die E-Mail mit dem Tag an Ihre Shopify-Kundenliste gesendet <code>newsletter</code>.</td></tr>
+<tr><td>Haftungsausschluss</td><td><span class="tb tt">Text</span></td><td>Kein Spam, niemals. Abmelden ist jederzeit möglich.</td><td>Kleingedruckter Text wird unterhalb der Eingabezeile angezeigt.</td></tr>
+<tr><td>Hintergrundwort</td><td><span class="tb tt">Text</span></td><td>ZEIT</td><td>Großes Wasserzeichenwort im Hintergrund, das sich hinter dem Inhaltsbereich befindet.</td></tr>
+<tr><td>Mindesthöhe des Abschnitts</td><td><span class="tb tr">Reichweite</span></td><td>100 Vh</td><td>Mindesthöhe des Abschnitts relativ zur Höhe des Ansichtsfensters (Bereich: 50–150 vh).</td></tr>
+</tbody></table>
+<h3>Farben und Typografiegrößen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Abschnittshintergrund</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Farbe des Hintergrunds.</td></tr>
+<tr><td>Augenbrauen-/Überschriften-/Subtext-Textfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c / #f0ece4 / #6b6456</td><td>Farbüberschreibungen für Textelemente.</td></tr>
+<tr><td>Eingabefeld (Rand / BG / Text)</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c / #0c0b09 / #f0ece4</td><td>Ästhetik des E-Mail-Texteingabeblocks.</td></tr>
+<tr><td>Abonnieren-Button (Hintergrund / Text)</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c / #050508</td><td>Ästhetik des Abo-Buttons.</td></tr>
+<tr><td>Geisterwortgröße/Deckkraft</td><td><span class="tb tr">Reichweite</span></td><td>40 vw / 4 %</td><td>Größe und Sichtbarkeit des Hintergrundworts. Bereich: 10–60 vw / 0–20 %.</td></tr>
+<tr><td>Schriftgröße der Überschrift – Desktop/Mobil</td><td><span class="tb tr">Reichweite</span></td><td>88 px / 52 px</td><td>Schriftgröße der geteilten Überschrift. Bereich: 32–140 px / 28–80 px.</td></tr>
+</tbody></table>
+</section>
+<section id="custom-liquid-doc">
+<h2><span class="ic">🧱</span>Benutzerdefiniert <em>Flüssigkeit</em></h2>
+<span class="pb g">Homepage</span>
+<p>Fügen Sie benutzerdefiniertes HTML, CSS-Regeln oder Shopify Liquid-Codefragmente direkt in Ihre Homepage ein. Ideal zum Einbetten benutzerdefinierter App-Formulare, Banner oder Videoplayer von Drittanbietern.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Kundenspezifische Flüssigkeit</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Das benutzerdefinierte Roh-Markup oder der Liquid-Code zum Rendern im Abschnittscontainer.</td></tr>
+</tbody></table>
+</section>
+<section id="coll-page">
+<h2><span class="ic">📋</span>Sammlungsseite <em>Einstellungen</em></h2>
+<span class="pb">Alle Sammlungsseiten</span>
+<p>Themeneditor → <strong>Sammlung</strong> Vorlage. Steuert das Hero-Banner, das Produktraster, die Kartenstile, die Typografie und die Farben für jede Sammlungsseite.</p>
+<h3>Sammlung Heldenbanner</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Sammlungsbild anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie das Heldenbanner in voller Breite oben auf jeder Sammlungsseite ein oder aus.</td></tr>
+<tr><td>Bildhöhe – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>480 px</td><td>Höhe des Heldenbanners auf dem Desktop. Bereich: 300–700 Pixel.</td></tr>
+<tr><td>Bildhöhe – mobil</td><td><span class="tb tr">Reichweite</span></td><td>300 px</td><td>Höhe des Heldenbanners auf Mobilgeräten. Bereich: 200–400 Pixel.</td></tr>
+</tbody></table>
+<div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">Halten Sie den unteren linken Rand der Bannerbilder frei</div><p>Aurick überlagert den Sammlungstitel, die Beschreibung und die Breadcrumbs im <strong>untere linke Ecke</strong> des Heldenbanners. Halten Sie diesen Bereich dunkel und frei von wichtigen Themen.</p></div></div>
+<h3>Produktraster</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Produkte pro Seite</td><td><span class="tb tr">Reichweite</span></td><td>12</td><td>Wie viele Produkte werden geladen, bevor die Schaltfläche „Mehr laden“ angezeigt wird? Bereich: 8–48.</td></tr>
+<tr><td>Spalten – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Produktkarten pro Zeile auf dem Desktop. Bereich: 2–5.</td></tr>
+<tr><td>Säulen – mobil</td><td><span class="tb tr">Reichweite</span></td><td>2</td><td>Produktkarten pro Zeile auf Mobilgeräten. Bereich: 1–3.</td></tr>
+<tr><td>Gitterlücke</td><td><span class="tb tr">Reichweite</span></td><td>24 px</td><td>Abstand zwischen den Produktkarten. Bereich: 8–48 Pixel.</td></tr>
+<tr><td>Produktanbieter anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Zeigen Sie auf jeder Karte den Marken-/Anbieternamen unter dem Produkttitel an.</td></tr>
+<tr><td>Schaltfläche zum schnellen Hinzufügen anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Wenn Sie mit der Maus darüber fahren, wird auf den Produktkarten ein Symbol zum schnellen Hinzufügen zum Warenkorb angezeigt.</td></tr>
+<tr><td>Sortier-Dropdown anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigen Sie das Dropdown-Menü „Sortieren nach“ über dem Produktraster an.</td></tr>
+<tr><td>Laden Sie mehr Text</td><td><span class="tb tt">Text</span></td><td>Laden Sie weitere Uhren</td><td>Beschriftung auf der Paginierungsschaltfläche, die die nächste Produktseite lädt.</td></tr>
+</tbody></table>
+<h3>Produktkartenstil</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Kartenrandradius</td><td><span class="tb tr">Reichweite</span></td><td>16 px</td><td>Eckenabrundung jeder Produktkarte. 0 = Quadrat. Bereich: 0–32 px.</td></tr>
+<tr><td>Höhe des Kartenbildes</td><td><span class="tb tr">Reichweite</span></td><td>260 px</td><td>Feste Höhe des Bildbereichs innerhalb jeder Produktkarte.</td></tr>
+<tr><td>Bildanpassung</td><td><span class="tb ts">auswählen</span></td><td>Enthalten</td><td><strong>Enthalten</strong> zeigt das vollständige Produkt ohne Zuschnitt (empfohlen für Uhren auf transparentem Hintergrund). <strong>Abdeckung</strong> Pflanzen zum Füllen.</td></tr>
+<tr><td>Bildposition</td><td><span class="tb ts">auswählen</span></td><td>Mitte</td><td>Brennpunkt bei aktivem Cover-Modus: Mitte, Oben, Unten, Links, Rechts.</td></tr>
+</tbody></table>
+<h3>Kartenfarben</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Kartenverlauf – oben</td><td><span class="tb tc">Farbe</span></td><td>#12111f</td><td>Oberste Farbe des Hintergrundverlaufs der Produktkarte.</td></tr>
+<tr><td>Kartenverlauf – Mitte</td><td><span class="tb tc">Farbe</span></td><td>#07070d</td><td>Mittlere Farbe des Drei-Stufen-Farbverlaufs.</td></tr>
+<tr><td>Kartenverlauf – unten</td><td><span class="tb tc">Farbe</span></td><td>#050509</td><td>Untere Farbe des Farbverlaufs.</td></tr>
+<tr><td>Farbe des Kartentitels</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Produkttitels auf jeder Karte.</td></tr>
+<tr><td>Preisfarbe</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Produktpreistextes.</td></tr>
+<tr><td>Schaltflächentext anzeigen</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe des „Ansicht“-Labels auf Produktkarten.</td></tr>
+<tr><td>Abzeichenfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Hintergrundfarbe der „Sale/New“-Abzeichenpille auf Produktkarten.</td></tr>
+</tbody></table>
+<h3>Kartentypografie</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Kartentitelgröße</td><td><span class="tb tr">Reichweite</span></td><td>20 px</td><td>Schriftgröße des Produkttitels auf jeder Karte. Bereich: 14–32 px.</td></tr>
+<tr><td>Preisgröße</td><td><span class="tb tr">Reichweite</span></td><td>17 px</td><td>Schriftgröße des Preistextes. Bereich: 12–28 Pixel.</td></tr>
+<tr><td>Beschreibung Größe</td><td><span class="tb tr">Reichweite</span></td><td>13 px</td><td>Schriftgröße der kurzen Produktbeschreibung, die beim Hover angezeigt wird. Bereich: 10–18 Pixel.</td></tr>
+</tbody></table>
+</section>
+<section id="filters">
+<h2><span class="ic">🔍</span>Produktliste <em>Filter</em></h2>
+<span class="pb">Sammlungsseiten – Filterschublade</span>
+<div class="note crit"><span class="ni">⚠</span><div class="nb"><div class="nt">Filter werden NICHT im Theme-Editor konfiguriert</div><p>Die Filterschublade auf Sammlungsseiten wird ausschließlich von der kostenlosen Seite betrieben <strong>Shopify Search &amp; Discovery</strong> App. Die gesamte Filterkonfiguration – welche Attribute angezeigt werden, ihre Reihenfolge, Anzeigetyp – erfolgt innerhalb dieser App und nicht in den Designeinstellungen von Aurick.</p></div></div>
+<div class="card">
+<h3>Warum Metafield-Filter Tag-Filter schlagen</h3>
+<p>Wenn Sie nach filtern <strong>Produkt-Tags</strong> (Standardeinstellung), ein Käufer stöbert <code>/collections/women</code> sieht in der Filterschublade ein Kontrollkästchen „Damen“ – sinnlos, weil jedes Produkt bereits passt. Mit <strong>Metafeldfilter</strong>, verbirgt die Such- und Discovery-Engine von Shopify automatisch jeden Filterwert, der dem aktuellen Sammlungskontext entspricht. Käufer sehen nur Filter, die wirklich nützlich sind, um ihre Auswahl einzugrenzen.</p>
+</div>
+<h3>Einrichten von Metafeldfiltern – Schritt für Schritt</h3>
+<ol class="steps">
+<li><strong>Metafelddefinitionen erstellen (einmalig)</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Einstellungen</span><span class="ps">›</span><span class="pc">Metafelder und Metaobjekte</span><span class="ps">›</span><span class="pc">Produkte</span><span class="ps">›</span><span class="pc">Definition hinzufügen</span></span> und erstellen Sie diese Definitionen:</p>
+<ul>
+<li><strong>Marke</strong> — Namespace &amp; Schlüssel: <code>custom.brand</code> — Typ: Einzeiliger Text</li>
+<li><strong>Geschlecht</strong> — Namespace &amp; Schlüssel: <code>custom.gender</code> — Typ: Einzeiliger Text</li>
+<li>Fügen Sie alle weiteren hinzu, die Sie benötigen: <strong>Bewegung</strong> (<code>custom.movement</code>), <strong>Gehäusematerial</strong> (<code>custom.case_material</code>), usw.</li>
+</ul>
+</li>
+<li><strong>Geben Sie Werte für jedes Produkt ein</strong>
+<p>Öffnen Sie jedes Produkt im Admin-Bereich → scrollen Sie zu <strong>Metafelder</strong> Panel (unten im Produkteditor) → Marke eingeben (z. B. <code>Rolex</code>) und Geschlecht (z. B. <code>Women</code>). Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+<li><strong>Installieren Sie die Search &amp; Discovery-App</strong>
+<p>Falls noch nicht installiert, gehen Sie zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Apps</span><span class="ps">›</span><span class="pc">Shopify Search &amp; Discovery</span></span>. Es ist kostenlos und wird von Shopify hergestellt.</p>
+</li>
+<li><strong>Konfigurieren Sie Filter in der App</strong>
+<p>Öffnen Sie die App → klicken Sie <strong>Filter</strong> im linken Menü → klicken <strong>Filter hinzufügen</strong>. Wählen Sie Ihr aus <strong>Marke</strong> und <strong>Geschlecht</strong> Metafelddefinitionen. Wählen Sie den Anzeigetyp: <strong>Liste</strong> (Kontrollkästchen) oder <strong>Muster</strong>. Entfernen Sie das Alte <strong>Produkt-Tag</strong> Filtereintrag. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+</ol>
+<div class="note tip"><span class="ni">✨</span><div class="nb"><div class="nt">Ergebnis: Kontextsensitive Filterschublade</div><p>Käufer auf <code>/collections/women</code> siehe nur Marke und Preis. Auf <code>/collections/rolex</code> Sie sehen nur Geschlecht und Preis. Der Kollektionskontext wird automatisch ausgeblendet – genau wie man es von einem Luxusgeschäft erwartet.</p></div></div>
+<h3>Preisfilter</h3>
+<p>Der Preisfilter ist in Shopify Search &amp; Discovery standardmäßig immer verfügbar. Aktivieren Sie es in der App-Filterliste, falls es nicht bereits angezeigt wird. Es wird automatisch als ziehbarer Bereichsschieberegler in der Filterschublade von Aurick gerendert.</p>
+<h3>Anzeigeoptionen filtern</h3>
+<table class="st"><thead><tr><th>Anzeigetyp</th><th>Am besten für</th><th>So stellen Sie ein</th></tr></thead><tbody>
+<tr><td>Liste (Kontrollkästchen)</td><td>Textwerte wie Marke, Geschlecht, Bewegungstyp</td><td>Suchen &amp; Entdecken → Filter → Filter auswählen → Als Liste anzeigen</td></tr>
+<tr><td>Muster</td><td>Visuelle Optionen für Farbe oder Material</td><td>Suchen und Entdecken → Filter → Filter auswählen → Als Muster anzeigen und dann Farbcodes pro Wert zuweisen</td></tr>
+<tr><td>Preisspanne</td><td>Budgetfilterung</td><td>Standardmäßig aktiviert. Wird als Schieberegler in Auricks Filterschublade angezeigt.</td></tr>
+</tbody></table>
+</section>
+<section id="product">
+<h2><span class="ic">💎</span>Produktseite <em>Einstellungen</em></h2>
+<span class="pb">Alle Produktseiten</span>
+<p>Themeneditor → <strong>Standardprodukt</strong> Vorlage → <strong>Produktinformationen</strong> Abschnitt. Steuert das Hauptproduktlayout, Galerieeinstellungen, Typografie und benutzerdefinierte Schaltflächen und ermöglicht Ihnen das Ziehen und Ablegen von mehr als 14 Blöcken, um das Layout der Kaufbox anzupassen.</p>
+<h3>Galerieeinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Miniaturbild-Layout der Galerie</td><td><span class="tb ts">auswählen</span></td><td>Vertikal (Links)</td><td><strong>Vertikal (Links)</strong> – Miniaturansichten in einer Spalte neben dem Hauptbild. <strong>Unten</strong> — horizontaler Streifen unten. <strong>Kreise überlagern</strong> – Punktindikatoren, die dem Hauptbild überlagert sind.</td></tr>
+<tr><td>Machen Sie die Galerie klebrig</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Die Galerie bleibt fixiert, während der Käufer durch das Kauffeld und die Beschreibung auf dem Desktop scrollt.</td></tr>
+<tr><td>Miniaturbildstreifen anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie die Miniaturbildreihe um. Für eine saubere Einzelbildansicht deaktivieren.</td></tr>
+<tr><td>Galerieeckenradius</td><td><span class="tb tr">Reichweite</span></td><td>8 px</td><td>Abgerundete Ecken am Bildcontainer der Hauptgalerie. Bereich: 0–32 px.</td></tr>
+</tbody></table>
+<h3>Bestandsdringlichkeit</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Niedriger Lagerbestandsschwellenwert</td><td><span class="tb tr">Reichweite</span></td><td>10</td><td>Wenn der Lagerbestand auf oder unter diese Zahl fällt, zeigt das dynamische Dringlichkeitsabzeichen den genauen verbleibenden Bestand an. Bereich: 2–20.</td></tr>
+</tbody></table>
+<h3>Typografie – Farben</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Farbe des Anbieters/der Marke</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe des Marken-/Anbieternamens, der über dem Produkttitel angezeigt wird.</td></tr>
+<tr><td>Farbe des Produkttitels</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Hauptprodukttitels.</td></tr>
+<tr><td>Preisfarbe</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Produktpreises.</td></tr>
+<tr><td>Beschreibungstextfarbe</td><td><span class="tb tc">Farbe</span></td><td>#787068</td><td>Farbe des Textkörpers der Produktbeschreibung.</td></tr>
+</tbody></table>
+<h3>Typografie – Schriftgrößen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Titelgröße – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>46 px</td><td>Schriftgröße des Produkttitels auf dem Desktop. Bereich: 24–72 Pixel.</td></tr>
+<tr><td>Titelgröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>32 px</td><td>Schriftgröße des Produkttitels auf Mobilgeräten. Bereich: 20–52 Pixel.</td></tr>
+<tr><td>Preisgröße – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>32 px</td><td>Schriftgröße des Preises auf dem Desktop. Bereich: 18–60 px.</td></tr>
+<tr><td>Preisgröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>26 px</td><td>Schriftgröße des Preises auf Mobilgeräten. Bereich: 16–44 Pixel.</td></tr>
+<tr><td>Beschreibung Größe – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>14 px</td><td>Schriftgröße der Beschreibung auf dem Desktop. Bereich: 12–22 Pixel.</td></tr>
+<tr><td>Beschreibungsgröße – mobil</td><td><span class="tb tr">Reichweite</span></td><td>14 px</td><td>Schriftgröße der Beschreibung auf Mobilgeräten. Bereich: 12–20 px.</td></tr>
+</tbody></table>
+<h3>Knöpfe</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Eckenradius der Schaltfläche</td><td><span class="tb tr">Reichweite</span></td><td>14 px</td><td>Eckenabrundung der Schaltflächen „In den Warenkorb“ und „Jetzt kaufen“. 0 = quadratisch, 40 = volle Pillenform. Bereich: 0–40 px.</td></tr>
+</tbody></table>
+<h3>Box Blocks kaufen (Drag-and-Drop)</h3>
+<p>Der Bereich Produktinformationen zeigt Inhalte über Blöcke an. Klicken Sie in der Seitenleiste des Theme-Editors auf <strong>Block hinzufügen</strong> So fügen Sie diese Blöcke ein, ordnen sie neu an oder passen sie an:</p>
+<table class="st st-blocks"><thead><tr><th>Blockname</th><th>Einstellungen</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td><strong>Anbieter</strong></td><td>—</td><td>—</td><td>Zeigt den Herstellernamen des Produkts in Kleinbuchstaben unter Verwendung der konfigurierten Herstellerfarbe an.</td></tr>
+<tr><td><strong>Titel</strong></td><td>—</td><td>—</td><td>Zeigt den Hauptprodukttitel in der gestalteten Serifentypografie an.</td></tr>
+<tr><td><strong>Bewertung</strong></td><td>Bewertungspunktzahl / Anzahl der Rezensionen</td><td>4,9 / 47</td><td>Zeigt Sternebewertungen und die Gesamtzahl der Bewertungen in luxuriöser Goldfarbe an.</td></tr>
+<tr><td><strong>Preis</strong></td><td>—</td><td>—</td><td>Zeigt den Produktpreis, Verkaufsabzeichen, Vergleichspreise und Steuerinformationen an.</td></tr>
+<tr><td><strong>Dringlichkeitsabzeichen</strong></td><td>—</td><td>—</td><td>Ein Echtzeit-Inventarzähler mit der Meldung „Nur noch X auf Lager!“ wenn der Lagerbestand unter den Schwellenwert fällt.</td></tr>
+<tr><td><strong>Beschreibung</strong></td><td>—</td><td>—</td><td>Rendert den Haupttext der Produktbeschreibung.</td></tr>
+<tr><td><strong>Teiler</strong></td><td>—</td><td>—</td><td>Zeichnet eine dezente goldene horizontale Trennlinie zwischen den Blöcken. Limit: 3 pro Seite.</td></tr>
+<tr><td><strong>Variantenauswahl</strong></td><td>—</td><td>—</td><td>Rendert Optionsauswahlen (Farbfelder oder Schaltflächen) für Größen, Armbandfarben oder Materialien.</td></tr>
+<tr><td><strong>Mengenauswahl</strong></td><td>—</td><td>—</td><td>Fügt ein Eingabefeld mit Plus-/Minus-Schaltflächen hinzu, sodass Käufer die Mengen ändern können, bevor sie sie in den Warenkorb legen.</td></tr>
+<tr><td><strong>Knöpfe kaufen</strong></td><td>Dynamischen Checkout-Button anzeigen</td><td>Auf</td><td>Fügt die primäre Schaltfläche „In den Warenkorb“ sowie beschleunigte Checkout-Optionen (Shop Pay, PayPal usw.) hinzu.</td></tr>
+<tr><td><strong>Vertrauensabzeichen</strong></td><td>Vordefiniertes Symbol / Benutzerdefiniertes Bild / Beschriftung / Unterbezeichnung</td><td>Versand / Rücksendungen / Schild • Standardetiketten</td><td>Konfiguriert bis zu 3 Vertrauensspalten unter der Schaltfläche „Kaufen“ (z. B. Kostenloser Versand, lebenslange Garantie). Details siehe unten.</td></tr>
+<tr><td><strong>Beschreibungsregisterkarten</strong></td><td>—</td><td>—</td><td>Wandelt den Beschreibungsbereich in ein schönes Widget mit Registerkarten um, das „Beschreibung“, „Spezifikationen“ und „Versand“ enthält.</td></tr>
+<tr><td><strong>Akkordeon</strong></td><td>Überschrift / Inhalt</td><td>Spezifikationen / Details</td><td>Fügt eine zusammenklappbare Rich-Text-Schublade für anpassbare Details hinzu (z. B. Bewegungsdetails, Wasserbeständigkeit).</td></tr>
+<tr><td><strong>Schlagworte</strong></td><td>—</td><td>—</td><td>Zeigt Produkt-Tags als übersichtliche, anklickbare Pillen an.</td></tr>
+<tr><td><strong>Kundenspezifische Flüssigkeit</strong></td><td>Benutzerdefinierter Flüssigkeitscode</td><td>—</td><td>Fügt benutzerdefinierte Liquid-, HTML- oder App-Skript-Snippets direkt in die Kaufbox ein.</td></tr>
+</tbody></table>
+<h3>Details zum Trust Badges-Block</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Abzeichen-Nr. – Vordefiniertes Symbol</td><td><span class="tb ts">auswählen</span></td><td>Variiert</td><td>Wählen Sie ein integriertes Symbol: Versand-LKW • Rückholschleife • Schildprüfung • Garantiezertifikat • Support-Headset • Sicheres Schloss • Premium Star • Kein Symbol.</td></tr>
+<tr><td>Abzeichen-Nr. – Benutzerdefiniertes Symbol</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Laden Sie Ihr eigenes Symbolbild (24 × 24 Pixel) hoch. Überschreibt das vordefinierte Symbol, wenn es festgelegt ist.</td></tr>
+<tr><td>Abzeichen-Nr. – Etikett</td><td><span class="tb tt">Text</span></td><td>Kostenloser Versand / 30-tägige Rückgabe / Authentisch</td><td>Fettgedruckter Haupttext des Vertrauensabzeichens.</td></tr>
+<tr><td>Abzeichen-Nr. – Unteretikett</td><td><span class="tb tt">Text</span></td><td>Bei Bestellungen über 300 €…</td><td>Unter dem Etikett wird ein kleinerer beschreibender Text angezeigt.</td></tr>
+</tbody></table>
+</section>
+<section id="size-guide">
+<h2><span class="ic">📏</span>Größe <em>Leitfaden</em></h2>
+<span class="pb">Produktseite – Kaufbox</span>
+<p>Aurick verfügt über eine integrierte <strong>Größentabelle</strong> Schaltfläche auf der Produktseite. Wenn Sie darauf tippen, wird ein Popup-Fenster in voller Breite geöffnet, das ein Größentabellenbild für dieses bestimmte Produkt zeigt. Bei Produkten, für die kein Leitfaden konfiguriert wurde, wird die Schaltfläche automatisch ausgeblendet – eine manuelle Verwaltung ist nicht erforderlich.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">Wie das Theme den Größenleitfaden erkennt</div><p>Das Thema prüft drei Quellen in der Reihenfolge ihrer Priorität. Der erste gefundene gewinnt: (1) Produkt-Metafeld <code>custom.size_guide</code>, (2) Varianten-Metafeld <code>custom.size_guide</code>, (3) Bild-Alt-Text auf genau eingestellt <code>size-guide</code>.</p></div></div>
+<h3>Methode 1 – Über Metafield (empfohlen)</h3>
+<ol class="steps">
+<li><strong>Erstellen Sie die Metafelddefinition (einmalig)</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Einstellungen</span><span class="ps">›</span><span class="pc">Metafelder und Metaobjekte</span><span class="ps">›</span><span class="pc">Produkte</span><span class="ps">›</span><span class="pc">Definition hinzufügen</span></span>. Set: <strong>Name</strong> = <code>Size Guide</code>, <strong>Namespace und Schlüssel</strong> = <code>custom.size_guide</code>, <strong>Typ</strong> = Datei → Bild. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+<li><strong>Laden Sie den Leitfaden pro Produkt hoch</strong>
+<p>Öffnen Sie ein beliebiges Produkt im Admin-Bereich → scrollen Sie zu <strong>Metafelder</strong> Panel unten → finden <strong>Größentabelle</strong> → Laden Sie Ihr Größentabellenbild (JPG oder PNG) hoch. Klicken Sie <strong>Produkt speichern</strong>. Die Schaltfläche „Größenübersicht“ wird nun automatisch auf dieser Produktseite angezeigt.</p>
+</li>
+</ol>
+</section>
+<section id="complete-look">
+<h2><span class="ic">🛍</span>Vervollständigen Sie Ihre <em>Schauen Sie</em></h2>
+<span class="pb">Produktseite</span><span class="pb gr">Wagenschublade</span>
+<p>Verknüpft ergänzendes Zubehör (zusätzliche Armbänder, Uhrenrollen, Wickler) mit einer bestimmten Uhr. Verlinkte Produkte erscheinen unterhalb des Kauffelds auf der Produktseite UND als Cross-Selling-Karussell in der ausziehbaren Einkaufswagenschublade – an zwei Stellen gleichzeitig, ohne zusätzlichen Aufwand nach der Einrichtung.</p>
+<h3>Abschnittseinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Auch aus der Sammlung</td><td>Der Titel wird über der Cross-Selling-Produktzeile angezeigt.</td></tr>
+<tr><td>Unterüberschrift</td><td><span class="tb tt">Text</span></td><td>Handverlesene Stücke ergänzen Ihre Auswahl.</td><td>Kurze Beschreibung unter der Überschrift.</td></tr>
+<tr><td>Spalten auf dem Desktop</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Anzahl der Zubehörproduktkarten pro Zeile auf dem Desktop.</td></tr>
+<tr><td>Maximale Anzahl an Produkten, die angezeigt werden sollen</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Maximale Anzahl verknüpfter Zubehörteile, die angezeigt werden sollen. Auch wenn mehr verlinkt sind, werden nur so viele angezeigt.</td></tr>
+<tr><td>Schaltfläche zum schnellen Hinzufügen anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigen Sie auf jeder Zubehörkarte ein Symbol zum schnellen Hinzufügen zum Warenkorb an.</td></tr>
+<tr><td>Produktanbieter anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigen Sie den Marken-/Anbieternamen unter jedem Zubehörproduktnamen an.</td></tr>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Hintergrundfarbe des Abschnitts „Vervollständigen Sie Ihren Look“.</td></tr>
+</tbody></table>
+<h3>Einrichtung: Zubehör mit einer Uhr verknüpfen</h3>
+<ol class="steps">
+<li><strong>Erstellen Sie die Metafelddefinition (einmalig)</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Einstellungen</span><span class="ps">›</span><span class="pc">Metafelder und Metaobjekte</span><span class="ps">›</span><span class="pc">Produkte</span><span class="ps">›</span><span class="pc">Definition hinzufügen</span></span>. Set: <strong>Name</strong> = <code>Complete Look</code>, <strong>Namespace und Schlüssel</strong> = <code>custom.complete_look</code>, <strong>Typ</strong> = Produkt. Aktivieren <strong>Werteliste akzeptieren</strong>. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+<li><strong>Verknüpfen Sie Zubehör pro Uhr</strong>
+<p>Öffnen Sie ein Uhrenprodukt → scrollen Sie zu <strong>Metafelder</strong> Bedienfeld → klicken <strong>Vollständiger Look</strong> → Verwenden Sie den Produkt-Picker, um das Zubehör auszuwählen (z. B. Lederarmband, Uhrenrolle, Reiseetui). Speichern Sie das Produkt.</p>
+</li>
+<li><strong>Aktivieren Sie den Block im Theme-Editor</strong>
+<p>Öffnen Sie den Theme-Editor → <strong>Standardprodukt</strong> Vorlage → im Abschnitt „Kaufbox“ klicken <strong>Block hinzufügen</strong> → auswählen <strong>Vervollständigen Sie Ihren Look</strong>. Positionieren Sie es unter dem Kaufen-Button. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+</ol>
+</section>
+<section id="prod-recommendations">
+<h2><span class="ic">💎</span>Produktempfehlungen</h2>
+<span class="pb">Produktseite</span>
+<p>Zeigt dynamisch vorgeschlagene Produkte als Empfehlungen unten auf der Produktseite an, um die kategorieübergreifende Entdeckung zu fördern.</p>
+<h3>Abschnittseinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Empfohlen</td><td>Über dem Titel wird ein kleiner Tag-Text angezeigt.</td></tr>
+<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Vielleicht gefällt es Ihnen auch</td><td>Titel des Hauptabschnitts.</td></tr>
+<tr><td>Maximale Anzahl an Produkten, die angezeigt werden sollen</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Maximale Anzahl der im Karussell angezeigten Produkte. (Bereich: 2–8).</td></tr>
+<tr><td>Spalten auf dem Desktop</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Anzahl der Spalten, die in Desktop-Ansichtsfenstern angezeigt werden. (Bereich: 2–5).</td></tr>
+<tr><td>Schnell hinzufügen anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigen Sie die Schaltfläche „Schnell zum Warenkorb hinzufügen“ auf Karten an.</td></tr>
+<tr><td>Anbieter anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Zeigt Produktanbieteretiketten auf den Empfehlungskarten an.</td></tr>
+</tbody></table>
+<h3>Konfigurieren von Empfehlungen – Search &amp; Discovery App</h3>
+<p>Während Shopify mithilfe seiner KI-Engine automatisch Empfehlungen generiert, können Sie diese manuell anpassen:</p>
+<ol class="steps">
+<li><strong>Öffnen Sie die Search &amp; Discovery-App</strong>
+<p>Navigieren Sie in Ihrem Shopify-Adminbereich zu **Apps** → **Shopify Search &amp; Discovery**.</p>
+</li>
+<li><strong>Konfigurieren Sie Produktempfehlungen</strong>
+<p>Klicken Sie im linken Menü auf **Empfehlungen**. Suchen Sie das Produkt, das Sie anpassen möchten, und wählen Sie es aus.</p>
+</li>
+<li><strong>Fügen Sie benutzerdefinierte Empfehlungen hinzu</strong>
+<p>Wählen Sie im Bereich **Benutzerdefinierte Empfehlungen** bestimmte Accessoires oder alternative Uhrenprodukte aus, die angezeigt werden sollen. Diese werden die automatisch generierte Liste überschreiben oder mit ihr zusammenführen.</p>
+</li>
+</ol>
+</section>
+<section id="about">
+<h2><span class="ic">📖</span>Über / <em>Heritage-Seite</em></h2>
+<span class="pb">Benutzerdefiniertes Seitensuffix</span>
+<p>Die <code>page.about</code> Die Vorlage liefert animierte Abschnitte zum Geschichtenerzählen der Marke. Nutzen Sie es für Ihre Markengeschichte, Philosophie und Handwerkskunst.</p>
+<ol class="steps">
+<li><strong>Erstellen Sie die Seite im Admin-Bereich</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Seiten</span><span class="ps">›</span><span class="pc">Seite hinzufügen</span></span>. Nennen Sie es „Unser Erbe“ oder ähnlich.</p>
+</li>
+<li><strong>Weisen Sie die Vorlage zu</strong>
+<p>Auswählen <code>page.about</code> aus dem Vorlagenauswahlfeld auf der rechten Seite. Klicken Sie auf **Speichern**.</p>
+</li>
+<li><strong>Eingebauter Theme-Editor</strong>
+<p>Navigieren Sie zur Vorlage „Info“ und klicken Sie auf <strong>Abschnitt hinzufügen</strong> um die Erzählung aus den folgenden Abschnitten zusammenzustellen.</p>
+</li>
+</ol>
+<h3>Über Heldenbanner</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Heldenbild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Das breite Bannerfoto. Empfohlen: <strong>2000 × 800 Pixel</strong> Landschaftsbild.</td></tr>
+<tr><td>Bildhöhe – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>520 px</td><td>Höhe des Heldenbanners auf dem Desktop. Bereich: 320–700 Pixel.</td></tr>
+<tr><td>Seitentitel</td><td><span class="tb tt">Text</span></td><td>Unser Erbe</td><td>Über dem Heldenbild wird eine große Überschrift angezeigt.</td></tr>
+</tbody></table>
+<h3>Über Manifest</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Manifest-Zitat</td><td><span class="tb ta">Textbereich</span></td><td>Wir stellen keine Uhren her. Wir orchestrieren die Zeit.</td><td>Eindrucksvolles Textzitat in großer Serifentypografie.</td></tr>
+<tr><td>Autorennennung</td><td><span class="tb tt">Text</span></td><td>Henri Moreau, Gründer · 1902</td><td>Details zum Namensnennungstext werden in Gold unterhalb des Zitats angezeigt.</td></tr>
+<tr><td>Hintergrundbild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Hintergrundbild mit Deckkraftsteuerung. Empfohlen: <strong>2000 × 1200 Pixel</strong>.</td></tr>
+<tr><td>Deckkraft der Überlagerung</td><td><span class="tb tr">Reichweite</span></td><td>40 %</td><td>Prozentsatz der dunklen Überlagerung über dem Hintergrundbild. Bereich: 0–95 %.</td></tr>
+</tbody></table>
+<h3>Abschnitt „Zeitleiste des Kulturerbes“.</h3>
+<p>Eine scrollanimierte Zeitleiste. Während der Besucher scrollt, zieht sich eine vertikale Linie nach unten und verbindet abwechselnd links-rechts-Meilensteinkarten.</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Unsere Reise</td><td>Kleine Beschriftung in Großbuchstaben über der Überschrift der Timeline.</td></tr>
+<tr><td>Schlagzeile</td><td><span class="tb tt">Text</span></td><td>Ein Jahrhundert der Neuheiten</td><td>Hauptüberschrift für den Zeitleistenabschnitt.</td></tr>
+<tr><td>Farbe der Timeline-Punkte</td><td><span class="tb tc">Farbe</span></td><td>#c9a96e</td><td>Farbe des animierten Punkts und der vertikalen Verbindungslinie.</td></tr>
+</tbody></table>
+<p>Jeder Meilenstein wird als **Meilensteinblock** mit folgenden Einstellungen hinzugefügt: **Jahr** (Text), **Titel** (Text) und **Beschreibung** (Textbereich).</p>
+<h3>Über Statistiken</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Die Zahlen</td><td>Über dem Statistikraster wird eine kleine Kategoriebezeichnung angezeigt.</td></tr>
+<tr><td>Hintergrundfarbe</td><td><span class="tb tc">Farbe</span></td><td>#050508</td><td>Abschnittshintergrund.</td></tr>
+</tbody></table>
+<p>Fügen Sie bis zu 4 **Statistikblöcke** hinzu, die wichtige Erfolge darstellen. Einstellungen pro Block:</p>
+<ul>
+<li><strong>Zählen</strong> — Der Zahlenwert (z. B. <code>120</code>).</li>
+<li><strong>Plus-Suffix anzeigen</strong> — Kontrollkästchen zum Anhängen eines <code>+</code> zum Grafen.</li>
+<li><strong>Suffix</strong> — Suffixtext (z. B. <code>%</code> oder <code>k</code>).</li>
+<li><strong>Ist dezimal</strong> — Kontrollkästchen zum Aktivieren von Gleitkommazahlen.</li>
+<li><strong>Etikett</strong> — Kleiner Beschriftungstext unter der Nummer (z. B. <code>Ateliers worldwide</code>).</li>
+</ul>
+<h3>Über Werte (Säulen)</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Was uns antreibt</td><td>Kleines Kategorieetikett.</td></tr>
+<tr><td>Schlagzeile</td><td><span class="tb tt">Text</span></td><td>Die vier Säulen von <em>AURICK</em></td><td>Große Überschrift. Wickeln Sie Wörter ein <code>&lt;em&gt;</code> für Gold-Styling.</td></tr>
+</tbody></table>
+<p>Fügen Sie **Säulenblöcke** für Werte hinzu. Einstellungen pro Block: **Säulennummer** (Text), **Titel** (Text), **Beschreibung** (Textbereich), **Symbolauswahl** (Dropdown: Präzision, Erbe, Innovation, Exklusivität, Benutzerdefiniert) und **Benutzerdefinierter SVG-Code** (Textbereich für Inline-XML-Pfade).</p>
+<h3>Abteilung Team/Atelier</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Mitgliedsname</td><td><span class="tb tt">Text</span></td><td>—</td><td>Der vollständige Name wird unter dem Foto angezeigt.</td></tr>
+<tr><td>Rolle/Titel des Mitglieds</td><td><span class="tb tt">Text</span></td><td>—</td><td>Berufsbezeichnung wird unter dem Namen angezeigt.</td></tr>
+<tr><td>Biografie des Mitglieds</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Beim Hover wird eine kurze Beschreibung angezeigt.</td></tr>
+</tbody></table>
+<h3>Über CTA</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Erleben Sie AURICK</td><td>Beschriftung über der Überschrift.</td></tr>
+<tr><td>Schlagzeile</td><td><span class="tb tt">Text</span></td><td>Jede Sekunde <em>jeden Tag.</em></td><td>CTA-Überschrift.</td></tr>
+<tr><td>Schaltflächenbeschriftung/Link</td><td><span class="tb tt">Text</span> / <span class="tb tu">URL</span></td><td>Entdecken Sie die Sammlung / /</td><td>CTA-Button-Konfigurationen.</td></tr>
+<tr><td>Hintergrundbild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Vollbild-Hintergrundbild für den CTA-Bereich.</td></tr>
+</tbody></table>
+</section>
+<section id="contact">
+<h2><span class="ic">✉</span>Kontakt / <em>Atelier-Seite</em></h2>
+<span class="pb">Benutzerdefiniertes Seitensuffix</span>
+<p>Die <code>page.contact</code> Die Vorlage kombiniert ein Premium-Anfrageformular mit Boutique-Standortkarten.</p>
+<ol class="steps">
+<li><strong>Erstellen Sie die Seite im Admin-Bereich</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Seiten</span><span class="ps">›</span><span class="pc">Seite hinzufügen</span></span>. Nennen Sie es „Kontakt“ oder „Atelier“.</p>
+</li>
+<li><strong>Weisen Sie die Vorlage zu</strong>
+<p>Auswählen <code>page.contact</code> aus dem Vorlagenauswahlfeld auf der rechten Seite. Klicken Sie auf **Speichern**.</p>
+</li>
+<li><strong>Eingebauter Theme-Editor</strong>
+<p>Öffnen Sie den Theme-Editor → navigieren Sie über das Vorlagen-Dropdown zu Ihrer neu erstellten Kontaktseite → klicken Sie darauf <strong>Abschnitt hinzufügen</strong> , um die Blöcke „Kontaktformular“ und „Standort“ zu konfigurieren.</p>
+</li>
+</ol>
+<h3>Kontaktieren Sie Hero Banner</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Heldenbild</td><td><span class="tb ti">Bild</span></td><td>—</td><td>Breites Bannerfoto. Empfohlen: <strong>2000 × 800 Pixel</strong> Landschaft.</td></tr>
+<tr><td>Seitentitel</td><td><span class="tb tt">Text</span></td><td>Besuchen Sie unser Atelier</td><td>Überschrift wird über dem Heldenbild angezeigt.</td></tr>
+</tbody></table>
+<h3>Abschnitt „Kontaktformular“.</h3>
+<p>Konfigurieren Sie die zweispaltigen Kontaktdetails und Formularabschnittseinstellungen:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Formulartitel</td><td><span class="tb tt">Text</span></td><td>Senden Sie eine Nachricht</td><td>Große Überschrift über dem Kontaktformular.</td></tr>
+<tr><td>Betreffoptionen</td><td><span class="tb tt">Text</span></td><td>Allgemeine Anfrage, privater Termin, maßgeschneiderte Kommission ...</td><td>Durch Kommas getrennte Optionen, die in der Betreff-Dropdown-Liste des Formulars angezeigt werden.</td></tr>
+<tr><td>Haftungsausschlusstext</td><td><span class="tb tt">Text</span></td><td>Ihre Daten werden streng vertraulich behandelt und niemals weitergegeben.</td><td>Unter der Schaltfläche „Senden“ wird kleiner Kleingedruckter Text angezeigt.</td></tr>
+<tr><td>Infotitel</td><td><span class="tb tt">Text</span></td><td>Direkter Kontakt</td><td>Über dem Kontaktinformationsfeld angezeigte Kopfzeilenbezeichnung.</td></tr>
+<tr><td>Allgemeine Anfrage-E-Mail</td><td><span class="tb tt">Text</span></td><td>atelier@aurick.com</td><td>Die E-Mail-Adresse für allgemeine Anfragen Ihres Shops.</td></tr>
+<tr><td>Drücken Sie E-Mail</td><td><span class="tb tt">Text</span></td><td>press@aurick.com</td><td>E-Mail für Presse- und Medienanfragen.</td></tr>
+<tr><td>Telefonnummer</td><td><span class="tb tt">Text</span></td><td>+41 22 317 44 00</td><td>Telefonnummer, die unter den E-Mails angezeigt wird.</td></tr>
+<tr><td>Info-Notiztext</td><td><span class="tb ta">Textbereich</span></td><td>Für private Aufträge und maßgeschneiderte Bestellungen laden wir Sie ein, unser Genfer Atelier zu besuchen...</td><td>Kurzes informatives Notizfeld unter den direkten Details (zur Unterstützung lokaler Boutique-Besuche).</td></tr>
+<tr><td>Abschnittshintergrund</td><td><span class="tb tc">Farbe</span></td><td>#040407</td><td>Hintergrundfarbe des Kontaktformularabschnitts.</td></tr>
+</tbody></table>
+<h3>Standortkarten</h3>
+<p>Fügen Sie im Abschnitt „Kontaktstandort“ Standortblöcke für Geschäftsadressen, Betriebszeiten, E-Mails und Telefonnummern hinzu.</p>
+</section>
+<section id="shipping-policy">
+<h2><span class="ic">🚚</span>Versand <em>Richtlinienseite</em></h2>
+<span class="pb">Benutzerdefiniertes Seitensuffix</span>
+<p>Die <code>page.shipping</code> Die Vorlage bietet ein Premium-Layout, um Ihre Versandmethoden und voraussichtlichen Lieferzeiten nach Region in übersichtlichen, gestalteten Rastern und Tabellen darzustellen.</p>
+<ol class="steps">
+<li><strong>Erstellen Sie die Seite im Admin-Bereich</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Seiten</span><span class="ps">›</span><span class="pc">Seite hinzufügen</span></span>. Nennen Sie es „Versandbedingungen“ oder „Lieferinformationen“.</p>
+</li>
+<li><strong>Weisen Sie die Aurick-Vorlage zu</strong>
+<p>In der rechten Seitenleiste unten <strong>Themenvorlage</strong>, auswählen <code>page.shipping</code>. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+<li><strong>Passen Sie es im Theme-Editor an</strong>
+<p>Öffnen Sie den Theme-Editor → navigieren Sie mit der Vorlagenauswahl oben zu Ihrer Seite „Versandrichtlinien“ → klicken Sie darauf <strong>Abschnitt hinzufügen</strong> → auswählen <strong>Versandbedingungen</strong>. Sie können jetzt Blöcke für Versandmethoden und regionale Lieferzeilen hinzufügen und konfigurieren.</p>
+</li>
+</ol>
+<h3>Abschnittseinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Held – Augenbraue</td><td><span class="tb tt">Text</span></td><td>Aurick-Richtlinie</td><td>Über dem Haupttitel wird ein kleines Tag in Großbuchstaben angezeigt.</td></tr>
+<tr><td>Held – Titel</td><td><span class="tb tt">Text</span></td><td>Versandbedingungen</td><td>Hauptüberschrift in großer Serifentypografie dargestellt.</td></tr>
+<tr><td>Held – Untertitel</td><td><span class="tb ta">Textbereich</span></td><td>Jede Uhr wird mit der Sorgfalt versendet, die sie verdient ...</td><td>Unterhalb des Titels wird eine einleitende Beschreibung angezeigt.</td></tr>
+<tr><td>Methoden – Titel</td><td><span class="tb tt">Text</span></td><td>Versandoptionen</td><td>Gehen Sie zum Abschnitt „Versandoptionen“.</td></tr>
+<tr><td>Tabelle – Anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie um, ob die regionale Tabelle mit geschätzten Zeiten unterhalb des Methodenrasters angezeigt werden soll.</td></tr>
+<tr><td>Tabelle – Titel</td><td><span class="tb tt">Text</span></td><td>Lieferung nach Region</td><td>Der Titel wird über der Tabelle mit regionalen Lieferschätzungen angezeigt.</td></tr>
+<tr><td>Tabelle – Hinweis</td><td><span class="tb ta">Textbereich</span></td><td>Die Zeiten sind Schätzungen in Werktagen...</td><td>Fußnotentext wird in kleiner Typografie unterhalb der Tabelle angezeigt.</td></tr>
+<tr><td>CTA – Überschrift / Untertext</td><td><span class="tb tt">Text</span> / <span class="tb ta">Textbereich</span></td><td>Sie haben noch Fragen? / Unser Team steht Ihnen gerne zur Verfügung...</td><td>Inhalt für das Call-to-Action-Banner unten auf der Seite.</td></tr>
+<tr><td>CTA – Kontakt-URL/Label</td><td><span class="tb tu">URL</span> / <span class="tb tt">Text</span></td><td>/pages/contact / Support kontaktieren</td><td>Link und Label für den CTA-Button.</td></tr>
+</tbody></table>
+<h3>Versandartenblock</h3>
+<p>Jeder Versandartenblock wird als Karte im Optionsraster angezeigt. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Versandart</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Symbol</td><td><span class="tb ts">auswählen</span></td><td>LKW (Standard)</td><td>Wählen Sie ein gestaltetes Symbol: LKW (Standard) • Blitz (Express) • Globus (International) • Flugzeug • Paket/Karton • Schild (versichert) • Uhr (zeitabhängig).</td></tr>
+<tr><td>Methodenname</td><td><span class="tb tt">Text</span></td><td>Standardversand</td><td>Überschrift der Versandartenkarte.</td></tr>
+<tr><td>Beschreibung</td><td><span class="tb ta">Textbereich</span></td><td>Kostenlos für alle Bestellungen über 200 $...</td><td>Einzelheiten darüber, was diese Methode beinhaltet (Verpackung, Kurier, Versicherung usw.).</td></tr>
+<tr><td>Zeit-/Ausweistext</td><td><span class="tb tt">Text</span></td><td>3–5 Werktage</td><td>Der Statustext wird in Fettdruck auf dem Ausweis der Karte angezeigt.</td></tr>
+<tr><td>Preishinweis</td><td><span class="tb tt">Text</span></td><td>—</td><td>Optionales Preisschild, das an den Ausweistext angehängt wird (z. B. <code>Free over $200</code>).</td></tr>
+</tbody></table>
+<h3>Zeilenblock für die Lieferregion</h3>
+<p>Jeder Block „Lieferregion“ erstellt eine Zeile in der regionalen Lieferzeitentabelle. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Lieferregion</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Region / Land</td><td><span class="tb tt">Text</span></td><td>Vereinigte Staaten</td><td>Der in der linken Spalte angezeigte Name des Landes oder der Region.</td></tr>
+<tr><td>Standardlieferzeit</td><td><span class="tb tt">Text</span></td><td>3–5 Tage</td><td>Geschätzte Standardversandlaufzeit.</td></tr>
+<tr><td>Express-Lieferzeit</td><td><span class="tb tt">Text</span></td><td>1–2 Tage</td><td>Geschätzte Lieferzeit für den Expressversand.</td></tr>
+<tr><td>Versanddienstleister</td><td><span class="tb tt">Text</span></td><td>FedEx / UPS</td><td>Für diese Region eingesetzte Kuriere.</td></tr>
+</tbody></table>
+</section>
+<section id="returns-policy">
+<h2><span class="ic">↻</span>Rückgaben <em>Richtlinienseite</em></h2>
+<span class="pb">Benutzerdefiniertes Seitensuffix</span>
+<p>Die <code>page.returns</code> Die Vorlage liefert eine strukturierte Seite mit Premium-Rückgaberichtlinien mit einer interaktiven Zeitleiste, Zustands-Kontrollkästchen und einem integrierten FAQ-System.</p>
+<ol class="steps">
+<li><strong>Erstellen Sie die Seite im Admin-Bereich</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Seiten</span><span class="ps">›</span><span class="pc">Seite hinzufügen</span></span>. Überschreiben Sie es mit „Rückgaben und Umtausch“.</p>
+</li>
+<li><strong>Weisen Sie die Aurick-Vorlage zu</strong>
+<p>In der rechten Seitenleiste unten <strong>Themenvorlage</strong>, auswählen <code>page.returns</code>. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+<li><strong>Passen Sie es im Theme-Editor an</strong>
+<p>Öffnen Sie den Theme-Editor → navigieren Sie zur Seite „Rückgabebedingungen“ → klicken Sie darauf <strong>Abschnitt hinzufügen</strong> → auswählen <strong>Rückgabebedingungen</strong>. Passen Sie die Blöcke an Ihre Richtlinienrichtlinien an.</p>
+</li>
+</ol>
+<h3>Abschnittseinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Held – Augenbraue</td><td><span class="tb tt">Text</span></td><td>Aurick-Richtlinie</td><td>Kleiner Tag-Text über dem Titel.</td></tr>
+<tr><td>Held – Titel</td><td><span class="tb tt">Text</span></td><td>Rückgabebedingungen</td><td>Hauptüberschrift in großer Serifentypografie dargestellt.</td></tr>
+<tr><td>Held – Untertitel</td><td><span class="tb ta">Textbereich</span></td><td>Wir stehen hinter jeder Uhr...</td><td>Einführende Beschreibung.</td></tr>
+<tr><td>Rückgabefenster (Tage)</td><td><span class="tb tr">Reichweite</span></td><td>30</td><td><strong>Entscheidende Einstellung:</strong> Die Anzahl der für die Rückgabe zulässigen Tage. Dieser Wert ersetzt das Wort dynamisch <code>DAYS</code> (in Großbuchstaben) überall dort, wo es in Rückgabeschritten, FAQs oder dem Prozesstitel geschrieben ist.</td></tr>
+<tr><td>Rückgabeprozess – Augenbraue</td><td><span class="tb tt">Text</span></td><td>Wie es funktioniert</td><td>Kleines Tag über der Prozesszeitleiste.</td></tr>
+<tr><td>Rückgabeprozess – Titel</td><td><span class="tb tt">Text</span></td><td>DAYS-Day-Rückgaberecht</td><td>Abschnittsüberschrift für die Zeitleiste. Weggehen <code>DAYS</code> in Großbuchstaben ersetzt automatisch die Tage des Rückgabefensters.</td></tr>
+<tr><td>Bedingungsfeld anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie um, ob die hervorgehobene Karte mit den Richtlinienanforderungen unterhalb der Zeitleiste angezeigt werden soll.</td></tr>
+<tr><td>FAQ-Bereich anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie unten das zusammenklappbare Akkordeon-FAQ-Widget um.</td></tr>
+</tbody></table>
+<h3>Schrittblock zurückgeben</h3>
+<p>Jeder Rückkehrschrittblock fügt der chronologischen Rückgabezeitleiste ein Element hinzu. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Rückschritt</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Symbol</td><td><span class="tb ts">auswählen</span></td><td>Post</td><td>Wählen Sie ein gestaltetes Symbol: Chat/Nachricht • E-Mail • Paket/Box • LKW (Schiff) • Schild (Rückerstattung/Geschützt) • Häkchen (Fertig) • Aktualisieren (Umtausch) • Suchen/Inspizieren.</td></tr>
+<tr><td>Überschreiben der Schrittnummer</td><td><span class="tb tt">Text</span></td><td>—</td><td>Geben Sie explizit eine Schrittnummer ein (z. B. <code>01</code>). Wenn das Feld leer bleibt, werden sie vom Thema automatisch fortlaufend nummeriert.</td></tr>
+<tr><td>Schritttitel</td><td><span class="tb tt">Text</span></td><td>Kontaktieren Sie uns</td><td>Überschrift des Zeitleistenschritts.</td></tr>
+<tr><td>Schrittbeschreibung</td><td><span class="tb ta">Textbereich</span></td><td>Schicken Sie uns innerhalb von TAGEN Tagen nach der Lieferung eine E-Mail ...</td><td>Detaillierte Anleitung. Benutzen <code>DAYS</code> in Großbuchstaben, um den Einstellungswert des Rückgabefensters anzuzeigen.</td></tr>
+</tbody></table>
+<h3>Bedingungsblock zurückgeben</h3>
+<p>Jeder Rückgabebedingungsblock fügt der Karte „Rückgabebedingungen“ unterhalb der Zeitleiste einen Aufzählungspunkt hinzu. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Rückgabebedingung</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Bedingungstext</td><td><span class="tb tt">Text</span></td><td>Der Artikel muss ungetragen und im unbeschädigten Originalzustand sein</td><td>Die Anforderungserklärung wird als Aufzählungspunkt angezeigt.</td></tr>
+</tbody></table>
+<h3>FAQ-Fragenblock</h3>
+<p>Jeder FAQ-Fragenblock erstellt eine reduzierbare Akkordeonzeile innerhalb der FAQ-Akkordeonliste. Klicken Sie <strong>Block hinzufügen</strong> → <strong>FAQ-Frage</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Frage</td><td><span class="tb tt">Text</span></td><td>Kann ich gegen ein anderes Modell umtauschen?</td><td>Die anklickbare Überschrift des Akkordeons.</td></tr>
+<tr><td>Antwort</td><td><span class="tb ta">Textbereich</span></td><td>Ja – Umtausch ist innerhalb von TAGEN Tagen möglich ...</td><td>Der versteckte Inhalt, der sich beim Klicken öffnet. Unterstützt die <code>DAYS</code> Platzhalter.</td></tr>
+</tbody></table>
+</section>
+<section id="privacy-policy">
+<h2><span class="ic">🛡</span>Privatsphäre <em>Richtlinienseite</em></h2>
+<span class="pb">Benutzerdefiniertes Seitensuffix</span>
+<p>Die <code>page.privacy-policy</code> Die Vorlage stellt eine schöne Compliance-Seite mit mehreren Abschnitten und einer Sticky-Navigationsleiste bereit, die sich beim Scrollen dynamisch aktualisiert, um Kunden das Durchsuchen der Richtlinienbedingungen zu erleichtern.</p>
+<ol class="steps">
+<li><strong>Erstellen Sie die Seite im Admin-Bereich</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Online-Shop</span><span class="ps">›</span><span class="pc">Seiten</span><span class="ps">›</span><span class="pc">Seite hinzufügen</span></span>. Geben Sie den Titel „Datenschutzerklärung“ ein.</p>
+</li>
+<li><strong>Weisen Sie die Aurick-Vorlage zu</strong>
+<p>In der rechten Seitenleiste unten <strong>Themenvorlage</strong>, auswählen <code>page.privacy-policy</code>. Klicken Sie <strong>Speichern</strong>.</p>
+</li>
+<li><strong>Passen Sie es im Theme-Editor an</strong>
+<p>Öffnen Sie den Theme-Editor → navigieren Sie zu Ihrer Datenschutzrichtlinie → klicken Sie auf <strong>Abschnitt hinzufügen</strong> → auswählen <strong>Datenschutzrichtlinie</strong>. Hinzufügen und anordnen <strong>Abschnitt „Richtlinien“.</strong> Blöcke zum Erstellen Ihrer Begriffe.</p>
+</li>
+</ol>
+<h3>Abschnittseinstellungen</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Held – Augenbraue / Titel</td><td><span class="tb tt">Text</span> / <span class="tb tt">Text</span></td><td>Aurick-Richtlinie / Datenschutzrichtlinie</td><td>Inhalt im oberen Header.</td></tr>
+<tr><td>Held – Untertitel</td><td><span class="tb ta">Textbereich</span></td><td>Ihre Privatsphäre ist uns heilig...</td><td>Die Beschreibung wird in der Kopfzeile angezeigt.</td></tr>
+<tr><td>Letztes aktualisiertes Etikett/Datum</td><td><span class="tb tt">Text</span> / <span class="tb tt">Text</span></td><td>Letzte Aktualisierung / Juli 2025</td><td>Zeigt einen kleinen Revisionszeitstempel unter dem Untertitel an.</td></tr>
+<tr><td>Datenschutz-E-Mail</td><td><span class="tb tt">Text</span></td><td>privatsphäre@aurick.com</td><td>Support-E-Mail wird dynamisch in Kontaktkarten und Blocküberschreibungen verwendet.</td></tr>
+<tr><td>Geschäftsadresse</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Unternehmensadresse, die dynamisch in Kontaktblöcken verwendet wird.</td></tr>
+</tbody></table>
+<h3>Richtlinienabschnittsblock</h3>
+<p>Ein Richtlinienabschnittsblock fügt eine vollständige Begriffskategorie mit einem passenden Sticky-Nav-Pill hinzu. Klicken Sie <strong>Block hinzufügen</strong> → <strong>Abschnitt „Richtlinien“.</strong>. Einstellungen pro Block:</p>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Klebendes Navi-Pillenetikett</td><td><span class="tb tt">Text</span></td><td>Abschnitt</td><td>Kurzes Etikett, das in der klebrigen horizontalen Leiste oben angezeigt wird. Lassen Sie das Feld leer, um diesen Abschnitt aus der Navigationsleiste auszublenden.</td></tr>
+<tr><td>Abschnittsnummer anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Fügt links eine große transparente fortlaufende Nummer (01, 02 usw.) hinzu.</td></tr>
+<tr><td>Augenbrauentext / Abschnittstitel</td><td><span class="tb tt">Text</span> / <span class="tb tt">Text</span></td><td>Kategorie-/Abschnittstitel</td><td>Header-Tags innerhalb der Abschnittskarte.</td></tr>
+<tr><td>Einleitung(en)</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Beschreibender Haupttext. Jeder Zeilenumbruch erstellt einen neuen Absatz.</td></tr>
+<tr><td>Bullet-Liste</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Eine Liste mit Anforderungen mit Aufzählungszeichen. Schreiben Sie einen Artikel pro Zeile.</td></tr>
+<tr><td>Text nach Aufzählungszeichen</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Optionale Absätze werden unterhalb der Aufzählungsliste angezeigt.</td></tr>
+<tr><td>Hervorgehobenes Callout-Feld</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Hervorgehobenes Feld mit einem dicken goldenen Rand links, um kritischen Text hervorzuheben.</td></tr>
+<tr><td>Zusätzliches Layoutelement</td><td><span class="tb ts">auswählen</span></td><td>Keine</td><td>Wählen Sie aus, ob Elemente unter dem Text angehängt werden sollen: <strong>Keine</strong> • <strong>Infokarten (2×2 Raster)</strong> • <strong>Feature-Chips (3-Farben-Raster)</strong>.</td></tr>
+<tr><td>Infokarten (1–4) – Beschriftung / Text</td><td><span class="tb tt">Text</span> / <span class="tb ta">Textbereich</span></td><td>—</td><td>Konfigurieren Sie bis zu 4 Beschriftungen und Beschreibungen für Infokarten (wird nur angezeigt, wenn das Layout auf „Infokarten“ eingestellt ist).</td></tr>
+<tr><td>Feature-Chip-Beschriftungen/Symbole</td><td><span class="tb ta">Textbereich</span> / <span class="tb ta">Textbereich</span></td><td>—</td><td>Ein Element pro Zeile (z. B. <code>Access Your Data</code>). Ordnen Sie die entsprechenden Symbole der Reihe nach zu (Optionen: <code>eye</code>, <code>edit</code>, <code>trash</code>, <code>slash</code>, <code>upload</code>, <code>shield</code>, <code>lock</code>, <code>check</code>, <code>mail</code>).</td></tr>
+<tr><td>Kontaktdaten anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Schalten Sie unten in diesem speziellen Abschnitt um, ob die Datenschutz-E-Mail-Adresse und die Geschäftsadresse gedruckt werden sollen.</td></tr>
+</tbody></table>
+</section>
+<section id="translate">
+<h2><span class="ic">🌐</span>Übersetzen &amp; <em>Anpassen</em></h2>
+<span class="pb">Shopify Native App – kostenlos</span>
+<p>Aurick umfasst vollständige Schnittstellenübersetzungen für **Englisch (EN)**, **Spanisch (ES)** und **Französisch (FR)**. Führen Sie die folgenden Schritte aus, um neue Sprachen zu veröffentlichen und Produktressourcen zu übersetzen:</p>
+<ol class="steps">
+<li><strong>Fügen Sie Sprachen in den Einstellungen hinzu</strong>
+<p>Gehe zu <span class="path"><span class="pc r">Admin</span><span class="ps">›</span><span class="pc">Einstellungen</span><span class="ps">›</span><span class="pc">Sprachen</span></span>, fügen Sie Spanisch/Französisch hinzu und klicken Sie auf **Veröffentlichen**.</p>
+</li>
+<li><strong>Installieren Sie Translate &amp; Adapt</strong>
+<p>Öffnen Sie die Translate &amp; Adapt-App, um Beschreibungen, Titel, Sammlungs-Tags und Menüelemente nebeneinander zu übersetzen.</p>
+</li>
+</ol>
+</section>
+<section id="images">
+<h2><span class="ic">🖼</span>Bild <em>Größen</em></h2>
+<p>Verwenden Sie für jedes Bild in jedem Abschnitt genau diese Abmessungen. Die richtigen Größen sorgen für scharfe, perfekt proportionierte und schnelle Bilder auf jedem Bildschirm.</p>
+<div class="ic-c"><span class="ic-n">Logo (Kopfzeile)</span><span class="ic-d">300 × 120 Pixel</span><span class="ic-f">Transparentes PNG oder SVG</span></div>
+<div class="ic-c"><span class="ic-n">Mit Showcase-Uhr</span><span class="ic-d">540 × 540 Pixel</span><span class="ic-f">Transparentes PNG (wird für saubere Flugübergänge benötigt)</span></div>
+<div class="ic-c"><span class="ic-n">Lifestyle-Fotos</span><span class="ic-d">1000 × 1250 Pixel</span><span class="ic-f">JPEG • 4:5-Porträt • Motiv zentriert</span></div>
+<div class="ic-c"><span class="ic-n">Sammlungsbanner</span><span class="ic-d">2000 × 800 Pixel</span><span class="ic-f">JPEG • 2,5:1 Querformat</span></div>
+</section>
+<section id="faq">
+<h2><span class="ic">❓</span>FAQ</h2>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">Wie ändere ich mein Shop-Logo?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Themeneditor → <strong>Kopfzeile</strong> → einstellen <strong>Logotyp</strong> zu <strong>Bild</strong> → Laden Sie Ihre Logodatei hoch. Empfohlenes Format: transparentes PNG, 300 × 120 Pixel.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">Wie füge ich rotierende Ankündigungsnachrichten hinzu?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Themeneditor → <strong>Ankündigungsleiste</strong> → mehrere **Ankündigungsblöcke** hinzufügen → **Ankündigungen automatisch drehen** aktivieren.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">Wie verstecke ich einen Homepage-Bereich, ohne ihn zu löschen?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Klicken Sie auf das **Augensymbol** neben dem Abschnittsnamen in der Seitenleiste des Theme-Editors. Der Abschnitt wird für Besucher unsichtbar, bleibt aber für die zukünftige Verwendung konfiguriert.</p></div></div></div>
+</section>
+<section id="watch-svg">
+<h2><span class="ic">⚙</span>Bild ansehen <em>→ SVG-Eingabeaufforderung</em></h2>
+<p>Der Aurick 3D-Uhrenbox-Held stellt Ihre Uhr als sauberen SVG-Vektor in der animierten Box dar. Fügen Sie diese Eingabeaufforderung zusammen mit Ihrem Uhrenbild in einen beliebigen KI-Assistenten ein, um den benutzerdefinierten SVG-Code zu erhalten:</p>
+<div class="prompt-wrap">
+<div class="prompt-label">Kopieren und Einfügen in AI (mit angehängtem Foto Ihrer Uhr)</div>
+<button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    Eingabeaufforderung kopieren
+  </button>
+<pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
+Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
+
+Follow these strict specifications:
+1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
+2. Background: Must be transparent.
+3. Viewport: The viewBox must be exactly "0 0 300 400".
+4. Vertical Alignment: The watch must be perfectly centered.
+   - The center of the watch dial must sit at (x=150, y=200).
+   - The strap must run straight vertically from y=10 to y=390.
+5. Dimension Specs:
+   - Strap Width: Exactly 60px (x=120 to x=180).
+   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
+   - Inner Dial Face Radius: Exactly 60px.
+6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
+7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
+</div>
+</section>
+<section id="support">
+<h2><span class="ic">🙋</span>Erhalten <em>Unterstützung</em></h2>
+<p>Benötigen Sie Hilfe beim Einrichten Ihres Aurick-Themes? Kontaktieren Sie uns direkt, indem Sie unten klicken:</p>
+<div class="sup-card">
+<span class="sup-icon">✉</span>
+<div class="sup-title">Brauche Hilfe bei<br/>dein <em>Aurick</em> speichern?</div>
+<p class="sup-lead">Ob es sich um eine Einstellungsfrage, ein Metafeld-Problem oder eine Funktion handelt, die Sie nicht finden können – füllen Sie das Formular aus und wir werden das Problem gemeinsam lösen.</p>
+<a class="sup-btn" href="https://forms.gle/uv5eW4ULpRG2NqF58" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    Öffnen Sie das Support-Formular
+    <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</section>
+<footer class="doc-footer">
+  © 2026 Aurick Theme – Einrichtungsanleitung für Ladenbesitzer · Alle Rechte vorbehalten.
+</footer>
+</section></section></div></main>
+<div class="toast" id="toast">✓ In die Zwischenablage kopiert</div>
+<script>
+function copyPrompt() {
+  const pre = document.getElementById('svg-prompt-text');
+  const btn = document.getElementById('svg-copy-btn');
+  if (!pre || !btn) return;
+  const tmp = document.createElement('textarea');
+  tmp.value = pre.innerText;
+  document.body.appendChild(tmp);
+  tmp.select();
+  document.execCommand('copy');
+  document.body.removeChild(tmp);
+  btn.classList.add('copied');
+  btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+  setTimeout(() => {
+    btn.classList.remove('copied');
+    btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Prompt';
+  }, 2000);
+}
+
+function nav(e, hash) {
+  e.preventDefault();
+  const el = document.querySelector(hash);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth" });
+  history.pushState(null, null, hash);
+  document.querySelectorAll(".sb-a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === hash));
+}
+
+const secs = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".sb-a");
+window.addEventListener("scroll", () => {
+  let cur = "";
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = "#" + s.id; });
+  if (cur) links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === cur));
+}, { passive: true });
+
+function toggleFaq(el) {
+  const open = el.classList.contains("open");
+  document.querySelectorAll(".faq.open").forEach(f => f.classList.remove("open"));
+  if (!open) el.classList.add("open");
+}
+
+function searchDocs(q) {
+  q = q.toLowerCase().trim();
+  secs.forEach(s => {
+    const id = "#" + s.id;
+    const link = Array.from(links).find(l => l.getAttribute("href") === id);
+    const match = q === "" || s.textContent.toLowerCase().includes(q);
+    s.style.display = match ? "" : "none";
+    if (link) link.style.display = match ? "" : "none";
+  });
+  document.querySelectorAll(".sb-cat").forEach(cat => {
+    const nextLinks = [];
+    let el = cat.nextElementSibling;
+    while (el && !el.classList.contains("sb-cat")) {
+      if (el.classList.contains("sb-a")) nextLinks.push(el);
+      el = el.nextElementSibling;
+    }
+    const anyVisible = nextLinks.some(l => l.style.display !== "none");
+    cat.style.display = q === "" || anyVisible ? "" : "none";
+  });
+}
+</script>
+</body></html>
