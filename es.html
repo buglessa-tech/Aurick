@@ -1,1 +1,1423 @@
+<!DOCTYPE html>
 
+<html dir="ltr" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guía de configuración del propietario de la tienda Aurick</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#050508;--sb:#08080d;--card:rgba(255,255,255,.023);--border:rgba(201,169,110,.11);--bhi:rgba(201,169,110,.32);--gold:#c9a96e;--gd:#8b7245;--gl:#e8d5b0;--tx:#f0ece4;--td:rgba(240,236,228,.63);--tm:rgba(240,236,228,.38);--green:#5dba7d;--blue:#5fa4e6;--amber:#e6b25f;--red:#e66c5f;--teal:#2dd4bf;--purple:#c084fc;--r:12px;--rs:8px;--sw:284px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
+aside.sb{width:var(--sw);background:var(--sb);border-right:1px solid var(--border);position:fixed;top:0;left:0;bottom:0;overflow-y:auto;display:flex;flex-direction:column;z-index:100;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sb-brand{padding:1.9rem 1.6rem 1.3rem;border-bottom:1px solid var(--border)}
+.sb-name{font-family:"Cormorant Garamond",serif;font-size:1.78rem;font-weight:600;letter-spacing:.08em;color:#fff}.sb-name span{color:var(--gold)}
+.sb-sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tm);margin-top:.18rem}
+.sb-ver{display:inline-block;margin-top:.48rem;background:rgba(201,169,110,.07);color:var(--gl);border:.5px solid var(--bhi);border-radius:20px;font-size:.58rem;padding:.13rem .5rem}
+.sb-search{padding:1rem 1.3rem .7rem;border-bottom:1px solid var(--border);position:relative}
+.sb-search svg{position:absolute;left:2.1rem;top:50%;transform:translateY(-50%);color:var(--tm);pointer-events:none}
+.sb-search input{width:100%;background:rgba(0,0,0,.28);border:1px solid var(--border);border-radius:var(--rs);color:var(--tx);font-family:inherit;font-size:.76rem;padding:.52rem .7rem .52rem 2rem;outline:none;transition:border-color .2s}
+.sb-search input:focus{border-color:var(--gold)}.sb-search input::placeholder{color:var(--tm)}
+.sb-nav{padding:.7rem .85rem 2rem;flex:1}
+.sb-cat{font-size:.59rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--gd);padding:1.1rem .6rem .32rem}
+.sb-a{display:flex;align-items:center;gap:.5rem;padding:.38rem .6rem;border-radius:var(--rs);color:var(--td);font-size:.77rem;text-decoration:none;cursor:pointer;transition:all .18s}
+.sb-a:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sb-a.on{color:var(--gl);background:rgba(201,169,110,.07);font-weight:500;border-left:1.5px solid var(--gold);border-radius:0 var(--rs) var(--rs) 0;padding-left:.55rem}
+.dot{width:3.5px;height:3.5px;border-radius:50%;background:var(--bhi);flex-shrink:0}.sb-a.on .dot{background:var(--gold)}
+main.main{margin-left:var(--sw);flex:1;min-width:0;padding:3.5rem 4.5rem 6rem}
+.wrap{max-width:900px;margin:0 auto}
+h2{font-family:"Cormorant Garamond",serif;font-size:1.82rem;font-weight:500;color:#fff;margin-top:4.5rem;margin-bottom:1.3rem;padding-bottom:.7rem;border-bottom:.5px solid var(--border);display:flex;align-items:center;gap:.7rem}
+h2 .ic{width:30px;height:30px;background:rgba(201,169,110,.07);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}h2 em{font-style:italic;color:var(--gold)}
+h3{font-family:"Cormorant Garamond",serif;font-size:1.22rem;font-weight:600;color:#fff;margin-top:2rem;margin-bottom:.7rem}
+h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-top:1.5rem;margin-bottom:.65rem}
+p{color:var(--td);font-size:.86rem;margin-bottom:.9rem;line-height:1.72}a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gl)}
+ul,ol{padding-left:1.35rem;margin-bottom:1rem}li{color:var(--td);font-size:.86rem;margin-bottom:.4rem;line-height:1.5}
+strong{color:#fff;font-weight:500}
+code{font-family:"JetBrains Mono",monospace;font-size:.78em;background:#010103;border:.5px solid var(--border);border-radius:4px;padding:.1em .42em;color:var(--gl)}
+table.st{width:100%;border-collapse:collapse;margin:.9rem 0 1.8rem;font-size:.79rem;border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden}
+table.st thead tr{background:rgba(0,0,0,.28)}
+table.st th{padding:.62rem .9rem;font-size:.61rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--tm);border-bottom:.5px solid var(--border);text-align:left;white-space:nowrap}
+table.st th:nth-child(2),table.st th:nth-child(3){text-align:center}
+table.st tbody tr{border-bottom:.5px solid var(--border);transition:background .14s}
+table.st tbody tr:last-child{border-bottom:none}table.st tbody tr:hover{background:rgba(201,169,110,.022)}
+table.st td{padding:.7rem .9rem;vertical-align:top}
+table.st td:first-child{color:#fff;font-weight:600;font-size:.81rem;white-space:nowrap;min-width:172px}
+table.st td:nth-child(2){text-align:center;width:90px}
+table.st td:nth-child(3){text-align:center;font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--tm);width:82px;white-space:nowrap}
+table.st td:last-child{color:var(--td);line-height:1.6}
+table.st-blocks td:nth-child(2){text-align:left;width:290px}
+table.st-blocks td:nth-child(2) ul{padding-left:1.1rem;margin-bottom:0}
+table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
+.tb{display:inline-block;font-size:.57rem;font-weight:700;padding:.13rem .45rem;border-radius:20px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.ti{background:rgba(45,212,191,.1);color:var(--teal);border:.5px solid rgba(45,212,191,.2)}.tr{background:rgba(95,164,230,.1);color:var(--blue);border:.5px solid rgba(95,164,230,.2)}.ts{background:rgba(230,178,95,.1);color:var(--amber);border:.5px solid rgba(230,178,95,.2)}.tt{background:rgba(192,132,252,.1);color:var(--purple);border:.5px solid rgba(192,132,252,.2)}.tc{background:rgba(230,108,95,.1);color:var(--red);border:.5px solid rgba(230,108,95,.2)}.tk{background:rgba(93,186,125,.1);color:var(--green);border:.5px solid rgba(93,186,125,.2)}.ta{background:rgba(192,132,252,.08);color:#d8b4fe;border:.5px solid rgba(192,132,252,.18)}.tu{background:rgba(95,164,230,.08);color:#93c5fd;border:.5px solid rgba(95,164,230,.18)}
+.note{display:flex;gap:.8rem;padding:1rem 1.3rem;border-radius:var(--rs);margin-bottom:1.3rem;border:.5px solid}
+.note .ni{flex-shrink:0;margin-top:1px}.note .nb p{margin:0;font-size:.82rem;line-height:1.62}.note .nt{font-weight:600;margin-bottom:.22rem;font-size:.83rem}
+.note p{font-size:.82rem}
+.note.info{background:rgba(95,164,230,.04);border-color:rgba(95,164,230,.2);color:#c7dff8}
+.note.tip{background:rgba(93,186,125,.04);border-color:rgba(93,186,125,.2);color:#c5f0d4}
+.note.warn{background:rgba(230,178,95,.04);border-color:rgba(230,178,95,.2);color:#f5e0c0}
+.note.crit{background:rgba(230,108,95,.04);border-color:rgba(230,108,95,.2);color:#f5c9c5}
+.steps{list-style:none;padding:0;counter-reset:s}.steps li{counter-increment:s;position:relative;padding:0 0 1.6rem 2.8rem;margin:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:700;color:var(--gl);line-height:1.75rem;text-align:center}
+.steps li::after{content:"";position:absolute;left:.875rem;top:1.75rem;bottom:0;width:.5px;background:var(--border)}
+.steps li:last-child{padding-bottom:0}.steps li:last-child::after{display:none}
+.steps li>strong{color:#fff;display:block;margin-bottom:.3rem;font-size:.88rem}.steps li p{margin:.14rem 0 0;font-size:.84rem}
+.path{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem;font-size:.74rem}
+.pc{background:rgba(201,169,110,.05);border:.5px solid var(--border);border-radius:5px;padding:.1rem .48rem;color:var(--td);font-weight:500;white-space:nowrap;font-size:.71rem}
+.pc.r{background:rgba(255,255,255,.025);color:var(--tm);font-weight:400}.ps{color:var(--gd);font-size:.6rem;opacity:.7}
+.pb{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600;background:rgba(95,164,230,.07);color:#93c5fd;border:.5px solid rgba(95,164,230,.18);border-radius:20px;padding:.2rem .58rem;margin:.15rem .3rem .15rem 0}
+.pb.g{background:rgba(201,169,110,.07);color:var(--gl);border-color:var(--bhi)}.pb.gr{background:rgba(93,186,125,.07);color:#86efac;border-color:rgba(93,186,125,.2)}
+.card{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.8rem;margin-bottom:1.6rem;transition:border-color .25s}.card:hover{border-color:rgba(201,169,110,.2)}.card h3{margin-top:0}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1.9rem}
+.fi{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.3rem;display:flex;gap:.8rem;align-items:flex-start;transition:border-color .18s}.fi:hover{border-color:var(--bhi)}
+.fi-ic{width:33px;height:33px;background:rgba(201,169,110,.06);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.fi-t{font-weight:600;font-size:.85rem;color:#fff;margin-bottom:.2rem}.fi-d{font-size:.74rem;color:var(--td);line-height:1.5}
+.ic-c{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:.8rem 1.1rem;display:flex;align-items:center;gap:1.1rem;margin-bottom:.48rem;flex-wrap:wrap;transition:border-color .2s}.ic-c:hover{border-color:var(--bhi)}
+.ic-n{font-weight:600;font-size:.82rem;color:#fff;min-width:205px}.ic-d{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--gold);min-width:148px}.ic-f{font-size:.73rem;color:var(--tm)}
+.faq{border:.5px solid var(--border);border-radius:var(--rs);margin-bottom:.55rem;overflow:hidden;transition:border-color .2s}.faq:hover{border-color:rgba(201,169,110,.2)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.3rem;cursor:pointer;background:var(--card);gap:1rem;user-select:none}
+.fqt{font-weight:500;font-size:.86rem;color:#fff;line-height:1.5}
+.fch{color:var(--gd);flex-shrink:0;transition:transform .22s;font-size:.75rem}
+.faq.open .fch{transform:rotate(180deg);color:var(--gold)}
+.fa{max-height:0;overflow:hidden;transition:max-height .32s ease;background:rgba(0,0,0,.14)}.faq.open .fa{max-height:700px}
+.fai{padding:.88rem 1.3rem 1.1rem;border-top:.5px solid var(--border)}.fai p{margin-bottom:.55rem;font-size:.84rem}.fai p:last-child{margin-bottom:0}
+.hbox{margin-bottom:3.8rem;padding-bottom:2.8rem;border-bottom:.5px solid var(--border)}
+.hbadge{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gl);background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:20px;padding:.22rem .65rem;margin-bottom:1.1rem}
+.h1x{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,3.7rem);font-weight:300;color:#fff;line-height:1.07;margin-bottom:.7rem}.h1x em{font-style:italic;color:var(--gold)}
+.hlead{color:var(--td);font-size:1rem;font-weight:300;max-width:700px;line-height:1.78;margin-bottom:2.2rem}
+.hg{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.hs{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.2rem 1rem;text-align:center}
+.hs-n{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;color:var(--gold);display:block;line-height:1;margin-bottom:.3rem}.hs-l{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tm)}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--gold);color:#050508;padding:.55rem 1.1rem;border-radius:40px;font-size:.74rem;font-weight:600;opacity:0;transform:translateY(12px);transition:all .28s;pointer-events:none;z-index:9999}.toast.show{opacity:1;transform:translateY(0)}
+.doc-footer{margin-top:6rem;padding-top:1.8rem;border-top:.5px solid var(--border);text-align:center;font-size:.72rem;color:var(--tm)}
+@media(max-width:1024px){aside.sb{display:none}main.main{margin-left:0;padding:2rem}h2{margin-top:2.5rem}.feat{grid-template-columns:1fr}}
+@media(max-width:640px){.h1x{font-size:2rem}main.main{padding:1.2rem 1rem 4rem}.hg{grid-template-columns:1fr 1fr}}
+
+.prompt-wrap{position:relative;margin:1.2rem 0 1.6rem}
+.prompt-code{background:#010103;border:.5px solid var(--border);border-radius:var(--r);padding:1.5rem 1.5rem 1.5rem;font-family:"JetBrains Mono",monospace;font-size:.72rem;color:#c5d5e8;line-height:1.75;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;counter-reset:none}
+.prompt-copy{position:absolute;top:.7rem;right:.7rem;background:rgba(201,169,110,.08);border:.5px solid var(--bhi);border-radius:var(--rs);color:var(--gl);font-family:"DM Sans",sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.32rem .75rem;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:.35rem}
+.prompt-copy:hover{background:rgba(201,169,110,.14);color:#fff}
+.prompt-copy.copied{background:rgba(93,186,125,.1);border-color:rgba(93,186,125,.3);color:#86efac}
+.prompt-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--gd);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+.prompt-label::after{content:"";flex:1;height:.5px;background:var(--border)}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.4rem 0}
+.ai-card{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:1rem .9rem;text-align:center;transition:border-color .18s}.ai-card:hover{border-color:var(--bhi)}
+.ai-ic{font-size:1.4rem;display:block;margin-bottom:.4rem}
+.ai-n{font-weight:600;font-size:.76rem;color:#fff;margin-bottom:.2rem}
+.ai-d{font-size:.67rem;color:var(--tm);line-height:1.45}
+@media(max-width:640px){.ai-grid{grid-template-columns:1fr 1fr}}
+.sup-card{background:linear-gradient(135deg,rgba(201,169,110,.06) 0%,rgba(201,169,110,.02) 100%);border:.5px solid var(--bhi);border-radius:var(--r);padding:2.8rem 2.4rem;text-align:center;margin:2rem 0;position:relative;overflow:hidden}
+.sup-card::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,169,110,.08) 0%,transparent 65%);pointer-events:none}
+.sup-icon{font-size:2.5rem;margin-bottom:1rem;display:block;line-height:1}
+.sup-title{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:500;color:#fff;margin-bottom:.6rem;line-height:1.15}
+.sup-title em{font-style:italic;color:var(--gold)}
+.sup-lead{color:var(--td);font-size:.9rem;max-width:520px;margin:0 auto 2rem;line-height:1.72}
+.sup-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:#050508;font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 2rem;border-radius:40px;text-decoration:none;transition:all .22s;box-shadow:0 0 0 0 rgba(201,169,110,.3)}
+.sup-btn:hover{background:var(--gl);color:#050508;box-shadow:0 0 0 6px rgba(201,169,110,.14);transform:translateY(-1px)}
+.sup-btn svg{flex-shrink:0;transition:transform .18s}
+.sup-btn:hover svg{transform:translateX(3px)}
+.sup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.sup-tip{background:rgba(255,255,255,.02);border:.5px solid var(--border);border-radius:var(--rs);padding:1.1rem 1rem;text-align:center;transition:border-color .2s}
+.sup-tip:hover{border-color:var(--bhi)}
+.sup-tip-ic{font-size:1.25rem;display:block;margin-bottom:.5rem}
+.sup-tip-t{font-weight:600;font-size:.78rem;color:#fff;margin-bottom:.25rem}
+.sup-tip-d{font-size:.72rem;color:var(--tm);line-height:1.5}
+@media(max-width:640px){.sup-grid{grid-template-columns:1fr}}
+.sb-lang {
+  margin: 1.1rem 0;
+  position: relative;
+  width: 100%;
+}
+.sb-lang select {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #a0a0a0;
+  font-size: 0.72rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sb-lang select:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  color: #fff;
+}
+.sb-lang::after {
+  content: "▼";
+  font-size: 8px;
+  color: #666;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+</style></head><body>
+<aside class="sb">
+<div class="sb-brand">
+<div class="sb-name">AURICO<span>.</span></div>
+<div class="sb-sub">Guía para propietarios de tiendas</div>
+<div class="sb-ver">v1.0 · SO 2.0</div>
+</div>
+<div class="sb-lang">
+<select onchange="location = this.value;">
+<option value="index.html">English (EN)</option>
+<option value="ar.html">العربية (AR)</option>
+<option selected="selected" value="es.html">Español (ES)</option>
+<option value="fr.html">Français (FR)</option>
+<option value="de.html">Deutsch (DE)</option>
+</select>
+</div>
+<div class="sb-search">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input id="sq" oninput="searchDocs(this.value)" placeholder="Buscar..." type="text"/>
+</div>
+<nav class="sb-nav">
+<div class="sb-cat">Empezando</div>
+<a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>Descripción general</a>
+<a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>Instalación</a>
+<div class="sb-cat">Configuración global</div>
+<a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>Pantalla del cargador</a>
+<a class="sb-a" href="#header" onclick="nav(event,'#header')"><span class="dot"></span>Encabezado y navegación</a>
+<a class="sb-a" href="#menus-submenus" onclick="nav(event,'#menus-submenus')"><span class="dot"></span>Menús y submenús</a>
+<a class="sb-a" href="#announce" onclick="nav(event,'#announce')"><span class="dot"></span>Barra de anuncios</a>
+<a class="sb-a" href="#search" onclick="nav(event,'#search')"><span class="dot"></span>Cajón de búsqueda</a>
+<a class="sb-a" href="#cart-drawer-doc" onclick="nav(event,'#cart-drawer-doc')"><span class="dot"></span>Cajón del carro</a>
+<a class="sb-a" href="#quick-view-doc" onclick="nav(event,'#quick-view-doc')"><span class="dot"></span>Modal de vista rápida</a>
+<a class="sb-a" href="#pickup-availability-doc" onclick="nav(event,'#pickup-availability-doc')"><span class="dot"></span>Disponibilidad de recogida</a>
+<a class="sb-a" href="#footer" onclick="nav(event,'#footer')"><span class="dot"></span>Pie de página</a>
+<div class="sb-cat">Secciones de la página de inicio</div>
+<a class="sb-a" href="#hero" onclick="nav(event,'#hero')"><span class="dot"></span>Control deslizante de caja de héroe</a>
+<a class="sb-a" href="#features" onclick="nav(event,'#features')"><span class="dot"></span>Escaparate de características</a>
+<a class="sb-a" href="#horizontal-gallery" onclick="nav(event,'#horizontal-gallery')"><span class="dot"></span>Galería horizontal</a>
+<a class="sb-a" href="#marquee" onclick="nav(event,'#marquee')"><span class="dot"></span>Ticker de marquesina</a>
+<a class="sb-a" href="#vault" onclick="nav(event,'#vault')"><span class="dot"></span>Bóveda de colección</a>
+<a class="sb-a" href="#lifestyle" onclick="nav(event,'#lifestyle')"><span class="dot"></span>Escaparate de estilo de vida</a>
+<a class="sb-a" href="#brand-story-doc" onclick="nav(event,'#brand-story-doc')"><span class="dot"></span>Historia de la marca</a>
+<a class="sb-a" href="#feat-collection" onclick="nav(event,'#feat-collection')"><span class="dot"></span>Colección destacada</a>
+<a class="sb-a" href="#featured-product-doc" onclick="nav(event,'#featured-product-doc')"><span class="dot"></span>Producto destacado</a>
+<a class="sb-a" href="#blog-posts" onclick="nav(event,'#blog-posts')"><span class="dot"></span>Publicaciones de blog</a>
+<a class="sb-a" href="#testimonials" onclick="nav(event,'#testimonials')"><span class="dot"></span>Control deslizante de testimonios</a>
+<a class="sb-a" href="#trusted" onclick="nav(event,'#trusted')"><span class="dot"></span>Confiado por</a>
+<a class="sb-a" href="#social" onclick="nav(event,'#social')"><span class="dot"></span>Galería Social</a>
+<a class="sb-a" href="#newsletter-doc" onclick="nav(event,'#newsletter-doc')"><span class="dot"></span>Boletín</a>
+<a class="sb-a" href="#custom-liquid-doc" onclick="nav(event,'#custom-liquid-doc')"><span class="dot"></span>Líquido personalizado</a>
+<div class="sb-cat">Página de colección</div>
+<a class="sb-a" href="#coll-page" onclick="nav(event,'#coll-page')"><span class="dot"></span>Configuración de colección</a>
+<a class="sb-a" href="#filters" onclick="nav(event,'#filters')"><span class="dot"></span>Filtros de productos</a>
+<div class="sb-cat">Página del producto</div>
+<a class="sb-a" href="#product" onclick="nav(event,'#product')"><span class="dot"></span>Configuración del producto</a>
+<a class="sb-a" href="#size-guide" onclick="nav(event,'#size-guide')"><span class="dot"></span>Guía de tallas</a>
+<a class="sb-a" href="#complete-look" onclick="nav(event,'#complete-look')"><span class="dot"></span>Completa tu look</a>
+<a class="sb-a" href="#prod-recommendations" onclick="nav(event,'#prod-recommendations')"><span class="dot"></span>Recomendaciones de productos</a>
+<div class="sb-cat">Plantillas de página</div>
+<a class="sb-a" href="#about" onclick="nav(event,'#about')"><span class="dot"></span>Acerca de / Patrimonio</a>
+<a class="sb-a" href="#contact" onclick="nav(event,'#contact')"><span class="dot"></span>Contacto / Taller</a>
+<div class="sb-cat">Plantillas de políticas</div>
+<a class="sb-a" href="#shipping-policy" onclick="nav(event,'#shipping-policy')"><span class="dot"></span>Política de envío</a>
+<a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>Política de devoluciones</a>
+<a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>Política de privacidad</a>
+<div class="sb-cat">Configuración de la tienda</div>
+<a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Traducir y adaptar</a>
+<a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>Tamaños de imagen</a>
+<a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>Preguntas frecuentes</a>
+<a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Ver mensaje SVG</a>
+<a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>Obtenga soporte</a>
+</nav>
+</aside>
+<main class="main"><div class="wrap">
+<section id="overview">
+<div class="hbox">
+<div class="hbadge">◆  Sistema operativo Shopify premium 2.0</div>
+<h1 class="h1x">aurik <em>Tema</em><br/>Guía de configuración</h1>
+<p class="hlead">Aurick es un tema de Shopify de lujo creado para boutiques de relojes. Animaciones cinematográficas, tipografía premium y un completo conjunto de herramientas de conversión, integrado desde el primer día. Esta guía cubre cada sección, cada configuración y cada característica nativa de Shopify que necesitas para administrar tu tienda.</p>
+<div class="hg">
+<div class="hs"><span class="hs-n">58</span><span class="hs-l">Secciones totales</span></div>
+<div class="hs"><span class="hs-n">0</span><span class="hs-l">Errores de verificación de tema</span></div>
+<div class="hs"><span class="hs-n">SO 2.0</span><span class="hs-l">Arquitectura</span></div>
+</div>
+</div>
+<div class="feat">
+<div class="fi"><div class="fi-ic">🎥</div><div><div class="fi-t">Animaciones GSAP</div><div class="fi-d">ScrollTrigger, pin+scrub, revelación de palabras, inclinación 3D, en todas las páginas. No se necesitan aplicaciones.</div></div></div>
+<div class="fi"><div class="fi-ic">⌛</div><div><div class="fi-t">Control deslizante de caja de reloj 3D</div><div class="fi-d">Héroe de caja de reloj animado en 3D en pantalla completa con hasta 3 diapositivas personalizables por tienda.</div></div></div>
+<div class="fi"><div class="fi-ic">🔍</div><div><div class="fi-t">Búsqueda inteligente y filtros</div><div class="fi-d">Sistemas de cajones integrados con tecnología de Shopify Search &amp; Discovery para sinónimos y filtros de búsqueda enriquecidos.</div></div></div>
+<div class="fi"><div class="fi-ic">🛍</div><div><div class="fi-t">Completa tu look</div><div class="fi-d">Accesorios de venta cruzada en la página del producto y dentro del cajón del carrito deslizable. No se requiere aplicación.</div></div></div>
+<div class="fi"><div class="fi-ic">📏</div><div><div class="fi-t">Guía de tallas</div><div class="fi-d">Abre una ventana emergente de imagen por producto, configurada mediante metacampo o etiqueta alternativa de imagen.</div></div></div>
+<div class="fi"><div class="fi-ic">🌐</div><div><div class="fi-t">Listo para multilingüe</div><div class="fi-d">Archivos locales EN / ES / FR prediseñados. Agregue más idiomas usando Traducir y Adaptar.</div></div></div>
+</div>
+</section>
+<section id="install">
+<h2><span class="ic">⚙</span>Instalación</h2>
+<p>Sube el tema Aurick a Shopify en cuatro pasos. No se requieren conocimientos técnicos.</p>
+<ol class="steps">
+<li><strong>Localice el archivo del tema</strong><p>encontrar <code>aurick-theme.zip</code> en tu computadora. hacer <em>no</em> descomprímelo.</p></li>
+<li><strong>Ir a Tienda Online → Temas</strong><p>En el administrador de Shopify: <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">Temas</span></span></p></li>
+<li><strong>Sube el ZIP</strong><p>Haga clic <strong>Agregar tema</strong> → <strong>Subir archivo zip</strong>. Seleccione el <code>.zip</code> y haga clic <strong>Subir archivo</strong>.</p></li>
+<li><strong>Personalizar y publicar</strong><p>Haga clic <strong>Personalizar</strong> para configurar todas las secciones en el Editor de temas, o haga clic en <strong>Publicar</strong> para entrar en funcionamiento inmediatamente.</p></li>
+</ol>
+<div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">Cargue el ZIP tal cual</div><p>No extraiga el archivo antes de cargarlo. Shopify requiere el formato comprimido. Extraerlo primero hará que la carga falle.</p></div></div>
+</section>
+<section id="loader">
+<h2><span class="ic">🎬</span>Pantalla del cargador</h2>
+<p>Editor de temas → <strong>Pantalla del cargador</strong>. Controla el precargador de entrada animado cuando los compradores visitan su tienda.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Habilitar cargador</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Actívelo para mostrar la animación del precargador al cargar la página inicial.</td></tr>
+<tr><td>Imagen del logotipo</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Imagen del logotipo de su marca para mostrar en el centro de la pantalla del precargador.</td></tr>
+<tr><td>Ancho del logotipo (escritorio)</td><td><span class="tb tr">rango</span></td><td>160 píxeles</td><td>Ancho de visualización del logotipo en pantallas de escritorio (Rango: 60–400 px).</td></tr>
+<tr><td>Ancho del logotipo (móvil)</td><td><span class="tb tr">rango</span></td><td>120 píxeles</td><td>Ancho de visualización del logotipo en pantallas móviles (Rango: 40–300 px).</td></tr>
+<tr><td>Línea de texto del precargador 1</td><td><span class="tb tt">texto</span></td><td>AURICO</td><td>Primera línea de texto que se muestra debajo del logotipo durante la carga.</td></tr>
+<tr><td>Línea de texto del precargador 2</td><td><span class="tb tt">texto</span></td><td>ALTA RELOJERÍA</td><td>Segunda línea de texto que muestra las credenciales de la marca.</td></tr>
+<tr><td>Duración de la animación</td><td><span class="tb tr">rango</span></td><td>2,5 segundos</td><td>Tiempo total de carga en segundos antes de que desaparezca (rango: 1,0 a 5,0 s).</td></tr>
+<tr><td>Familia de fuentes</td><td><span class="tb ts">seleccionar</span></td><td>Serifa</td><td>Elige entre <strong>Serifa</strong> (aspecto editorial de lujo) o <strong>Sans-serif</strong> (moderno).</td></tr>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color de la pantalla de superposición completa del precargador.</td></tr>
+<tr><td>Color del texto</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color de los textos del precargador.</td></tr>
+<tr><td>Color de acento</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de detalles, puntos o términos resaltados.</td></tr>
+</tbody></table>
+</section>
+<section id="header">
+<h2><span class="ic">🧭</span>Encabezado y <em>Navegación</em></h2>
+<p>Editor de temas → <strong>encabezado</strong>. Controla el logotipo, los enlaces de navegación, los iconos, los colores y el comportamiento adhesivo y transparente.</p>
+<h3>Logotipo</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Tipo de logotipo</td><td><span class="tb ts">seleccionar</span></td><td>texto</td><td>Elige <strong>Texto</strong> para mostrar el nombre de tu tienda como texto serif con estilo, o <strong>Imagen</strong> para mostrar un logotipo que subes.</td></tr>
+<tr><td>Texto del logotipo</td><td><span class="tb tt">texto</span></td><td>—</td><td>Anulación de texto personalizado para el logotipo. Déjalo en blanco para usar el nombre de tu tienda Shopify automáticamente.</td></tr>
+<tr><td>Imagen del logotipo</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Archivo del logotipo de su marca. Solo visible cuando el tipo de logotipo es Imagen. Recomendado: PNG o SVG transparente, 300 × 120 px.</td></tr>
+<tr><td>Posición del logotipo: escritorio</td><td><span class="tb ts">seleccionar</span></td><td>Centro izquierda</td><td><strong>Centro izquierda</strong> • <strong>Centro medio</strong> (logotipo centrado, navegación a la izquierda) • <strong>Arriba a la izquierda</strong> (logotipo encima de la barra de navegación) • <strong>Centro superior</strong>.</td></tr>
+<tr><td>Posición del logotipo: móvil</td><td><span class="tb ts">seleccionar</span></td><td>Centro</td><td>Alineación central o izquierda en ventanas gráficas móviles.</td></tr>
+<tr><td>Tamaño del logotipo: escritorio</td><td><span class="tb tr">rango</span></td><td>140 píxeles</td><td>Ancho máximo del logo en el escritorio. Rango: 60–260 píxeles.</td></tr>
+<tr><td>Tamaño del logotipo: móvil</td><td><span class="tb tr">rango</span></td><td>100 píxeles</td><td>Ancho máximo en dispositivos móviles. Rango: 52–180 píxeles.</td></tr>
+</tbody></table>
+<h3>Tipografía e iconos</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Tamaño del texto del menú: escritorio</td><td><span class="tb tr">rango</span></td><td>13 píxeles</td><td>Tamaño de fuente de los enlaces de navegación en el escritorio. Rango: 10 a 18 píxeles.</td></tr>
+<tr><td>Tamaño del texto del menú: móvil</td><td><span class="tb tr">rango</span></td><td>28 píxeles</td><td>Tamaño de fuente dentro del menú deslizable del móvil. Rango: 18 a 40 píxeles.</td></tr>
+<tr><td>Tamaño de los iconos: escritorio</td><td><span class="tb tr">rango</span></td><td>22 píxeles</td><td>Tamaño de los íconos de búsqueda, carrito e idioma en el escritorio. Rango: 16–32 píxeles.</td></tr>
+<tr><td>Tamaño de los iconos – móvil</td><td><span class="tb tr">rango</span></td><td>22 píxeles</td><td>Tamaño de los iconos de encabezado en dispositivos móviles. Rango: 16–32 píxeles.</td></tr>
+</tbody></table>
+<h3>Colores</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto del menú: activo/desplazado</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de un enlace de navegación cuando se encuentra en la página actual o cuando se encuentra sobre ella.</td></tr>
+<tr><td>Texto del menú: predeterminado</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color predeterminado de todos los enlaces de navegación en su estado inactivo.</td></tr>
+<tr><td>Color del texto del logotipo</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del texto del logotipo (solo aplica cuando el tipo de logotipo es Texto).</td></tr>
+<tr><td>Color del icono de búsqueda</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del icono de búsqueda en el encabezado.</td></tr>
+<tr><td>Color del icono de idioma</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del icono del selector de idioma/localización. Aparece automáticamente cuando se publican varios idiomas.</td></tr>
+<tr><td>Color del icono del país</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del icono del selector de moneda/país.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>El icono de búsqueda en el encabezado abre la <strong>Cajón de búsqueda</strong> cubrir. Ver el <a href="#search" onclick="nav(event,'#search')">Cajón de búsqueda</a> sección para saber cómo configurar lo que aparece dentro usando Shopify Search &amp; Discovery.</p></div></div>
+<h3>Configuración del megamenú de colecciones</h3>
+<p>Selecciona un panel de tarjetas de colección deslizante de ancho completo que se abre automáticamente al pasar el enlace del activador coincidente en su menú principal.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Habilitar mega menú de colecciones</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Actívelo para habilitar el megamenú deslizante horizontal de colecciones.</td></tr>
+<tr><td>Título del elemento de navegación activador</td><td><span class="tb tt">texto</span></td><td>Colecciones</td><td>El nombre del enlace en su menú principal (no distingue entre mayúsculas y minúsculas) que activa este megamenú cuando se coloca el cursor sobre él.</td></tr>
+<tr><td>Colecciones para mostrar</td><td><span class="tb ts">seleccionar</span></td><td>—</td><td>Seleccione hasta 12 colecciones para mostrarlas como tarjetas dentro de la cuadrícula del megamenú.</td></tr>
+<tr><td>Tarjetas visibles a la vez (escritorio)</td><td><span class="tb tr">rango</span></td><td>3</td><td>Número de colecciones que se muestran en el escritorio antes de que aparezcan las flechas de navegación. Rango: 2–6.</td></tr>
+<tr><td>Texto del enlace "Comprar ahora"</td><td><span class="tb tt">texto</span></td><td>Compra ahora</td><td>Etiqueta en cursiva que se muestra en el estado de desplazamiento de cada tarjeta de colección.</td></tr>
+<tr><td>URL del botón "Ver todo"</td><td><span class="tb tu">URL</span></td><td>—</td><td>Enlace de destino del botón Ver todo. cae de nuevo a <code>/collections</code> si está en blanco.</td></tr>
+<tr><td>Texto del botón "Ver todo"</td><td><span class="tb tt">texto</span></td><td>Ver toda la colección</td><td>Etiqueta del botón principal inferior dentro del megamenú.</td></tr>
+</tbody></table>
+<h3>Configuración destacada del megamenú (navegación + tarjetas)</h3>
+<p>Divide el panel desplegable en una lista de navegación del lado izquierdo (hasta 3 columnas) y un panel de promociones del lado derecho (hasta 6 tarjetas de funciones visuales con animaciones de entrada escalonadas).</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Habilitar mega menú destacado</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Actívelo para activar el megamenú destacado de múltiples paneles.</td></tr>
+<tr><td>Título del elemento de navegación activador</td><td><span class="tb tt">texto</span></td><td>Tienda</td><td>El título del enlace en su menú principal (no distingue entre mayúsculas y minúsculas) que activa este menú.</td></tr>
+<tr><td>Menú columna 1 / 2 / 3</td><td><span class="tb ts">seleccionar</span></td><td>—</td><td>Seleccione hasta 3 menús para representarlos como columnas de navegación a la izquierda. El título del menú se utiliza como encabezado de columna.</td></tr>
+<tr><td>Tarjeta 1–6 — Imagen</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Cargue imágenes promocionales para hasta 6 tarjetas (se recomienda una relación de aspecto de 16:10).</td></tr>
+<tr><td>Tarjeta 1 a 6: Etiqueta</td><td><span class="tb tt">texto</span></td><td>—</td><td>Títulos que se muestran debajo de cada imagen (p. ej. <code>New Arrivals</code>, <code>Best Sellers</code>).</td></tr>
+<tr><td>Tarjeta 1 a 6: Enlace</td><td><span class="tb tu">URL</span></td><td>—</td><td>Destinos de URL para cada tarjeta. Deje la imagen y la etiqueta en blanco para ocultar una ranura para tarjetas.</td></tr>
+</tbody></table>
+</section>
+<section id="menus-submenus">
+<h2><span class="ic">🔍</span>Menús y <em>Submenús</em></h2>
+<span class="pb g">Navegación de Shopify</span>
+<p>Aprenda a crear menús desplegables, menús anidados de varios niveles y megamenús visuales en Shopify e intégrelos en la navegación de encabezado de Aurick.</p>
+<h3>Paso 1: crear menús anidados en Shopify</h3>
+<p>Shopify admite navegación anidada hasta tres niveles de profundidad. Para crear una estructura anidada:</p>
+<ol class="steps">
+<li><strong>Ir a configuración de navegación</strong>
+<p>En Shopify Admin, navega hasta <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">Navegación</span></span>.</p>
+</li>
+<li><strong>Seleccionar o crear un menú</strong>
+<p>Haga clic en **Menú principal** (o haga clic en **Agregar menú** para crear uno nuevo).</p>
+</li>
+<li><strong>Agregar elementos de menú</strong>
+<p>Haga clic en **Agregar elemento de menú**, asígnele un nombre (p. ej. <code>Collections</code>) y vincúlelo. Luego agregue elementos secundarios debajo (p. ej. <code>Chronograph</code>, <code>Automatic</code>).</p>
+</li>
+<li><strong>Anidar elementos (arrastrar y soltar)</strong>
+<p>Haga clic y mantenga presionado el ícono del controlador de arrastre al lado de un elemento del menú secundario, arrástrelo **hacia arriba y hacia la derecha** debajo del elemento principal (por ejemplo, arrástrelo debajo <code>Collections</code>). Esto anida el elemento debajo del padre. Repita para agregar subelementos debajo de elementos secundarios (hasta 3 niveles).</p>
+</li>
+<li><strong>Haga clic en Guardar menú.</strong></li>
+</ol>
+<h3>Paso 2: vincular el menú en el encabezado de Aurick</h3>
+<p>Para mostrar su menú en el encabezado:</p>
+<ol class="steps">
+<li><strong>Abrir editor de temas</strong>
+<p>Navegue a **Tienda en línea** → **Temas** → haga clic en **Personalizar** en el tema Aurick.</p>
+</li>
+<li><strong>Seleccione la sección del encabezado</strong>
+<p>Haga clic en la sección **Encabezado** en la barra lateral izquierda.</p>
+</li>
+<li><strong>Elija Menú</strong>
+<p>Busque la configuración de **Menú** y haga clic en **Cambiar** → **Seleccionar menú**. Seleccione su Menú principal y haga clic en **Guardar**.</p>
+</li>
+</ol>
+</section>
+<section id="announce">
+<h2><span class="ic">📢</span>Anuncio <em>barra</em></h2>
+<p>Una barra delgada que se muestra encima del encabezado de cada página. Editor de temas → <strong>Barra de anuncios</strong>.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Mostrar barra de anuncios</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Alternancia maestra. Actívelo para mostrar la barra encima del encabezado en todo el sitio.</td></tr>
+<tr><td>Texto del anuncio</td><td><span class="tb tt">texto</span></td><td>Envío gratuito en pedidos superiores a $100</td><td>El mensaje que se muestra en la barra. Cada bloque de Anuncio es un mensaje.</td></tr>
+<tr><td>Enlace (opcional)</td><td><span class="tb tu">URL</span></td><td>—</td><td>Si se completa, al hacer clic en cualquier lugar de la barra, el comprador accede a esta URL.</td></tr>
+<tr><td>Anuncios de rotación automática</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Cuando está activado, varios bloques de anuncios se desplazan automáticamente uno a la vez.</td></tr>
+<tr><td>Cambiar cada (segundos)</td><td><span class="tb tr">rango</span></td><td>5 segundos</td><td>Cuánto tiempo permanece visible cada mensaje antes de pasar al siguiente. Rango: 2 a 15 s.</td></tr>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#121212</td><td>Color de fondo de la franja de anuncios.</td></tr>
+<tr><td>Color del texto</td><td><span class="tb tc">color</span></td><td>#ffffff</td><td>Color del texto del anuncio.</td></tr>
+<tr><td>Tamaño de fuente: escritorio</td><td><span class="tb tr">rango</span></td><td>13 píxeles</td><td>Tamaño del texto en el escritorio. Rango: 10 a 18 píxeles.</td></tr>
+<tr><td>Tamaño de fuente: móvil</td><td><span class="tb tr">rango</span></td><td>11 píxeles</td><td>Tamaño del texto en el móvil. Rango: 9–16 píxeles.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">💡</span><div class="nb"><p>Agregar varios <strong>Anuncio</strong> bloques dentro de esta sección y habilite <em>Rotación automática</em> para crear un banner ciclista que muestre información de envío, promociones y políticas de la tienda en secuencia.</p></div></div>
+</section>
+<section id="search">
+<h2><span class="ic">🔎</span>Buscar <em>Cajón</em></h2>
+<span class="pb">En todo el sitio: icono de búsqueda de encabezado</span>
+<p>Cuando un comprador hace clic en el ícono de búsqueda en el encabezado de Aurick, se abre un cajón de búsqueda deslizable en pantalla completa. Muestra una entrada de búsqueda, resultados instantáneos (productos, colecciones, páginas) y sugerencias predictivas. Todo esto está impulsado por el <strong>Búsqueda y descubrimiento de Shopify</strong> aplicación: no se necesita código de tema.</p>
+<h3>Configuración del cajón de búsqueda</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Título</td><td><span class="tb tt">texto</span></td><td>Busca en nuestro taller</td><td>Título grande que se muestra al abrir el cajón.</td></tr>
+<tr><td>Etiqueta de sugerencias de búsqueda</td><td><span class="tb tt">texto</span></td><td>Sugerencias</td><td>Etiqueta que se muestra encima de las palabras clave previas a la búsqueda.</td></tr>
+<tr><td>Resultados predictivos máximos</td><td><span class="tb tr">rango</span></td><td>6</td><td>Los resultados máximos de productos/colección se muestran al instante. (Rango: 3 a 12).</td></tr>
+<tr><td>Habilitar sugerencias</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra términos y categorías populares rápidamente cuando está vacío.</td></tr>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color de la superposición de fondo del panel del cajón.</td></tr>
+</tbody></table>
+<h3>Configuración del comportamiento de búsqueda: aplicación de búsqueda y descubrimiento</h3>
+<ol class="steps">
+<li><strong>Abre la aplicación</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Aplicaciones</span><span class="ps">›</span><span class="pc">Búsqueda y descubrimiento</span></span>. Si no está instalado, instálelo gratis desde Shopify App Store.</p>
+</li>
+<li><strong>Establecer lo que aparece en los resultados de búsqueda</strong>
+<p>En la aplicación haga clic <strong>Buscar</strong> → <strong>Productos</strong>. Puede establecer en qué campos de producto se buscan (título, descripción, SKU, etiquetas, proveedor, tipo, variantes). Habilitar <strong>Búsqueda de metacampos</strong> para permitir a los compradores encontrar relojes por material de caja, marca o cualquier otro metacampo que haya definido.</p>
+</li>
+<li><strong>Configurar sinónimos</strong>
+<p>Haga clic <strong>Sinónimos</strong>. Agregue grupos de palabras para que al escribir “crono” aparezcan relojes “cronógrafo” y “correa” encuentre productos “banda”. Esto mejora drásticamente la calidad de los resultados de búsqueda de vocabulario de lujo.</p>
+</li>
+<li><strong>Impulsar y enterrar productos</strong>
+<p>Haga clic <strong>Resultados de la búsqueda</strong> → <strong>Impulsos de producto</strong>. Fije productos específicos en la parte superior de los resultados de búsqueda para las palabras clave objetivo; por ejemplo, aumente su visibilidad cuando un comprador busque "firma". Del mismo modo, entierre los artículos agotados hasta el fondo.</p>
+</li>
+</ol>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">La calidad de la búsqueda mejora con más datos de productos</div><p>Complete su producto <strong>Tipo</strong>, <strong>vendedor</strong>, <strong>Etiquetas</strong>, y especialmente tu costumbre <strong>Metacampos</strong> en cada producto. Cuantos más datos estructurados tenga Shopify, más precisos y relevantes serán los resultados de la búsqueda dentro del cajón.</p></div></div>
+</section>
+<section id="cart-drawer-doc">
+<h2><span class="ic">🛍</span>Cajón del carro</h2>
+<p>Editor de temas → <strong>Cajón del carro</strong>. Controla el diseño del carrito de compras deslizable, los objetivos de envío y las notas.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Umbral de envío gratuito</td><td><span class="tb tr">rango</span></td><td>150</td><td>Cantidad en moneda de la tienda necesaria para desbloquear el envío gratuito. Establezca en 0 para desactivar (Rango: 0–1000).</td></tr>
+<tr><td>Mensaje de envío gratuito</td><td><span class="tb tt">texto</span></td><td>Estás a {{ cantidad }} de recibir envío gratis</td><td>Mensaje que se muestra cuando no se alcanza el umbral. uso <code>{{ amount }}</code> para mostrar el valor restante.</td></tr>
+<tr><td>Mensaje de éxito</td><td><span class="tb tt">texto</span></td><td>¡Has desbloqueado el envío gratis!</td><td>Mensaje de celebración que se muestra cuando el subtotal supera el umbral.</td></tr>
+<tr><td>Mostrar nota</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Agrega un área de texto de notas desplegable que permite a los clientes agregar mensajes de envoltura de regalo o instrucciones especiales.</td></tr>
+<tr><td>Etiqueta de nota</td><td><span class="tb tt">texto</span></td><td>Agregar nota de pedido</td><td>Texto de etiqueta del bloque desplegable de notas.</td></tr>
+<tr><td>Continuar comprando etiqueta</td><td><span class="tb tt">texto</span></td><td>Continuar comprando</td><td>Texto que se muestra en el botón de cierre del cajón en la parte inferior.</td></tr>
+<tr><td>Etiqueta del botón de pago</td><td><span class="tb tt">texto</span></td><td>Proceder al pago</td><td>Texto que se muestra en el botón de envío de pago.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Para maximizar la claridad del cajón del carrito, los precios se muestran en **Outfit (Sans-serif)** altamente legible en lugar de una fuente serif decorativa. El control deslizante de venta cruzada muestra artículos vinculados automáticamente desde el <strong>Completa tu look</strong> Configuración del metacampo.</p></div></div>
+</section>
+<section id="quick-view-doc">
+<h2><span class="ic">👁</span>Modal de vista rápida</h2>
+<span class="pb y">Utilidad</span>
+<p>La superposición modal Vista rápida permite a los clientes ver los medios y las opciones de los productos y agregar productos a su carrito sin salir de la página actual.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Este modal se carga dinámicamente usando Shopify. <strong>API de representación de secciones</strong> de <code>sections/quick-view.liquid</code>, lo que garantiza una carga rápida de la página inicial. Incluye un sistema de color de acento personalizado que evalúa las etiquetas de los productos (por ejemplo, agregar etiquetas <code>accent-#c9a96e</code> cambia dinámicamente el color de las opciones resaltadas para ese producto).</p></div></div>
+</section>
+<section id="pickup-availability-doc">
+<h2><span class="ic">📍</span>Disponibilidad de recogida</h2>
+<span class="pb y">Utilidad</span>
+<p>Indicador dinámico de recogida local requerido por los estándares de Shopify Theme Store. Muestra si la variante actual está disponible en tiendas minoristas cercanas.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Se renderiza de forma asincrónica utilizando la API de renderizado de secciones de <code>sections/pickup-availability.liquid</code>. La configuración se administra de forma nativa en tu administrador de Shopify en <strong>Configuración → Envío y entrega → Recogida local</strong>.</p></div></div>
+</section>
+<section id="footer">
+<h2><span class="ic">▼</span><em>Pie de página</em></h2>
+<p>Editor de temas → <strong>Pie de página</strong>. Controla el área de la marca, las columnas de navegación, los íconos sociales y el aviso de derechos de autor.</p>
+<h3>Configuración de marca</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Logotipo de la marca</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Logotipo de pie de página opcional. Recomendado: PNG transparente de 200 × 60 px.</td></tr>
+<tr><td>Ancho máximo del logotipo</td><td><span class="tb tr">rango</span></td><td>120 píxeles</td><td>Ancho máximo de visualización del logotipo del pie de página. Rango: 60–300 px.</td></tr>
+<tr><td>Nombre de marca</td><td><span class="tb tt">texto</span></td><td>—</td><td>Anulación de texto para el nombre de la marca del pie de página. Déjalo en blanco para usar el nombre de tu tienda Shopify.</td></tr>
+<tr><td>Lema de la marca</td><td><span class="tb tt">texto</span></td><td>Diseñado para aquellos que entienden el tiempo.</td><td>Línea en cursiva que se muestra debajo del nombre de la marca en el pie de página.</td></tr>
+<tr><td>Texto de derechos de autor</td><td><span class="tb tt">texto</span></td><td>© {año} {marca}. Reservados todos los derechos.</td><td>uso <code>{year}</code> para el año en curso y <code>{brand}</code> para el nombre de su tienda automáticamente.</td></tr>
+</tbody></table>
+<h3>Colores y diseño</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Fondo de pie de página</td><td><span class="tb tc">color</span></td><td>#030305</td><td>Color de fondo de toda el área del pie de página.</td></tr>
+<tr><td>Color del nombre de la marca</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color del texto del nombre de la marca en el pie de página.</td></tr>
+<tr><td>Color del eslogan</td><td><span class="tb tc">color</span></td><td>#3a3530</td><td>Color del eslogan en cursiva debajo del nombre de la marca.</td></tr>
+<tr><td>Línea divisoria dorada</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de la línea divisoria horizontal decorativa.</td></tr>
+<tr><td>Enlaces de navegación (predeterminado)</td><td><span class="tb tc">color</span></td><td>#6b6456</td><td>Color predeterminado del texto del enlace de navegación del pie de página.</td></tr>
+<tr><td>Enlaces de navegación (desplazar el cursor)</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color de los enlaces de navegación al pasar el mouse.</td></tr>
+<tr><td>Íconos sociales (predeterminado)</td><td><span class="tb tc">color</span></td><td>#6b6456</td><td>Color de los íconos de las redes sociales en su estado inactivo.</td></tr>
+<tr><td>Íconos sociales (desplazar el cursor)</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de los íconos sociales cuando se coloca el cursor sobre ellos.</td></tr>
+<tr><td>Texto de derechos de autor</td><td><span class="tb tc">color</span></td><td>#3a3530</td><td>Color del aviso de copyright en la parte inferior.</td></tr>
+</tbody></table>
+<h3>Bloques de pie de página</h3>
+<p>El contenido del pie de página está completamente basado en bloques. Dentro del Editor de temas, haga clic en <strong>Agregar bloque</strong> en la sección Pie de página para configurar bloques:</p>
+<table class="st st-blocks"><thead><tr><th>Tipo de bloque</th><th>Configuración</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td><strong>Enlace de navegación</strong></td><td>
+<ul>
+<li><strong>Etiqueta</strong> (<span class="tb tt">texto</span>): El texto del enlace de navegación (p. ej. <code>About</code>).</li>
+<li><strong>URL</strong> (<span class="tb tu">URL</span>): Destino del enlace.</li>
+</ul>
+</td><td>Acerca de / —</td><td>Crea un enlace de navegación horizontal individual en el pie de página. Agregue tantos como sea necesario.</td></tr>
+<tr><td><strong>Icono social</strong></td><td>
+<ul>
+<li><strong>Plataforma</strong> (<span class="tb ts">seleccionar</span>): Elija Instagram, X/Twitter, Facebook, YouTube, Pinterest, TikTok, Snapchat, LinkedIn o <code>Custom (SVG / Image)</code>.</li>
+<li><strong>Anular URL</strong> (<span class="tb tu">URL</span>): URL de destino (anula el enlace global de Configuración del tema).</li>
+<li><strong>Código SVG personalizado</strong> (<span class="tb ta">área de texto</span>): Pegar sin procesar en línea <code>&lt;svg&gt;&lt;/svg&gt;</code> marcado aquí cuando la Plataforma está configurada como Personalizada.</li>
+<li><strong>Imagen de icono personalizado</strong> (<span class="tb ti">imagen</span>): Imagen alternativa si el código SVG personalizado está vacío. Tamaño recomendado: 64×64 px.</li>
+<li><strong>etiqueta aria</strong> (<span class="tb tt">texto</span>): Texto de accesibilidad para lectores de pantalla.</li>
+</ul>
+</td><td>Instagram/—</td><td>Crea un enlace de redes sociales. La elección de una plataforma coincide automáticamente con el ícono social apropiado.</td></tr>
+<tr><td><strong>Tarjeta de pago</strong></td><td>
+<ul>
+<li><strong>Tipo de tarjeta</strong> (<span class="tb ts">seleccionar</span>): Visa, Mastercard, Amex, PayPal, Discover, Apple Pay, Google Pay, Stripe o <code>Custom (Image/Text)</code>.</li>
+<li><strong>Imagen de tarjeta personalizada</strong> (<span class="tb ti">imagen</span>): Logotipo de pasarela de pago personalizado (se recomienda 60×40 px).</li>
+<li><strong>Nombre de la tarjeta</strong> (<span class="tb tt">texto</span>): texto de accesibilidad/atributo alternativo.</li>
+<li><strong>Color de texto alternativo</strong> (<span class="tb tc">color</span>): Se utiliza para el respaldo personalizado del texto del nombre de la tarjeta.</li>
+<li><strong>Fondo personalizado</strong> (<span class="tb tc">color</span>): Color de fondo del icono de la tarjeta de pago.</li>
+</ul>
+</td><td>Visa / —</td><td>Muestra una insignia de marca de pago en la parte inferior del pie de página. Agregue varias tarjetas para crear su sección de insignia de confianza.</td></tr>
+</tbody></table>
+</section>
+<section id="hero">
+<h2><span class="ic">🎥</span>Caja de héroe <em>control deslizante</em></h2>
+<span class="pb g">Página de inicio — Primera sección</span>
+<p>Un control deslizante de pantalla completa con un cuadro de reloj animado en 3D en cada diapositiva. La tapa de la caja se abre para revelar el reloj con una animación cinematográfica al entrar. Hasta 3 toboganes, cada uno de ellos totalmente independiente.</p>
+<h3>Configuración a nivel de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Modo de altura del escritorio</td><td><span class="tb ts">seleccionar</span></td><td>Pantalla completa</td><td><strong>Pantalla completa (100vh)</strong> llena toda la ventana del navegador. <strong>Altura personalizada</strong> utiliza el valor de píxel que establece a continuación.</td></tr>
+<tr><td>Altura del escritorio (px)</td><td><span class="tb tr">rango</span></td><td>700 píxeles</td><td>Solo se aplica cuando se selecciona Altura personalizada. Mínimo 500 px para proteger el diseño del cuadro 3D.</td></tr>
+<tr><td>Modo de altura móvil</td><td><span class="tb ts">seleccionar</span></td><td>Pantalla completa</td><td>Igual que el escritorio: pantalla completa o una altura personalizada fija para ventanas gráficas móviles.</td></tr>
+<tr><td>Altura del móvil (px)</td><td><span class="tb tr">rango</span></td><td>560 píxeles</td><td>Altura fija en píxeles para dispositivos móviles cuando se selecciona Personalizado.</td></tr>
+<tr><td>Deslizamiento automático</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Pase automáticamente por las diapositivas sin interacción del usuario.</td></tr>
+<tr><td>Avance automático (segundos)</td><td><span class="tb tr">rango</span></td><td>6 segundos</td><td>Cuánto tiempo permanece visible cada diapositiva antes de avanzar. Rango: 3 a 12 s.</td></tr>
+<tr><td>margen superior</td><td><span class="tb tr">rango</span></td><td>0 píxeles</td><td>Espacio encima de la sección. Útil cuando el encabezado es transparente; utilícelo para empujar el contenido principal hacia abajo.</td></tr>
+<tr><td>Margen inferior</td><td><span class="tb tr">rango</span></td><td>0 píxeles</td><td>Espacio debajo de la sección antes de que comience la siguiente sección.</td></tr>
+</tbody></table>
+<h3>Configuración por diapositiva (bloque de observación)</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Marca (tapa superior)</td><td><span class="tb tt">texto</span></td><td>ALBA / APEX / AURUM</td><td>Texto del nombre de la marca grabado en la parte superior de la tapa de la caja del reloj. Déjelo en blanco para usar la ranura predeterminada.</td></tr>
+<tr><td>Nombre del modelo (tapa interior)</td><td><span class="tb tt">texto</span></td><td>Alba Azul / Carmesí / Aurum Reserva</td><td>El nombre del modelo del reloj se muestra en el interior de la tapa abierta. Déjelo en blanco para la ranura predeterminada.</td></tr>
+<tr><td>Subtítulo de la colección</td><td><span class="tb tt">texto</span></td><td>—</td><td>Línea de subtítulo opcional que se muestra debajo del nombre del modelo dentro de la tapa.</td></tr>
+<tr><td>Material de la caja</td><td><span class="tb ts">seleccionar</span></td><td>Cuero de obsidiana</td><td>Estilo visual de la caja 3D: <strong>Cuero de obsidiana</strong> (azul - ranura 1), <strong>Carbono Titanio</strong> (rojo - ranura 2), <strong>Madera Lacada</strong> (oro - ranura 3).</td></tr>
+<tr><td>acento primario</td><td><span class="tb tc">color</span></td><td>#8ab4f8</td><td>Color de acento principal para el cuadro y la tipografía de la diapositiva. Mantenga los valores predeterminados de las ranuras para obtener el mejor equilibrio visual.</td></tr>
+<tr><td>Resaltado de acento</td><td><span class="tb tc">color</span></td><td>#f5cba7</td><td>Acento secundario más claro para reflejos y bordes degradados.</td></tr>
+<tr><td>Resplandor interior</td><td><span class="tb tc">color</span></td><td>#60a8ff</td><td>Color de brillo ambiental dentro del área del cojín interior de la caja abierta.</td></tr>
+<tr><td>Foco RGB</td><td><span class="tb tt">texto</span></td><td>52, 152, 219</td><td>Valores RGB para la superposición de focos interiores de la caja (p. ej. <code>52, 152, 219</code>). Formato: <code>r, g, b</code>.</td></tr>
+<tr><td>reloj incorporado</td><td><span class="tb ts">seleccionar</span></td><td>alba-real.svg</td><td>Seleccione uno de los vectores de visualización integrados de alta fidelidad del tema: <strong>alba azul</strong> (espacio 1), <strong>Edición carmesí</strong>, o <strong>Reserva Aurum</strong>.</td></tr>
+<tr><td>Foto de reloj personalizada</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Sube tu propia imagen de reloj. Anula el SVG incorporado. Recomendado: <strong>400 × 500 píxeles</strong> retrato con fondo transparente (PNG). Si desea utilizar un vector de reloj SVG personalizado, puede generarlo utilizando el mensaje del asistente de IA que se proporciona en el <a href="#watch-svg">Ver imagen → Aviso SVG</a> sección siguiente.</td></tr>
+</tbody></table>
+</section>
+<section id="features">
+<h2><span class="ic">✨</span>Características <em>escaparate</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Sección de pantalla dividida GSAP. La imagen de su reloj se ubica en el panel derecho, mientras que las viñetas de funciones animadas aparecen en el izquierdo. Cuando le sigue inmediatamente la sección Galería horizontal, la imagen del reloj vuela hacia la primera tarjeta de la galería en el desplazamiento (la transición voladora).</p>
+<h3>Configuración de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Elaborado sin concesiones</td><td>Pequeña etiqueta en mayúscula que aparece encima de la lista de funciones.</td></tr>
+<tr><td>Imagen de presentación</td><td><span class="tb ti">imagen</span></td><td>—</td><td>La imagen del reloj en el panel derecho. Recomendado: <strong>540 × 540 píxeles</strong> con un fondo transparente (PNG) para que la transición de vuelo funcione limpiamente.</td></tr>
+<tr><td>Habilitar la transición de vigilancia de vuelo</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Anima la imagen del reloj volando hacia la primera tarjeta de la Galería horizontal al desplazarse. Solo funciona cuando la sección Galería se coloca inmediatamente debajo.</td></tr>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color de fondo de toda esta sección.</td></tr>
+<tr><td>Acento / Color dorado</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de los iconos de viñetas de funciones y del texto resaltado.</td></tr>
+<tr><td>Color del texto</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color de los títulos de las funciones.</td></tr>
+<tr><td>Color del texto de descripción</td><td><span class="tb tc">color</span></td><td>#a8a29e</td><td>Color de los párrafos de descripción de características.</td></tr>
+</tbody></table>
+<h3>Bloque de funciones (uno por función)</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Título de la función</td><td><span class="tb tt">texto</span></td><td>—</td><td>Nombre de la característica, p.e. “Cristal de Zafiro”.</td></tr>
+<tr><td>Descripción de la característica</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Breve párrafo que explica la característica en detalle.</td></tr>
+</tbody></table>
+<section id="horizontal-gallery">
+<h2><span class="ic">💎</span>Horizontales <em>Galería</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Una vitrina de productos de lujo con desplazamiento horizontal. Muestra tarjetas de vigilancia con fondos dinámicos premium, etiquetas personalizables, botones de carrito de "Agregación rápida" en línea e indicadores de puntos. Totalmente responsivo con interacciones fluidas de deslizamiento de la rueda del mouse impulsadas por GSAP.</p>
+<h3>Configuración principal</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Colección</td><td><span class="tb tt">colección</span></td><td>—</td><td>La colección de Shopify para sacar productos.</td></tr>
+<tr><td>Máximo de productos para mostrar</td><td><span class="tb tr">rango</span></td><td>6</td><td>Límite máximo de tarjetas de vigilancia para mostrar en la lista de desplazamiento horizontal. Rango: 2–12.</td></tr>
+<tr><td>Alineación del encabezado</td><td><span class="tb ts">seleccionar</span></td><td>izquierda</td><td>Alineación horizontal del título de la sección: Izquierda • Centro • Derecha.</td></tr>
+</tbody></table>
+<h3>Colores y estilos de tarjetas</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Fondo de la sección</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Antecedentes generales de la sección.</td></tr>
+<tr><td>Color del texto/Acento dorado</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#f0ece4 / #c9a96e</td><td>Textos primarios y reflejos dorados.</td></tr>
+<tr><td>Color de cejas/título</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / #f0ece4</td><td>Anulaciones de color de fuentes de encabezado.</td></tr>
+<tr><td>Precio / Comparar precio color</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#f0ece4 / rgba(240,236,228,0.68)</td><td>Estilos de color de precios normales y comparados.</td></tr>
+<tr><td>Fondo de tarjeta (1, 2, 3)</td><td><span class="tb tc">color</span></td><td>#12111f / #07070d / #050509</td><td>Tres paradas de degradado de fondo para las superficies de las tarjetas de reloj.</td></tr>
+<tr><td>Fondo del cuerpo de la tarjeta (1, 2)</td><td><span class="tb tc">color</span></td><td>#07070d / #050508</td><td>Colores de fondo de las áreas de texto inferiores de las tarjetas.</td></tr>
+<tr><td>Fondo del área de la imagen de la tarjeta</td><td><span class="tb tc">color</span></td><td>#090912</td><td>Color del cuadro de fondo directamente detrás de la imagen del reloj.</td></tr>
+<tr><td>Color del borde al pasar el cursor sobre la tarjeta</td><td><span class="tb tc">color</span></td><td>#c9a96e (28%)</td><td>Un brillo tenue en el borde se muestra al pasar el cursor sobre una tarjeta.</td></tr>
+</tbody></table>
+<h3>Insignias de etiquetas de productos personalizadas</h3>
+<p>Cada tarjeta puede mostrar hasta tres etiquetas con estilos basadas en etiquetas de productos. Modifique sus colores, bordes y fondos a continuación para que se ajusten a la estética de su tema:</p>
+<table class="st"><thead><tr><th>Grupo de etiquetas</th><th>Color del texto</th><th>Color del borde</th><th>Color de fondo</th></tr></thead><tbody>
+<tr><td>Etiqueta 1 (p. ej. <code>New</code>)</td><td><span class="tb tc">color</span> (#e8d5a3)</td><td><span class="tb tc">color</span> (rgba(201.169.110,0,4))</td><td><span class="tb tc">color</span> (rgba(201.169.110,0,08))</td></tr>
+<tr><td>Etiqueta 2 (p. ej. <code>Premium</code>)</td><td><span class="tb tc">color</span> (#a1b2c6)</td><td><span class="tb tc">color</span> (rgba(138.149.165,0,4))</td><td><span class="tb tc">color</span> (rgba(138.149.165,0,08))</td></tr>
+<tr><td>Etiqueta 3 (p. ej. <code>Limited</code>)</td><td><span class="tb tc">color</span> (#f5c2c6)</td><td><span class="tb tc">color</span> (rgba(232.180.184,0,4))</td><td><span class="tb tc">color</span> (rgba(232.180.184,0,08))</td></tr>
+</tbody></table>
+<h3>Controles de botones y navegación</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Botón Ver: Normal</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / transparente</td><td>Texto y color de fondo del botón "Ver".</td></tr>
+<tr><td>Botón Ver: pasar el cursor</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#f0ece4 / #c9a96e (15%)</td><td>Texto y fondo al pasar el mouse.</td></tr>
+<tr><td>Botón Agregar: normal</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / transparente</td><td>Texto/icono y fondo del botón "+" Agregar al carrito.</td></tr>
+<tr><td>Botón Agregar: pasar el cursor</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#050508 / #dbbe80</td><td>Estados de desplazamiento para el botón Agregar.</td></tr>
+<tr><td>Agregar tamaño de botón</td><td><span class="tb tr">rango</span></td><td>36 píxeles / 32 píxeles</td><td>Diámetro del botón en escritorio (24–60 px) y móvil (24–50 px).</td></tr>
+<tr><td>Agregar tamaño del icono del botón</td><td><span class="tb tr">rango</span></td><td>18 píxeles / 16 píxeles</td><td>Tamaño del icono del signo más en escritorio (10 a 30 px) y móvil (10 a 30 px).</td></tr>
+<tr><td>Tamaño de navegación de flecha</td><td><span class="tb tr">rango</span></td><td>34 píxeles / 30 píxeles</td><td>Tamaño visual de las flechas del control deslizante en computadoras de escritorio y dispositivos móviles.</td></tr>
+<tr><td>Indicadores de puntos (activos/inactivos)</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / #f0ece4 (25%)</td><td>Estados del indicador de progreso de desplazamiento de puntos.</td></tr>
+</tbody></table>
+</section>
+<section id="marquee">
+<h2><span class="ic">📡</span>marquesina <em>teletipo</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Banner de texto animado de dos filas. La fila 1 se desplaza hacia la izquierda con grandes nombres de marcas serif. La fila 2 se desplaza hacia la derecha con atributos en versalitas. CSS puro: sin JavaScript, sin impacto en el rendimiento.</p>
+<h3>tipografía</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Tamaño de la fila 1: escritorio</td><td><span class="tb tr">rango</span></td><td>64 píxeles</td><td>Tamaño de fuente de la fila superior serif grande en el escritorio.</td></tr>
+<tr><td>Tamaño de la fila 1: Móvil</td><td><span class="tb tr">rango</span></td><td>38 píxeles</td><td>Tamaño de fuente de la fila superior en dispositivos móviles.</td></tr>
+<tr><td>Tamaño de la fila 2: escritorio</td><td><span class="tb tr">rango</span></td><td>9 píxeles</td><td>Tamaño de fuente de la fila inferior de versalitas en el escritorio.</td></tr>
+<tr><td>Tamaño de la fila 2: Móvil</td><td><span class="tb tr">rango</span></td><td>9 píxeles</td><td>Tamaño de fuente de la fila de versalitas en dispositivos móviles.</td></tr>
+</tbody></table>
+<h3>Colores</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Fondo de la franja de marquesina.</td></tr>
+<tr><td>Color de acento dorado</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de los símbolos separadores de diamantes entre frases.</td></tr>
+<tr><td>Degradado de la fila 1: primario</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color inicial del degradado de texto de la fila superior.</td></tr>
+<tr><td>Degradado de la fila 1: secundario</td><td><span class="tb tc">color</span></td><td>#e4c882</td><td>Color final del degradado: crea un brillo dorado en el texto.</td></tr>
+<tr><td>Color del texto de la fila 2</td><td><span class="tb tc">color</span></td><td>rgba(201.169.110,.4)</td><td>Color predeterminado de la fila inferior de versales.</td></tr>
+<tr><td>Desplazamiento del texto de la fila 2</td><td><span class="tb tc">color</span></td><td>rgba(201.169.110,.72)</td><td>Color de la fila inferior al pasar el cursor.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">💡</span><div class="nb"><p>Edita las frases reales dentro de cada una. <strong>Fila 1</strong> y <strong>Fila 2</strong> bloque. Agregue varios bloques para ampliar la secuencia de texto en bucle con nombres de marcas, materiales o atributos.</p></div></div>
+</section>
+<section id="vault">
+<h2><span class="ic">🏛</span>Colección <em>Bóveda</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Tus colecciones se muestran como tarjetas premium con inclinación 3D. Al pasar el cursor, se inclina cada tarjeta hacia el cursor, se revelan corchetes dorados en las esquinas y se reproduce un brillo brillante en la superficie. Cada tarjeta enlaza con una colección.</p>
+<h3>Encabezado de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>La Bóveda</td><td>Pequeña etiqueta en mayúscula encima del título de la sección.</td></tr>
+<tr><td>Titular - línea 1</td><td><span class="tb tt">texto</span></td><td>Explora Nuestro</td><td>Primera línea del título principal.</td></tr>
+<tr><td>Titular - línea 2</td><td><span class="tb tt">texto</span></td><td>Colecciones</td><td>Segunda línea. Envolver palabras en <code>&lt;em&gt;&lt;/em&gt;</code> para estilos dorados en cursiva, p. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Subtexto</td><td><span class="tb ta">área de texto</span></td><td>Cada reloj cuenta una historia...</td><td>Párrafo breve que se muestra debajo del título.</td></tr>
+<tr><td>Alineación del encabezado</td><td><span class="tb ts">seleccionar</span></td><td>Izquierda</td><td>Alineación del texto del encabezado de la sección: izquierda, centro o derecha.</td></tr>
+</tbody></table>
+<h3>Diseño</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Columnas: escritorio</td><td><span class="tb tr">rango</span></td><td>3</td><td>Tarjetas por fila en escritorio. Rango: 2–5.</td></tr>
+<tr><td>Columnas - tableta</td><td><span class="tb tr">rango</span></td><td>2</td><td>Tarjetas por fila en tableta.</td></tr>
+<tr><td>Columnas – móvil</td><td><span class="tb tr">rango</span></td><td>1</td><td>Tarjetas por fila en móvil. Se recomienda 1 para obtener la mejor experiencia móvil.</td></tr>
+<tr><td>Espacio de red</td><td><span class="tb tr">rango</span></td><td>24 píxeles</td><td>Espacio de píxeles entre tarjetas. Rango: 8–48 píxeles.</td></tr>
+<tr><td>Relación de aspecto de la tarjeta</td><td><span class="tb ts">seleccionar</span></td><td>Retrato 3:4</td><td>Retrato 3:4 • Retrato 4:5 • Cuadrado 1:1 • Paisaje 16:9.</td></tr>
+<tr><td>Radio del borde de la tarjeta</td><td><span class="tb tr">rango</span></td><td>12 píxeles</td><td>Radio de esquina redondeada de cada tarjeta. Rango: 0–32 píxeles.</td></tr>
+<tr><td>Ajuste de imagen</td><td><span class="tb ts">seleccionar</span></td><td>Portada</td><td><strong>Portada</strong> cultivos para llenar la tarjeta. <strong>contener</strong> Se ajusta a toda la imagen sin recortar.</td></tr>
+</tbody></table>
+<h3>Colores</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Antecedentes</td><td><span class="tb tc">color</span></td><td>#0a0906</td><td>Fondo de la sección detrás de la cuadrícula de la tarjeta.</td></tr>
+<tr><td>color de cejas</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de la etiqueta de la ceja encima del título.</td></tr>
+<tr><td>Color del título</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del título de la sección principal.</td></tr>
+<tr><td>Color de subtexto</td><td><span class="tb tc">color</span></td><td>#6b6660</td><td>Color del párrafo del subtexto.</td></tr>
+<tr><td>Acento (oro)</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de detalles dorados, brillos de bordes, partes en cursiva y revelaciones de esquinas al pasar el mouse.</td></tr>
+<tr><td>Color del nombre de la tarjeta</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del nombre de la colección en cada tarjeta.</td></tr>
+<tr><td>Color de la descripción de la tarjeta</td><td><span class="tb tc">color</span></td><td>#8c8680</td><td>Color del texto de descripción de la colección en cada tarjeta.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>Cada bloque de tarjetas está vinculado a una colección de Shopify. La imagen de fondo de la tarjeta es la <strong>Imagen de colección</strong> establecer en <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Productos</span><span class="ps">›</span><span class="pc">Colecciones</span><span class="ps">›</span><span class="pc">Tu colección</span></span>. Recomendado: <strong>800 × 1000 píxeles</strong> retrato.</p></div></div>
+</section>
+<section id="lifestyle">
+<h2><span class="ic">📷</span>Estilo de vida <em>escaparate</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Una cuadrícula rotada de fotografías de retratos dividida en dos filas. Cada fila se traduce en direcciones opuestas en respuesta al movimiento del mouse, creando un efecto editorial de profundidad de campo de paralaje cinematográfico.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Título de sección</td><td><span class="tb tt">texto</span></td><td>—</td><td>Título grande que se muestra encima de la cuadrícula de fotografías.</td></tr>
+<tr><td>Foto (por bloque)</td><td><span class="tb ti">imagen</span></td><td>—</td><td>La imagen de estilo de vida para cada tarjeta. Recomendado: <strong>1000 × 1250 píxeles</strong> (Retrato 4:5), sujeto centrado para que permanezca en el encuadre cuando se gira la tarjeta.</td></tr>
+<tr><td>Título (por bloque)</td><td><span class="tb tt">texto</span></td><td>—</td><td>Etiqueta opcional que se muestra al pasar el cursor sobre cada tarjeta fotográfica.</td></tr>
+</tbody></table>
+</section>
+<section id="brand-story-doc">
+<h2><span class="ic">📖</span>Historia de la marca</h2>
+<span class="pb g">Página de inicio</span>
+<p>Un bloque de narración visual característico con texto enriquecido uno al lado del otro y una imagen de fondo cinematográfica con desplazamiento de paralaje.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Desde 1947</td><td>Etiqueta de credencial pequeña en mayúsculas.</td></tr>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>Una herencia de innovación</td><td>Titular de la historia principal. Envolver las piezas en <code>&lt;em&gt;</code> para cursiva.</td></tr>
+<tr><td>Descripción</td><td><span class="tb ta">área de texto</span></td><td>En lo profundo de las montañas suizas del Jura...</td><td>Texto del cuerpo narrativo que explica la artesanía de la marca.</td></tr>
+<tr><td>Imagen de fondo</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Visual de fondo de paralaje. Recomendado: <strong>2000 × 1200 píxeles</strong> paisaje.</td></tr>
+<tr><td>Alineación de texto</td><td><span class="tb ts">seleccionar</span></td><td>Izquierda</td><td>Alinea el texto del cuadro de contenido a la izquierda, al centro o a la derecha.</td></tr>
+<tr><td>Etiqueta del botón</td><td><span class="tb tt">texto</span></td><td>Descubre Nuestra Historia</td><td>Texto que se muestra dentro del botón de llamada a la acción.</td></tr>
+<tr><td>Enlace de botón</td><td><span class="tb tu">URL</span></td><td>—</td><td>URL de destino al hacer clic en el botón.</td></tr>
+</tbody></table>
+</section>
+<section id="feat-collection">
+<h2><span class="ic">📋</span>Colección destacada</h2>
+<span class="pb g">Página de inicio</span>
+<p>Muestra una cuadrícula receptiva de productos de una colección elegida. Ideal para mostrar los más vendidos o los recién llegados en su página de inicio.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Destacado</td><td>Texto de etiqueta pequeña encima del título.</td></tr>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>Colección destacada</td><td>Título de la sección principal.</td></tr>
+<tr><td>Subtítulo</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Breve párrafo descriptivo que se muestra debajo del título.</td></tr>
+<tr><td>Colección</td><td><span class="tb tt">colección</span></td><td>—</td><td>Selector de colección de Shopify para completar productos.</td></tr>
+<tr><td>Máximo de productos para mostrar</td><td><span class="tb tr">rango</span></td><td>4</td><td>Recuento de productos mostrados en la cuadrícula (Rango: 2–12).</td></tr>
+<tr><td>Columnas en el escritorio</td><td><span class="tb tr">rango</span></td><td>4</td><td>Columnas de cuadrícula que se muestran en las vistas de escritorio (rango: 2 a 5).</td></tr>
+<tr><td>Columnas en el móvil</td><td><span class="tb ts">seleccionar</span></td><td>2</td><td>Columnas en ventanas gráficas móviles: <strong>1</strong> o <strong>2</strong>.</td></tr>
+<tr><td>Mostrar botón Agregar rápido</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Agrega un botón de carrito para agregar rápidamente dentro de las tarjetas de productos.</td></tr>
+<tr><td>Mostrar proveedor</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Muestra etiquetas de proveedores de productos en las tarjetas.</td></tr>
+<tr><td>Mostrar el botón "Ver todo"</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra un botón inferior que enlaza con la página de la colección si tiene más elementos.</td></tr>
+</tbody></table>
+<section id="featured-product-doc">
+<h2><span class="ic">🕐</span>Destacado <em>Producto</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Destaca un solo producto directamente en su página de inicio con un formulario de compra completo, una galería multimedia y menús desplegables dinámicos en forma de acordeón. Perfecto para lanzar un modelo de reloj insignia.</p>
+<h3>Configuración principal</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Producto</td><td><span class="tb tt">producto</span></td><td>—</td><td>Seleccione el producto a exhibir en esta sección.</td></tr>
+<tr><td>Mostrar miniaturas de la galería</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Actívelo para mostrar miniaturas de medios debajo del cuadro de imagen principal.</td></tr>
+<tr><td>Radio de esquina de la galería</td><td><span class="tb tr">rango</span></td><td>8 píxeles</td><td>Redondea las esquinas de las imágenes de la galería de productos. Rango: 0–40 píxeles.</td></tr>
+<tr><td>Umbral de stock bajo</td><td><span class="tb tr">rango</span></td><td>10</td><td>Cantidad de existencias debajo de la cual se muestra una insignia de advertencia de inventario bajo. Rango: 2–20.</td></tr>
+<tr><td>Mostrar etiquetas de productos</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Alterna si se muestran etiquetas de productos sin procesar.</td></tr>
+</tbody></table>
+<h3>Tipografía y estilo</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Fondo de la sección</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color de fondo de la sección.</td></tr>
+<tr><td>Proveedor / Título / Color del precio</td><td><span class="tb tc">color</span></td><td>#c9a96e / #f0ece4 / #f0ece4</td><td>El color de fuente anula los elementos.</td></tr>
+<tr><td>Color del texto de descripción</td><td><span class="tb tc">color</span></td><td>#787068</td><td>Color de la descripción del producto.</td></tr>
+<tr><td>Tamaño de fuente del título: escritorio/móvil</td><td><span class="tb tr">rango</span></td><td>46 píxeles / 32 píxeles</td><td>Tamaños de fuente del título. Rango: 24–72 px / 20–52 px.</td></tr>
+<tr><td>Tamaño de fuente del precio: escritorio/móvil</td><td><span class="tb tr">rango</span></td><td>32 píxeles / 26 píxeles</td><td>Tamaños de fuente del precio. Rango: 18–60 px / 16–44 px.</td></tr>
+<tr><td>Tamaño de la descripción: escritorio/móvil</td><td><span class="tb tr">rango</span></td><td>14 píxeles / 14 píxeles</td><td>Tamaños de fuente de las descripciones de productos. Rango: 12–22 px / 12–20 px.</td></tr>
+<tr><td>Radio de la esquina del botón</td><td><span class="tb tr">rango</span></td><td>14 píxeles</td><td>Redondeo de esquinas para botones de pago y carrito. Rango: 0–40 píxeles.</td></tr>
+</tbody></table>
+<h3>Bloques de productos destacados</h3>
+<p>Los comerciantes pueden estructurar la columna de compras arrastrando y soltando bloques dentro de la sección. Están disponibles los siguientes bloques:</p>
+<table class="st st-blocks"><thead><tr><th>Tipo de bloque</th><th>Configuración y opciones</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td><strong>vendedor</strong></td><td>Ninguno</td><td>Muestra la marca del producto/nombre del proveedor.</td></tr>
+<tr><td><strong>Título</strong></td><td>Ninguno</td><td>Muestra el título del producto.</td></tr>
+<tr><td><strong>Calificación</strong></td><td><code>rating_score</code> (Predeterminado: 4.9), <code>rating_count</code> (Predeterminado: 47)</td><td>Muestra estrellas de productos y recuento de reseñas.</td></tr>
+<tr><td><strong>Precio</strong></td><td>Ninguno</td><td>Muestra el precio del producto y los precios comparados.</td></tr>
+<tr><td><strong>Insignia de urgencia</strong></td><td>Ninguno</td><td>Muestra avisos de urgencia de existencias si las existencias están por debajo del umbral.</td></tr>
+<tr><td><strong>Descripción</strong></td><td>Ninguno</td><td>Muestra el texto breve de descripción del producto.</td></tr>
+<tr><td><strong>Divisor</strong></td><td>Ninguno</td><td>Pone una sutil línea divisoria de borde horizontal (Límite: 3).</td></tr>
+<tr><td><strong>Selector de variantes</strong></td><td>Ninguno</td><td>Muestra menús desplegables o píldoras de variantes (por ejemplo, color de la correa, tamaño de la esfera).</td></tr>
+<tr><td><strong>selector de cantidad</strong></td><td>Ninguno</td><td>Muestra el selector de números para la cantidad de productos.</td></tr>
+<tr><td><strong>Comprar botones</strong></td><td><code>show_dynamic_checkout</code> (Alternar botones de pago dinámico)</td><td>Muestra los botones Agregar al carrito y Cómpralo ahora.</td></tr>
+<tr><td><strong>Insignias de confianza</strong></td><td>Menú desplegable de íconos predefinidos (envío, devoluciones, autenticidad, garantía, etc.), carga de íconos personalizados, etiqueta y subtexto (hasta 3 insignias).</td><td>Muestra iconos y textos que fomentan la confianza.</td></tr>
+<tr><td><strong>Pestañas de descripción</strong></td><td>Ninguno</td><td>Muestra un cajón de pestañas plegable para descripciones.</td></tr>
+<tr><td><strong>acordeon</strong></td><td><code>heading</code> (Texto), <code>content</code> (texto enriquecido)</td><td>Muestra filas de acordeón expandibles (por ejemplo, Especificaciones, Garantía).</td></tr>
+<tr><td><strong>Etiquetas</strong></td><td>Ninguno</td><td>Muestra etiquetas de productos.</td></tr>
+<tr><td><strong>Líquido personalizado</strong></td><td><code>custom_liquid</code> (Cuadro de texto líquido)</td><td>Incorpora códigos Liquid personalizados o bloques HTML.</td></tr>
+</tbody></table>
+</section>
+<section id="blog-posts">
+<h2><span class="ic">✍</span>Publicaciones de blog</h2>
+<span class="pb g">Página de inicio</span>
+<p>Destaca los últimos artículos editoriales de su blog en la página de inicio en un diseño de cuadrícula de alta costura.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Redacción</td><td>Texto de etiqueta pequeña encima del encabezado.</td></tr>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>Últimos artículos</td><td>Título de la sección principal.</td></tr>
+<tr><td>Subtítulo</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Breve párrafo descriptivo debajo del título.</td></tr>
+<tr><td>Blog</td><td><span class="tb tt">blog</span></td><td>—</td><td>Selector de blogs de Shopify para extraer artículos.</td></tr>
+<tr><td>Máximo de publicaciones para mostrar</td><td><span class="tb tr">rango</span></td><td>3</td><td>Número de artículos a mostrar (rango: 2 a 6).</td></tr>
+<tr><td>Columnas en el escritorio</td><td><span class="tb tr">rango</span></td><td>3</td><td>Columnas que se muestran en las ventanas gráficas del escritorio (rango: 2 a 4).</td></tr>
+<tr><td>Mostrar fecha</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra las fechas de publicación del artículo.</td></tr>
+<tr><td>Mostrar autor</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Muestra los nombres de los autores del artículo.</td></tr>
+<tr><td>Mostrar extracto</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra resúmenes breves de extractos debajo de los títulos de los artículos.</td></tr>
+<tr><td>Mostrar el botón "Ver todo"</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra un enlace inferior a la página principal del blog.</td></tr>
+</tbody></table>
+</section>
+<section id="testimonials">
+<h2><span class="ic">💬</span>Control deslizante de testimonios</h2>
+<span class="pb g">Página de inicio</span>
+<p>Un carrusel de citas horizontal y limpio para mostrar opiniones de clientes y recortes de prensa en un hermoso diseño de lujo.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Título de sección</td><td><span class="tb tt">texto</span></td><td>Testimonios de clientes</td><td>Titular de sección grande.</td></tr>
+<tr><td>Control deslizante de reproducción automática</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Active el ciclo de cotizaciones automáticamente.</td></tr>
+<tr><td>Cambiar cotización cada</td><td><span class="tb tr">rango</span></td><td>6 segundos</td><td>Duración de la rotación automática en segundos (rango: 3 a 12 s).</td></tr>
+</tbody></table>
+<p>Cada cita se agrega como un **Bloque de testimonios** dentro de la sección. Haga clic <strong>Agregar bloque</strong> → <strong>Testimonio</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Cotización</td><td><span class="tb ta">área de texto</span></td><td>La artesanía es extraordinaria...</td><td>El testimonio del cliente o el texto de reseña que se muestra entre comillas grandes.</td></tr>
+<tr><td>Nombre del autor</td><td><span class="tb tt">texto</span></td><td>James Harrington</td><td>Nombre completo del cliente o revisor.</td></tr>
+<tr><td>Rol / Título</td><td><span class="tb tt">texto</span></td><td>Director ejecutivo, Grupo Harrington</td><td>Subtítulo de la empresa, título o credencial que se muestra debajo del nombre del autor.</td></tr>
+<tr><td>Calificación (estrellas)</td><td><span class="tb tr">rango</span></td><td>5</td><td>Clasificación de estrellas para mostrar. Se representa como estrellas SVG doradas (rango: 1 a 5).</td></tr>
+<tr><td>Color de acento de la tarjeta</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de acento utilizado para la línea de progreso dorada y los elementos decorativos de esta tarjeta específica.</td></tr>
+</tbody></table>
+</section>
+<section id="trusted">
+<h2><span class="ic">🤝</span>Confiado por</h2>
+<span class="pb g">Página de inicio</span>
+<p>Representa una fila de logotipos de marcas, prensa o certificados para establecer la credibilidad de la tienda.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>Como se ve en</td><td>Pequeña etiqueta de sección en mayúsculas.</td></tr>
+<tr><td>Logotipos en escala de grises</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Convierte imágenes de logotipos a escala de grises para mantener una integración de diseño premium.</td></tr>
+</tbody></table>
+<p>Puede agregar tres tipos de bloques para crear su cuadrícula de credenciales: Publicaciones, Estadísticas y Certificaciones. Haga clic <strong>Agregar bloque</strong> → seleccione entre:</p>
+<table class="st st-blocks"><thead><tr><th>Tipo de bloque</th><th>Configuración</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td><strong>Publicación</strong></td><td>
+<ul>
+<li><strong>Nombre de la publicación</strong> (<span class="tb tt">texto</span>): Logotipo o texto de etiqueta (p. ej. <code>GQ</code>, <code>Forbes</code>).</li>
+<li><strong>Lema</strong> (<span class="tb tt">texto</span>): cita breve o credencial que se muestra al pasar el cursor (p. ej. <code>Watch of the Year</code>).</li>
+</ul>
+</td><td>GQ / Reloj del año</td><td>Crea una tarjeta con el logotipo de la prensa que revela una cita cuando se coloca el cursor sobre ella.</td></tr>
+<tr><td><strong>estadística</strong></td><td>
+<ul>
+<li><strong>Icono</strong> (<span class="tb tt">texto</span>): Emoji o símbolo (p. ej. <code>â—ˆ</code>, <code>â˜…</code>).</li>
+<li><strong>Valor</strong> (<span class="tb tt">texto</span>): Número (p. ej. <code>45,000</code>).</li>
+<li><strong>sufijo</strong> (<span class="tb tt">texto</span>): Símbolo añadido al valor (p. ej. <code>+</code>, <code>%</code>).</li>
+<li><strong>Texto de etiqueta</strong> (<span class="tb tt">texto</span>): Descripción (p. ej. <code>Timepieces Crafted</code>).</li>
+</ul>
+</td><td>â—ˆ / 45 000 / + / Relojes elaborados</td><td>Muestra una tarjeta de indicador clave de rendimiento (KPI) destacada.</td></tr>
+<tr><td><strong>Certificación</strong></td><td>
+<ul>
+<li><strong>Texto de certificación</strong> (<span class="tb tt">texto</span>): Etiqueta de autoridad (p. ej. <code>COSC Certified</code>, <code>Swiss Made</code>).</li>
+</ul>
+</td><td>Certificado COSC</td><td>Muestra una insignia de seguridad o certificación en un cuadro con borde dorado limpio.</td></tr>
+</tbody></table>
+</section>
+<section id="social">
+<h2><span class="ic">📸</span>Galería Social</h2>
+<span class="pb g">Página de inicio</span>
+<p>Muestra una cuadrícula responsiva de publicaciones seleccionadas en redes sociales (como fotos de Instagram) que enlazan directamente con sus perfiles.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>Sigue el viaje</td><td>Título de la sección principal.</td></tr>
+<tr><td>identificador de cuenta</td><td><span class="tb tt">texto</span></td><td>@aurick_boutique</td><td>Su identificador social se muestra encima de la cuadrícula de la galería.</td></tr>
+<tr><td>Enlace de cuenta</td><td><span class="tb tu">URL</span></td><td>—</td><td>URL de la página de perfil para el enlace del identificador.</td></tr>
+</tbody></table>
+<p>Cada publicación se agrega como un **Bloque de publicaciones**. Haga clic <strong>Agregar bloque</strong> → <strong>Publicar</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Imagen</td><td><span class="tb ti">imagen</span></td><td>—</td><td>La foto de las redes sociales (por ejemplo, subida a Instagram). Recomendado: <strong>800 × 800 píxeles</strong> imagen cuadrada.</td></tr>
+<tr><td>Enlace (opcional)</td><td><span class="tb tu">URL</span></td><td>—</td><td>Enlace de destino cuando el usuario hace clic en la foto (por ejemplo, la URL de su publicación de Instagram).</td></tr>
+<tr><td>Texto alternativo</td><td><span class="tb tt">texto</span></td><td>—</td><td>Texto de descripción de accesibilidad alternativa para la imagen.</td></tr>
+<tr><td>Ajuste de imagen</td><td><span class="tb ts">seleccionar</span></td><td>Cubrir (recortar para rellenar)</td><td><strong>Portada</strong> cultivos para llenar la celda de la cuadrícula, <strong>contener</strong> Se ajusta a toda la imagen sin recortar.</td></tr>
+<tr><td>Posición de la imagen</td><td><span class="tb ts">seleccionar</span></td><td>Centro</td><td>Punto focal: Centro • Arriba • Abajo • Izquierda • Derecha.</td></tr>
+</tbody></table>
+</section>
+<section id="newsletter-doc">
+<h2><span class="ic">📣</span>Boletín <em>Regístrate</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Una sección de suscripción editorial en pantalla completa que presenta animaciones de entrada de texto en filas divididas, campos de entrada premium y una gran marca de agua personalizable (palabra de fondo fantasma) que brilla dinámicamente al desplazarse.</p>
+<h3>Contenido y tipografía</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>ceja</td><td><span class="tb tt">texto</span></td><td>Acceso Exclusivo</td><td>Pequeña etiqueta de categoría que se muestra encima del título principal.</td></tr>
+<tr><td>Línea de título 1 y 2</td><td><span class="tb tt">texto</span></td><td>Quédate en / el Círculo.</td><td>Divide el texto del título en dos líneas independientes para permitir animaciones deslizantes escalonadas.</td></tr>
+<tr><td>Subtexto</td><td><span class="tb ta">área de texto</span></td><td>Obtén un 10% de descuento en tu primer pedido...</td><td>Párrafo editorial que se muestra debajo del título.</td></tr>
+<tr><td>Texto del botón</td><td><span class="tb tt">texto</span></td><td>Suscríbete</td><td>Etiqueta en el botón de envío. Al hacer clic, se envía el correo electrónico a tu lista de clientes de Shopify con la etiqueta <code>newsletter</code>.</td></tr>
+<tr><td>Descargo de responsabilidad</td><td><span class="tb tt">texto</span></td><td>Nada de spam, nunca. Darse de baja en cualquier momento.</td><td>Texto en letra pequeña que se muestra debajo de la fila de entrada.</td></tr>
+<tr><td>palabra de fondo</td><td><span class="tb tt">texto</span></td><td>TIEMPO</td><td>Palabra de marca de agua de fondo grande que se encuentra detrás del panel de contenido.</td></tr>
+<tr><td>Altura mínima de sección</td><td><span class="tb tr">rango</span></td><td>100vh</td><td>Altura mínima de la sección en relación con la altura de la ventana gráfica (Rango: 50–150 vh).</td></tr>
+</tbody></table>
+<h3>Colores y tamaños de tipografía</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Fondo de la sección</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color del fondo.</td></tr>
+<tr><td>Color de texto de ceja/título/subtexto</td><td><span class="tb tc">color</span></td><td>#c9a84c / #f0ece4 / #6b6456</td><td>Anulaciones de color para elementos de texto.</td></tr>
+<tr><td>Campo de entrada (Borde / BG / Texto)</td><td><span class="tb tc">color</span></td><td>#c9a84c / #0c0b09 / #f0ece4</td><td>Estética del bloque de entrada de texto del correo electrónico.</td></tr>
+<tr><td>Botón de suscripción (BG / Texto)</td><td><span class="tb tc">color</span></td><td>#c9a84c / #050508</td><td>Estética del botón de suscripción.</td></tr>
+<tr><td>Tamaño/opacidad de la palabra fantasma</td><td><span class="tb tr">rango</span></td><td>40 vw / 4%</td><td>Dimensionamiento y visibilidad de la palabra de fondo. Rango: 10–60 vw / 0–20%.</td></tr>
+<tr><td>Tamaño de fuente del título: escritorio/móvil</td><td><span class="tb tr">rango</span></td><td>88 píxeles / 52 píxeles</td><td>Tamaño de fuente del título dividido. Rango: 32–140 px / 28–80 px.</td></tr>
+</tbody></table>
+</section>
+<section id="custom-liquid-doc">
+<h2><span class="ic">🧱</span>personalizado <em>Líquido</em></h2>
+<span class="pb g">Página de inicio</span>
+<p>Inyecta HTML personalizado, reglas CSS o fragmentos de código de Shopify Liquid directamente dentro de tu página de inicio. Ideal para incorporar formularios, pancartas o reproductores de vídeo personalizados de aplicaciones de terceros.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Líquido personalizado</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>El marcado sin procesar personalizado o el código Liquid para representar dentro del contenedor de la sección.</td></tr>
+</tbody></table>
+</section>
+<section id="coll-page">
+<h2><span class="ic">📋</span>Página de colección <em>Configuración</em></h2>
+<span class="pb">Todas las páginas de la colección</span>
+<p>Editor de temas → <strong>Colección</strong> plantilla. Controla el banner principal, la cuadrícula de productos, los estilos de tarjetas, la tipografía y los colores de cada página de la colección.</p>
+<h3>Estandarte de héroe de colección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Mostrar imagen de colección</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Activa o desactiva el banner de héroe de ancho completo en la parte superior de cada página de colección.</td></tr>
+<tr><td>Altura de la imagen: escritorio</td><td><span class="tb tr">rango</span></td><td>480 píxeles</td><td>Altura del banner del héroe en el escritorio. Rango: 300–700 píxeles.</td></tr>
+<tr><td>Altura de la imagen: móvil</td><td><span class="tb tr">rango</span></td><td>300 píxeles</td><td>Altura del banner del héroe en el móvil. Rango: 200–400 píxeles.</td></tr>
+</tbody></table>
+<div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">Mantenga clara la parte inferior izquierda de las imágenes del banner</div><p>Aurick superpone el título de la colección, la descripción y las rutas de navegación en el <strong>esquina inferior izquierda</strong> del estandarte del héroe. Mantenga esa área oscura y libre de temas importantes.</p></div></div>
+<h3>Cuadrícula de productos</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Productos por página</td><td><span class="tb tr">rango</span></td><td>12</td><td>Cuántos productos se cargan antes de que aparezca el botón "Cargar más". Rango: 8–48.</td></tr>
+<tr><td>Columnas: escritorio</td><td><span class="tb tr">rango</span></td><td>4</td><td>Tarjetas de productos por fila en el escritorio. Rango: 2–5.</td></tr>
+<tr><td>Columnas – móvil</td><td><span class="tb tr">rango</span></td><td>2</td><td>Tarjetas de producto por fila en dispositivos móviles. Rango: 1–3.</td></tr>
+<tr><td>Espacio de red</td><td><span class="tb tr">rango</span></td><td>24 píxeles</td><td>Espacio entre tarjetas de productos. Rango: 8–48 píxeles.</td></tr>
+<tr><td>Mostrar proveedor de producto</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Muestre el nombre de la marca/proveedor debajo del título del producto en cada tarjeta.</td></tr>
+<tr><td>Mostrar botón de adición rápida</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestre un ícono de agregar rápidamente al carrito en las tarjetas de productos cuando esté sobre el cursor.</td></tr>
+<tr><td>Mostrar menú desplegable de clasificación</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestre el menú desplegable "Ordenar por" encima de la cuadrícula de productos.</td></tr>
+<tr><td>Cargar más texto</td><td><span class="tb tt">texto</span></td><td>Cargar más relojes</td><td>Etiqueta en el botón de paginación que carga la siguiente página de productos.</td></tr>
+</tbody></table>
+<h3>Estilo de tarjeta de producto</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Radio del borde de la tarjeta</td><td><span class="tb tr">rango</span></td><td>16 píxeles</td><td>Redondeo de esquinas de cada ficha de producto. 0 = cuadrado. Rango: 0–32 píxeles.</td></tr>
+<tr><td>Altura de la imagen de la tarjeta</td><td><span class="tb tr">rango</span></td><td>260 píxeles</td><td>Altura fija del área de la imagen dentro de cada tarjeta de producto.</td></tr>
+<tr><td>Ajuste de imagen</td><td><span class="tb ts">seleccionar</span></td><td>contener</td><td><strong>contener</strong> muestra el producto completo sin recortar (recomendado para relojes con fondos transparentes). <strong>Portada</strong> cultivos para llenar.</td></tr>
+<tr><td>Posición de la imagen</td><td><span class="tb ts">seleccionar</span></td><td>Centro</td><td>Punto focal cuando el modo Portada está activo: Centro, Arriba, Abajo, Izquierda, Derecha.</td></tr>
+</tbody></table>
+<h3>Colores de la tarjeta</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Degradado de tarjeta — arriba</td><td><span class="tb tc">color</span></td><td>#12111f</td><td>Color superior del degradado de fondo de la tarjeta de producto.</td></tr>
+<tr><td>Gradiente de tarjeta: medio</td><td><span class="tb tc">color</span></td><td>#07070d</td><td>Color medio del degradado de tres paradas.</td></tr>
+<tr><td>Degradado de tarjeta: abajo</td><td><span class="tb tc">color</span></td><td>#050509</td><td>Color inferior del degradado.</td></tr>
+<tr><td>Color del título de la tarjeta</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del título del producto en cada tarjeta.</td></tr>
+<tr><td>Color del precio</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del texto del precio del producto.</td></tr>
+<tr><td>Ver texto del botón</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de la etiqueta "Ver" en las tarjetas de producto.</td></tr>
+<tr><td>Color de la insignia</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de fondo de la pastilla de insignia Oferta/Nueva en las tarjetas de productos.</td></tr>
+</tbody></table>
+<h3>Tipografía de tarjeta</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Tamaño del título de la tarjeta</td><td><span class="tb tr">rango</span></td><td>20 píxeles</td><td>Tamaño de fuente del título del producto en cada tarjeta. Rango: 14 a 32 píxeles.</td></tr>
+<tr><td>Tamaño del precio</td><td><span class="tb tr">rango</span></td><td>17 píxeles</td><td>Tamaño de fuente del texto del precio. Rango: 12 a 28 píxeles.</td></tr>
+<tr><td>Descripción tamaño</td><td><span class="tb tr">rango</span></td><td>13 píxeles</td><td>Tamaño de fuente de la breve descripción del producto que se muestra al pasar el mouse. Rango: 10 a 18 píxeles.</td></tr>
+</tbody></table>
+</section>
+<section id="filters">
+<h2><span class="ic">🔍</span>Lista de productos <em>Filtros</em></h2>
+<span class="pb">Páginas de colección: cajón de filtro</span>
+<div class="note crit"><span class="ni">⚠</span><div class="nb"><div class="nt">Los filtros NO están configurados en el Editor de temas</div><p>El cajón de filtro en las páginas de la colección funciona exclusivamente con el software gratuito <strong>Búsqueda y descubrimiento de Shopify</strong> aplicación. Toda la configuración de los filtros (qué atributos aparecen, su orden, tipo de visualización) se realiza dentro de esa aplicación, no en la configuración del tema de Aurick.</p></div></div>
+<div class="card">
+<h3>Por qué los filtros Metafield superan a los filtros de etiquetas</h3>
+<p>Si filtras por <strong>Etiquetas de producto</strong> (valor predeterminado), un comprador navegando <code>/collections/women</code> ve una casilla de verificación "Mujeres" en el cajón de filtros; no tiene sentido porque todos los productos ya coinciden. con <strong>Filtros de metacampo</strong>, el motor de búsqueda y descubrimiento de Shopify oculta automáticamente cualquier valor de filtro que coincida con el contexto de la colección actual. Los compradores sólo ven filtros que son realmente útiles para limitar sus opciones.</p>
+</div>
+<h3>Configuración de filtros de metacampos: paso a paso</h3>
+<ol class="steps">
+<li><strong>Crear definiciones de metacampos (una vez)</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Configuración</span><span class="ps">›</span><span class="pc">Metacampos y metaobjetos</span><span class="ps">›</span><span class="pc">Productos</span><span class="ps">›</span><span class="pc">Agregar definición</span></span> y crear estas definiciones:</p>
+<ul>
+<li><strong>Marca</strong> - Espacio de nombres y clave: <code>custom.brand</code> — Tipo: texto de una sola línea</li>
+<li><strong>Género</strong> - Espacio de nombres y clave: <code>custom.gender</code> — Tipo: texto de una sola línea</li>
+<li>Añade cualquier otro que necesites: <strong>movimiento</strong> (<code>custom.movement</code>), <strong>Material de la caja</strong> (<code>custom.case_material</code>), etc</li>
+</ul>
+</li>
+<li><strong>Complete los valores de cada producto</strong>
+<p>Abra cada producto en Administrador → desplácese hasta <strong>Metacampos</strong> panel (en la parte inferior del editor de productos) → ingrese Marca (p. ej. <code>Rolex</code>) y Género (p. ej. <code>Women</code>). Haga clic <strong>Guardar</strong>.</p>
+</li>
+<li><strong>Instalar la aplicación de búsqueda y descubrimiento</strong>
+<p>Si aún no está instalado, vaya a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Aplicaciones</span><span class="ps">›</span><span class="pc">Búsqueda y descubrimiento de Shopify</span></span>. Es gratis y está hecho por Shopify.</p>
+</li>
+<li><strong>Configurar filtros en la aplicación</strong>
+<p>Abra la aplicación → haga clic <strong>Filtros</strong> en el menú de la izquierda → haga clic <strong>Agregar filtro</strong>. Selecciona tu <strong>Marca</strong> y <strong>Género</strong> Definiciones de metacampos. Elija el tipo de visualización: <strong>Lista</strong> (casillas de verificación) o <strong>muestra</strong>. quitar lo viejo <strong>Etiqueta de producto</strong> entrada de filtro. Haga clic <strong>Guardar</strong>.</p>
+</li>
+</ol>
+<div class="note tip"><span class="ni">✨</span><div class="nb"><div class="nt">Resultado: Cajón de filtros contextual</div><p>Compradores en <code>/collections/women</code> ver sólo Marca y Precio. encendido <code>/collections/rolex</code> solo ven Género y Precio. El contexto de la colección se oculta automáticamente, exactamente como se espera de una tienda de lujo.</p></div></div>
+<h3>Filtro de precios</h3>
+<p>El filtro Precio siempre está disponible de forma predeterminada dentro de Shopify Search &amp; Discovery. Habilítelo en la lista de filtros de aplicaciones si aún no se muestra. Se representa automáticamente como un control deslizante de rango arrastrable en el cajón de filtros de Aurick.</p>
+<h3>Opciones de visualización de filtros</h3>
+<table class="st"><thead><tr><th>Tipo de pantalla</th><th>Mejor para</th><th>Cómo configurar</th></tr></thead><tbody>
+<tr><td>Lista (casillas de verificación)</td><td>Valores de texto como marca, género, tipo de movimiento</td><td>Búsqueda y descubrimiento → Filtros → seleccionar filtro → Mostrar como lista</td></tr>
+<tr><td>muestra</td><td>Opciones visuales de color o material.</td><td>Búsqueda y descubrimiento → Filtros → seleccionar filtro → Mostrar como muestra, luego asignar códigos de color por valor</td></tr>
+<tr><td>Rango de precios</td><td>Filtrado de presupuesto</td><td>Habilitado de forma predeterminada. Se muestra como un control deslizante en el cajón de filtros de Aurick.</td></tr>
+</tbody></table>
+</section>
+<section id="product">
+<h2><span class="ic">💎</span>Página del producto <em>Configuración</em></h2>
+<span class="pb">Todas las páginas de productos</span>
+<p>Editor de temas → <strong>Producto predeterminado</strong> plantilla → <strong>Información del producto</strong> sección. Controla el diseño principal del producto, la configuración de la galería, la tipografía, los botones personalizados y le permite arrastrar y soltar más de 14 bloques para personalizar el diseño del cuadro de compra.</p>
+<h3>Configuración de la galería</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Diseño de miniaturas de la galería</td><td><span class="tb ts">seleccionar</span></td><td>Vertical (izquierda)</td><td><strong>Vertical (izquierda)</strong> — miniaturas en una columna al lado de la imagen principal. <strong>Abajo</strong> — franja horizontal debajo. <strong>Círculos superpuestos</strong> — indicadores de puntos superpuestos en la imagen principal.</td></tr>
+<tr><td>Hacer galería pegajosa</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Mantiene la galería fija mientras el comprador desplaza el cuadro de compra y la descripción en el escritorio.</td></tr>
+<tr><td>Mostrar tira de miniaturas</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Alterna la fila de miniaturas. Desactívelo para obtener una vista limpia de una sola imagen.</td></tr>
+<tr><td>Radio de esquina de la galería</td><td><span class="tb tr">rango</span></td><td>8 píxeles</td><td>Esquinas redondeadas en el contenedor de imágenes de la galería principal. Rango: 0–32 píxeles.</td></tr>
+</tbody></table>
+<h3>Urgencia del inventario</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Umbral de stock bajo</td><td><span class="tb tr">rango</span></td><td>10</td><td>Cuando el inventario cae en este número o por debajo de él, la insignia de urgencia dinámica muestra el recuento restante exacto. Rango: 2–20.</td></tr>
+</tbody></table>
+<h3>Tipografía - Colores</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Color del proveedor/marca</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color de la marca/nombre del proveedor que se muestra encima del título del producto.</td></tr>
+<tr><td>Color del título del producto</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del título principal del producto.</td></tr>
+<tr><td>Color del precio</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del precio del producto.</td></tr>
+<tr><td>Color del texto de descripción</td><td><span class="tb tc">color</span></td><td>#787068</td><td>Color del texto del cuerpo de la descripción del producto.</td></tr>
+</tbody></table>
+<h3>Tipografía: tamaños de fuente</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Tamaño del título: escritorio</td><td><span class="tb tr">rango</span></td><td>46 píxeles</td><td>Tamaño de fuente del título del producto en el escritorio. Rango: 24–72 píxeles.</td></tr>
+<tr><td>Tamaño del título: móvil</td><td><span class="tb tr">rango</span></td><td>32 píxeles</td><td>Tamaño de fuente del título del producto en móvil. Rango: 20–52 píxeles.</td></tr>
+<tr><td>Tamaño del precio: escritorio</td><td><span class="tb tr">rango</span></td><td>32 píxeles</td><td>Tamaño de fuente del precio en escritorio. Rango: 18–60 píxeles.</td></tr>
+<tr><td>Tamaño del precio: móvil</td><td><span class="tb tr">rango</span></td><td>26 píxeles</td><td>Tamaño de fuente del precio en el móvil. Rango: 16–44 píxeles.</td></tr>
+<tr><td>Tamaño de la descripción: escritorio</td><td><span class="tb tr">rango</span></td><td>14 píxeles</td><td>Tamaño de fuente de la descripción en el escritorio. Rango: 12 a 22 píxeles.</td></tr>
+<tr><td>Tamaño de la descripción: móvil</td><td><span class="tb tr">rango</span></td><td>14 píxeles</td><td>Tamaño de fuente de la descripción en el móvil. Rango: 12 a 20 píxeles.</td></tr>
+</tbody></table>
+<h3>Botones</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Radio de la esquina del botón</td><td><span class="tb tr">rango</span></td><td>14 píxeles</td><td>Redondeo de esquinas de los botones Agregar al carrito y Comprar ahora. 0 = cuadrado, 40 = forma de pastilla completa. Rango: 0–40 píxeles.</td></tr>
+</tbody></table>
+<h3>Comprar bloques de cajas (arrastrar y soltar)</h3>
+<p>El área de Información del producto muestra contenidos a través de bloques. En la barra lateral del Editor de temas, haga clic en <strong>Agregar bloque</strong> para insertar, reordenar o personalizar estos bloques:</p>
+<table class="st st-blocks"><thead><tr><th>Nombre del bloque</th><th>Configuración</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td><strong>vendedor</strong></td><td>—</td><td>—</td><td>Muestra el nombre del proveedor del producto en minúsculas utilizando el color del proveedor configurado.</td></tr>
+<tr><td><strong>Título</strong></td><td>—</td><td>—</td><td>Muestra el título principal del producto en la tipografía serif con estilo.</td></tr>
+<tr><td><strong>Calificación</strong></td><td>Puntuación de calificación/recuento de reseñas</td><td>4.9 / 47</td><td>Muestra calificaciones de estrellas y recuento total de reseñas en un elegante color dorado de lujo.</td></tr>
+<tr><td><strong>Precio</strong></td><td>—</td><td>—</td><td>Muestra el precio del producto, insignias de venta, precios de comparación e información fiscal.</td></tr>
+<tr><td><strong>Insignia de urgencia</strong></td><td>—</td><td>—</td><td>Un contador de inventario en tiempo real que muestra "¡Solo quedan X en stock!" cuando el inventario cae por debajo del umbral.</td></tr>
+<tr><td><strong>Descripción</strong></td><td>—</td><td>—</td><td>Representa el texto de descripción principal del producto.</td></tr>
+<tr><td><strong>Divisor</strong></td><td>—</td><td>—</td><td>Dibuja una sutil línea divisoria horizontal dorada entre bloques. Límite: 3 por página.</td></tr>
+<tr><td><strong>Selector de variantes</strong></td><td>—</td><td>—</td><td>Representa selectores de opciones (muestras o botones) para tamaños, colores de correa o materiales.</td></tr>
+<tr><td><strong>selector de cantidad</strong></td><td>—</td><td>—</td><td>Agrega un campo de entrada con botones más/menos que permiten a los compradores cambiar las cantidades antes de agregarlas al carrito.</td></tr>
+<tr><td><strong>Comprar botones</strong></td><td>Mostrar botón de pago dinámico</td><td>encendido</td><td>Agrega el botón principal "Agregar al carrito", junto con opciones de pago acelerado (Shop Pay, PayPal, etc.).</td></tr>
+<tr><td><strong>Insignias de confianza</strong></td><td>Icono predefinido/Imagen personalizada/Etiqueta/Subetiqueta</td><td>Envíos / Devoluciones / Escudo • Etiquetas predeterminadas</td><td>Configura hasta 3 columnas de confianza debajo del botón de compra (por ejemplo, envío gratuito, garantía de por vida). Vea los detalles a continuación.</td></tr>
+<tr><td><strong>Pestañas de descripción</strong></td><td>—</td><td>—</td><td>Convierte el área de descripción en un hermoso widget con pestañas que contiene "Descripción", "Especificaciones" y "Envío".</td></tr>
+<tr><td><strong>acordeon</strong></td><td>Título / Contenido</td><td>Especificaciones / Detalles</td><td>Agrega un cajón de texto enriquecido plegable para detalles personalizables (por ejemplo, detalles de movimiento, resistencia al agua).</td></tr>
+<tr><td><strong>Etiquetas</strong></td><td>—</td><td>—</td><td>Muestra etiquetas de productos como elegantes píldoras en las que se puede hacer clic.</td></tr>
+<tr><td><strong>Líquido personalizado</strong></td><td>Código de líquido personalizado</td><td>—</td><td>Inyecta fragmentos de secuencias de comandos de aplicaciones, HTML o líquidos personalizados directamente en el cuadro de compra.</td></tr>
+</tbody></table>
+<h3>Detalles del bloque de insignias de confianza</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Número de insignia: icono predefinido</td><td><span class="tb ts">seleccionar</span></td><td>Varía</td><td>Elija un ícono incorporado: Camión de envío • Bucle de retorno • Verificación de escudo • Certificado de garantía • Auriculares de soporte • Bloqueo seguro • Estrella Premium • Sin ícono.</td></tr>
+<tr><td>Insignia # — Icono personalizado</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Sube tu propia imagen de icono (24 × 24 px). Anula el icono predefinido cuando se establece.</td></tr>
+<tr><td>Número de placa: etiqueta</td><td><span class="tb tt">texto</span></td><td>Envío gratuito / Devoluciones en 30 días / Auténtico</td><td>Texto principal en negrita de la insignia de confianza.</td></tr>
+<tr><td>Número de insignia: subetiqueta</td><td><span class="tb tt">texto</span></td><td>En pedidos superiores a 300€…</td><td>Texto descriptivo más pequeño que se muestra debajo de la etiqueta.</td></tr>
+</tbody></table>
+</section>
+<section id="size-guide">
+<h2><span class="ic">📏</span>Tamaño <em>Guía</em></h2>
+<span class="pb">Página del producto — Comprar caja</span>
+<p>Aurick incluye un incorporado <strong>Guía de tallas</strong> botón en la página del producto. Cuando se toca, se abre una ventana emergente de ancho completo que muestra una imagen de tabla de tallas para ese producto específico. El botón se oculta automáticamente en productos donde no se ha configurado ninguna guía; no es necesario administrarlo manualmente.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">Cómo detecta el tema la guía de tallas</div><p>El tema comprueba tres fuentes en orden de prioridad. El primero que se encuentre gana: (1) Metacampo del producto <code>custom.size_guide</code>, (2) Metacampo variante <code>custom.size_guide</code>, (3) Texto alternativo de la imagen configurado exactamente <code>size-guide</code>.</p></div></div>
+<h3>Método 1: a través de Metafield (recomendado)</h3>
+<ol class="steps">
+<li><strong>Crear la definición de metacampo (una vez)</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Configuración</span><span class="ps">›</span><span class="pc">Metacampos y metaobjetos</span><span class="ps">›</span><span class="pc">Productos</span><span class="ps">›</span><span class="pc">Agregar definición</span></span>. Conjunto: <strong>Nombre</strong> = <code>Size Guide</code>, <strong>Espacio de nombres y clave</strong> = <code>custom.size_guide</code>, <strong>Tipo</strong> = Archivo → Imagen. Haga clic <strong>Guardar</strong>.</p>
+</li>
+<li><strong>Sube la guía por producto</strong>
+<p>Abra cualquier producto en Administrador → desplácese hasta <strong>Metacampos</strong> panel en la parte inferior → buscar <strong>Guía de tallas</strong> → sube la imagen de tu tabla de tallas (JPG o PNG). Haga clic <strong>Guardar producto</strong>. El botón Guía de tallas ahora aparecerá automáticamente en la página de ese producto.</p>
+</li>
+</ol>
+</section>
+<section id="complete-look">
+<h2><span class="ic">🛍</span>Completa tu <em>mira</em></h2>
+<span class="pb">Página del producto</span><span class="pb gr">Cajón del carro</span>
+<p>Vincula accesorios complementarios (correas adicionales, rollos de reloj, enrolladores) a un reloj específico. Los productos vinculados aparecen debajo del cuadro de compra en la página del producto Y como un carrusel de venta cruzada dentro del cajón del carrito deslizable, en dos lugares a la vez, sin trabajo adicional después de la configuración.</p>
+<h3>Configuración de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>También de la colección</td><td>Título que se muestra encima de la fila de productos de venta cruzada.</td></tr>
+<tr><td>Subtítulo</td><td><span class="tb tt">texto</span></td><td>Piezas cuidadosamente seleccionadas para complementar su selección.</td><td>Breve descripción debajo del título.</td></tr>
+<tr><td>Columnas en el escritorio</td><td><span class="tb tr">rango</span></td><td>4</td><td>Número de tarjetas de productos accesorios por fila en el escritorio.</td></tr>
+<tr><td>Máximo de productos para mostrar</td><td><span class="tb tr">rango</span></td><td>4</td><td>Número máximo de accesorios vinculados para mostrar. Incluso si hay más enlaces, solo se muestran estos.</td></tr>
+<tr><td>Mostrar botón de adición rápida</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestre un ícono rápido para agregar al carrito en cada tarjeta de accesorios.</td></tr>
+<tr><td>Mostrar proveedor de producto</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestre el nombre de la marca/proveedor debajo de cada nombre de producto accesorio.</td></tr>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color de fondo de la sección Completa tu look.</td></tr>
+</tbody></table>
+<h3>Configuración: vincular accesorios a un reloj</h3>
+<ol class="steps">
+<li><strong>Crear la definición de metacampo (una vez)</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Configuración</span><span class="ps">›</span><span class="pc">Metacampos y metaobjetos</span><span class="ps">›</span><span class="pc">Productos</span><span class="ps">›</span><span class="pc">Agregar definición</span></span>. Conjunto: <strong>Nombre</strong> = <code>Complete Look</code>, <strong>Espacio de nombres y clave</strong> = <code>custom.complete_look</code>, <strong>Tipo</strong> = Producto. Habilitar <strong>Aceptar lista de valores</strong>. Haga clic <strong>Guardar</strong>.</p>
+</li>
+<li><strong>Vincular accesorios por reloj</strong>
+<p>Abra un producto de reloj → desplácese hasta <strong>Metacampos</strong> panel → haga clic <strong>Mirada completa</strong> → utilice el selector de productos para seleccionar los accesorios (por ejemplo, correa de cuero, rollo de reloj, estuche de viaje). Guarde el producto.</p>
+</li>
+<li><strong>Habilite el bloque en el Editor de temas</strong>
+<p>Abrir editor de temas → <strong>Producto predeterminado</strong> plantilla → en la sección del cuadro de compra, haga clic <strong>Agregar bloque</strong> → seleccionar <strong>Completa tu look</strong>. Colóquelo debajo del botón de compra. Haga clic <strong>Guardar</strong>.</p>
+</li>
+</ol>
+</section>
+<section id="prod-recommendations">
+<h2><span class="ic">💎</span>Recomendaciones de productos</h2>
+<span class="pb">Página del producto</span>
+<p>Muestra productos sugeridos dinámicamente como recomendaciones en la parte inferior de la página del producto para fomentar el descubrimiento entre categorías.</p>
+<h3>Configuración de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Recomendado</td><td>Texto de etiqueta pequeño que se muestra encima del título.</td></tr>
+<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>También te puede gustar</td><td>Título de la sección principal.</td></tr>
+<tr><td>Máximo de productos para mostrar</td><td><span class="tb tr">rango</span></td><td>4</td><td>Recuento máximo de productos mostrados en el carrusel. (Rango: 2 a 8).</td></tr>
+<tr><td>Columnas en el escritorio</td><td><span class="tb tr">rango</span></td><td>4</td><td>Número de columnas mostradas en las ventanas gráficas del escritorio. (Rango: 2 a 5).</td></tr>
+<tr><td>Mostrar adición rápida</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra el botón rápido de agregar al carrito en las tarjetas.</td></tr>
+<tr><td>Mostrar proveedor</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Muestra etiquetas de proveedores de productos en las tarjetas de recomendación.</td></tr>
+</tbody></table>
+<h3>Configuración de recomendaciones: aplicación de búsqueda y descubrimiento</h3>
+<p>Si bien Shopify genera recomendaciones automáticamente utilizando su motor de inteligencia artificial, puedes personalizarlas manualmente:</p>
+<ol class="steps">
+<li><strong>Abra la aplicación de búsqueda y descubrimiento</strong>
+<p>En tu administrador de Shopify, navega hasta **Aplicaciones** → **Shopify Search &amp; Discovery**.</p>
+</li>
+<li><strong>Configurar recomendaciones de productos</strong>
+<p>Haga clic en **Recomendaciones** en el menú de la izquierda. Busca y selecciona el producto que deseas personalizar.</p>
+</li>
+<li><strong>Agregar recomendaciones personalizadas</strong>
+<p>En el panel **Recomendaciones personalizadas**, seleccione accesorios específicos o productos de reloj alternativos para mostrar. Estos anularán o se fusionarán con la lista generada automáticamente.</p>
+</li>
+</ol>
+</section>
+<section id="about">
+<h2><span class="ic">📖</span>Acerca de / <em>Página de patrimonio</em></h2>
+<span class="pb">Sufijo de página personalizado</span>
+<p>el <code>page.about</code> La plantilla ofrece secciones animadas de narración de la marca. Úselo para la historia, la filosofía y la narrativa de su marca.</p>
+<ol class="steps">
+<li><strong>Crear la página en Admin</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">paginas</span><span class="ps">›</span><span class="pc">Agregar página</span></span>. Títelo “Nuestra herencia” o algo similar.</p>
+</li>
+<li><strong>Asignar la plantilla</strong>
+<p>Seleccionar <code>page.about</code> en el cuadro de selección de plantilla a la derecha. Haga clic en **Guardar**.</p>
+</li>
+<li><strong>Editor de temas integrado</strong>
+<p>Navegue hasta la plantilla Acerca de y haga clic <strong>Agregar sección</strong> para armar la narrativa de las secciones siguientes.</p>
+</li>
+</ol>
+<h3>Acerca del estandarte del héroe</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Imagen de héroe</td><td><span class="tb ti">imagen</span></td><td>—</td><td>La foto del banner ancho. Recomendado: <strong>2000 × 800 píxeles</strong> imagen del paisaje.</td></tr>
+<tr><td>Altura de la imagen: escritorio</td><td><span class="tb tr">rango</span></td><td>520 píxeles</td><td>Altura del banner del héroe en el escritorio. Rango: 320–700 píxeles.</td></tr>
+<tr><td>Título de la página</td><td><span class="tb tt">texto</span></td><td>Nuestro Patrimonio</td><td>Título grande que se muestra sobre la imagen principal.</td></tr>
+</tbody></table>
+<h3>Acerca del Manifiesto</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Cita del Manifiesto</td><td><span class="tb ta">área de texto</span></td><td>No fabricamos relojes. Nosotros organizamos el tiempo.</td><td>Cita de texto de alto impacto mostrada en tipografía serif grande.</td></tr>
+<tr><td>Atribución del autor</td><td><span class="tb tt">texto</span></td><td>Henri Moreau, Fundador · 1902</td><td>Los detalles del texto de atribución se muestran en dorado debajo de la cita.</td></tr>
+<tr><td>Imagen de fondo</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Imagen de fondo con controles de opacidad. Recomendado: <strong>2000 × 1200 píxeles</strong>.</td></tr>
+<tr><td>Opacidad de superposición</td><td><span class="tb tr">rango</span></td><td>40%</td><td>Porcentaje de superposición oscura sobre la imagen de fondo. Rango: 0–95%.</td></tr>
+</tbody></table>
+<h3>Sección de cronología del patrimonio</h3>
+<p>Una línea de tiempo animada con desplazamiento. Una línea vertical se dibuja hacia abajo a medida que el visitante se desplaza, conectando tarjetas de hitos alternadas de izquierda a derecha.</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Nuestro viaje</td><td>Pequeña etiqueta en mayúscula encima del título de la línea de tiempo.</td></tr>
+<tr><td>Titular</td><td><span class="tb tt">texto</span></td><td>Un siglo de primicias</td><td>Título principal de la sección de línea de tiempo.</td></tr>
+<tr><td>Color de punto de la línea de tiempo</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color del punto animado y de la línea conectora vertical.</td></tr>
+</tbody></table>
+<p>Cada hito se agrega como un **Bloque de hitos** con configuraciones: **Año** (texto), **Título** (texto) y **Descripción** (área de texto).</p>
+<h3>Acerca de las estadísticas</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Los números</td><td>Pequeña etiqueta de categoría que se muestra encima de la cuadrícula de estadísticas.</td></tr>
+<tr><td>Color de fondo</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Antecedentes de la sección.</td></tr>
+</tbody></table>
+<p>Agregue hasta 4 **Bloques de estadísticas** que representen logros clave. Configuraciones por bloque:</p>
+<ul>
+<li><strong>contar</strong> — El valor numérico (p. ej. <code>120</code>).</li>
+<li><strong>Mostrar más sufijo</strong> — Casilla de verificación para agregar un <code>+</code> al conteo.</li>
+<li><strong>sufijo</strong> — Texto de sufijo (p. ej. <code>%</code> o <code>k</code>).</li>
+<li><strong>es decimal</strong> — Casilla de verificación para habilitar números flotantes.</li>
+<li><strong>Etiqueta</strong> — Texto de etiqueta pequeña debajo del número (p. ej. <code>Ateliers worldwide</code>).</li>
+</ul>
+<h3>Acerca de los valores (pilares)</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Lo que nos impulsa</td><td>Etiqueta de categoría pequeña.</td></tr>
+<tr><td>Titular</td><td><span class="tb tt">texto</span></td><td>Los cuatro pilares de <em>AURICO</em></td><td>Título grande. Envolver palabras en <code>&lt;em&gt;</code> para un estilo dorado.</td></tr>
+</tbody></table>
+<p>Agregue **Bloques de pilares** para los valores. Configuraciones por bloque: **Número de pilar** (texto), **Título** (texto), **Descripción** (área de texto), **Selección de ícono** (menú desplegable: Precisión, Herencia, Innovación, Exclusividad, Personalizado) y **Código SVG personalizado** (área de texto para rutas XML en línea).</p>
+<h3>Sección Equipo / Atelier</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Nombre del miembro</td><td><span class="tb tt">texto</span></td><td>—</td><td>Nombre completo mostrado debajo de la foto.</td></tr>
+<tr><td>Función/título del miembro</td><td><span class="tb tt">texto</span></td><td>—</td><td>Título del trabajo que se muestra debajo del nombre.</td></tr>
+<tr><td>Biografía del miembro</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Breve descripción que se muestra al pasar el mouse.</td></tr>
+</tbody></table>
+<h3>Acerca de la llamada a la acción</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Experiencia AURICK</td><td>Etiqueta encima del título.</td></tr>
+<tr><td>Titular</td><td><span class="tb tt">texto</span></td><td>Cada segundo de <em>todos los días.</em></td><td>Titular de CTA.</td></tr>
+<tr><td>Etiqueta/enlace del botón</td><td><span class="tb tt">texto</span> / <span class="tb tu">URL</span></td><td>Descubre la Colección / /</td><td>Configuraciones del botón CTA.</td></tr>
+<tr><td>Imagen de fondo</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Imagen de fondo de pantalla completa para la sección CTA.</td></tr>
+</tbody></table>
+</section>
+<section id="contact">
+<h2><span class="ic">✉</span>Contacto / <em>Página del taller</em></h2>
+<span class="pb">Sufijo de página personalizado</span>
+<p>el <code>page.contact</code> La plantilla combina un formulario de consulta premium con tarjetas de ubicación de boutique.</p>
+<ol class="steps">
+<li><strong>Crear la página en Admin</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">paginas</span><span class="ps">›</span><span class="pc">Agregar página</span></span>. Tómelo "Contáctenos" o "Atelier".</p>
+</li>
+<li><strong>Asignar la plantilla</strong>
+<p>Seleccionar <code>page.contact</code> en el cuadro de selección de plantilla a la derecha. Haga clic en **Guardar**.</p>
+</li>
+<li><strong>Editor de temas integrado</strong>
+<p>Abra el Editor de temas → navegue hasta la página de contacto recién creada usando el menú desplegable de plantillas → haga clic <strong>Agregar sección</strong> para configurar los bloques Formulario de contacto y Ubicación.</p>
+</li>
+</ol>
+<h3>Banner de héroe de contacto</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Imagen de héroe</td><td><span class="tb ti">imagen</span></td><td>—</td><td>Foto de pancarta ancha. Recomendado: <strong>2000 × 800 píxeles</strong> paisaje.</td></tr>
+<tr><td>Título de la página</td><td><span class="tb tt">texto</span></td><td>Visita nuestro taller</td><td>Encabezado mostrado sobre la imagen principal.</td></tr>
+</tbody></table>
+<h3>Sección de formulario de contacto</h3>
+<p>Configure los detalles de contacto de dos columnas y la configuración de la sección del formulario:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Título del formulario</td><td><span class="tb tt">texto</span></td><td>Enviar un mensaje</td><td>Etiqueta de título grande encima del formulario de contacto.</td></tr>
+<tr><td>Opciones de tema</td><td><span class="tb tt">texto</span></td><td>Consulta general, cita privada, encargo a medida...</td><td>Opciones separadas por comas que se muestran en la lista desplegable de asuntos del formulario.</td></tr>
+<tr><td>Texto de descargo de responsabilidad</td><td><span class="tb tt">texto</span></td><td>Su información se mantiene estrictamente confidencial y nunca se comparte.</td><td>Texto en letra pequeña y pequeña que se muestra debajo del botón Enviar.</td></tr>
+<tr><td>Título de la información</td><td><span class="tb tt">texto</span></td><td>Contacto directo</td><td>Etiqueta de encabezado que se muestra encima del panel de información de contacto.</td></tr>
+<tr><td>Correo electrónico de consulta general</td><td><span class="tb tt">texto</span></td><td>taller@aurick.com</td><td>La dirección de correo electrónico de consulta general de tu tienda.</td></tr>
+<tr><td>Prensa Correo electrónico</td><td><span class="tb tt">texto</span></td><td>prensa@aurick.com</td><td>Correo electrónico de consulta de prensa y medios.</td></tr>
+<tr><td>Número de teléfono</td><td><span class="tb tt">texto</span></td><td>+41 22 317 44 00</td><td>Número de teléfono que se mostrará debajo de los correos electrónicos.</td></tr>
+<tr><td>Texto de nota informativa</td><td><span class="tb ta">área de texto</span></td><td>Para encargos privados y pedidos personalizados, le invitamos a visitar nuestro Atelier de Ginebra...</td><td>Cuadro de nota informativa breve que se muestra debajo de los detalles directos (para respaldar las visitas a boutiques locales).</td></tr>
+<tr><td>Fondo de la sección</td><td><span class="tb tc">color</span></td><td>#040407</td><td>Color de fondo de la sección del formulario de contacto.</td></tr>
+</tbody></table>
+<h3>Tarjetas de ubicación</h3>
+<p>Agregue bloques de ubicación dentro de la sección Ubicación de contacto para direcciones de tiendas, horarios de atención, correos electrónicos y números de teléfono.</p>
+</section>
+<section id="shipping-policy">
+<h2><span class="ic">🚚</span>Envío <em>Página de política</em></h2>
+<span class="pb">Sufijo de página personalizado</span>
+<p>el <code>page.shipping</code> La plantilla ofrece un diseño premium para presentar sus métodos de envío y tiempos de entrega estimados por región en cuadrículas y tablas limpias y con estilo.</p>
+<ol class="steps">
+<li><strong>Crear la página en Admin</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">paginas</span><span class="ps">›</span><span class="pc">Agregar página</span></span>. Tómelo "Política de envío" o "Información de entrega".</p>
+</li>
+<li><strong>Asignar la plantilla Aurick</strong>
+<p>En la barra lateral derecha debajo <strong>Plantilla de tema</strong>, seleccione <code>page.shipping</code>. Haga clic <strong>Guardar</strong>.</p>
+</li>
+<li><strong>Personalizar en el editor de temas</strong>
+<p>Abra el Editor de temas → navegue hasta la página Política de envío usando el selector de plantillas en la parte superior → haga clic <strong>Agregar sección</strong> → seleccionar <strong>Política de envío</strong>. Ahora puede agregar y configurar bloques para métodos de envío y filas de entrega regional.</p>
+</li>
+</ol>
+<h3>Configuración de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Héroe - Ceja</td><td><span class="tb tt">texto</span></td><td>Política de Aurick</td><td>Pequeña etiqueta en mayúscula que se muestra encima del título principal.</td></tr>
+<tr><td>Héroe - Título</td><td><span class="tb tt">texto</span></td><td>Política de envío</td><td>Encabezado principal mostrado en tipografía serif grande.</td></tr>
+<tr><td>Héroe - Subtítulo</td><td><span class="tb ta">área de texto</span></td><td>Cada reloj se envía con el cuidado que se merece...</td><td>Descripción introductoria que se muestra debajo del título.</td></tr>
+<tr><td>Métodos - Título</td><td><span class="tb tt">texto</span></td><td>Opciones de envío</td><td>Dirigido a la sección de la cuadrícula de opciones de envío.</td></tr>
+<tr><td>Tabla — Mostrar</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Cambie si desea mostrar la tabla de tiempos estimados regionales debajo de la cuadrícula de métodos.</td></tr>
+<tr><td>Tabla - Título</td><td><span class="tb tt">texto</span></td><td>Entrega por región</td><td>Título que se muestra encima de la tabla de estimaciones de entrega regional.</td></tr>
+<tr><td>Tabla — Nota</td><td><span class="tb ta">área de texto</span></td><td>Los tiempos son estimados en días hábiles...</td><td>El texto de la nota al pie se muestra en tipografía pequeña debajo de la tabla.</td></tr>
+<tr><td>CTA: título/subtexto</td><td><span class="tb tt">texto</span> / <span class="tb ta">área de texto</span></td><td>¿Aún tienes preguntas? / Nuestro equipo está listo para ayudar...</td><td>Contenido para el banner de llamado a la acción en la parte inferior de la página.</td></tr>
+<tr><td>CTA: URL/etiqueta de contacto</td><td><span class="tb tu">URL</span> / <span class="tb tt">texto</span></td><td>/pages/contacto / Contactar con soporte</td><td>Enlace y etiqueta para el botón CTA.</td></tr>
+</tbody></table>
+<h3>Bloque de método de envío</h3>
+<p>Cada bloque de Método de envío se muestra como una tarjeta en la cuadrícula de opciones. Haga clic <strong>Agregar bloque</strong> → <strong>Método de envío</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Icono</td><td><span class="tb ts">seleccionar</span></td><td>Camión (Estándar)</td><td>Elija un icono de estilo: Camión (Estándar) • Rayo (Express) • Globo (Internacional) • Avión • Paquete/Caja • Escudo (Asegurado) • Reloj (Dependiendo del tiempo).</td></tr>
+<tr><td>Nombre del método</td><td><span class="tb tt">texto</span></td><td>Envío estándar</td><td>Titular de la tarjeta de método de envío.</td></tr>
+<tr><td>Descripción</td><td><span class="tb ta">área de texto</span></td><td>Gratis en todos los pedidos superiores a $200...</td><td>Detalles de lo que incluye este método (embalaje, mensajería, seguro, etc.).</td></tr>
+<tr><td>Hora/texto de la insignia</td><td><span class="tb tt">texto</span></td><td>3 a 5 días hábiles</td><td>Texto de estado en negrita que se muestra dentro de la insignia de la tarjeta.</td></tr>
+<tr><td>Nota de precio</td><td><span class="tb tt">texto</span></td><td>—</td><td>Etiqueta de precio opcional adjunta al texto de la insignia (p. ej. <code>Free over $200</code>).</td></tr>
+</tbody></table>
+<h3>Bloque de filas de región de entrega</h3>
+<p>Cada bloque de Región de entrega crea una fila dentro de la tabla de tiempos de entrega regional. Haga clic <strong>Agregar bloque</strong> → <strong>Región de entrega</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Región / País</td><td><span class="tb tt">texto</span></td><td>Estados Unidos</td><td>El nombre del país o región que se muestra en la columna de la izquierda.</td></tr>
+<tr><td>Tiempo de entrega estándar</td><td><span class="tb tt">texto</span></td><td>3-5 días</td><td>Tiempo de tránsito de envío estándar estimado.</td></tr>
+<tr><td>tiempo de entrega urgente</td><td><span class="tb tt">texto</span></td><td>1-2 días</td><td>Tiempo de tránsito estimado para envío exprés.</td></tr>
+<tr><td>Transportista(s) de envío</td><td><span class="tb tt">texto</span></td><td>FedEx/UPS</td><td>Mensajeros utilizados para esta región.</td></tr>
+</tbody></table>
+</section>
+<section id="returns-policy">
+<h2><span class="ic">↻</span>Devoluciones <em>Página de política</em></h2>
+<span class="pb">Sufijo de página personalizado</span>
+<p>el <code>page.returns</code> La plantilla ofrece una página estructurada de política de devoluciones premium que presenta una línea de tiempo interactiva, casillas de verificación de condiciones y un sistema de preguntas frecuentes integrado.</p>
+<ol class="steps">
+<li><strong>Crear la página en Admin</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">paginas</span><span class="ps">›</span><span class="pc">Agregar página</span></span>. Títelo "Devoluciones y cambios".</p>
+</li>
+<li><strong>Asignar la plantilla Aurick</strong>
+<p>En la barra lateral derecha debajo <strong>Plantilla de tema</strong>, seleccione <code>page.returns</code>. Haga clic <strong>Guardar</strong>.</p>
+</li>
+<li><strong>Personalizar en el editor de temas</strong>
+<p>Abra el Editor de temas → navegue hasta la página Política de devoluciones → haga clic <strong>Agregar sección</strong> → seleccionar <strong>Política de devoluciones</strong>. Personalice los bloques para reflejar las pautas de su política.</p>
+</li>
+</ol>
+<h3>Configuración de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Héroe - Ceja</td><td><span class="tb tt">texto</span></td><td>Política de Aurick</td><td>Texto de etiqueta pequeña encima del título.</td></tr>
+<tr><td>Héroe - Título</td><td><span class="tb tt">texto</span></td><td>Política de devoluciones</td><td>Encabezado principal mostrado en tipografía serif grande.</td></tr>
+<tr><td>Héroe - Subtítulo</td><td><span class="tb ta">área de texto</span></td><td>Respaldamos cada reloj...</td><td>Descripción introductoria.</td></tr>
+<tr><td>Ventana de devolución (días)</td><td><span class="tb tr">rango</span></td><td>30</td><td><strong>Entorno crucial:</strong> El número de días permitidos para las devoluciones. Este valor reemplaza dinámicamente la palabra. <code>DAYS</code> (en mayúsculas) donde esté escrito dentro de los pasos de devolución, las preguntas frecuentes o el título del proceso.</td></tr>
+<tr><td>Proceso de devolución: ceja</td><td><span class="tb tt">texto</span></td><td>Cómo funciona</td><td>Pequeña etiqueta encima de la línea de tiempo del proceso.</td></tr>
+<tr><td>Proceso de devolución: título</td><td><span class="tb tt">texto</span></td><td>Política de devolución de DÍAS-día</td><td>Encabezado de sección para la línea de tiempo. Dejando <code>DAYS</code> en mayúsculas sustituye automáticamente los días de la ventana de devolución.</td></tr>
+<tr><td>Mostrar cuadro de condiciones</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Cambie si desea mostrar la tarjeta resaltada que contiene los requisitos de la política debajo de la línea de tiempo.</td></tr>
+<tr><td>Mostrar sección de preguntas frecuentes</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Active el widget de preguntas frecuentes sobre acordeón plegable en la parte inferior.</td></tr>
+</tbody></table>
+<h3>Bloque de paso de retorno</h3>
+<p>Cada bloque de Paso de devolución agrega un elemento al cronograma cronológico de devoluciones. Haga clic <strong>Agregar bloque</strong> → <strong>Paso de regreso</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Icono</td><td><span class="tb ts">seleccionar</span></td><td>correo</td><td>Elija un icono con estilo: Chat/Mensaje • Correo electrónico • Paquete/Caja • Camión (barco) • Escudo (Reembolso/Protegido) • Marca de verificación (Listo) • Actualizar (Intercambio) • Buscar/Inspeccionar.</td></tr>
+<tr><td>Anulación del número de paso</td><td><span class="tb tt">texto</span></td><td>—</td><td>Escriba explícitamente un número de paso (p. ej. <code>01</code>). Si se deja en blanco, el tema los numera automáticamente de forma secuencial.</td></tr>
+<tr><td>Título del paso</td><td><span class="tb tt">texto</span></td><td>Contáctenos</td><td>Título del paso de la línea de tiempo.</td></tr>
+<tr><td>Descripción del paso</td><td><span class="tb ta">área de texto</span></td><td>Envíenos un correo electrónico dentro de los DÍAS días posteriores a la entrega...</td><td>Instrucciones detalladas. uso <code>DAYS</code> en mayúsculas para mostrar el valor de configuración de la ventana de retorno.</td></tr>
+</tbody></table>
+<h3>Bloque de condiciones de devolución</h3>
+<p>Cada bloque de Condiciones de devolución agrega una viñeta a la tarjeta "Condiciones de devolución" debajo de la línea de tiempo. Haga clic <strong>Agregar bloque</strong> → <strong>Condición de devolución</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Texto de condición</td><td><span class="tb tt">texto</span></td><td>El artículo debe estar sin usar y en su estado original y sin daños.</td><td>La declaración de requisitos se muestra como un elemento con viñetas.</td></tr>
+</tbody></table>
+<h3>Bloque de preguntas frecuentes</h3>
+<p>Cada bloque de preguntas frecuentes crea una fila de acordeón plegable dentro de la lista de acordeones de preguntas frecuentes. Haga clic <strong>Agregar bloque</strong> → <strong>Preguntas frecuentes</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Pregunta</td><td><span class="tb tt">texto</span></td><td>¿Puedo cambiar por un modelo diferente?</td><td>El encabezado del acordeón en el que se puede hacer clic.</td></tr>
+<tr><td>respuesta</td><td><span class="tb ta">área de texto</span></td><td>Sí, los cambios están disponibles dentro de DAYS días...</td><td>El contenido oculto que se abre al hacer clic. Apoya el <code>DAYS</code> marcador de posición.</td></tr>
+</tbody></table>
+</section>
+<section id="privacy-policy">
+<h2><span class="ic">🛡</span>Privacidad <em>Página de política</em></h2>
+<span class="pb">Sufijo de página personalizado</span>
+<p>el <code>page.privacy-policy</code> La plantilla ofrece una hermosa página de cumplimiento de varias secciones con una barra de navegación adhesiva que se actualiza dinámicamente al desplazarse para ayudar a los clientes a explorar los términos de las políticas fácilmente.</p>
+<ol class="steps">
+<li><strong>Crear la página en Admin</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Tienda en línea</span><span class="ps">›</span><span class="pc">paginas</span><span class="ps">›</span><span class="pc">Agregar página</span></span>. Tómelo “Política de Privacidad”.</p>
+</li>
+<li><strong>Asignar la plantilla Aurick</strong>
+<p>En la barra lateral derecha debajo <strong>Plantilla de tema</strong>, seleccione <code>page.privacy-policy</code>. Haga clic <strong>Guardar</strong>.</p>
+</li>
+<li><strong>Personalizar en el editor de temas</strong>
+<p>Abra el Editor de temas → navegue hasta la página de Política de privacidad → haga clic <strong>Agregar sección</strong> → seleccionar <strong>Política de privacidad</strong>. Agregar y organizar <strong>Sección de Políticas</strong> bloques para construir sus términos.</p>
+</li>
+</ol>
+<h3>Configuración de sección</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Héroe - Ceja / Título</td><td><span class="tb tt">texto</span> / <span class="tb tt">texto</span></td><td>Política de Aurick / Política de Privacidad</td><td>Contenido dentro del encabezado superior.</td></tr>
+<tr><td>Héroe - Subtítulo</td><td><span class="tb ta">área de texto</span></td><td>Su privacidad es sagrada para nosotros...</td><td>Descripción que se muestra dentro del encabezado.</td></tr>
+<tr><td>Última etiqueta/fecha actualizada</td><td><span class="tb tt">texto</span> / <span class="tb tt">texto</span></td><td>Última actualización / julio de 2025</td><td>Muestra una pequeña marca de tiempo de revisión debajo del subtítulo.</td></tr>
+<tr><td>Correo electrónico de privacidad</td><td><span class="tb tt">texto</span></td><td>privacidad@aurick.com</td><td>Correo electrónico de soporte utilizado dinámicamente en tarjetas de contacto y anulaciones de bloques.</td></tr>
+<tr><td>Dirección comercial</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Dirección corporativa utilizada dinámicamente dentro de los bloques de contactos.</td></tr>
+</tbody></table>
+<h3>Bloque de sección de política</h3>
+<p>Un bloque de Sección de Política agrega una categoría de términos completos con una pastilla de navegación adhesiva correspondiente. Haga clic <strong>Agregar bloque</strong> → <strong>Sección de Políticas</strong>. Configuraciones por bloque:</p>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Etiqueta adhesiva de la pastilla de navegación</td><td><span class="tb tt">texto</span></td><td>Sección</td><td>Etiqueta corta que se muestra en la barra horizontal adhesiva en la parte superior. Déjelo en blanco para ocultar esta sección de la barra de navegación.</td></tr>
+<tr><td>Mostrar número de sección</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Agrega un número secuencial transparente grande (01, 02, etc.) a la izquierda.</td></tr>
+<tr><td>Texto de ceja/título de sección</td><td><span class="tb tt">texto</span> / <span class="tb tt">texto</span></td><td>Título de categoría/sección</td><td>Etiquetas de encabezado dentro de la tarjeta de sección.</td></tr>
+<tr><td>Párrafo(s) de introducción</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Texto del cuerpo descriptivo principal. Cada salto de línea crea un nuevo párrafo.</td></tr>
+<tr><td>lista de viñetas</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Una lista con viñetas de requisitos. Escribe un elemento por línea.</td></tr>
+<tr><td>Texto después de viñetas</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Párrafos opcionales que se muestran debajo de la lista con viñetas.</td></tr>
+<tr><td>Cuadro de llamada resaltado</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Cuadro resaltado con un borde dorado izquierdo grueso para enfatizar el texto crítico.</td></tr>
+<tr><td>Elemento de diseño adicional</td><td><span class="tb ts">seleccionar</span></td><td>Ninguno</td><td>Elija agregar elementos debajo del texto: <strong>Ninguno</strong> • <strong>Tarjetas de información (cuadrícula 2×2)</strong> • <strong>Fichas de características (cuadrícula de 3 columnas)</strong>.</td></tr>
+<tr><td>Tarjetas de información (1 a 4): etiqueta/texto</td><td><span class="tb tt">texto</span> / <span class="tb ta">área de texto</span></td><td>—</td><td>Configure hasta 4 etiquetas y descripciones de tarjetas de información (solo se muestra cuando el diseño está configurado en Tarjetas de información).</td></tr>
+<tr><td>Etiquetas/iconos de chips de características</td><td><span class="tb ta">área de texto</span> / <span class="tb ta">área de texto</span></td><td>—</td><td>Un elemento por línea (p. ej. <code>Access Your Data</code>). Haga coincidir los iconos correspondientes en orden (opciones: <code>eye</code>, <code>edit</code>, <code>trash</code>, <code>slash</code>, <code>upload</code>, <code>shield</code>, <code>lock</code>, <code>check</code>, <code>mail</code>).</td></tr>
+<tr><td>Mostrar datos de contacto</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Cambie si desea imprimir el correo electrónico de privacidad y la dirección comercial en la parte inferior de esta sección específica.</td></tr>
+</tbody></table>
+</section>
+<section id="translate">
+<h2><span class="ic">🌐</span>Traducir y <em>Adaptarse</em></h2>
+<span class="pb">Aplicación nativa de Shopify: gratuita</span>
+<p>Aurick incluye traducciones completas de la interfaz para **inglés (EN)**, **español (ES)** y **francés (FR)**. Para publicar nuevos idiomas y traducir activos de productos, siga los pasos:</p>
+<ol class="steps">
+<li><strong>Agregar idiomas en Configuración</strong>
+<p>Ir a <span class="path"><span class="pc r">administrador</span><span class="ps">›</span><span class="pc">Configuración</span><span class="ps">›</span><span class="pc">Idiomas</span></span>, agregue español/francés y haga clic en **Publicar**.</p>
+</li>
+<li><strong>Instalar Traducir y Adaptar</strong>
+<p>Abra la aplicación Translate &amp; Adapt para traducir descripciones, títulos, etiquetas de colección y elementos de menú uno al lado del otro.</p>
+</li>
+</ol>
+</section>
+<section id="images">
+<h2><span class="ic">🖼</span>Imagen <em>Tallas</em></h2>
+<p>Utilice estas dimensiones exactas para cada imagen en cada sección. Los tamaños correctos mantienen imágenes nítidas, perfectamente proporcionadas y rápidas en todas las pantallas.</p>
+<div class="ic-c"><span class="ic-n">Logotipo (encabezado)</span><span class="ic-d">300 × 120 píxeles</span><span class="ic-f">PNG o SVG transparentes</span></div>
+<div class="ic-c"><span class="ic-n">Características del reloj de exhibición</span><span class="ic-d">540 × 540 píxeles</span><span class="ic-f">PNG transparente (necesario para transiciones de vuelo limpias)</span></div>
+<div class="ic-c"><span class="ic-n">Fotos de estilo de vida</span><span class="ic-d">1000 × 1250 píxeles</span><span class="ic-f">JPEG • Retrato 4:5 • centrado en el sujeto</span></div>
+<div class="ic-c"><span class="ic-n">Pancartas de colección</span><span class="ic-d">2000 × 800 píxeles</span><span class="ic-f">JPEG • 2,5:1 horizontal</span></div>
+</section>
+<section id="faq">
+<h2><span class="ic">❓</span>Preguntas frecuentes</h2>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">¿Cómo cambio el logotipo de mi tienda?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Editor de temas → <strong>encabezado</strong> → establecer <strong>Tipo de logotipo</strong> a <strong>Imagen</strong> → sube tu archivo de logotipo. Formato recomendado: PNG transparente, 300 × 120 px.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">¿Cómo agrego mensajes de anuncios rotativos?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Editor de temas → <strong>Barra de anuncios</strong> → agregue varios **Bloques de anuncios** → habilite **Anuncios de rotación automática**.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">¿Cómo oculto una sección de la página de inicio sin eliminarla?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Haga clic en el **icono de ojo** junto al nombre de la sección dentro de la barra lateral del Editor de temas. La sección se vuelve invisible para los visitantes pero permanece configurada para uso futuro.</p></div></div></div>
+</section>
+<section id="watch-svg">
+<h2><span class="ic">⚙</span>Ver imagen <em>→ Aviso SVG</em></h2>
+<p>El héroe de la caja del reloj Aurick 3D representa su reloj como un vector SVG limpio dentro de la caja animada. Pegue este mensaje en cualquier asistente de IA junto con la imagen de su reloj para obtener el código SVG personalizado:</p>
+<div class="prompt-wrap">
+<div class="prompt-label">Copie y pegue en AI (con la foto de su reloj adjunta)</div>
+<button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    Copiar mensaje
+  </button>
+<pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
+Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
+
+Follow these strict specifications:
+1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
+2. Background: Must be transparent.
+3. Viewport: The viewBox must be exactly "0 0 300 400".
+4. Vertical Alignment: The watch must be perfectly centered.
+   - The center of the watch dial must sit at (x=150, y=200).
+   - The strap must run straight vertically from y=10 to y=390.
+5. Dimension Specs:
+   - Strap Width: Exactly 60px (x=120 to x=180).
+   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
+   - Inner Dial Face Radius: Exactly 60px.
+6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
+7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
+</div>
+</section>
+<section id="support">
+<h2><span class="ic">🙋</span>Conseguir <em>Soporte</em></h2>
+<p>¿Necesitas ayuda para configurar tu tema Aurick? Contáctenos directamente haciendo clic a continuación:</p>
+<div class="sup-card">
+<span class="sup-icon">✉</span>
+<div class="sup-title">Necesito ayuda con<br/>tu <em>aurik</em> tienda?</div>
+<p class="sup-lead">Ya sea que se trate de una pregunta de configuración, un problema de metacampo o una función que no puede encontrar, complete el formulario y lo resolveremos juntos.</p>
+<a class="sup-btn" href="https://forms.gle/uv5eW4ULpRG2NqF58" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    Abrir formulario de soporte
+    <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</section>
+<footer class="doc-footer">
+  © 2026 Aurick Theme — Guía de configuración del propietario de la tienda · Todos los derechos reservados.
+</footer>
+</section></section></div></main>
+<div class="toast" id="toast">✓ Copiado al portapapeles</div>
+<script>
+function copyPrompt() {
+  const pre = document.getElementById('svg-prompt-text');
+  const btn = document.getElementById('svg-copy-btn');
+  if (!pre || !btn) return;
+  const tmp = document.createElement('textarea');
+  tmp.value = pre.innerText;
+  document.body.appendChild(tmp);
+  tmp.select();
+  document.execCommand('copy');
+  document.body.removeChild(tmp);
+  btn.classList.add('copied');
+  btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+  setTimeout(() => {
+    btn.classList.remove('copied');
+    btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Prompt';
+  }, 2000);
+}
+
+function nav(e, hash) {
+  e.preventDefault();
+  const el = document.querySelector(hash);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth" });
+  history.pushState(null, null, hash);
+  document.querySelectorAll(".sb-a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === hash));
+}
+
+const secs = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".sb-a");
+window.addEventListener("scroll", () => {
+  let cur = "";
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = "#" + s.id; });
+  if (cur) links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === cur));
+}, { passive: true });
+
+function toggleFaq(el) {
+  const open = el.classList.contains("open");
+  document.querySelectorAll(".faq.open").forEach(f => f.classList.remove("open"));
+  if (!open) el.classList.add("open");
+}
+
+function searchDocs(q) {
+  q = q.toLowerCase().trim();
+  secs.forEach(s => {
+    const id = "#" + s.id;
+    const link = Array.from(links).find(l => l.getAttribute("href") === id);
+    const match = q === "" || s.textContent.toLowerCase().includes(q);
+    s.style.display = match ? "" : "none";
+    if (link) link.style.display = match ? "" : "none";
+  });
+  document.querySelectorAll(".sb-cat").forEach(cat => {
+    const nextLinks = [];
+    let el = cat.nextElementSibling;
+    while (el && !el.classList.contains("sb-cat")) {
+      if (el.classList.contains("sb-a")) nextLinks.push(el);
+      el = el.nextElementSibling;
+    }
+    const anyVisible = nextLinks.some(l => l.style.display !== "none");
+    cat.style.display = q === "" || anyVisible ? "" : "none";
+  });
+}
+</script>
+</body></html>
