@@ -160,6 +160,10 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   transform: translateY(-50%);
   pointer-events: none;
 }
+.sb-lang select option {
+  background: #08080d !important;
+  color: #f0ece4 !important;
+}
 </style></head><body>
 <aside class="sb">
 <div class="sb-brand">
@@ -663,30 +667,66 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <section id="feat-collection">
 <h2><span class="ic">📋</span>Ausgewählte Sammlung</h2>
 <span class="pb g">Homepage</span>
-<p>Zeigt ein ansprechendes Raster mit Produkten aus einer ausgewählten Kollektion an. Ideal, um Bestseller oder Neuzugänge auf Ihrer Homepage zu präsentieren.</p>
+<p>Ihre Kollektionen werden als erstklassige 3D-Kippkarten dargestellt. Wenn Sie mit dem Mauszeiger darüber fahren, neigt sich die Karte in Richtung des Zeigers, enthüllt goldene Eckklammern und führt einen Schimmereffekt über die Oberfläche aus. Jede Karte verweist auf eine Kollektion. (Entspricht dem Layout von Kollektionsliste / Sammlungstresor).</p>
+<h3>Abschnittsüberschrift</h3>
 <table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
-<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Hervorgehoben</td><td>Kleiner Tag-Text über dem Titel.</td></tr>
-<tr><td>Überschrift</td><td><span class="tb tt">Text</span></td><td>Ausgewählte Sammlung</td><td>Titel des Hauptabschnitts.</td></tr>
-<tr><td>Unterüberschrift</td><td><span class="tb ta">Textbereich</span></td><td>—</td><td>Kurzer beschreibender Absatz, der unter der Überschrift angezeigt wird.</td></tr>
-<tr><td>Sammlung</td><td><span class="tb tt">Sammlung</span></td><td>—</td><td>Shopify-Sammlungsauswahl zum Auffüllen von Produkten.</td></tr>
-<tr><td>Maximale Anzahl an Produkten, die angezeigt werden sollen</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>Anzahl der im Raster angezeigten Produkte (Bereich: 2–12).</td></tr>
-<tr><td>Spalten auf dem Desktop</td><td><span class="tb tr">Reichweite</span></td><td>4</td><td>In Desktop-Ansichten angezeigte Rasterspalten (Bereich: 2–5).</td></tr>
-<tr><td>Kolumnen auf Mobilgeräten</td><td><span class="tb ts">auswählen</span></td><td>2</td><td>Spalten in mobilen Ansichtsfenstern: <strong>1</strong> oder <strong>2</strong>.</td></tr>
-<tr><td>Schaltfläche „Schnell hinzufügen“ anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Fügt in den Produktkarten eine Schaltfläche zum schnellen Hinzufügen des Warenkorbs hinzu.</td></tr>
-<tr><td>Anbieter anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Zeigt Produktanbieteretiketten auf den Karten an.</td></tr>
-<tr><td>Schaltfläche „Alle anzeigen“ anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Zeigt eine untere Schaltfläche an, die auf die Sammlungsseite verweist, wenn diese mehr Elemente enthält.</td></tr>
+<tr><td>Augenbrauentext</td><td><span class="tb tt">Text</span></td><td>Der Tresor</td><td>Kleine Beschriftung in Großbuchstaben über der Abschnittsüberschrift.</td></tr>
+<tr><td>Überschrift – Zeile 1</td><td><span class="tb tt">Text</span></td><td>Entdecken Sie unsere</td><td>Erste Zeile der Hauptüberschrift.</td></tr>
+<tr><td>Überschrift – Zeile 2</td><td><span class="tb tt">Text</span></td><td>Sammlungen</td><td>Zweite Zeile. Wickeln Sie Wörter ein <code>&lt;em&gt;&lt;/em&gt;</code> für kursives Gold-Styling, z.B. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Untertext</td><td><span class="tb ta">Textbereich</span></td><td>Jede Uhr erzählt eine Geschichte ...</td><td>Kurzer Absatz, der unter der Überschrift angezeigt wird.</td></tr>
+<tr><td>Header-Ausrichtung</td><td><span class="tb ts">auswählen</span></td><td>Links</td><td>Ausrichtung des Abschnittskopftextes: Links, Mitte oder Rechts.</td></tr>
 </tbody></table>
+<h3>Layout</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Spalten – Desktop</td><td><span class="tb tr">Reichweite</span></td><td>3</td><td>Karten pro Reihe auf dem Desktop. Bereich: 2–5.</td></tr>
+<tr><td>Spalten – Tablet</td><td><span class="tb tr">Reichweite</span></td><td>2</td><td>Karten pro Reihe auf dem Tablet.</td></tr>
+<tr><td>Säulen – mobil</td><td><span class="tb tr">Reichweite</span></td><td>1</td><td>Karten pro Reihe auf dem Handy. Für ein optimales mobiles Erlebnis wird 1 empfohlen.</td></tr>
+<tr><td>Gitterlücke</td><td><span class="tb tr">Reichweite</span></td><td>24 px</td><td>Pixellücke zwischen den Karten. Bereich: 8–48 Pixel.</td></tr>
+<tr><td>Seitenverhältnis der Karte</td><td><span class="tb ts">auswählen</span></td><td>Porträt 3:4</td><td>Hochformat 3:4 • Hochformat 4:5 • Quadratisch 1:1 • Querformat 16:9.</td></tr>
+<tr><td>Kartenrandradius</td><td><span class="tb tr">Reichweite</span></td><td>12 px</td><td>Abgerundeter Eckenradius jeder Karte. Bereich: 0–32 px.</td></tr>
+<tr><td>Bildanpassung</td><td><span class="tb ts">auswählen</span></td><td>Abdeckung</td><td><strong>Abdeckung</strong> Pflanzen, um die Karte zu füllen. <strong>Enthalten</strong> Passt das gesamte Bild an, ohne es zu beschneiden.</td></tr>
+</tbody></table>
+<h3>Farben</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Hintergrund</td><td><span class="tb tc">Farbe</span></td><td>#0a0906</td><td>Abschnittshintergrund hinter dem Kartengitter.</td></tr>
+<tr><td>Augenbrauenfarbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe der Augenbrauenbeschriftung über der Überschrift.</td></tr>
+<tr><td>Farbe der Überschrift</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe der Überschrift des Hauptabschnitts.</td></tr>
+<tr><td>Subtextfarbe</td><td><span class="tb tc">Farbe</span></td><td>#6b6660</td><td>Farbe des Untertextabsatzes.</td></tr>
+<tr><td>Akzent (Gold)</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Farbe der goldenen Akzente, Randleuchten, kursiven Teile und Eckfreilegungen beim Schweben.</td></tr>
+<tr><td>Farbe des Kartennamens</td><td><span class="tb tc">Farbe</span></td><td>#f0ece4</td><td>Farbe des Sammlungsnamens auf jeder Karte.</td></tr>
+<tr><td>Farbe der Kartenbeschreibung</td><td><span class="tb tc">Farbe</span></td><td>#8c8680</td><td>Farbe des Sammlungsbeschreibungstextes auf jeder Karte.</td></tr>
+</tbody></table>
+<h3>Button „Alle anzeigen“</h3>
+<table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td>Button „Alle anzeigen“ anzeigen</td><td><span class="tb tk">Checkbox</span></td><td>Ein</td><td>Schaltet den unteren CTA-Button unter den Kollektionen um.</td></tr>
+<tr><td>Buttontext</td><td><span class="tb tt">Text</span></td><td>Alle Kollektionen anzeigen</td><td>Textbeschriftung im Button.</td></tr>
+<tr><td>Button-URL</td><td><span class="tb tu">URL</span></td><td>&mdash;</td><td>Ziel-Link (z. B. /collections).</td></tr>
+<tr><td>CTA-Farbe</td><td><span class="tb tc">Farbe</span></td><td>#c9a84c</td><td>Akzentfarbe für den Button.</td></tr>
+</tbody></table>
+<h3>Kollektionsblöcke (Bis zu 12)</h3>
+<p>Jeder Kartenblock ist mit einer Shopify-Kollektion verknüpft. Die folgenden Blockfelder sind anpassbar:</p>
+<table class="st st-blocks"><thead><tr><th>Blockfeld</th><th>Typ</th><th>Was es tut</th></tr></thead><tbody>
+<tr><td><strong>Kollektion</strong></td><td>Kollektion</td><td>Wählen Sie die Kollektion aus, die Sie präsentieren möchten. Das Standard-Kartenhintergrundbild ist das Kollektionsbild.</td></tr>
+<tr><td><strong>Titel überschreiben</strong></td><td>Text</td><td>Optionaler benutzerdefinierter Titel, der auf der Karte anstelle des Kollektionstitels angezeigt wird.</td></tr>
+<tr><td><strong>Beschreibung überschreiben</strong></td><td>Textbereich</td><td>Optionale benutzerdefinierte Beschreibung, die auf der Karte anstelle der Kollektionsbeschreibung angezeigt wird.</td></tr>
+<tr><td><strong>Button-Label</strong></td><td>Text</td><td>Auf dem Erkundungslink der Karte angezeigter Text (Standard: <code>Explore Collection</code>).</td></tr>
+<tr><td><strong>Benutzerdefiniertes Bild</strong></td><td>Bild</td><td>Optionales benutzerdefiniertes Fokusbild zur Überschreibung des Kollektionsbildes.</td></tr>
+</tbody></table>
+</section>
+
 <section id="featured-product-doc">
 <h2><span class="ic">🕐</span>Hervorgehoben <em>Produkt</em></h2>
 <span class="pb g">Homepage</span>
 <p>Hebt ein einzelnes Produkt direkt auf Ihrer Homepage mit einem vollständigen Kaufformular, einer Mediengalerie und dynamischen Akkordeon-Dropdowns hervor. Perfekt für die Einführung eines Flaggschiff-Uhrenmodells.</p>
 <h3>Kerneinstellungen</h3>
 <table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
-<tr><td>Produkt</td><td><span class="tb tt">Produkt</span></td><td>—</td><td>Wählen Sie das Produkt aus, das Sie in diesem Abschnitt präsentieren möchten.</td></tr>
-<tr><td>Miniaturansichten der Galerie anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Aus</td><td>Aktivieren Sie diese Option, um Medienminiaturansichten unterhalb des Hauptbildfelds anzuzeigen.</td></tr>
-<tr><td>Galerieeckenradius</td><td><span class="tb tr">Reichweite</span></td><td>8 px</td><td>Rundet die Ecken von Produktgaleriebildern ab. Bereich: 0–40 px.</td></tr>
-<tr><td>Niedriger Lagerbestandsschwellenwert</td><td><span class="tb tr">Reichweite</span></td><td>10</td><td>Lagerbestandsmenge, unterhalb derer ein Warnschild wegen niedrigem Lagerbestand angezeigt wird. Bereich: 2–20.</td></tr>
-<tr><td>Produkt-Tags anzeigen</td><td><span class="tb tk">Kontrollkästchen</span></td><td>Auf</td><td>Schalten Sie um, ob Rohprodukt-Tags angezeigt werden sollen.</td></tr>
+<tr><td>Produkt</td><td><span class="tb tt">Produkt</span></td><td>—</td><td>Wählen Sie das Produkt aus, das in diesem Bereich präsentiert werden soll.</td></tr>
+<tr><td>Galerie-Thumbnail-Layout</td><td><span class="tb ts">Auswahl</span></td><td>Vertikal (Links)</td><td><strong>Vertikal (Links)</strong> &mdash; Vorschaubilder neben dem Hauptbild. <strong>Unten</strong> &mdash; horizontaler Streifen darunter. <strong>Overlay-Kreise</strong> &mdash; überlagerte Punkte.</td></tr>
+<tr><td>Galerie-Vorschaubilder anzeigen</td><td><span class="tb tk">Checkbox</span></td><td>Ein</td><td>Schaltet die Reihe der Vorschaubilder ein oder aus.</td></tr>
+<tr><td>Sticky-Galerie aktivieren</td><td><span class="tb tk">Checkbox</span></td><td>Ein</td><td>Hält die Galerie beim Scrollen auf dem Desktop fixiert.</td></tr>
+<tr><td>Galerie-Eckenradius</td><td><span class="tb tr">Bereich</span></td><td>8 px</td><td>Rundet die Ecken der Bilder in der Produktgalerie ab. Bereich: 0–40 px.</td></tr>
+<tr><td>Niedriger Schwellenwert für Lagerbestand</td><td><span class="tb tr">Bereich</span></td><td>10</td><td>Lagerbestand, unter dem eine Warnmeldung für niedrigen Lagerbestand angezeigt wird. Bereich: 2–20.</td></tr>
+<tr><td>Produkt-Tags anzeigen</td><td><span class="tb tk">Checkbox</span></td><td>Ein</td><td>Schaltet die Anzeige der Produkt-Tags ein oder aus.</td></tr>
 </tbody></table>
 <h3>Typografie und Styling</h3>
 <table class="st"><thead><tr><th>Einstellung</th><th>Typ</th><th>Standard</th><th>Was es tut</th></tr></thead><tbody>
