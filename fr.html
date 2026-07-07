@@ -160,6 +160,10 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   transform: translateY(-50%);
   pointer-events: none;
 }
+.sb-lang select option {
+  background: #08080d !important;
+  color: #f0ece4 !important;
+}
 </style></head><body>
 <aside class="sb">
 <div class="sb-brand">
@@ -663,30 +667,66 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <section id="feat-collection">
 <h2><span class="ic">📋</span>Collection en vedette</h2>
 <span class="pb g">Page d'accueil</span>
-<p>Affiche une grille réactive de produits d'une collection choisie. Idéal pour présenter les best-sellers ou les nouveautés sur votre page d’accueil.</p>
+<p>Vos collections affichées sous forme de cartes inclinables 3D premium. Le survol incline chaque carte vers le curseur, révèle des coins dorés et joue un balayage scintillant sur la surface. Chaque carte est liée à une collection. (Correspond à la mise en page Liste des collections / Coffre-fort de collection).</p>
+<h3>En-tête de section</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
-<tr><td>Texte des sourcils</td><td><span class="tb tt">texte</span></td><td>En vedette</td><td>Petit texte de balise au-dessus du titre.</td></tr>
-<tr><td>Rubrique</td><td><span class="tb tt">texte</span></td><td>Collection en vedette</td><td>Titre de la section principale.</td></tr>
-<tr><td>Sous-titre</td><td><span class="tb ta">zone de texte</span></td><td>—</td><td>Court paragraphe descriptif affiché sous le titre.</td></tr>
-<tr><td>Collecte</td><td><span class="tb tt">collecte</span></td><td>—</td><td>Sélecteur de collection Shopify pour remplir les produits.</td></tr>
-<tr><td>Maximum de produits à afficher</td><td><span class="tb tr">gamme</span></td><td>4</td><td>Nombre de produits affichés dans la grille (Plage : 2 à 12).</td></tr>
-<tr><td>Colonnes sur le bureau</td><td><span class="tb tr">gamme</span></td><td>4</td><td>Colonnes de grille affichées sur les vues du bureau (plage : 2 à 5).</td></tr>
-<tr><td>Colonnes sur mobile</td><td><span class="tb ts">sélectionner</span></td><td>2</td><td>Colonnes sur les fenêtres mobiles : <strong>1</strong> ou <strong>2</strong>.</td></tr>
-<tr><td>Afficher le bouton Ajout rapide</td><td><span class="tb tk">case à cocher</span></td><td>Sur</td><td>Ajoute un bouton d'ajout rapide au panier dans les fiches produits.</td></tr>
-<tr><td>Afficher le fournisseur</td><td><span class="tb tk">case à cocher</span></td><td>Désactivé</td><td>Affiche les étiquettes des fournisseurs de produits sur les cartes.</td></tr>
-<tr><td>Afficher le bouton "Tout afficher"</td><td><span class="tb tk">case à cocher</span></td><td>Sur</td><td>Affiche un bouton du bas reliant à la page de collection si elle contient plus d'éléments.</td></tr>
+<tr><td>Texte des sourcils</td><td><span class="tb tt">texte</span></td><td>Le coffre-fort</td><td>Petite étiquette majuscule au-dessus du titre de la section.</td></tr>
+<tr><td>Titre — ligne 1</td><td><span class="tb tt">texte</span></td><td>Explorez notre</td><td>Première ligne du titre principal.</td></tr>
+<tr><td>Titre — ligne 2</td><td><span class="tb tt">texte</span></td><td>Collections</td><td>Deuxième ligne. Enveloppez les mots dans <code>&lt;em&gt;&lt;/em&gt;</code> pour un style doré italique, par ex. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Sous-texte</td><td><span class="tb ta">zone de texte</span></td><td>Chaque garde-temps raconte une histoire…</td><td>Court paragraphe affiché sous le titre.</td></tr>
+<tr><td>Alignement de l'en-tête</td><td><span class="tb ts">sélectionner</span></td><td>Gauche</td><td>Alignement du texte de l'en-tête de section : Gauche, Centre ou Droite.</td></tr>
 </tbody></table>
+<h3>Disposition</h3>
+<table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
+<tr><td>Colonnes — bureau</td><td><span class="tb tr">gamme</span></td><td>3</td><td>Cartes par ligne sur le bureau. Plage : 2 à 5.</td></tr>
+<tr><td>Colonnes — tablette</td><td><span class="tb tr">gamme</span></td><td>2</td><td>Cartes par ligne sur tablette.</td></tr>
+<tr><td>Colonnes — mobiles</td><td><span class="tb tr">gamme</span></td><td>1</td><td>Cartes par ligne sur mobile. 1 est recommandé pour une meilleure expérience mobile.</td></tr>
+<tr><td>Écart de grille</td><td><span class="tb tr">gamme</span></td><td>24 pixels</td><td>Écart de pixels entre les cartes. Plage : 8 à 48 px.</td></tr>
+<tr><td>Format de la carte</td><td><span class="tb ts">sélectionner</span></td><td>Portraits 3:4</td><td>Portrait 3:4 • Portrait 4:5 • Carré 1:1 • Paysage 16:9.</td></tr>
+<tr><td>Rayon de la bordure de la carte</td><td><span class="tb tr">gamme</span></td><td>12 pixels</td><td>Rayon de coin arrondi de chaque carte. Plage : 0 à 32 px.</td></tr>
+<tr><td>Ajustement de l'image</td><td><span class="tb ts">sélectionner</span></td><td>Couverture</td><td><strong>Couverture</strong> cultures pour remplir la carte. <strong>Contenir</strong> s'adapte à toute l'image sans recadrage.</td></tr>
+</tbody></table>
+<h3>Couleurs</h3>
+<table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
+<tr><td>Contexte</td><td><span class="tb tc">couleur</span></td><td>#0a0906</td><td>Fond de section derrière la grille de la carte.</td></tr>
+<tr><td>Couleur des sourcils</td><td><span class="tb tc">couleur</span></td><td>#c9a84c</td><td>Couleur de l’étiquette du sourcil au-dessus du titre.</td></tr>
+<tr><td>Couleur du titre</td><td><span class="tb tc">couleur</span></td><td>#f0ece4</td><td>Couleur du titre de la section principale.</td></tr>
+<tr><td>Couleur du sous-texte</td><td><span class="tb tc">couleur</span></td><td>#6b6660</td><td>Couleur du paragraphe de sous-texte.</td></tr>
+<tr><td>Accent (or)</td><td><span class="tb tc">couleur</span></td><td>#c9a84c</td><td>La couleur des accents dorés, des bordures lumineuses, des parties en italique et des coins révélés au survol.</td></tr>
+<tr><td>Couleur du nom de la carte</td><td><span class="tb tc">couleur</span></td><td>#f0ece4</td><td>Couleur du nom de la collection sur chaque carte.</td></tr>
+<tr><td>Couleur de la description de la carte</td><td><span class="tb tc">couleur</span></td><td>#8c8680</td><td>Couleur du texte de description de la collection sur chaque carte.</td></tr>
+</tbody></table>
+<h3>Bouton "Tout afficher"</h3>
+<table class="st"><thead><tr><th>Paramètre</th><th>Type</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
+<tr><td>Afficher le bouton "Tout afficher"</td><td><span class="tb tk">case à cocher</span></td><td>Actif</td><td>Active ou désactive le bouton CTA inférieur sous les collections.</td></tr>
+<tr><td>Texte du bouton</td><td><span class="tb tt">texte</span></td><td>Tout afficher les collections</td><td>Libellé affiché dans le bouton.</td></tr>
+<tr><td>URL du bouton</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Lien de destination (ex. /collections).</td></tr>
+<tr><td>Couleur du CTA</td><td><span class="tb tc">couleur</span></td><td>#c9a84c</td><td>Couleur d'accentuation du bouton.</td></tr>
+</tbody></table>
+<h3>Blocs de collection (Jusqu'à 12)</h3>
+<p>Chaque bloc de carte est lié à une collection Shopify. Les champs de bloc suivants sont personnalisables :</p>
+<table class="st st-blocks"><thead><tr><th>Champ de bloc</th><th>Type</th><th>Ce qu'il fait</th></tr></thead><tbody>
+<tr><td><strong>Collection</strong></td><td>Collection</td><td>Sélectionnez la collection à mettre en vedette. L'image d'arrière-plan de la carte est par défaut l'image de la collection.</td></tr>
+<tr><td><strong>Titre personnalisé</strong></td><td>Texte</td><td>Titre personnalisé facultatif à afficher sur la carte à la place du nom de la collection.</td></tr>
+<tr><td><strong>Description personnalisée</strong></td><td>Zone de texte</td><td>Description personnalisée facultative à afficher sur la carte à la place de la description de la collection.</td></tr>
+<tr><td><strong>Libellé du bouton</strong></td><td>Texte</td><td>Texte affiché sur le lien d'exploration de la carte (Par défaut : <code>Explore Collection</code>).</td></tr>
+<tr><td><strong>Imagen personalizada</strong></td><td>Image</td><td>Image focale personnalisée facultative pour remplacer l'image de la collection.</td></tr>
+</tbody></table>
+</section>
+
 <section id="featured-product-doc">
 <h2><span class="ic">🕐</span>En vedette <em>Produit</em></h2>
 <span class="pb g">Page d'accueil</span>
 <p>Met en évidence un seul produit directement sur votre page d'accueil avec un formulaire d'achat complet, une galerie multimédia et des listes déroulantes dynamiques en accordéon. Parfait pour lancer un modèle de montre phare.</p>
 <h3>Paramètres de base</h3>
-<table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
+<table class="st"><thead><tr><th>Paramètre</th><th>Type</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
 <tr><td>Produit</td><td><span class="tb tt">produit</span></td><td>—</td><td>Sélectionnez le produit à présenter dans cette section.</td></tr>
-<tr><td>Afficher les vignettes de la galerie</td><td><span class="tb tk">case à cocher</span></td><td>Désactivé</td><td>Activez cette option pour afficher les miniatures des médias sous la zone d'image principale.</td></tr>
-<tr><td>Rayon d'angle de la galerie</td><td><span class="tb tr">gamme</span></td><td>8 pixels</td><td>Arrondit les coins des images de la galerie de produits. Plage : 0 à 40 px.</td></tr>
-<tr><td>Seuil de stock bas</td><td><span class="tb tr">gamme</span></td><td>10</td><td>Quantité de stock en dessous de laquelle un badge d'avertissement de faible stock est affiché. Plage : 2 à 20.</td></tr>
-<tr><td>Afficher les balises des produits</td><td><span class="tb tk">case à cocher</span></td><td>Sur</td><td>Indiquez s'il faut afficher les balises de produits bruts.</td></tr>
+<tr><td>Disposition des vignettes</td><td><span class="tb ts">sélectionner</span></td><td>Vertical (Gauche)</td><td><strong>Vertical (Gauche)</strong> &mdash; vignettes à côté de l'image. <strong>Bas</strong> &mdash; bande horizontale inférieure. <strong>Cercles superposés</strong> &mdash; points superposés.</td></tr>
+<tr><td>Afficher les vignettes de la gelerie</td><td><span class="tb tk">case à cocher</span></td><td>Actif</td><td>Active ou désactive la ligne de vignettes.</td></tr>
+<tr><td>Activer la galerie collante</td><td><span class="tb tk">case à cocher</span></td><td>Actif</td><td>Maintient la galerie fixe lors du défilement de la colonne d'achat sur ordinateur.</td></tr>
+<tr><td>Rayon des coins de la galerie</td><td><span class="tb tr">plage</span></td><td>8 px</td><td>Arrondit les coins des images de la galerie de produits. Plage : 0 à 40 px.</td></tr>
+<tr><td>Seuil de stock bas</td><td><span class="tb tr">plage</span></td><td>10</td><td>Quantité de stock en dessous de laquelle un badge d'avertissement de stock bas est affiché. Plage : 2 à 20.</td></tr>
+<tr><td>Afficher les étiquettes de produit</td><td><span class="tb tk">case à cocher</span></td><td>Actif</td><td>Activer ou désactiver l'affichage des étiquettes de produit.</td></tr>
 </tbody></table>
 <h3>Typographie et style</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
