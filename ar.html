@@ -1,1 +1,1423 @@
+<!DOCTYPE html>
 
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>دليل إعداد مالك متجر Aurick</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#050508;--sb:#08080d;--card:rgba(255,255,255,.023);--border:rgba(201,169,110,.11);--bhi:rgba(201,169,110,.32);--gold:#c9a96e;--gd:#8b7245;--gl:#e8d5b0;--tx:#f0ece4;--td:rgba(240,236,228,.63);--tm:rgba(240,236,228,.38);--green:#5dba7d;--blue:#5fa4e6;--amber:#e6b25f;--red:#e66c5f;--teal:#2dd4bf;--purple:#c084fc;--r:12px;--rs:8px;--sw:284px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
+aside.sb{width:var(--sw);background:var(--sb);border-right:1px solid var(--border);position:fixed;top:0;left:0;bottom:0;overflow-y:auto;display:flex;flex-direction:column;z-index:100;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sb-brand{padding:1.9rem 1.6rem 1.3rem;border-bottom:1px solid var(--border)}
+.sb-name{font-family:"Cormorant Garamond",serif;font-size:1.78rem;font-weight:600;letter-spacing:.08em;color:#fff}.sb-name span{color:var(--gold)}
+.sb-sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tm);margin-top:.18rem}
+.sb-ver{display:inline-block;margin-top:.48rem;background:rgba(201,169,110,.07);color:var(--gl);border:.5px solid var(--bhi);border-radius:20px;font-size:.58rem;padding:.13rem .5rem}
+.sb-search{padding:1rem 1.3rem .7rem;border-bottom:1px solid var(--border);position:relative}
+.sb-search svg{position:absolute;left:2.1rem;top:50%;transform:translateY(-50%);color:var(--tm);pointer-events:none}
+.sb-search input{width:100%;background:rgba(0,0,0,.28);border:1px solid var(--border);border-radius:var(--rs);color:var(--tx);font-family:inherit;font-size:.76rem;padding:.52rem .7rem .52rem 2rem;outline:none;transition:border-color .2s}
+.sb-search input:focus{border-color:var(--gold)}.sb-search input::placeholder{color:var(--tm)}
+.sb-nav{padding:.7rem .85rem 2rem;flex:1}
+.sb-cat{font-size:.59rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--gd);padding:1.1rem .6rem .32rem}
+.sb-a{display:flex;align-items:center;gap:.5rem;padding:.38rem .6rem;border-radius:var(--rs);color:var(--td);font-size:.77rem;text-decoration:none;cursor:pointer;transition:all .18s}
+.sb-a:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sb-a.on{color:var(--gl);background:rgba(201,169,110,.07);font-weight:500;border-left:1.5px solid var(--gold);border-radius:0 var(--rs) var(--rs) 0;padding-left:.55rem}
+.dot{width:3.5px;height:3.5px;border-radius:50%;background:var(--bhi);flex-shrink:0}.sb-a.on .dot{background:var(--gold)}
+main.main{margin-left:var(--sw);flex:1;min-width:0;padding:3.5rem 4.5rem 6rem}
+.wrap{max-width:900px;margin:0 auto}
+h2{font-family:"Cormorant Garamond",serif;font-size:1.82rem;font-weight:500;color:#fff;margin-top:4.5rem;margin-bottom:1.3rem;padding-bottom:.7rem;border-bottom:.5px solid var(--border);display:flex;align-items:center;gap:.7rem}
+h2 .ic{width:30px;height:30px;background:rgba(201,169,110,.07);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}h2 em{font-style:italic;color:var(--gold)}
+h3{font-family:"Cormorant Garamond",serif;font-size:1.22rem;font-weight:600;color:#fff;margin-top:2rem;margin-bottom:.7rem}
+h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-top:1.5rem;margin-bottom:.65rem}
+p{color:var(--td);font-size:.86rem;margin-bottom:.9rem;line-height:1.72}a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gl)}
+ul,ol{padding-left:1.35rem;margin-bottom:1rem}li{color:var(--td);font-size:.86rem;margin-bottom:.4rem;line-height:1.5}
+strong{color:#fff;font-weight:500}
+code{font-family:"JetBrains Mono",monospace;font-size:.78em;background:#010103;border:.5px solid var(--border);border-radius:4px;padding:.1em .42em;color:var(--gl)}
+table.st{width:100%;border-collapse:collapse;margin:.9rem 0 1.8rem;font-size:.79rem;border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden}
+table.st thead tr{background:rgba(0,0,0,.28)}
+table.st th{padding:.62rem .9rem;font-size:.61rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--tm);border-bottom:.5px solid var(--border);text-align:left;white-space:nowrap}
+table.st th:nth-child(2),table.st th:nth-child(3){text-align:center}
+table.st tbody tr{border-bottom:.5px solid var(--border);transition:background .14s}
+table.st tbody tr:last-child{border-bottom:none}table.st tbody tr:hover{background:rgba(201,169,110,.022)}
+table.st td{padding:.7rem .9rem;vertical-align:top}
+table.st td:first-child{color:#fff;font-weight:600;font-size:.81rem;white-space:nowrap;min-width:172px}
+table.st td:nth-child(2){text-align:center;width:90px}
+table.st td:nth-child(3){text-align:center;font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--tm);width:82px;white-space:nowrap}
+table.st td:last-child{color:var(--td);line-height:1.6}
+table.st-blocks td:nth-child(2){text-align:left;width:290px}
+table.st-blocks td:nth-child(2) ul{padding-left:1.1rem;margin-bottom:0}
+table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
+.tb{display:inline-block;font-size:.57rem;font-weight:700;padding:.13rem .45rem;border-radius:20px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.ti{background:rgba(45,212,191,.1);color:var(--teal);border:.5px solid rgba(45,212,191,.2)}.tr{background:rgba(95,164,230,.1);color:var(--blue);border:.5px solid rgba(95,164,230,.2)}.ts{background:rgba(230,178,95,.1);color:var(--amber);border:.5px solid rgba(230,178,95,.2)}.tt{background:rgba(192,132,252,.1);color:var(--purple);border:.5px solid rgba(192,132,252,.2)}.tc{background:rgba(230,108,95,.1);color:var(--red);border:.5px solid rgba(230,108,95,.2)}.tk{background:rgba(93,186,125,.1);color:var(--green);border:.5px solid rgba(93,186,125,.2)}.ta{background:rgba(192,132,252,.08);color:#d8b4fe;border:.5px solid rgba(192,132,252,.18)}.tu{background:rgba(95,164,230,.08);color:#93c5fd;border:.5px solid rgba(95,164,230,.18)}
+.note{display:flex;gap:.8rem;padding:1rem 1.3rem;border-radius:var(--rs);margin-bottom:1.3rem;border:.5px solid}
+.note .ni{flex-shrink:0;margin-top:1px}.note .nb p{margin:0;font-size:.82rem;line-height:1.62}.note .nt{font-weight:600;margin-bottom:.22rem;font-size:.83rem}
+.note p{font-size:.82rem}
+.note.info{background:rgba(95,164,230,.04);border-color:rgba(95,164,230,.2);color:#c7dff8}
+.note.tip{background:rgba(93,186,125,.04);border-color:rgba(93,186,125,.2);color:#c5f0d4}
+.note.warn{background:rgba(230,178,95,.04);border-color:rgba(230,178,95,.2);color:#f5e0c0}
+.note.crit{background:rgba(230,108,95,.04);border-color:rgba(230,108,95,.2);color:#f5c9c5}
+.steps{list-style:none;padding:0;counter-reset:s}.steps li{counter-increment:s;position:relative;padding:0 0 1.6rem 2.8rem;margin:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:700;color:var(--gl);line-height:1.75rem;text-align:center}
+.steps li::after{content:"";position:absolute;left:.875rem;top:1.75rem;bottom:0;width:.5px;background:var(--border)}
+.steps li:last-child{padding-bottom:0}.steps li:last-child::after{display:none}
+.steps li>strong{color:#fff;display:block;margin-bottom:.3rem;font-size:.88rem}.steps li p{margin:.14rem 0 0;font-size:.84rem}
+.path{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem;font-size:.74rem}
+.pc{background:rgba(201,169,110,.05);border:.5px solid var(--border);border-radius:5px;padding:.1rem .48rem;color:var(--td);font-weight:500;white-space:nowrap;font-size:.71rem}
+.pc.r{background:rgba(255,255,255,.025);color:var(--tm);font-weight:400}.ps{color:var(--gd);font-size:.6rem;opacity:.7}
+.pb{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600;background:rgba(95,164,230,.07);color:#93c5fd;border:.5px solid rgba(95,164,230,.18);border-radius:20px;padding:.2rem .58rem;margin:.15rem .3rem .15rem 0}
+.pb.g{background:rgba(201,169,110,.07);color:var(--gl);border-color:var(--bhi)}.pb.gr{background:rgba(93,186,125,.07);color:#86efac;border-color:rgba(93,186,125,.2)}
+.card{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.8rem;margin-bottom:1.6rem;transition:border-color .25s}.card:hover{border-color:rgba(201,169,110,.2)}.card h3{margin-top:0}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1.9rem}
+.fi{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.3rem;display:flex;gap:.8rem;align-items:flex-start;transition:border-color .18s}.fi:hover{border-color:var(--bhi)}
+.fi-ic{width:33px;height:33px;background:rgba(201,169,110,.06);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.fi-t{font-weight:600;font-size:.85rem;color:#fff;margin-bottom:.2rem}.fi-d{font-size:.74rem;color:var(--td);line-height:1.5}
+.ic-c{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:.8rem 1.1rem;display:flex;align-items:center;gap:1.1rem;margin-bottom:.48rem;flex-wrap:wrap;transition:border-color .2s}.ic-c:hover{border-color:var(--bhi)}
+.ic-n{font-weight:600;font-size:.82rem;color:#fff;min-width:205px}.ic-d{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--gold);min-width:148px}.ic-f{font-size:.73rem;color:var(--tm)}
+.faq{border:.5px solid var(--border);border-radius:var(--rs);margin-bottom:.55rem;overflow:hidden;transition:border-color .2s}.faq:hover{border-color:rgba(201,169,110,.2)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.3rem;cursor:pointer;background:var(--card);gap:1rem;user-select:none}
+.fqt{font-weight:500;font-size:.86rem;color:#fff;line-height:1.5}
+.fch{color:var(--gd);flex-shrink:0;transition:transform .22s;font-size:.75rem}
+.faq.open .fch{transform:rotate(180deg);color:var(--gold)}
+.fa{max-height:0;overflow:hidden;transition:max-height .32s ease;background:rgba(0,0,0,.14)}.faq.open .fa{max-height:700px}
+.fai{padding:.88rem 1.3rem 1.1rem;border-top:.5px solid var(--border)}.fai p{margin-bottom:.55rem;font-size:.84rem}.fai p:last-child{margin-bottom:0}
+.hbox{margin-bottom:3.8rem;padding-bottom:2.8rem;border-bottom:.5px solid var(--border)}
+.hbadge{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gl);background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:20px;padding:.22rem .65rem;margin-bottom:1.1rem}
+.h1x{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,3.7rem);font-weight:300;color:#fff;line-height:1.07;margin-bottom:.7rem}.h1x em{font-style:italic;color:var(--gold)}
+.hlead{color:var(--td);font-size:1rem;font-weight:300;max-width:700px;line-height:1.78;margin-bottom:2.2rem}
+.hg{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.hs{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.2rem 1rem;text-align:center}
+.hs-n{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;color:var(--gold);display:block;line-height:1;margin-bottom:.3rem}.hs-l{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tm)}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--gold);color:#050508;padding:.55rem 1.1rem;border-radius:40px;font-size:.74rem;font-weight:600;opacity:0;transform:translateY(12px);transition:all .28s;pointer-events:none;z-index:9999}.toast.show{opacity:1;transform:translateY(0)}
+.doc-footer{margin-top:6rem;padding-top:1.8rem;border-top:.5px solid var(--border);text-align:center;font-size:.72rem;color:var(--tm)}
+@media(max-width:1024px){aside.sb{display:none}main.main{margin-left:0;padding:2rem}h2{margin-top:2.5rem}.feat{grid-template-columns:1fr}}
+@media(max-width:640px){.h1x{font-size:2rem}main.main{padding:1.2rem 1rem 4rem}.hg{grid-template-columns:1fr 1fr}}
+
+.prompt-wrap{position:relative;margin:1.2rem 0 1.6rem}
+.prompt-code{background:#010103;border:.5px solid var(--border);border-radius:var(--r);padding:1.5rem 1.5rem 1.5rem;font-family:"JetBrains Mono",monospace;font-size:.72rem;color:#c5d5e8;line-height:1.75;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;counter-reset:none}
+.prompt-copy{position:absolute;top:.7rem;right:.7rem;background:rgba(201,169,110,.08);border:.5px solid var(--bhi);border-radius:var(--rs);color:var(--gl);font-family:"DM Sans",sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.32rem .75rem;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:.35rem}
+.prompt-copy:hover{background:rgba(201,169,110,.14);color:#fff}
+.prompt-copy.copied{background:rgba(93,186,125,.1);border-color:rgba(93,186,125,.3);color:#86efac}
+.prompt-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--gd);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+.prompt-label::after{content:"";flex:1;height:.5px;background:var(--border)}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.4rem 0}
+.ai-card{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:1rem .9rem;text-align:center;transition:border-color .18s}.ai-card:hover{border-color:var(--bhi)}
+.ai-ic{font-size:1.4rem;display:block;margin-bottom:.4rem}
+.ai-n{font-weight:600;font-size:.76rem;color:#fff;margin-bottom:.2rem}
+.ai-d{font-size:.67rem;color:var(--tm);line-height:1.45}
+@media(max-width:640px){.ai-grid{grid-template-columns:1fr 1fr}}
+.sup-card{background:linear-gradient(135deg,rgba(201,169,110,.06) 0%,rgba(201,169,110,.02) 100%);border:.5px solid var(--bhi);border-radius:var(--r);padding:2.8rem 2.4rem;text-align:center;margin:2rem 0;position:relative;overflow:hidden}
+.sup-card::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,169,110,.08) 0%,transparent 65%);pointer-events:none}
+.sup-icon{font-size:2.5rem;margin-bottom:1rem;display:block;line-height:1}
+.sup-title{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:500;color:#fff;margin-bottom:.6rem;line-height:1.15}
+.sup-title em{font-style:italic;color:var(--gold)}
+.sup-lead{color:var(--td);font-size:.9rem;max-width:520px;margin:0 auto 2rem;line-height:1.72}
+.sup-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:#050508;font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 2rem;border-radius:40px;text-decoration:none;transition:all .22s;box-shadow:0 0 0 0 rgba(201,169,110,.3)}
+.sup-btn:hover{background:var(--gl);color:#050508;box-shadow:0 0 0 6px rgba(201,169,110,.14);transform:translateY(-1px)}
+.sup-btn svg{flex-shrink:0;transition:transform .18s}
+.sup-btn:hover svg{transform:translateX(3px)}
+.sup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.sup-tip{background:rgba(255,255,255,.02);border:.5px solid var(--border);border-radius:var(--rs);padding:1.1rem 1rem;text-align:center;transition:border-color .2s}
+.sup-tip:hover{border-color:var(--bhi)}
+.sup-tip-ic{font-size:1.25rem;display:block;margin-bottom:.5rem}
+.sup-tip-t{font-weight:600;font-size:.78rem;color:#fff;margin-bottom:.25rem}
+.sup-tip-d{font-size:.72rem;color:var(--tm);line-height:1.5}
+@media(max-width:640px){.sup-grid{grid-template-columns:1fr}}
+.sb-lang {
+  margin: 1.1rem 0;
+  position: relative;
+  width: 100%;
+}
+.sb-lang select {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #a0a0a0;
+  font-size: 0.72rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sb-lang select:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  color: #fff;
+}
+.sb-lang::after {
+  content: "▼";
+  font-size: 8px;
+  color: #666;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+</style></head><body>
+<aside class="sb">
+<div class="sb-brand">
+<div class="sb-name">أوريك<span>.</span></div>
+<div class="sb-sub">دليل مالك المتجر</div>
+<div class="sb-ver">الإصدار 1.0 · نظام التشغيل 2.0</div>
+</div>
+<div class="sb-lang">
+<select onchange="location = this.value;">
+<option value="index.html">English (EN)</option>
+<option selected="selected" value="ar.html">العربية (AR)</option>
+<option value="es.html">Español (ES)</option>
+<option value="fr.html">Français (FR)</option>
+<option value="de.html">Deutsch (DE)</option>
+</select>
+</div>
+<div class="sb-search">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input id="sq" oninput="searchDocs(this.value)" placeholder="يبحث..." type="text"/>
+</div>
+<nav class="sb-nav">
+<div class="sb-cat">البدء</div>
+<a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>نظرة عامة</a>
+<a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>التثبيت</a>
+<div class="sb-cat">الإعدادات العالمية</div>
+<a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>شاشة اللودر</a>
+<a class="sb-a" href="#header" onclick="nav(event,'#header')"><span class="dot"></span>الرأس والملاحة</a>
+<a class="sb-a" href="#menus-submenus" onclick="nav(event,'#menus-submenus')"><span class="dot"></span>القوائم والقوائم الفرعية</a>
+<a class="sb-a" href="#announce" onclick="nav(event,'#announce')"><span class="dot"></span>شريط الإعلان</a>
+<a class="sb-a" href="#search" onclick="nav(event,'#search')"><span class="dot"></span>درج البحث</a>
+<a class="sb-a" href="#cart-drawer-doc" onclick="nav(event,'#cart-drawer-doc')"><span class="dot"></span>درج العربة</a>
+<a class="sb-a" href="#quick-view-doc" onclick="nav(event,'#quick-view-doc')"><span class="dot"></span>عرض سريع مشروط</a>
+<a class="sb-a" href="#pickup-availability-doc" onclick="nav(event,'#pickup-availability-doc')"><span class="dot"></span>توافر بيك اب</a>
+<a class="sb-a" href="#footer" onclick="nav(event,'#footer')"><span class="dot"></span>تذييل</a>
+<div class="sb-cat">أقسام الصفحة الرئيسية</div>
+<a class="sb-a" href="#hero" onclick="nav(event,'#hero')"><span class="dot"></span>هيرو بوكس ​​سلايدر</a>
+<a class="sb-a" href="#features" onclick="nav(event,'#features')"><span class="dot"></span>عرض الميزات</a>
+<a class="sb-a" href="#horizontal-gallery" onclick="nav(event,'#horizontal-gallery')"><span class="dot"></span>معرض أفقي</a>
+<a class="sb-a" href="#marquee" onclick="nav(event,'#marquee')"><span class="dot"></span>شريط سرادق</a>
+<a class="sb-a" href="#vault" onclick="nav(event,'#vault')"><span class="dot"></span>قبو المجموعة</a>
+<a class="sb-a" href="#lifestyle" onclick="nav(event,'#lifestyle')"><span class="dot"></span>معرض نمط الحياة</a>
+<a class="sb-a" href="#brand-story-doc" onclick="nav(event,'#brand-story-doc')"><span class="dot"></span>قصة العلامة التجارية</a>
+<a class="sb-a" href="#feat-collection" onclick="nav(event,'#feat-collection')"><span class="dot"></span>مجموعة مميزة</a>
+<a class="sb-a" href="#featured-product-doc" onclick="nav(event,'#featured-product-doc')"><span class="dot"></span>منتج مميز</a>
+<a class="sb-a" href="#blog-posts" onclick="nav(event,'#blog-posts')"><span class="dot"></span>منشورات المدونة</a>
+<a class="sb-a" href="#testimonials" onclick="nav(event,'#testimonials')"><span class="dot"></span>شهادات المنزلق</a>
+<a class="sb-a" href="#trusted" onclick="nav(event,'#trusted')"><span class="dot"></span>موثوق به</a>
+<a class="sb-a" href="#social" onclick="nav(event,'#social')"><span class="dot"></span>المعرض الاجتماعي</a>
+<a class="sb-a" href="#newsletter-doc" onclick="nav(event,'#newsletter-doc')"><span class="dot"></span>النشرة الإخبارية</a>
+<a class="sb-a" href="#custom-liquid-doc" onclick="nav(event,'#custom-liquid-doc')"><span class="dot"></span>سائل مخصص</a>
+<div class="sb-cat">صفحة التجميع</div>
+<a class="sb-a" href="#coll-page" onclick="nav(event,'#coll-page')"><span class="dot"></span>إعدادات التجميع</a>
+<a class="sb-a" href="#filters" onclick="nav(event,'#filters')"><span class="dot"></span>مرشحات المنتج</a>
+<div class="sb-cat">صفحة المنتج</div>
+<a class="sb-a" href="#product" onclick="nav(event,'#product')"><span class="dot"></span>إعدادات المنتج</a>
+<a class="sb-a" href="#size-guide" onclick="nav(event,'#size-guide')"><span class="dot"></span>دليل الحجم</a>
+<a class="sb-a" href="#complete-look" onclick="nav(event,'#complete-look')"><span class="dot"></span>أكمل مظهرك</a>
+<a class="sb-a" href="#prod-recommendations" onclick="nav(event,'#prod-recommendations')"><span class="dot"></span>توصيات المنتج</a>
+<div class="sb-cat">قوالب الصفحة</div>
+<a class="sb-a" href="#about" onclick="nav(event,'#about')"><span class="dot"></span>عن / التراث</a>
+<a class="sb-a" href="#contact" onclick="nav(event,'#contact')"><span class="dot"></span>الاتصال / أتيليه</a>
+<div class="sb-cat">قوالب السياسة</div>
+<a class="sb-a" href="#shipping-policy" onclick="nav(event,'#shipping-policy')"><span class="dot"></span>سياسة الشحن</a>
+<a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>سياسة الإرجاع</a>
+<a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>سياسة الخصوصية</a>
+<div class="sb-cat">إعدادات المتجر</div>
+<a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>ترجمة والتكيف</a>
+<a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>أحجام الصور</a>
+<a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>الأسئلة الشائعة</a>
+<a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>شاهد مطالبة SVG</a>
+<a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>احصل على الدعم</a>
+</nav>
+</aside>
+<main class="main"><div class="wrap">
+<section id="overview">
+<div class="hbox">
+<div class="hbadge">◆  نظام التشغيل Premium Shopify OS 2.0</div>
+<h1 class="h1x">أوريك <em>الموضوع</em><br/>دليل الإعداد</h1>
+<p class="hlead">Aurick عبارة عن سمة Shopify فاخرة مصممة لمحلات الساعات. رسوم متحركة سينمائية، وطباعة متميزة، ومجموعة أدوات تحويل كاملة - مدمجة منذ اليوم الأول. يغطي هذا الدليل كل قسم وكل إعداد وكل ميزة أصلية في Shopify تحتاجها لتشغيل متجرك.</p>
+<div class="hg">
+<div class="hs"><span class="hs-n">58</span><span class="hs-l">مجموع الأقسام</span></div>
+<div class="hs"><span class="hs-n">0</span><span class="hs-l">موضوع التحقق من الأخطاء</span></div>
+<div class="hs"><span class="hs-n">نظام التشغيل 2.0</span><span class="hs-l">الهندسة المعمارية</span></div>
+</div>
+</div>
+<div class="feat">
+<div class="fi"><div class="fi-ic">🎥</div><div><div class="fi-t">الرسوم المتحركة GSAP</div><div class="fi-d">ScrollTrigger، الدبوس + الفرك، كشف الكلمات، الإمالة ثلاثية الأبعاد - في كل صفحة. لا حاجة للتطبيقات.</div></div></div>
+<div class="fi"><div class="fi-ic">⌛</div><div><div class="fi-t">3D مشاهدة مربع المنزلق</div><div class="fi-d">بطل صندوق الساعة المتحرك ثلاثي الأبعاد بملء الشاشة مع ما يصل إلى 3 شرائح قابلة للتخصيص لكل متجر.</div></div></div>
+<div class="fi"><div class="fi-ic">🔍</div><div><div class="fi-t">البحث الذكي والمرشحات</div><div class="fi-d">أنظمة الأدراج المتكاملة المدعومة من Shopify Search &amp; Discovery للحصول على مرادفات ومرشحات بحث غنية.</div></div></div>
+<div class="fi"><div class="fi-ic">🛍</div><div><div class="fi-t">أكمل مظهرك</div><div class="fi-d">بيع الملحقات على صفحة المنتج وداخل درج العربة المنزلق للخارج. لا يوجد تطبيق مطلوب.</div></div></div>
+<div class="fi"><div class="fi-ic">📏</div><div><div class="fi-t">دليل الحجم</div><div class="fi-d">يفتح نافذة منبثقة للصورة لكل منتج - يتم تعيينها عبر علامة التعريف أو علامة بديل الصورة.</div></div></div>
+<div class="fi"><div class="fi-ic">🌐</div><div><div class="fi-t">متعدد اللغات جاهز</div><div class="fi-d">ملفات محلية EN / ES / FR مدمجة مسبقًا. أضف المزيد من اللغات باستخدام الترجمة والتكيف.</div></div></div>
+</div>
+</section>
+<section id="install">
+<h2><span class="ic">⚙</span>التثبيت</h2>
+<p>قم بتحميل سمة Aurick إلى Shopify في أربع خطوات. لا المعرفة التقنية المطلوبة.</p>
+<ol class="steps">
+<li><strong>حدد موقع ملف الموضوع</strong><p>البحث عن <code>aurick-theme.zip</code> على جهاز الكمبيوتر الخاص بك. افعل <em>لا</em> قم بفك ضغطه.</p></li>
+<li><strong>انتقل إلى المتجر عبر الإنترنت → السمات</strong><p>في Shopify المشرف: <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">المواضيع</span></span></p></li>
+<li><strong>قم بتحميل الملف المضغوط</strong><p>انقر <strong>إضافة موضوع</strong> → <strong>تحميل ملف مضغوط</strong>. حدد <code>.zip</code> وانقر <strong>تحميل الملف</strong>.</p></li>
+<li><strong>تخصيص ونشر</strong><p>انقر <strong>تخصيص</strong> لتكوين جميع الأقسام في محرر السمات، أو انقر فوق <strong>نشر</strong> لبدء البث المباشر على الفور.</p></li>
+</ol>
+<div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">قم بتحميل ملف ZIP كما هو</div><p>لا تقم باستخراج الملف قبل التحميل. يتطلب Shopify التنسيق المضغوط. سيؤدي استخراجه أولاً إلى فشل التحميل.</p></div></div>
+</section>
+<section id="loader">
+<h2><span class="ic">🎬</span>شاشة اللودر</h2>
+<p>محرر الموضوع → <strong>شاشة اللودر</strong>. يتحكم في أداة التحميل المسبق للدخول المتحركة عندما يزور المتسوقون متجرك.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>تمكين محمل</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بالتشغيل لإظهار الرسوم المتحركة لبرنامج التحميل المسبق عند التحميل الأولي للصفحة.</td></tr>
+<tr><td>صورة الشعار</td><td><span class="tb ti">صورة</span></td><td>—</td><td>سيتم عرض صورة شعار علامتك التجارية في وسط شاشة التحميل المسبق.</td></tr>
+<tr><td>عرض الشعار (سطح المكتب)</td><td><span class="tb tr">النطاق</span></td><td>160 بكسل</td><td>عرض الشعار على شاشات سطح المكتب (النطاق: 60–400 بكسل).</td></tr>
+<tr><td>عرض الشعار (الجوّال)</td><td><span class="tb tr">النطاق</span></td><td>120 بكسل</td><td>عرض الشعار على شاشات الجوال (النطاق: 40-300 بكسل).</td></tr>
+<tr><td>سطر نص التحميل المسبق 1</td><td><span class="tb tt">نص</span></td><td>أوريك</td><td>يتم عرض سطر النص الأول أسفل الشعار أثناء التحميل.</td></tr>
+<tr><td>سطر النص التحميل المسبق 2</td><td><span class="tb tt">نص</span></td><td>صناعة الساعات الفاخرة</td><td>يعرض سطر النص الثاني بيانات اعتماد العلامة التجارية.</td></tr>
+<tr><td>مدة الرسوم المتحركة</td><td><span class="tb tr">النطاق</span></td><td>2.5 ثانية</td><td>إجمالي وقت التحميل بالثواني قبل أن يتلاشى (النطاق: 1.0-5.0 ثانية).</td></tr>
+<tr><td>عائلة الخطوط</td><td><span class="tb ts">حدد</span></td><td>شريف</td><td>اختر بين <strong>شريف</strong> (نظرة تحريرية فاخرة) أو <strong>بلا الرقيق</strong> (حديث).</td></tr>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>لون شاشة تراكب التحميل المسبق الكاملة.</td></tr>
+<tr><td>لون النص</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون النصوص التحميل المسبق.</td></tr>
+<tr><td>لون مميز</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون التفاصيل أو النقاط أو المصطلحات المميزة.</td></tr>
+</tbody></table>
+</section>
+<section id="header">
+<h2><span class="ic">🧭</span>رأس &amp; <em>الملاحة</em></h2>
+<p>محرر الموضوع → <strong>رأس</strong>. يتحكم في الشعار وروابط التنقل والأيقونات والألوان والسلوك اللزج والشفاف.</p>
+<h3>الشعار</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نوع الشعار</td><td><span class="tb ts">حدد</span></td><td>نص</td><td>اختر <strong>نص</strong> لإظهار اسم متجرك كنص رقيق، أو <strong>صورة</strong> لإظهار الشعار الذي تقوم بتحميله.</td></tr>
+<tr><td>نص الشعار</td><td><span class="tb tt">نص</span></td><td>—</td><td>تجاوز النص المخصص للشعار. اتركه فارغًا لاستخدام اسم متجر Shopify الخاص بك تلقائيًا.</td></tr>
+<tr><td>صورة الشعار</td><td><span class="tb ti">صورة</span></td><td>—</td><td>ملف شعار علامتك التجارية. يكون مرئيًا فقط عندما يكون نوع الشعار هو صورة. الموصى بها: شفافة PNG أو SVG، 300 × 120 بكسل.</td></tr>
+<tr><td>موضع الشعار — سطح المكتب</td><td><span class="tb ts">حدد</span></td><td>منتصف اليسار</td><td><strong>منتصف اليسار</strong> • <strong>المركز الأوسط</strong> (الشعار في المنتصف، كل التنقل على اليسار) • <strong>أعلى اليسار</strong> (الشعار أعلى شريط التنقل) • <strong>المركز العلوي</strong>.</td></tr>
+<tr><td>موقف الشعار — المحمول</td><td><span class="tb ts">حدد</span></td><td>مركز</td><td>محاذاة للوسط أو لليسار في إطارات العرض المحمولة.</td></tr>
+<tr><td>حجم الشعار — سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>140 بكسل</td><td>أقصى عرض للشعار على سطح المكتب. النطاق: 60-260 بكسل.</td></tr>
+<tr><td>حجم الشعار — المحمول</td><td><span class="tb tr">النطاق</span></td><td>100 بكسل</td><td>أقصى عرض على الهاتف المحمول. النطاق: 52-180 بكسل.</td></tr>
+</tbody></table>
+<h3>الطباعة والأيقونات</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>حجم نص القائمة - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>13 بيكسل</td><td>حجم خط روابط التنقل على سطح المكتب. النطاق: 10-18 بكسل.</td></tr>
+<tr><td>حجم نص القائمة — المحمول</td><td><span class="tb tr">النطاق</span></td><td>28 بيكسل</td><td>حجم الخط داخل القائمة المنزلقة للجوال. النطاق: 18-40 بكسل.</td></tr>
+<tr><td>حجم الأيقونات - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>22 بيكسل</td><td>حجم أيقونات البحث وعربة التسوق واللغة على سطح المكتب. النطاق: 16-32 بكسل.</td></tr>
+<tr><td>حجم الأيقونات – الجوال</td><td><span class="tb tr">النطاق</span></td><td>22 بيكسل</td><td>حجم أيقونات الرأس على الهاتف المحمول. النطاق: 16-32 بكسل.</td></tr>
+</tbody></table>
+<h3>الألوان</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص القائمة — نشط / تحوم</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون رابط التنقل عندما يكون هو الصفحة الحالية أو عندما يتم تمرير مؤشر الماوس فوقه.</td></tr>
+<tr><td>نص القائمة — الافتراضي</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>اللون الافتراضي لجميع روابط التنقل في حالة الخمول الخاصة بها.</td></tr>
+<tr><td>لون نص الشعار</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون نص الشعار (ينطبق فقط عندما يكون نوع الشعار نصًا).</td></tr>
+<tr><td>لون أيقونة البحث</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون أيقونة البحث في الرأس.</td></tr>
+<tr><td>لون أيقونة اللغة</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون رمز محوّل اللغة/اللغة المحلية. يظهر تلقائيًا عند نشر لغات متعددة.</td></tr>
+<tr><td>لون رمز البلد</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون رمز محدد العملة/البلد.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>يفتح رمز البحث الموجود في الرأس الملف <strong>درج البحث</strong> تراكب. انظر <a href="#search" onclick="nav(event,'#search')">درج البحث</a> قسم لكيفية تكوين ما يظهر بداخله باستخدام Shopify Search &amp; Discovery.</p></div></div>
+<h3>إعدادات القائمة الضخمة للمجموعات</h3>
+<p>ينظم لوحة بطاقات تجميع منزلقة كاملة العرض يتم فتحها تلقائيًا عند تمرير رابط التشغيل المطابق في القائمة الرئيسية.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>تمكين القائمة الضخمة للمجموعات</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بالتشغيل لتمكين القائمة الضخمة لشريط التمرير الأفقي للمجموعات.</td></tr>
+<tr><td>تشغيل عنوان عنصر التنقل</td><td><span class="tb tt">نص</span></td><td>المجموعات</td><td>اسم الرابط الموجود في قائمتك الرئيسية (غير حساس لحالة الأحرف) الذي يقوم بتشغيل هذه القائمة الضخمة عند التمرير فوقها.</td></tr>
+<tr><td>مجموعات للعرض</td><td><span class="tb ts">حدد</span></td><td>—</td><td>حدد ما يصل إلى 12 مجموعة لعرضها كبطاقات داخل شبكة القائمة الضخمة.</td></tr>
+<tr><td>بطاقات مرئية مرة واحدة (سطح المكتب)</td><td><span class="tb tr">النطاق</span></td><td>3</td><td>عدد المجموعات المعروضة على سطح المكتب قبل ظهور أسهم التنقل. النطاق: 2-6.</td></tr>
+<tr><td>نص الرابط "تسوق الآن".</td><td><span class="tb tt">نص</span></td><td>تسوق الآن</td><td>يتم عرض الملصق المائل في حالة التمرير لكل بطاقة تجميع.</td></tr>
+<tr><td>عنوان URL للزر "عرض الكل".</td><td><span class="tb tu">عنوان URL</span></td><td>—</td><td>رابط الوجهة لزر عرض الكل. يعود إلى <code>/collections</code> إذا فارغة.</td></tr>
+<tr><td>نص الزر "عرض الكل".</td><td><span class="tb tt">نص</span></td><td>عرض كل المجموعة</td><td>تسمية الزر السفلي الرئيسي داخل القائمة الضخمة.</td></tr>
+</tbody></table>
+<h3>إعدادات القائمة الضخمة (التنقل + البطاقات) المميزة</h3>
+<p>لتقسيم اللوحة المنسدلة إلى قائمة تنقل على الجانب الأيسر (ما يصل إلى 3 أعمدة) ولوحة ترويجية على الجانب الأيمن (ما يصل إلى 6 بطاقات ميزات مرئية مع رسوم دخول متداخلة).</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>تمكين القائمة الضخمة المميزة</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>قم بالتشغيل لتنشيط القائمة الضخمة المميزة متعددة اللوحات.</td></tr>
+<tr><td>تشغيل عنوان عنصر التنقل</td><td><span class="tb tt">نص</span></td><td>تسوق</td><td>عنوان الرابط في القائمة الرئيسية (غير حساس لحالة الأحرف) الذي يقوم بتشغيل هذه القائمة.</td></tr>
+<tr><td>قائمة العمود 1/2/3</td><td><span class="tb ts">حدد</span></td><td>—</td><td>حدد ما يصل إلى 3 قوائم لعرضها كأعمدة تنقل على اليسار. يتم استخدام عنوان القائمة كعنوان العمود.</td></tr>
+<tr><td>البطاقة 1–6 — الصورة</td><td><span class="tb ti">صورة</span></td><td>—</td><td>قم بتحميل صور ترويجية لما يصل إلى 6 بطاقات (يوصى باستخدام نسبة العرض إلى الارتفاع 16:10).</td></tr>
+<tr><td>البطاقة 1-6 - الملصق</td><td><span class="tb tt">نص</span></td><td>—</td><td>العناوين المعروضة أسفل كل صورة (على سبيل المثال. <code>New Arrivals</code>, <code>Best Sellers</code>).</td></tr>
+<tr><td>البطاقة 1-6 - الرابط</td><td><span class="tb tu">عنوان URL</span></td><td>—</td><td>أهداف URL لكل بطاقة. اترك الصورة والملصق فارغين لإخفاء فتحة البطاقة.</td></tr>
+</tbody></table>
+</section>
+<section id="menus-submenus">
+<h2><span class="ic">🔍</span>القوائم &amp; <em>القوائم الفرعية</em></h2>
+<span class="pb g">Shopify الملاحة</span>
+<p>تعرف على كيفية إنشاء القوائم المنسدلة والقوائم المتداخلة متعددة المستويات والقوائم الضخمة المرئية في Shopify ودمجها في التنقل في رأس Aurick.</p>
+<h3>الخطوة 1: إنشاء قوائم متداخلة في Shopify</h3>
+<p>يدعم Shopify التنقل المتداخل حتى عمق ثلاثة مستويات. لإنشاء بنية متداخلة:</p>
+<ol class="steps">
+<li><strong>انتقل إلى إعدادات التنقل</strong>
+<p>في Shopify المشرف، انتقل إلى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">الملاحة</span></span>.</p>
+</li>
+<li><strong>حدد أو أنشئ قائمة</strong>
+<p>انقر على **القائمة الرئيسية** (أو انقر على **إضافة قائمة** لإنشاء قائمة جديدة).</p>
+</li>
+<li><strong>إضافة عناصر القائمة</strong>
+<p>انقر **إضافة عنصر قائمة**، وقم بتسميته (على سبيل المثال: <code>Collections</code>)، وربطها. ثم قم بإضافة عناصر فرعية تحته (على سبيل المثال. <code>Chronograph</code>, <code>Automatic</code>).</p>
+</li>
+<li><strong>عناصر Nest (السحب والإفلات)</strong>
+<p>انقر مع الاستمرار على أيقونة مقبض السحب بجوار عنصر القائمة الفرعية، ثم اسحبه **لأعلى وإلى اليمين** أسفل العنصر الأصلي (على سبيل المثال، اسحبه لأسفل <code>Collections</code>). يؤدي هذا إلى تداخل العنصر تحت الأصل. كرر ذلك لإضافة عناصر فرعية ضمن العناصر الفرعية (حتى 3 مستويات).</p>
+</li>
+<li><strong>انقر فوق حفظ القائمة.</strong></li>
+</ol>
+<h3>الخطوة 2: ربط القائمة في رأس Aurick</h3>
+<p>لعرض القائمة الخاصة بك في الرأس:</p>
+<ol class="steps">
+<li><strong>افتح محرر الموضوع</strong>
+<p>انتقل إلى **المتجر عبر الإنترنت** → **السمات** ← انقر **تخصيص** في سمة Aurick.</p>
+</li>
+<li><strong>حدد قسم الرأس</strong>
+<p>انقر على قسم **الرأس** في الشريط الجانبي الأيسر.</p>
+</li>
+<li><strong>اختر القائمة</strong>
+<p>ابحث عن إعداد **القائمة** ثم انقر على **تغيير** → **تحديد القائمة**. حدد القائمة الرئيسية وانقر فوق **حفظ**.</p>
+</li>
+</ol>
+</section>
+<section id="announce">
+<h2><span class="ic">📢</span>إعلان <em>بار</em></h2>
+<p>شريط رفيع يتم عرضه أعلى الرأس في كل صفحة. محرر الموضوع → <strong>شريط الإعلان</strong>.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>إظهار شريط الإعلانات</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>تبديل رئيسي. قم بالتشغيل لإظهار الشريط أعلى الرأس على مستوى الموقع.</td></tr>
+<tr><td>نص الإعلان</td><td><span class="tb tt">نص</span></td><td>شحن مجاني للطلبات التي تزيد عن 100 دولار</td><td>الرسالة التي تظهر في الشريط. كل كتلة إعلان هي رسالة واحدة.</td></tr>
+<tr><td>الرابط (اختياري)</td><td><span class="tb tu">عنوان URL</span></td><td>—</td><td>إذا تم ملؤها، فإن النقر في أي مكان على الشريط ينقل المتسوق إلى عنوان URL هذا.</td></tr>
+<tr><td>إعلانات التدوير التلقائي</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>عند التشغيل، تتنقل كتل الإعلانات المتعددة تلقائيًا واحدة تلو الأخرى.</td></tr>
+<tr><td>التغيير كل (ثانية)</td><td><span class="tb tr">النطاق</span></td><td>5 ثانية</td><td>المدة التي تظل فيها كل رسالة مرئية قبل الانتقال إلى الرسالة التالية. المدى: 2-15 ثانية.</td></tr>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#121212</td><td>لون خلفية شريط الإعلان.</td></tr>
+<tr><td>لون النص</td><td><span class="tb tc">اللون</span></td><td>#فففف</td><td>لون نص الإعلان.</td></tr>
+<tr><td>حجم الخط - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>13 بيكسل</td><td>حجم النص على سطح المكتب النطاق: 10-18 بكسل.</td></tr>
+<tr><td>حجم الخط – الجوال</td><td><span class="tb tr">النطاق</span></td><td>11 بيكسل</td><td>حجم النص على الجوال النطاق: 9-16 بكسل.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">💡</span><div class="nb"><p>إضافة متعددة <strong>إعلان</strong> الكتل الموجودة داخل هذا القسم وتمكينها <em>التدوير التلقائي</em> لإنشاء لافتة ركوب الدراجات تعرض معلومات الشحن والعروض الترويجية وسياسات المتجر بالتسلسل.</p></div></div>
+</section>
+<section id="search">
+<h2><span class="ic">🔎</span>بحث <em>درج</em></h2>
+<span class="pb">على مستوى الموقع - أيقونة البحث في الرأس</span>
+<p>عندما ينقر المتسوق على أيقونة البحث في رأس Aurick، يتم فتح درج البحث بملء الشاشة. يعرض مدخلات البحث والنتائج الفورية (المنتجات والمجموعات والصفحات) والاقتراحات التنبؤية. كل هذا مدعوم من <strong>Shopify البحث والاكتشاف</strong> التطبيق - لا حاجة إلى رمز الموضوع.</p>
+<h3>إعدادات درج البحث</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>ابحث في مشغلنا</td><td>يظهر عنوان كبير عند فتح الدرج.</td></tr>
+<tr><td>تسمية اقتراحات البحث</td><td><span class="tb tt">نص</span></td><td>اقتراحات</td><td>التسمية المعروضة فوق الكلمات الرئيسية قبل البحث.</td></tr>
+<tr><td>ماكس النتائج التنبؤية</td><td><span class="tb tr">النطاق</span></td><td>6</td><td>يتم عرض الحد الأقصى لنتائج المنتج/المجموعة على الفور. (المدى: 3-12).</td></tr>
+<tr><td>تمكين الاقتراحات</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يعرض المصطلحات والفئات الشائعة السريعة عندما تكون فارغة.</td></tr>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>لون تراكب خلفية لوحة الدرج.</td></tr>
+</tbody></table>
+<h3>تكوين سلوك البحث - تطبيق البحث والاكتشاف</h3>
+<ol class="steps">
+<li><strong>افتح التطبيق</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">تطبيقات</span><span class="ps">›</span><span class="pc">البحث والاكتشاف</span></span>. إذا لم يكن مثبتًا، قم بتثبيته مجانًا من Shopify App Store.</p>
+</li>
+<li><strong>ضبط ما يظهر في نتائج البحث</strong>
+<p>في التطبيق انقر <strong>بحث</strong> → <strong>المنتجات</strong>. يمكنك تعيين حقول المنتج التي سيتم البحث عنها (العنوان، الوصف، SKU، العلامات، البائع، النوع، المتغيرات). تمكين <strong>البحث في حقل التعريف</strong> للسماح للمتسوقين بالعثور على الساعات حسب مادة الحالة أو العلامة التجارية أو أي حقل تعريف آخر قمت بتحديده.</p>
+</li>
+<li><strong>تكوين المرادفات</strong>
+<p>انقر <strong>المرادفات</strong>. أضف مجموعات كلمات بحيث تؤدي كتابة "chrono" إلى ظهور ساعات "chronograph"، و"strap" للعثور على منتجات "band". يؤدي هذا إلى تحسين جودة نتائج البحث عن المفردات الفاخرة بشكل كبير.</p>
+</li>
+<li><strong>تعزيز ودفن المنتجات</strong>
+<p>انقر <strong>نتائج البحث</strong> → <strong>يعزز المنتج</strong>. قم بتثبيت منتجات معينة في أعلى نتائج البحث للكلمات الرئيسية المستهدفة - على سبيل المثال، قم بتعزيز ساعتك المميزة عندما يبحث أحد المتسوقين عن "توقيع". وبالمثل، قم بدفن العناصر التي نفدت مخزونها في الأسفل.</p>
+</li>
+</ol>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">تتحسن جودة البحث مع المزيد من بيانات المنتج</div><p>املأ المنتج الخاص بك <strong>اكتب</strong>, <strong>بائع</strong>, <strong>العلامات</strong>، وخاصة عادتك <strong>حقول التعريف</strong> على كل منتج. كلما كانت البيانات منظمة لدى Shopify، أصبحت نتائج البحث داخل الدرج أكثر دقة وملاءمة.</p></div></div>
+</section>
+<section id="cart-drawer-doc">
+<h2><span class="ic">🛍</span>درج العربة</h2>
+<p>محرر الموضوع → <strong>درج العربة</strong>. يتحكم في تخطيط عربة التسوق المنزلقة وأهداف الشحن والملاحظات.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عتبة الشحن المجاني</td><td><span class="tb tr">النطاق</span></td><td>150</td><td>المبلغ المطلوب بعملة المتجر لفتح الشحن المجاني. اضبط على 0 للتعطيل (النطاق: 0–1000).</td></tr>
+<tr><td>رسالة الشحن المجاني</td><td><span class="tb tt">نص</span></td><td>أنت على بعد {{ المبلغ }} من الشحن المجاني</td><td>تظهر الرسالة عند عدم استيفاء الحد الأدنى. استخدم <code>{{ amount }}</code> لعرض القيمة المتبقية.</td></tr>
+<tr><td>رسالة النجاح</td><td><span class="tb tt">نص</span></td><td>لقد فتحت الشحن المجاني!</td><td>تظهر رسالة الاحتفال عندما يتجاوز الإجمالي الفرعي الحد.</td></tr>
+<tr><td>إظهار الملاحظة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يضيف منطقة نصية للملاحظات المنسدلة مما يسمح للعملاء بإضافة رسائل تغليف الهدايا أو تعليمات خاصة.</td></tr>
+<tr><td>تسمية الملاحظة</td><td><span class="tb tt">نص</span></td><td>إضافة مذكرة الطلب</td><td>تسمية النص الخاص بكتلة القائمة المنسدلة للملاحظات.</td></tr>
+<tr><td>مواصلة تسمية التسوق</td><td><span class="tb tt">نص</span></td><td>مواصلة التسوق</td><td>النص الموضح على زر إغلاق الدرج في الأسفل.</td></tr>
+<tr><td>تسمية زر الخروج</td><td><span class="tb tt">نص</span></td><td>انتقل إلى الخروج</td><td>النص المعروض على زر إرسال الخروج.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>لتحقيق أقصى قدر من الوضوح في درج سلة التسوق، يتم عرض الأسعار بخط **Outfit (Sans-serif)** واضح للغاية بدلاً من الخط الرقيق المزخرف. يعرض شريط تمرير البيع المتبادل العناصر المرتبطة تلقائيًا من <strong>أكمل مظهرك</strong> إعداد حقل التعريف.</p></div></div>
+</section>
+<section id="quick-view-doc">
+<h2><span class="ic">👁</span>عرض سريع مشروط</h2>
+<span class="pb y">فائدة</span>
+<p>يمكّن تراكب العرض السريع العملاء من عرض وسائط المنتج وخياراته وإضافة المنتجات إلى سلة التسوق الخاصة بهم دون مغادرة صفحتهم الحالية.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>يتم تحميل هذا النموذج ديناميكيًا باستخدام Shopify <strong>واجهة برمجة تطبيقات عرض القسم</strong> من <code>sections/quick-view.liquid</code>مما يضمن التحميل السريع للصفحة الأولية. يتضمن نظام ألوان مميزًا مخصصًا يقوم بتقييم علامات المنتج (مثل إضافة علامة <code>accent-#c9a96e</code> يعيد تلوين أبرز خيارات هذا المنتج ديناميكيًا).</p></div></div>
+</section>
+<section id="pickup-availability-doc">
+<h2><span class="ic">📍</span>توافر بيك اب</h2>
+<span class="pb y">فائدة</span>
+<p>مؤشر الالتقاط المحلي الديناميكي مطلوب وفقًا لمعايير Shopify Theme Store. يعرض ما إذا كان المتغير الحالي متوفرًا في مواقع البيع بالتجزئة القريبة.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>يتم العرض بشكل غير متزامن باستخدام واجهة برمجة تطبيقات عرض القسم من <code>sections/pickup-availability.liquid</code>. تتم إدارة الإعدادات محليًا في Shopify Admin الخاص بك ضمن <strong>الإعدادات → الشحن والتسليم → الاستلام المحلي</strong>.</p></div></div>
+</section>
+<section id="footer">
+<h2><span class="ic">▼</span><em>تذييل</em></h2>
+<p>محرر الموضوع → <strong>تذييل</strong>. يتحكم في منطقة العلامة التجارية وأعمدة التنقل والأيقونات الاجتماعية وإشعار حقوق النشر.</p>
+<h3>إعدادات العلامة التجارية</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>شعار العلامة التجارية</td><td><span class="tb ti">صورة</span></td><td>—</td><td>شعار تذييل اختياري. الموصى بها: 200 × 60 بكسل PNG شفافة.</td></tr>
+<tr><td>أقصى عرض للشعار</td><td><span class="tb tr">النطاق</span></td><td>120 بكسل</td><td>الحد الأقصى لعرض شعار التذييل. النطاق: 60-300 بكسل.</td></tr>
+<tr><td>اسم العلامة التجارية</td><td><span class="tb tt">نص</span></td><td>—</td><td>تجاوز النص لاسم العلامة التجارية للتذييل. اتركه فارغًا لاستخدام اسم متجر Shopify الخاص بك.</td></tr>
+<tr><td>شعار العلامة التجارية</td><td><span class="tb tt">نص</span></td><td>وضعت لأولئك الذين يفهمون الوقت.</td><td>يظهر الخط المائل أسفل اسم العلامة التجارية في التذييل.</td></tr>
+<tr><td>نص حقوق الطبع والنشر</td><td><span class="tb tt">نص</span></td><td>© {السنة} {العلامة التجارية}. جميع الحقوق محفوظة.</td><td>استخدم <code>{year}</code> للعام الحالي و <code>{brand}</code> لاسم متجرك تلقائيًا.</td></tr>
+</tbody></table>
+<h3>الألوان والتخطيط</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>خلفية التذييل</td><td><span class="tb tc">اللون</span></td><td>#030305</td><td>لون الخلفية لمنطقة التذييل بأكملها.</td></tr>
+<tr><td>لون اسم العلامة التجارية</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون نص اسم العلامة التجارية في التذييل.</td></tr>
+<tr><td>لون الشعار</td><td><span class="tb tc">اللون</span></td><td>#3a3530</td><td>لون الشعار المائل أسفل اسم العلامة التجارية.</td></tr>
+<tr><td>خط تقسيم الذهب</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون خط الفاصل الأفقي الزخرفي.</td></tr>
+<tr><td>روابط التنقل (افتراضية)</td><td><span class="tb tc">اللون</span></td><td>#6ب6456</td><td>اللون الافتراضي لنص رابط التنقل في التذييل.</td></tr>
+<tr><td>روابط التنقل (التمرير)</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون روابط التنقل عند التمرير.</td></tr>
+<tr><td>الرموز الاجتماعية (افتراضي)</td><td><span class="tb tc">اللون</span></td><td>#6ب6456</td><td>لون أيقونات وسائل التواصل الاجتماعي في حالة الخمول.</td></tr>
+<tr><td>الرموز الاجتماعية (التمرير)</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون الرموز الاجتماعية عند التمرير.</td></tr>
+<tr><td>نص حقوق الطبع والنشر</td><td><span class="tb tc">اللون</span></td><td>#3a3530</td><td>لون إشعار حقوق النشر في الأسفل.</td></tr>
+</tbody></table>
+<h3>كتل التذييل</h3>
+<p>محتوى التذييل يعتمد بشكل كامل على الكتل. داخل محرر السمات، انقر فوق <strong>أضف كتلة</strong> في قسم التذييل لتكوين الكتل:</p>
+<table class="st st-blocks"><thead><tr><th>نوع الكتلة</th><th>الإعدادات</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td><strong>رابط التنقل</strong></td><td>
+<ul>
+<li><strong>التسمية</strong> (<span class="tb tt">نص</span>): نص رابط التنقل (على سبيل المثال. <code>About</code>).</li>
+<li><strong>عنوان URL</strong> (<span class="tb tu">عنوان URL</span>): وجهة الارتباط.</li>
+</ul>
+</td><td>حول / —</td><td>ينشئ رابط تنقل أفقيًا فرديًا في التذييل. أضف أكبر عدد ممكن حسب الحاجة.</td></tr>
+<tr><td><strong>أيقونة الاجتماعية</strong></td><td>
+<ul>
+<li><strong>منصة</strong> (<span class="tb ts">حدد</span>): اختر Instagram أو X/Twitter أو Facebook أو YouTube أو Pinterest أو TikTok أو Snapchat أو LinkedIn أو <code>Custom (SVG / Image)</code>.</li>
+<li><strong>تجاوز عنوان URL</strong> (<span class="tb tu">عنوان URL</span>): عنوان URL المقصود المستهدف (يتجاوز رابط إعدادات السمة العامة).</li>
+<li><strong>رمز SVG مخصص</strong> (<span class="tb ta">منطقة النص</span>): لصق مضمنة الخام <code>&lt;svg&gt;&lt;/svg&gt;</code> الترميز هنا عند ضبط النظام الأساسي على مخصص.</li>
+<li><strong>صورة أيقونة مخصصة</strong> (<span class="tb ti">صورة</span>): صورة احتياطية إذا كان رمز SVG المخصص فارغًا. الحجم الموصى به: 64×64 بكسل.</li>
+<li><strong>تسمية آريا</strong> (<span class="tb tt">نص</span>): نص إمكانية الوصول لقارئات الشاشة.</li>
+</ul>
+</td><td>انستقرام / —</td><td>ينشئ رابطًا لوسائل التواصل الاجتماعي. يؤدي اختيار النظام الأساسي إلى مطابقة الأيقونة الاجتماعية المناسبة تلقائيًا.</td></tr>
+<tr><td><strong>بطاقة الدفع</strong></td><td>
+<ul>
+<li><strong>نوع البطاقة</strong> (<span class="tb ts">حدد</span>): Visa أو Mastercard أو Amex أو PayPal أو Discover أو Apple Pay أو Google Pay أو Stripe أو <code>Custom (Image/Text)</code>.</li>
+<li><strong>صورة البطاقة المخصصة</strong> (<span class="tb ti">صورة</span>): شعار بوابة الدفع المخصص (يوصى بحجم 60 × 40 بكسل).</li>
+<li><strong>اسم البطاقة</strong> (<span class="tb tt">نص</span>): نص إمكانية الوصول/سمة البديل.</li>
+<li><strong>لون النص الاحتياطي</strong> (<span class="tb tc">اللون</span>): يستخدم للنسخ الاحتياطي لنص اسم البطاقة المخصصة.</li>
+<li><strong>خلفية مخصصة</strong> (<span class="tb tc">اللون</span>): لون خلفية أيقونة بطاقة الدفع.</li>
+</ul>
+</td><td>التأشيرة / —</td><td>يعرض شارة العلامة التجارية للدفع في أسفل التذييل. أضف بطاقات متعددة لبناء قسم شارة الثقة الخاصة بك.</td></tr>
+</tbody></table>
+</section>
+<section id="hero">
+<h2><span class="ic">🎥</span>صندوق البطل <em>المنزلق</em></h2>
+<span class="pb g">الصفحة الرئيسية – القسم الأول</span>
+<p>شريط تمرير بملء الشاشة مع مربع مشاهدة متحرك ثلاثي الأبعاد على كل شريحة. يُفتح غطاء الصندوق ليكشف عن الساعة برسوم متحركة سينمائية عند الدخول. ما يصل إلى 3 شرائح، كل منها مستقلة تمامًا.</p>
+<h3>إعدادات مستوى القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>وضع ارتفاع سطح المكتب</td><td><span class="tb ts">حدد</span></td><td>شاشة كاملة</td><td><strong>شاشة كاملة (100 فولت)</strong> يملأ نافذة المتصفح بأكملها. <strong>ارتفاع مخصص</strong> يستخدم قيمة البكسل التي قمت بتعيينها أدناه.</td></tr>
+<tr><td>ارتفاع سطح المكتب (بكسل)</td><td><span class="tb tr">النطاق</span></td><td>700 بكسل</td><td>ينطبق فقط عند تحديد الارتفاع المخصص. الحد الأدنى 500 بكسل لحماية تخطيط الصندوق ثلاثي الأبعاد.</td></tr>
+<tr><td>وضع الارتفاع المحمول</td><td><span class="tb ts">حدد</span></td><td>شاشة كاملة</td><td>مثل سطح المكتب — ملء الشاشة أو ارتفاع مخصص ثابت لإطارات العرض على الأجهزة المحمولة.</td></tr>
+<tr><td>ارتفاع الجوال (بكسل)</td><td><span class="tb tr">النطاق</span></td><td>560 بكسل</td><td>ارتفاع ثابت بالبكسل للجوال عند تحديد مخصص.</td></tr>
+<tr><td>الشريحة التلقائية</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>التنقل تلقائيًا بين الشرائح دون تدخل المستخدم.</td></tr>
+<tr><td>التقدم التلقائي (ثواني)</td><td><span class="tb tr">النطاق</span></td><td>6 ثانية</td><td>المدة التي تظل فيها كل شريحة مرئية قبل التقدم. المدى: 3-12 ثانية.</td></tr>
+<tr><td>الهامش العلوي</td><td><span class="tb tr">النطاق</span></td><td>0 بيكسل</td><td>الفضاء فوق القسم. يكون هذا مفيدًا عندما يكون الرأس شفافًا — استخدمه لدفع محتوى البطل إلى الأسفل.</td></tr>
+<tr><td>الهامش السفلي</td><td><span class="tb tr">النطاق</span></td><td>0 بيكسل</td><td>المسافة الموجودة أسفل القسم قبل بدء القسم التالي.</td></tr>
+</tbody></table>
+<h3>إعدادات كل شريحة (كتلة المشاهدة)</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>العلامة التجارية (الغطاء العلوي)</td><td><span class="tb tt">نص</span></td><td>ألبا / أبيكس / أوروم</td><td>نص اسم العلامة التجارية محفور على الجزء العلوي من غطاء صندوق الساعة. اتركه فارغًا لاستخدام الفتحة الافتراضية.</td></tr>
+<tr><td>اسم الموديل (الغطاء الداخلي)</td><td><span class="tb tt">نص</span></td><td>ألبا بلو / قرمزي / محمية أوروم</td><td>شاهد اسم الطراز الموضح داخل الغطاء المفتوح. اتركه فارغًا للفتحة الافتراضية.</td></tr>
+<tr><td>العنوان الفرعي للمجموعة</td><td><span class="tb tt">نص</span></td><td>—</td><td>يظهر سطر الترجمة الاختياري أسفل اسم الطراز داخل الغطاء.</td></tr>
+<tr><td>مادة الصندوق</td><td><span class="tb ts">حدد</span></td><td>جلد سبج</td><td>النمط المرئي للمربع ثلاثي الأبعاد: <strong>جلد سبج</strong> (الأزرق - الفتحة 1)، <strong>تيتانيوم الكربون</strong> (الأحمر - الفتحة 2)، <strong>الخشب المصقول</strong> (الذهب - الفتحة 3).</td></tr>
+<tr><td>لهجة أساسية</td><td><span class="tb tc">اللون</span></td><td>#8ab4f8</td><td>لون التمييز الرئيسي لمربع الشريحة والطباعة. احتفظ بالإعدادات الافتراضية للفتحة للحصول على أفضل توازن بصري.</td></tr>
+<tr><td>تسليط الضوء على اللكنة</td><td><span class="tb tc">اللون</span></td><td>#f5cba7</td><td>لهجة أخف ثانوية للإبرازات والحواف المتدرجة.</td></tr>
+<tr><td>توهج داخلي</td><td><span class="tb tc">اللون</span></td><td>#60a8ff</td><td>لون متوهج محيطي داخل منطقة الوسادة الداخلية للصندوق المفتوح.</td></tr>
+<tr><td>أضواء كاشفة RGB</td><td><span class="tb tt">نص</span></td><td>52، 152، 219</td><td>قيم RGB لتراكب الأضواء الداخلية للصندوق (على سبيل المثال. <code>52, 152, 219</code>). التنسيق: <code>r, g, b</code>.</td></tr>
+<tr><td>ساعة مدمجة</td><td><span class="tb ts">حدد</span></td><td>ألبا-real.svg</td><td>حدد أحد ناقلات الساعة المضمنة عالية الدقة للموضوع: <strong>ألبا بلو</strong> (الفتحة 1)، <strong>الطبعة قرمزي</strong>أو <strong>محمية أوروم</strong>.</td></tr>
+<tr><td>صورة مخصصة للساعة</td><td><span class="tb ti">صورة</span></td><td>—</td><td>قم بتحميل صورة الساعة الخاصة بك. يتجاوز SVG المدمج. الموصى بها: <strong>400 × 500 بكسل</strong> صورة شخصية بخلفية شفافة (PNG). إذا كنت ترغب في استخدام متجه ساعة SVG مخصص، فيمكنك إنشائه باستخدام موجه مساعد الذكاء الاصطناعي المتوفر في ملف <a href="#watch-svg">شاهد الصورة → موجه SVG</a> القسم أدناه.</td></tr>
+</tbody></table>
+</section>
+<section id="features">
+<h2><span class="ic">✨</span>الميزات <em>عرض</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>قسم تقسيم الشاشة GSAP. تعمل صورة الساعة على تثبيت اللوحة اليمنى بينما تظهر الرموز النقطية المميزة المتحركة على اليسار. عندما يتبعه قسم المعرض الأفقي مباشرة، تنتقل صورة الساعة إلى بطاقة المعرض الأولى عند التمرير (الانتقال المتطاير).</p>
+<h3>إعدادات القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>صُنعت دون أي تنازلات</td><td>تظهر تسمية صغيرة بأحرف كبيرة أعلى قائمة الميزات.</td></tr>
+<tr><td>صورة العرض</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة الساعة على اللوحة اليمنى. الموصى بها: <strong>540 × 540 بكسل</strong> بخلفية شفافة (PNG) لكي يعمل انتقال الطيران بشكل نظيف.</td></tr>
+<tr><td>تفعيل انتقال مراقبة الطيران</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يقوم بتحريك صورة الساعة المتطايرة في بطاقة المعرض الأفقي الأولى عند التمرير. يعمل فقط عندما يتم وضع قسم المعرض أدناه مباشرة.</td></tr>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>لون الخلفية لهذا القسم بأكمله.</td></tr>
+<tr><td>لهجة / اللون الذهبي</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون أيقونات التعداد النقطي المميزة والنص المميز.</td></tr>
+<tr><td>لون النص</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون عناوين الميزات.</td></tr>
+<tr><td>وصف لون النص</td><td><span class="tb tc">اللون</span></td><td>#a8a29e</td><td>لون فقرات وصف الميزة.</td></tr>
+</tbody></table>
+<h3>كتلة الميزات (واحدة لكل ميزة)</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عنوان الميزة</td><td><span class="tb tt">نص</span></td><td>—</td><td>اسم الميزة، على سبيل المثال. "زجاج كريستال ياقوتي".</td></tr>
+<tr><td>وصف الميزة</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>فقرة قصيرة تشرح الميزة بالتفصيل.</td></tr>
+</tbody></table>
+<section id="horizontal-gallery">
+<h2><span class="ic">💎</span>أفقي <em>معرض</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>عرض منتجات فاخر بتمرير أفقي. يعرض بطاقات الساعة بخلفيات ديناميكية متميزة وعلامات قابلة للتخصيص وأزرار عربة التسوق "الإضافة السريعة" المضمنة ومؤشرات النقاط. سريع الاستجابة مع تفاعلات سلسة لعجلة الماوس مدعومة بـ GSAP.</p>
+<h3>الإعدادات الأساسية</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>المجموعة</td><td><span class="tb tt">مجموعة</span></td><td>—</td><td>مجموعة Shopify لسحب المنتجات منها.</td></tr>
+<tr><td>الحد الأقصى من المنتجات للعرض</td><td><span class="tb tr">النطاق</span></td><td>6</td><td>الحد الأقصى لبطاقات المراقبة التي سيتم عرضها في قائمة التمرير الأفقية. النطاق: 2-12.</td></tr>
+<tr><td>محاذاة الرأس</td><td><span class="tb ts">حدد</span></td><td>اليسار</td><td>المحاذاة الأفقية لعنوان القسم: اليسار • الوسط • اليمين.</td></tr>
+</tbody></table>
+<h3>الألوان وأنماط البطاقة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>خلفية القسم</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>خلفية القسم العام</td></tr>
+<tr><td>لون النص / لهجة ذهبية</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#f0ece4 / #c9a96e</td><td>النصوص الأساسية ويسلط الضوء على لهجة الذهب.</td></tr>
+<tr><td>الحاجب / لون العنوان</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#c9a96e / #f0ece4</td><td>تجاوزات لون خطوط الرأس.</td></tr>
+<tr><td>السعر / مقارنة لون السعر</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#f0ece4 / rgba(240,236,228,0.68)</td><td>أنماط الألوان للأسعار العادية والمقارنة.</td></tr>
+<tr><td>خلفية البطاقة (1، 2، 3)</td><td><span class="tb tc">اللون</span></td><td>#12111f / #07070d / #050509</td><td>ثلاث نقاط توقف متدرجة في الخلفية لأسطح بطاقة الساعة.</td></tr>
+<tr><td>خلفية نص البطاقة (1، 2)</td><td><span class="tb tc">اللون</span></td><td>#07070د / #050508</td><td>ألوان الخلفية لمناطق النص السفلية على البطاقات.</td></tr>
+<tr><td>خلفية منطقة صورة البطاقة</td><td><span class="tb tc">اللون</span></td><td>#090912</td><td>لون مربع الخلفية خلف صورة الساعة مباشرةً.</td></tr>
+<tr><td>لون حدود تمرير البطاقة</td><td><span class="tb tc">اللون</span></td><td>#c9a96e (28%)</td><td>يظهر توهج حدودي خافت عند المرور فوق البطاقة.</td></tr>
+</tbody></table>
+<h3>شارة علامة المنتج المخصصة</h3>
+<p>يمكن لكل بطاقة عرض ما يصل إلى ثلاث علامات نمطية بناءً على علامات المنتج. قم بتعديل ألوانها وحدودها وخلفياتها أدناه لتناسب جمالية المظهر الخاص بك:</p>
+<table class="st"><thead><tr><th>مجموعة العلامات</th><th>لون النص</th><th>لون الحدود</th><th>لون الخلفية</th></tr></thead><tbody>
+<tr><td>العلامة 1 (على سبيل المثال. <code>New</code>)</td><td><span class="tb tc">اللون</span> (#e8d5a3)</td><td><span class="tb tc">اللون</span> (رغبا (201,169,110,0.4))</td><td><span class="tb tc">اللون</span> (رغبا (201,169,110,0.08))</td></tr>
+<tr><td>العلامة 2 (على سبيل المثال. <code>Premium</code>)</td><td><span class="tb tc">اللون</span> (#a1b2c6)</td><td><span class="tb tc">اللون</span> (رغبا (138,149,165,0.4))</td><td><span class="tb tc">اللون</span> (رغبا (138,149,165,0.08))</td></tr>
+<tr><td>العلامة 3 (على سبيل المثال. <code>Limited</code>)</td><td><span class="tb tc">اللون</span> (#f5c2c6)</td><td><span class="tb tc">اللون</span> (رغبا (232,180,184,0.4))</td><td><span class="tb tc">اللون</span> (رغبا (232,180,184,0.08))</td></tr>
+</tbody></table>
+<h3>عناصر التحكم في الأزرار والملاحة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>زر العرض - عادي</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#c9a96e / شفاف</td><td>لون النص والخلفية لزر "عرض".</td></tr>
+<tr><td>زر العرض – التحويم</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#f0ece4 / #c9a96e (15%)</td><td>النص والخلفية عند التمرير.</td></tr>
+<tr><td>إضافة زر - عادي</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#c9a96e / شفاف</td><td>النص/الرمز وخلفية زر الإضافة إلى سلة التسوق "+".</td></tr>
+<tr><td>زر الإضافة - التحويم</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#050508 / #dbbe80</td><td>قم بالتمرير على حالات الزر "إضافة".</td></tr>
+<tr><td>إضافة حجم الزر</td><td><span class="tb tr">النطاق</span></td><td>36 بكسل / 32 بكسل</td><td>قطر الزر على سطح المكتب (24–60 بكسل) والجوال (24–50 بكسل).</td></tr>
+<tr><td>إضافة حجم أيقونة الزر</td><td><span class="tb tr">النطاق</span></td><td>18 بكسل / 16 بكسل</td><td>بالإضافة إلى حجم رمز الإشارة على سطح المكتب (10–30 بكسل) والجوال (10–30 بكسل).</td></tr>
+<tr><td>حجم التنقل بالسهم</td><td><span class="tb tr">النطاق</span></td><td>34 بكسل / 30 بكسل</td><td>الحجم المرئي للأسهم المنزلقة على سطح المكتب والهاتف المحمول.</td></tr>
+<tr><td>مؤشرات النقطة (نشطة/غير نشطة)</td><td><span class="tb tc">اللون</span> / <span class="tb tc">اللون</span></td><td>#c9a96e / #f0ece4 (25%)</td><td>حالات مؤشر تقدم التمرير النقطي.</td></tr>
+</tbody></table>
+</section>
+<section id="marquee">
+<h2><span class="ic">📡</span>سرادق <em>شريط</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>لافتة نصية متحركة ذات صفين. يتم تمرير الصف الأول إلى اليسار بأسماء تجارية كبيرة. يتم تمرير الصف 2 إلى اليمين باستخدام سمات الأحرف الصغيرة. Pure CSS — لا يوجد JavaScript، ولا يوجد أداء جيد.</p>
+<h3>الطباعة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>حجم الصف 1 - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>64 بيكسل</td><td>حجم الخط للصف العلوي الكبير على سطح المكتب.</td></tr>
+<tr><td>حجم الصف 1 - الجوال</td><td><span class="tb tr">النطاق</span></td><td>38 بيكسل</td><td>حجم الخط للصف العلوي على الهاتف المحمول.</td></tr>
+<tr><td>حجم الصف 2 - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>9 بيكسل</td><td>حجم الخط للصف السفلي بالأحرف الكبيرة على سطح المكتب.</td></tr>
+<tr><td>حجم الصف 2 - الجوال</td><td><span class="tb tr">النطاق</span></td><td>9 بيكسل</td><td>حجم الخط لصف الأحرف الصغيرة على الهاتف المحمول.</td></tr>
+</tbody></table>
+<h3>الألوان</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>خلفية شريط التحديد.</td></tr>
+<tr><td>لون ذهبي مميز</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون رموز الفاصل الماسي بين العبارات.</td></tr>
+<tr><td>التدرج الصف 1 - الابتدائي</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون البداية لتدرج النص في الصف العلوي.</td></tr>
+<tr><td>التدرج الصف 1 - ثانوي</td><td><span class="tb tc">اللون</span></td><td>#e4c882</td><td>لون النهاية للتدرج — يخلق وميضًا ذهبيًا على النص.</td></tr>
+<tr><td>لون نص الصف 2</td><td><span class="tb tc">اللون</span></td><td>رغبا (201,169,110,.4)</td><td>اللون الافتراضي للصف السفلي ذو الأحرف الصغيرة.</td></tr>
+<tr><td>قم بتمرير نص الصف 2</td><td><span class="tb tc">اللون</span></td><td>رغبا (201,169,110,.72)</td><td>لون الصف السفلي عند تحريك المؤشر.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">💡</span><div class="nb"><p>قم بتحرير العبارات الفعلية داخل كل منها <strong>الصف 1</strong> و <strong>الصف 2</strong> كتلة. أضف كتلًا متعددة لتوسيع تسلسل النص الحلقي بأسماء العلامات التجارية أو المواد أو السمات.</p></div></div>
+</section>
+<section id="vault">
+<h2><span class="ic">🏛</span>المجموعة <em>قبو</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>يتم عرض مجموعاتك كبطاقات مميزة ثلاثية الأبعاد. يؤدي التمرير إلى إمالة كل بطاقة نحو المؤشر، وإظهار أقواس ركنية ذهبية، وتشغيل مسح وميض عبر السطح. ترتبط كل بطاقة بمجموعة.</p>
+<h3>رأس القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>القبو</td><td>تسمية بأحرف كبيرة صغيرة أعلى عنوان القسم.</td></tr>
+<tr><td>العنوان - السطر 1</td><td><span class="tb tt">نص</span></td><td>اكتشف لدينا</td><td>السطر الأول من العنوان الرئيسي.</td></tr>
+<tr><td>العنوان - السطر 2</td><td><span class="tb tt">نص</span></td><td>المجموعات</td><td>السطر الثاني. التفاف الكلمات في <code>&lt;em&gt;&lt;/em&gt;</code> للتصميم الذهبي المائل، على سبيل المثال. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>النص الفرعي</td><td><span class="tb ta">منطقة النص</span></td><td>كل ساعة تحكي قصة...</td><td>فقرة قصيرة معروضة أسفل العنوان.</td></tr>
+<tr><td>محاذاة الرأس</td><td><span class="tb ts">حدد</span></td><td>اليسار</td><td>محاذاة نص رأس القسم: لليسار أو للوسط أو لليمين.</td></tr>
+</tbody></table>
+<h3>التخطيط</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>الأعمدة - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>3</td><td>بطاقات لكل صف على سطح المكتب. النطاق: 2-5.</td></tr>
+<tr><td>أعمدة – قرص</td><td><span class="tb tr">النطاق</span></td><td>2</td><td>بطاقات لكل صف على الجهاز اللوحي.</td></tr>
+<tr><td>الأعمدة – متنقلة</td><td><span class="tb tr">النطاق</span></td><td>1</td><td>بطاقات لكل صف على الهاتف المحمول. 1 يوصى به للحصول على أفضل تجربة للهاتف المحمول.</td></tr>
+<tr><td>فجوة الشبكة</td><td><span class="tb tr">النطاق</span></td><td>24 بيكسل</td><td>فجوة البكسل بين البطاقات. النطاق: 8-48 بكسل.</td></tr>
+<tr><td>نسبة أبعاد البطاقة</td><td><span class="tb ts">حدد</span></td><td>صورة 3:4</td><td>صورة 3:4 • صورة 4:5 • مربع 1:1 • منظر طبيعي 16:9.</td></tr>
+<tr><td>نصف قطر حدود البطاقة</td><td><span class="tb tr">النطاق</span></td><td>12 بكسل</td><td>نصف قطر الزاوية المستديرة لكل بطاقة. النطاق: 0–32 بكسل.</td></tr>
+<tr><td>تناسب الصورة</td><td><span class="tb ts">حدد</span></td><td>الغلاف</td><td><strong>الغلاف</strong> المحاصيل لملء البطاقة. <strong>تحتوي</strong> يناسب الصورة بأكملها دون اقتصاص.</td></tr>
+</tbody></table>
+<h3>الألوان</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>الخلفية</td><td><span class="tb tc">اللون</span></td><td>#0a0906</td><td>خلفية القسم خلف شبكة البطاقة.</td></tr>
+<tr><td>لون الحاجب</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون علامة الحاجب فوق العنوان.</td></tr>
+<tr><td>لون العنوان</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون عنوان القسم الرئيسي.</td></tr>
+<tr><td>لون النص الفرعي</td><td><span class="tb tc">اللون</span></td><td>#6ب6660</td><td>لون فقرة النص الفرعي.</td></tr>
+<tr><td>لهجة (الذهب)</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>لون اللمسات الذهبية، وتوهج الحدود، والأجزاء المائلة، وكشف الزوايا عند التمرير.</td></tr>
+<tr><td>لون اسم البطاقة</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون اسم المجموعة على كل بطاقة.</td></tr>
+<tr><td>لون وصف البطاقة</td><td><span class="tb tc">اللون</span></td><td>#8c8680</td><td>لون نص وصف المجموعة على كل بطاقة.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><p>ترتبط كل كتلة بطاقة بمجموعة Shopify. صورة خلفية البطاقة هي <strong>صورة المجموعة</strong> تعيين في <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">المنتجات</span><span class="ps">›</span><span class="pc">المجموعات</span><span class="ps">›</span><span class="pc">مجموعتك</span></span>. الموصى بها: <strong>800 × 1000 بكسل</strong> صورة.</p></div></div>
+</section>
+<section id="lifestyle">
+<h2><span class="ic">📷</span>نمط الحياة <em>عرض</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>شبكة مستديرة من الصور الشخصية مقسمة إلى صفين. تتم ترجمة كل صف في اتجاهين متعاكسين استجابةً لحركة الماوس، مما يؤدي إلى إنشاء تأثير تحريري لعمق المجال.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عنوان القسم</td><td><span class="tb tt">نص</span></td><td>—</td><td>عنوان كبير معروض أعلى شبكة الصور.</td></tr>
+<tr><td>الصورة (لكل كتلة)</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة نمط الحياة لكل بطاقة. الموصى بها: <strong>1000 × 1250 بكسل</strong> (صورة شخصية بنسبة 4:5)، يتم توسيط الهدف بحيث يظل في الإطار عند تدوير البطاقة.</td></tr>
+<tr><td>تسمية توضيحية (لكل كتلة)</td><td><span class="tb tt">نص</span></td><td>—</td><td>تظهر التسمية الاختيارية عند المرور فوق كل بطاقة صورة.</td></tr>
+</tbody></table>
+</section>
+<section id="brand-story-doc">
+<h2><span class="ic">📖</span>قصة العلامة التجارية</h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>مجموعة قصصية مرئية مميزة تحتوي على نص منسق جنبًا إلى جنب وصورة خلفية سينمائية قابلة للتمرير.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>منذ عام 1947</td><td>علامة بيانات الاعتماد بأحرف كبيرة صغيرة.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>تراث الابتكار</td><td>عنوان القصة الرئيسية. التفاف الأجزاء في <code>&lt;em&gt;</code> للخط المائل.</td></tr>
+<tr><td>الوصف</td><td><span class="tb ta">منطقة النص</span></td><td>في أعماق جبال جورا السويسرية..</td><td>نص سردي يشرح براعة العلامة التجارية.</td></tr>
+<tr><td>صورة الخلفية</td><td><span class="tb ti">صورة</span></td><td>—</td><td>المنظر الخلفية البصرية. الموصى بها: <strong>2000 × 1200 بكسل</strong> المناظر الطبيعية.</td></tr>
+<tr><td>محاذاة النص</td><td><span class="tb ts">حدد</span></td><td>اليسار</td><td>محاذاة نص مربع المحتوى إلى اليسار أو الوسط أو اليمين.</td></tr>
+<tr><td>تسمية الزر</td><td><span class="tb tt">نص</span></td><td>اكتشف تاريخنا</td><td>النص المعروض داخل زر الحث على اتخاذ إجراء.</td></tr>
+<tr><td>رابط الزر</td><td><span class="tb tu">عنوان URL</span></td><td>—</td><td>عنوان URL المستهدف عند النقر فوق الزر.</td></tr>
+</tbody></table>
+</section>
+<section id="feat-collection">
+<h2><span class="ic">📋</span>مجموعة مميزة</h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>يعرض شبكة سريعة الاستجابة من المنتجات من مجموعة مختارة. مثالية لعرض أفضل البائعين أو الوافدين الجدد على صفحتك الرئيسية.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>مميز</td><td>نص علامة صغيرة فوق العنوان.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>مجموعة مميزة</td><td>عنوان القسم الرئيسي.</td></tr>
+<tr><td>عنوان فرعي</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>فقرة وصفية قصيرة معروضة أسفل العنوان.</td></tr>
+<tr><td>المجموعة</td><td><span class="tb tt">مجموعة</span></td><td>—</td><td>Shopify منتقي المجموعة لملء المنتجات.</td></tr>
+<tr><td>الحد الأقصى من المنتجات للعرض</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>عدد المنتجات المعروضة في الشبكة (النطاق: 2-12).</td></tr>
+<tr><td>الأعمدة على سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>أعمدة الشبكة المعروضة على طرق عرض سطح المكتب (النطاق: 2-5).</td></tr>
+<tr><td>الأعمدة على الهاتف المحمول</td><td><span class="tb ts">حدد</span></td><td>2</td><td>الأعمدة في إطارات العرض المحمولة: <strong>1</strong> أو <strong>2</strong>.</td></tr>
+<tr><td>إظهار زر الإضافة السريعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يضيف زر سلة الإضافة السريعة داخل بطاقات المنتج.</td></tr>
+<tr><td>عرض البائع</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>يعرض تسميات بائع المنتج على البطاقات.</td></tr>
+<tr><td>إظهار زر "عرض الكل".</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يظهر زرًا سفليًا يرتبط بصفحة المجموعة إذا كانت تحتوي على المزيد من العناصر.</td></tr>
+</tbody></table>
+<section id="featured-product-doc">
+<h2><span class="ic">🕐</span>مميز <em>المنتج</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>يسلط الضوء على منتج واحد مباشرة على صفحتك الرئيسية باستخدام نموذج شراء كامل ومعرض الوسائط وقوائم الأكورديون المنسدلة الديناميكية. مثالية لإطلاق نموذج الساعة الرائد.</p>
+<h3>الإعدادات الأساسية</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>المنتج</td><td><span class="tb tt">المنتج</span></td><td>—</td><td>حدد المنتج الذي تريد عرضه في هذا القسم.</td></tr>
+<tr><td>عرض الصور المصغرة للمعرض</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>قم بالتشغيل لعرض الصور المصغرة للوسائط أسفل مربع الصورة الرئيسي.</td></tr>
+<tr><td>نصف قطر زاوية المعرض</td><td><span class="tb tr">النطاق</span></td><td>8 بيكسل</td><td>يقوم بتقريب زوايا صور معرض المنتجات. النطاق: 0-40 بكسل.</td></tr>
+<tr><td>عتبة المخزون منخفضة</td><td><span class="tb tr">النطاق</span></td><td>10</td><td>كمية المخزون التي تظهر أسفلها شارة تحذير انخفاض المخزون. النطاق: 2-20.</td></tr>
+<tr><td>إظهار علامات المنتج</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتبديل ما إذا كنت تريد إظهار علامات المنتج الخام أم لا.</td></tr>
+</tbody></table>
+<h3>الطباعة والتصميم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>خلفية القسم</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>لون خلفية القسم</td></tr>
+<tr><td>البائع / العنوان / لون السعر</td><td><span class="tb tc">اللون</span></td><td>#c9a96e / #f0ece4 / #f0ece4</td><td>تجاوزات لون الخط للعناصر.</td></tr>
+<tr><td>وصف لون النص</td><td><span class="tb tc">اللون</span></td><td>#787068</td><td>لون وصف المنتج.</td></tr>
+<tr><td>حجم خط العنوان — سطح المكتب / الهاتف المحمول</td><td><span class="tb tr">النطاق</span></td><td>46 بكسل / 32 بكسل</td><td>أحجام خطوط العنوان. النطاق: 24–72 بكسل / 20–52 بكسل.</td></tr>
+<tr><td>حجم خط السعر — سطح المكتب / الهاتف المحمول</td><td><span class="tb tr">النطاق</span></td><td>32 بكسل / 26 بكسل</td><td>أحجام الخطوط من السعر. النطاق: 18–60 بكسل / 16–44 بكسل.</td></tr>
+<tr><td>حجم الوصف — سطح المكتب / الجوال</td><td><span class="tb tr">النطاق</span></td><td>14 بكسل / 14 بكسل</td><td>أحجام الخطوط لوصف المنتج. النطاق: 12–22 بكسل / 12–20 بكسل.</td></tr>
+<tr><td>نصف قطر زاوية الزر</td><td><span class="tb tr">النطاق</span></td><td>14 بيكسل</td><td>تقريب الزاوية لأزرار الخروج وعربة التسوق. النطاق: 0-40 بكسل.</td></tr>
+</tbody></table>
+<h3>كتل المنتج المميزة</h3>
+<p>يمكن للتجار هيكلة عمود الشراء عن طريق سحب الكتل وإسقاطها داخل القسم. الكتل التالية متوفرة:</p>
+<table class="st st-blocks"><thead><tr><th>نوع الكتلة</th><th>الإعدادات والخيارات</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td><strong>بائع</strong></td><td>لا شيء</td><td>يعرض العلامة التجارية للمنتج/اسم البائع.</td></tr>
+<tr><td><strong>العنوان</strong></td><td>لا شيء</td><td>يعرض عنوان المنتج.</td></tr>
+<tr><td><strong>التقييم</strong></td><td><code>rating_score</code> (الافتراضي: 4.9)، <code>rating_count</code> (الافتراضي: 47)</td><td>يعرض نجوم المنتج وعدد المراجعة.</td></tr>
+<tr><td><strong>السعر</strong></td><td>لا شيء</td><td>يعرض سعر المنتج والأسعار المقارنة.</td></tr>
+<tr><td><strong>شارة عاجلة</strong></td><td>لا شيء</td><td>يعرض إشعارات إلحاح المخزون إذا كان المخزون أقل من الحد الأدنى.</td></tr>
+<tr><td><strong>الوصف</strong></td><td>لا شيء</td><td>يعرض نص وصف المنتج القصير.</td></tr>
+<tr><td><strong>مقسم</strong></td><td>لا شيء</td><td>يضع خطًا فاصلًا أفقيًا دقيقًا للحدود (الحد: 3).</td></tr>
+<tr><td><strong>منتقي البديل</strong></td><td>لا شيء</td><td>يعرض القوائم المنسدلة أو الأقراص المتنوعة (مثل لون الحزام وحجم القرص).</td></tr>
+<tr><td><strong>محدد الكمية</strong></td><td>لا شيء</td><td>يعرض محدد الرقم لكمية المنتجات.</td></tr>
+<tr><td><strong>شراء الأزرار</strong></td><td><code>show_dynamic_checkout</code> (تبديل أزرار الخروج الديناميكية)</td><td>يعرض أزرار "إضافة إلى عربة التسوق" و"اشتريه الآن".</td></tr>
+<tr><td><strong>شارات الثقة</strong></td><td>القائمة المنسدلة للأيقونات المحددة مسبقًا (الشحن، والإرجاع، والأصالة، والضمان، وما إلى ذلك)، وتحميل الرموز المخصصة، والتسمية، والنص الفرعي (ما يصل إلى 3 شارات).</td><td>يعرض أيقونات ونصوص بناء الثقة.</td></tr>
+<tr><td><strong>علامات تبويب الوصف</strong></td><td>لا شيء</td><td>يعرض درج علامات التبويب القابل للطي للحصول على الأوصاف.</td></tr>
+<tr><td><strong>الأكورديون</strong></td><td><code>heading</code> (نص)، <code>content</code> (نص منسق)</td><td>يعرض صفوف الأكورديون القابلة للتوسيع (مثل المواصفات والضمان).</td></tr>
+<tr><td><strong>العلامات</strong></td><td>لا شيء</td><td>يعرض علامات المنتج.</td></tr>
+<tr><td><strong>سائل مخصص</strong></td><td><code>custom_liquid</code> (مربع النص السائل)</td><td>دمج رموز Liquid مخصصة أو كتل HTML.</td></tr>
+</tbody></table>
+</section>
+<section id="blog-posts">
+<h2><span class="ic">✍</span>منشورات المدونة</h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>يسلط الضوء على أحدث المقالات التحريرية من مدونتك على الصفحة الرئيسية في تخطيط شبكي عالي الجودة.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>افتتاحية</td><td>نص علامة صغيرة فوق العنوان.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>أحدث المقالات</td><td>عنوان القسم الرئيسي.</td></tr>
+<tr><td>عنوان فرعي</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>فقرة وصفية قصيرة أسفل العنوان.</td></tr>
+<tr><td>مدونة</td><td><span class="tb tt">مدونة</span></td><td>—</td><td>Shopify منتقي المدونة لسحب المقالات.</td></tr>
+<tr><td>الحد الأقصى للمشاركات للعرض</td><td><span class="tb tr">النطاق</span></td><td>3</td><td>عدد المقالات المراد عرضها (النطاق: 2-6).</td></tr>
+<tr><td>الأعمدة على سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>3</td><td>الأعمدة المعروضة على إطارات عرض سطح المكتب (النطاق: 2-4).</td></tr>
+<tr><td>تاريخ العرض</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يعرض مواعيد نشر المقال.</td></tr>
+<tr><td>عرض المؤلف</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>يعرض أسماء مؤلفي المقالة.</td></tr>
+<tr><td>عرض مقتطف</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يعرض ملخصات مقتطفات قصيرة أسفل عناوين المقالات.</td></tr>
+<tr><td>إظهار زر "عرض الكل".</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يعرض الرابط السفلي لصفحة المدونة الرئيسية.</td></tr>
+</tbody></table>
+</section>
+<section id="testimonials">
+<h2><span class="ic">💬</span>شهادات المنزلق</h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>دائرة اقتباسات أفقية نظيفة لعرض تعليقات العملاء والمقتطفات الصحفية في تصميم فاخر وجميل.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عنوان القسم</td><td><span class="tb tt">نص</span></td><td>شهادات العملاء</td><td>عنوان قسم كبير.</td></tr>
+<tr><td>شريط تمرير التشغيل التلقائي</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتشغيل عروض الأسعار الدورية تلقائيًا.</td></tr>
+<tr><td>تغيير الاقتباس كل</td><td><span class="tb tr">النطاق</span></td><td>6 ثانية</td><td>مدة الدوران التلقائي بالثواني (النطاق: 3-12 ثانية).</td></tr>
+</tbody></table>
+<p>تتم إضافة كل اقتباس على هيئة **كتلة شهادة** داخل القسم. انقر <strong>أضف كتلة</strong> → <strong>شهادة</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>اقتباس</td><td><span class="tb ta">منطقة النص</span></td><td>الحرفية غير عادية ...</td><td>يتم عرض شهادة العميل أو نص المراجعة بعلامات اقتباس كبيرة.</td></tr>
+<tr><td>اسم المؤلف</td><td><span class="tb tt">نص</span></td><td>جيمس هارينجتون</td><td>الاسم الكامل للعميل أو المراجع.</td></tr>
+<tr><td>الدور / العنوان</td><td><span class="tb tt">نص</span></td><td>الرئيس التنفيذي لمجموعة هارينغتون</td><td>يتم عرض الشركة أو العنوان أو العنوان الفرعي لبيانات الاعتماد أسفل اسم المؤلف.</td></tr>
+<tr><td>التقييم (النجوم)</td><td><span class="tb tr">النطاق</span></td><td>5</td><td>تصنيف النجوم للعرض. يتم عرضه كنجوم SVG ذهبية (النطاق: 1-5).</td></tr>
+<tr><td>لون لهجة البطاقة</td><td><span class="tb tc">اللون</span></td><td>#c9a84c</td><td>اللون المميز المستخدم لخط التقدم الذهبي والعناصر الزخرفية في هذه البطاقة المحددة.</td></tr>
+</tbody></table>
+</section>
+<section id="trusted">
+<h2><span class="ic">🤝</span>موثوق به</h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>يعرض صفًا من شعارات العلامة التجارية أو الصحافة أو الشهادات لإثبات مصداقية المتجر.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>كما رأينا في</td><td>تسمية القسم الصغيرة الكبيرة.</td></tr>
+<tr><td>الشعارات ذات التدرج الرمادي</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يحول صور الشعار إلى تدرج رمادي للحفاظ على تكامل التصميم المتميز.</td></tr>
+</tbody></table>
+<p>يمكنك إضافة ثلاثة أنواع من الكتل لإنشاء شبكة بيانات الاعتماد الخاصة بك: المنشورات والإحصائيات والشهادات. انقر <strong>أضف كتلة</strong> → اختر من:</p>
+<table class="st st-blocks"><thead><tr><th>نوع الكتلة</th><th>الإعدادات</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td><strong>النشر</strong></td><td>
+<ul>
+<li><strong>اسم المنشور</strong> (<span class="tb tt">نص</span>): شعار أو نص التسمية (على سبيل المثال. <code>GQ</code>, <code>Forbes</code>).</li>
+<li><strong>سطر الوصف</strong> (<span class="tb tt">نص</span>): عرض أسعار قصير أو بيانات اعتماد يتم عرضها عند تحريك المؤشر (على سبيل المثال: <code>Watch of the Year</code>).</li>
+</ul>
+</td><td>جي كيو / ساعة العام</td><td>إنشاء بطاقة شعار صحفية تكشف عن الاقتباس عند تمرير مؤشر الماوس فوقه.</td></tr>
+<tr><td><strong>الإحصائيات</strong></td><td>
+<ul>
+<li><strong>أيقونة</strong> (<span class="tb tt">نص</span>): رمز تعبيري أو رمز (على سبيل المثال. <code>â—ˆ</code>, <code>â˜…</code>).</li>
+<li><strong>القيمة</strong> (<span class="tb tt">نص</span>): الرقم (على سبيل المثال. <code>45,000</code>).</li>
+<li><strong>لاحقة</strong> (<span class="tb tt">نص</span>): الرمز الملحق بالقيمة (على سبيل المثال: <code>+</code>, <code>%</code>).</li>
+<li><strong>نص التسمية</strong> (<span class="tb tt">نص</span>): الوصف (على سبيل المثال. <code>Timepieces Crafted</code>).</li>
+</ul>
+</td><td>â—ˆ / 45,000 / + / ساعات مصنوعة</td><td>يعرض بطاقة مؤشر الأداء الرئيسي (KPI) البارزة.</td></tr>
+<tr><td><strong>شهادة</strong></td><td>
+<ul>
+<li><strong>نص الشهادة</strong> (<span class="tb tt">نص</span>): تسمية السلطة (على سبيل المثال <code>COSC Certified</code>, <code>Swiss Made</code>).</li>
+</ul>
+</td><td>معتمد من COSC</td><td>يعرض شارة الأمان أو الشهادة في مربع حدود ذهبي نظيف.</td></tr>
+</tbody></table>
+</section>
+<section id="social">
+<h2><span class="ic">📸</span>المعرض الاجتماعي</h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>يعرض شبكة سريعة الاستجابة من منشورات الوسائط الاجتماعية المنسقة (مثل صور Instagram) المرتبطة مباشرة بملفاتك الشخصية.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>اتبع الرحلة</td><td>عنوان القسم الرئيسي.</td></tr>
+<tr><td>مقبض الحساب</td><td><span class="tb tt">نص</span></td><td>@aurick_boutique</td><td>يتم عرض المقبض الاجتماعي الخاص بك أعلى شبكة المعرض.</td></tr>
+<tr><td>رابط الحساب</td><td><span class="tb tu">عنوان URL</span></td><td>—</td><td>عنوان URL لصفحة الملف الشخصي لرابط المقبض.</td></tr>
+</tbody></table>
+<p>تتم إضافة كل مشاركة على هيئة **كتلة مشاركة**. انقر <strong>أضف كتلة</strong> → <strong>مشاركة</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>صورة</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة الوسائط الاجتماعية (مثل تحميل Instagram). الموصى بها: <strong>800 × 800 بكسل</strong> صورة مربعة.</td></tr>
+<tr><td>الرابط (اختياري)</td><td><span class="tb tu">عنوان URL</span></td><td>—</td><td>رابط الوجهة عندما ينقر المستخدم على الصورة (على سبيل المثال، عنوان URL لمنشور Instagram الخاص بك).</td></tr>
+<tr><td>نص بديل</td><td><span class="tb tt">نص</span></td><td>—</td><td>نص وصف إمكانية الوصول البديل للصورة.</td></tr>
+<tr><td>تناسب الصورة</td><td><span class="tb ts">حدد</span></td><td>الغلاف (المحصول لملء)</td><td><strong>الغلاف</strong> المحاصيل لملء خلية الشبكة، <strong>تحتوي</strong> يناسب الصورة بأكملها دون اقتصاص.</td></tr>
+<tr><td>موضع الصورة</td><td><span class="tb ts">حدد</span></td><td>مركز</td><td>نقطة التركيز: المركز • الأعلى • الأسفل • اليسار • اليمين.</td></tr>
+</tbody></table>
+</section>
+<section id="newsletter-doc">
+<h2><span class="ic">📣</span>النشرة الإخبارية <em>الاشتراك</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>قسم اشتراك تحريري بملء الشاشة يتميز برسوم متحركة لمدخل النص في صف مقسم، وحقول إدخال متميزة، وعلامة مائية كبيرة قابلة للتخصيص (كلمة خلفية شبحية) تلمع ديناميكيًا عند التمرير.</p>
+<h3>المحتوى والطباعة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>الحاجب</td><td><span class="tb tt">نص</span></td><td>الوصول الحصري</td><td>تظهر تسمية الفئة الصغيرة أعلى العنوان الرئيسي.</td></tr>
+<tr><td>سطر العنوان 1 و 2</td><td><span class="tb tt">نص</span></td><td>البقاء في / الدائرة.</td><td>يقسم نص العنوان الرئيسي إلى سطرين مستقلين للسماح برسوم متحركة متدرجة.</td></tr>
+<tr><td>نص فرعي</td><td><span class="tb ta">منطقة النص</span></td><td>احصل على خصم 10% على طلبك الأول...</td><td>تظهر الفقرة الافتتاحية أسفل العنوان.</td></tr>
+<tr><td>نص الزر</td><td><span class="tb tt">نص</span></td><td>اشترك</td><td>التسمية على زر التقديم. يؤدي النقر إلى إرسال البريد الإلكتروني إلى قائمة عملاء Shopify الخاصة بك مع العلامة <code>newsletter</code>.</td></tr>
+<tr><td>إخلاء المسؤولية</td><td><span class="tb tt">نص</span></td><td>لا البريد المزعج، من أي وقت مضى. إلغاء الاشتراك في أي وقت.</td><td>يتم عرض النص المطبوع بشكل جيد أسفل صف الإدخال.</td></tr>
+<tr><td>كلمة الخلفية</td><td><span class="tb tt">نص</span></td><td>الوقت</td><td>كلمة علامة مائية كبيرة في الخلفية توجد خلف لوحة المحتوى.</td></tr>
+<tr><td>قسم الحد الأدنى للارتفاع</td><td><span class="tb tr">النطاق</span></td><td>100 فولت</td><td>الحد الأدنى لارتفاع القسم بالنسبة إلى ارتفاع إطار العرض (النطاق: 50-150 فولتًا).</td></tr>
+</tbody></table>
+<h3>الألوان وأحجام الطباعة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>خلفية القسم</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>لون الخلفية.</td></tr>
+<tr><td>الحاجب / العنوان / لون نص النص الفرعي</td><td><span class="tb tc">اللون</span></td><td>#c9a84c / #f0ece4 / #6b6456</td><td>تجاوزات اللون لعناصر النص.</td></tr>
+<tr><td>حقل الإدخال (الحدود / BG / النص)</td><td><span class="tb tc">اللون</span></td><td>#c9a84c / #0c0b09 / #f0ece4</td><td>جماليات كتلة إدخال نص البريد الإلكتروني.</td></tr>
+<tr><td>زر الاشتراك (BG / نص)</td><td><span class="tb tc">اللون</span></td><td>#c9a84c / #050508</td><td>جماليات زر الاشتراك.</td></tr>
+<tr><td>حجم كلمة الشبح / التعتيم</td><td><span class="tb tr">النطاق</span></td><td>40 فولكس فاجن / 4%</td><td>تغيير حجم ورؤية كلمة الخلفية. النطاق: 10-60 فولت/0-20%.</td></tr>
+<tr><td>حجم خط العنوان — سطح المكتب / الهاتف المحمول</td><td><span class="tb tr">النطاق</span></td><td>88 بكسل / 52 بكسل</td><td>حجم الخط للعنوان المقسم. النطاق: 32-140 بكسل / 28-80 بكسل.</td></tr>
+</tbody></table>
+</section>
+<section id="custom-liquid-doc">
+<h2><span class="ic">🧱</span>مخصص <em>سائل</em></h2>
+<span class="pb g">الصفحة الرئيسية</span>
+<p>أدخل قواعد HTML أو CSS مخصصة أو مقتطفات كود Shopify Liquid مباشرة داخل صفحتك الرئيسية. مثالية لتضمين نماذج التطبيقات أو اللافتات أو مشغلات الفيديو المخصصة التابعة لجهات خارجية.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>سائل مخصص</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>العلامة الأولية المخصصة أو الكود السائل الذي سيتم عرضه داخل حاوية القسم.</td></tr>
+</tbody></table>
+</section>
+<section id="coll-page">
+<h2><span class="ic">📋</span>صفحة التجميع <em>الإعدادات</em></h2>
+<span class="pb">جميع صفحات المجموعة</span>
+<p>محرر الموضوع → <strong>المجموعة</strong> نموذج. يتحكم في شعار البطل وشبكة المنتج وأنماط البطاقة والطباعة والألوان لكل صفحة مجموعة.</p>
+<h3>مجموعة البطل راية</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عرض صورة المجموعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتبديل لافتة البطل ذات العرض الكامل أعلى كل صفحة مجموعة أو إيقاف تشغيلها.</td></tr>
+<tr><td>ارتفاع الصورة — سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>480 بكسل</td><td>ارتفاع لافتة البطل على سطح المكتب. النطاق: 300-700 بكسل.</td></tr>
+<tr><td>ارتفاع الصورة — المحمول</td><td><span class="tb tr">النطاق</span></td><td>300 بكسل</td><td>ارتفاع لافتة البطل على الهاتف المحمول. النطاق: 200-400 بكسل.</td></tr>
+</tbody></table>
+<div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">أبقِ الجزء السفلي الأيسر من صور البانر واضحًا</div><p>يقوم Aurick بتراكب عنوان المجموعة ووصفها ومسارات التنقل في ملف <strong>الزاوية السفلية اليسرى</strong> من راية البطل. أبقِ تلك المنطقة مظلمة وخالية من الموضوعات المهمة.</p></div></div>
+<h3>شبكة المنتج</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>المنتجات لكل صفحة</td><td><span class="tb tr">النطاق</span></td><td>12</td><td>كم عدد المنتجات التي يتم تحميلها قبل ظهور زر "تحميل المزيد". النطاق: 8-48.</td></tr>
+<tr><td>الأعمدة - سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>بطاقات المنتجات لكل صف على سطح المكتب. النطاق: 2-5.</td></tr>
+<tr><td>الأعمدة – متنقلة</td><td><span class="tb tr">النطاق</span></td><td>2</td><td>بطاقات المنتج لكل صف على الهاتف المحمول. النطاق: 1-3.</td></tr>
+<tr><td>فجوة الشبكة</td><td><span class="tb tr">النطاق</span></td><td>24 بيكسل</td><td>المسافة بين بطاقات المنتج. النطاق: 8-48 بكسل.</td></tr>
+<tr><td>عرض بائع المنتج</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>أظهر اسم العلامة التجارية/المورد أسفل عنوان المنتج على كل بطاقة.</td></tr>
+<tr><td>إظهار زر الإضافة السريعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>إظهار رمز الإضافة السريعة إلى سلة التسوق على بطاقات المنتجات عند تمرير مؤشر الماوس فوقها.</td></tr>
+<tr><td>إظهار القائمة المنسدلة للفرز</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>اعرض القائمة المنسدلة "الفرز حسب" أعلى شبكة المنتج.</td></tr>
+<tr><td>تحميل المزيد من النص</td><td><span class="tb tt">نص</span></td><td>تحميل المزيد من الساعات</td><td>ضع علامة على زر ترقيم الصفحات الذي يقوم بتحميل الصفحة التالية من المنتجات.</td></tr>
+</tbody></table>
+<h3>نمط بطاقة المنتج</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نصف قطر حدود البطاقة</td><td><span class="tb tr">النطاق</span></td><td>16 بيكسل</td><td>تقريب الزاوية لكل بطاقة منتج. 0 = مربع. النطاق: 0–32 بكسل.</td></tr>
+<tr><td>ارتفاع صورة البطاقة</td><td><span class="tb tr">النطاق</span></td><td>260 بكسل</td><td>ارتفاع ثابت لمساحة الصورة داخل كل بطاقة منتج.</td></tr>
+<tr><td>تناسب الصورة</td><td><span class="tb ts">حدد</span></td><td>تحتوي</td><td><strong>تحتوي</strong> يعرض المنتج كاملاً بدون اقتصاص (ينصح به للساعات ذات الخلفيات الشفافة). <strong>الغلاف</strong> المحاصيل لملء.</td></tr>
+<tr><td>موضع الصورة</td><td><span class="tb ts">حدد</span></td><td>مركز</td><td>النقطة المحورية عندما يكون وضع الغطاء نشطًا: المركز، الأعلى، الأسفل، اليسار، اليمين.</td></tr>
+</tbody></table>
+<h3>ألوان البطاقة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>تدرج البطاقة – أعلى</td><td><span class="tb tc">اللون</span></td><td>#12111و</td><td>اللون العلوي لتدرج خلفية بطاقة المنتج.</td></tr>
+<tr><td>تدرج البطاقة - الوسط</td><td><span class="tb tc">اللون</span></td><td>#07070د</td><td>اللون الأوسط للتدرج ثلاثي التوقف.</td></tr>
+<tr><td>تدرج البطاقة — الأسفل</td><td><span class="tb tc">اللون</span></td><td>#050509</td><td>اللون السفلي للتدرج.</td></tr>
+<tr><td>لون عنوان البطاقة</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون عنوان المنتج على كل بطاقة.</td></tr>
+<tr><td>لون السعر</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون نص سعر المنتج.</td></tr>
+<tr><td>عرض نص الزر</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون علامة "العرض" الموجودة على بطاقات المنتج.</td></tr>
+<tr><td>لون الشارة</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون خلفية قرص الشارة للبيع/الجديد على بطاقات المنتج.</td></tr>
+</tbody></table>
+<h3>طباعة البطاقة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>حجم عنوان البطاقة</td><td><span class="tb tr">النطاق</span></td><td>20 بيكسل</td><td>حجم خط عنوان المنتج على كل بطاقة. النطاق: 14-32 بكسل.</td></tr>
+<tr><td>حجم السعر</td><td><span class="tb tr">النطاق</span></td><td>17 بيكسل</td><td>حجم الخط لنص السعر. النطاق: 12-28 بكسل.</td></tr>
+<tr><td>حجم الوصف</td><td><span class="tb tr">النطاق</span></td><td>13 بيكسل</td><td>حجم خط الوصف القصير للمنتج الذي يظهر عند التمرير. النطاق: 10-18 بكسل.</td></tr>
+</tbody></table>
+</section>
+<section id="filters">
+<h2><span class="ic">🔍</span>قائمة المنتجات <em>المرشحات</em></h2>
+<span class="pb">صفحات المجموعة — درج التصفية</span>
+<div class="note crit"><span class="ni">⚠</span><div class="nb"><div class="nt">لم يتم تكوين عوامل التصفية في محرر السمات</div><p>يتم تشغيل درج التصفية في صفحات المجموعة حصريًا مجانًا <strong>Shopify البحث والاكتشاف</strong> التطبيق. تتم جميع عمليات تكوين المرشح - السمات التي تظهر وترتيبها ونوع العرض - داخل هذا التطبيق، وليس في إعدادات سمة Aurick.</p></div></div>
+<div class="card">
+<h3>لماذا تتفوق مرشحات Metafield على مرشحات العلامات؟</h3>
+<p>إذا قمت بالتصفية حسب <strong>علامات المنتج</strong> (الافتراضي)، وهو تصفح المتسوق <code>/collections/women</code> يرى مربع اختيار "النساء" في درج الفلتر - وهو أمر لا معنى له لأن كل منتج مطابق بالفعل. مع <strong>مرشحات حقل التعريف</strong>، يقوم محرك البحث والاكتشاف الخاص بـ Shopify تلقائيًا بإخفاء أي قيمة مرشح تتوافق مع سياق المجموعة الحالية. يرى المتسوقون فقط المرشحات المفيدة حقًا لتضييق نطاق اختياراتهم.</p>
+</div>
+<h3>إعداد عوامل تصفية Metafield - خطوة بخطوة</h3>
+<ol class="steps">
+<li><strong>إنشاء تعريفات حقول التعريف (مرة واحدة)</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">الإعدادات</span><span class="ps">›</span><span class="pc">حقول التعريف والكائنات الوصفية</span><span class="ps">›</span><span class="pc">المنتجات</span><span class="ps">›</span><span class="pc">إضافة تعريف</span></span> وإنشاء هذه التعريفات:</p>
+<ul>
+<li><strong>العلامة التجارية</strong> - مساحة الاسم والمفتاح: <code>custom.brand</code> - النوع: نص سطر واحد</li>
+<li><strong>الجنس</strong> - مساحة الاسم والمفتاح: <code>custom.gender</code> - النوع: نص سطر واحد</li>
+<li>أضف أي أشخاص آخرين تحتاجهم: <strong>الحركة</strong> (<code>custom.movement</code>)، <strong>مادة القضية</strong> (<code>custom.case_material</code>)، الخ.</li>
+</ul>
+</li>
+<li><strong>املأ القيم على كل منتج</strong>
+<p>افتح كل منتج في المسؤول → قم بالتمرير إلى <strong>حقول التعريف</strong> اللوحة (أسفل محرر المنتج) ← أدخل العلامة التجارية (على سبيل المثال: <code>Rolex</code>) والجنس (على سبيل المثال. <code>Women</code>). انقر <strong>حفظ</strong>.</p>
+</li>
+<li><strong>قم بتثبيت تطبيق البحث والاكتشاف</strong>
+<p>إذا لم يكن مثبتًا بالفعل، فانتقل إلى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">تطبيقات</span><span class="ps">›</span><span class="pc">Shopify البحث والاكتشاف</span></span>. إنه مجاني ومصنوع بواسطة Shopify.</p>
+</li>
+<li><strong>تكوين المرشحات في التطبيق</strong>
+<p>افتح التطبيق ← انقر <strong>المرشحات</strong> في القائمة اليسرى → انقر <strong>إضافة مرشح</strong>. اختر الخاص بك <strong>العلامة التجارية</strong> و <strong>الجنس</strong> تعريفات حقول التعريف. اختر نوع العرض: <strong>قائمة</strong> (خانات الاختيار) أو <strong>سواتش</strong>. إزالة القديم <strong>علامة المنتج</strong> دخول التصفية. انقر <strong>حفظ</strong>.</p>
+</li>
+</ol>
+<div class="note tip"><span class="ni">✨</span><div class="nb"><div class="nt">النتيجة: درج التصفية المدرك للسياق</div><p>المتسوقون على <code>/collections/women</code> انظر فقط العلامة التجارية والسعر. على <code>/collections/rolex</code> يرون فقط الجنس والسعر. يتم إخفاء سياق المجموعة تلقائيًا، تمامًا كما هو متوقع من متجر فاخر.</p></div></div>
+<h3>تصفية الأسعار</h3>
+<p>يتوفر مرشح السعر دائمًا بشكل افتراضي داخل Shopify Search &amp; Discovery. قم بتمكينه في قائمة عوامل تصفية التطبيق إذا لم يكن ظاهرًا بالفعل. يتم عرضه كمنزلق نطاق قابل للسحب في درج مرشح Aurick تلقائيًا.</p>
+<h3>خيارات عرض التصفية</h3>
+<table class="st"><thead><tr><th>نوع العرض</th><th>أفضل ل</th><th>كيفية تعيين</th></tr></thead><tbody>
+<tr><td>القائمة (مربعات الاختيار)</td><td>القيم النصية مثل العلامة التجارية والجنس ونوع الحركة</td><td>البحث والاكتشاف → المرشحات → حدد عامل التصفية → العرض كقائمة</td></tr>
+<tr><td>سواتش</td><td>خيارات مرئية للون أو المادة</td><td>البحث والاكتشاف ← المرشحات ← حدد عامل التصفية ← العرض كحامل، ثم قم بتعيين رموز الألوان لكل قيمة</td></tr>
+<tr><td>نطاق السعر</td><td>تصفية الميزانية</td><td>ممكّن افتراضيًا. يظهر كشريط تمرير في درج مرشح Aurick.</td></tr>
+</tbody></table>
+</section>
+<section id="product">
+<h2><span class="ic">💎</span>صفحة المنتج <em>الإعدادات</em></h2>
+<span class="pb">جميع صفحات المنتج</span>
+<p>محرر الموضوع → <strong>المنتج الافتراضي</strong> القالب → <strong>معلومات المنتج</strong> قسم. يتحكم في تخطيط المنتج الرئيسي، وإعدادات المعرض، والطباعة، والأزرار المخصصة، ويسمح لك بسحب وإسقاط أكثر من 14 قطعة لتخصيص تخطيط مربع الشراء.</p>
+<h3>إعدادات المعرض</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>تخطيط الصورة المصغرة للمعرض</td><td><span class="tb ts">حدد</span></td><td>عمودي (يسار)</td><td><strong>عمودي (يسار)</strong> - الصور المصغرة في عمود بجانب الصورة الرئيسية. <strong>أسفل</strong> — شريط أفقي أدناه. <strong>تراكب الدوائر</strong> - مؤشرات نقطية متراكبة على الصورة الرئيسية.</td></tr>
+<tr><td>جعل المعرض لزجًا</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>يحافظ على إصلاح المعرض أثناء قيام المتسوق بتمرير مربع الشراء والوصف على سطح المكتب.</td></tr>
+<tr><td>إظهار شريط الصور المصغرة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>تبديل صف الصورة المصغرة. قم بإيقاف التشغيل للحصول على عرض نظيف لصورة واحدة.</td></tr>
+<tr><td>نصف قطر زاوية المعرض</td><td><span class="tb tr">النطاق</span></td><td>8 بيكسل</td><td>زوايا مستديرة في حاوية صور المعرض الرئيسية. النطاق: 0–32 بكسل.</td></tr>
+</tbody></table>
+<h3>إلحاح المخزون</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عتبة المخزون منخفضة</td><td><span class="tb tr">النطاق</span></td><td>10</td><td>عندما ينخفض ​​المخزون إلى هذا الرقم أو أقل منه، تعرض شارة الطوارئ الديناميكية العدد المتبقي الدقيق. النطاق: 2-20.</td></tr>
+</tbody></table>
+<h3>الطباعة - الألوان</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>لون البائع/العلامة التجارية</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون العلامة التجارية/اسم البائع المعروض أعلى عنوان المنتج.</td></tr>
+<tr><td>لون عنوان المنتج</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون عنوان المنتج الرئيسي.</td></tr>
+<tr><td>لون السعر</td><td><span class="tb tc">اللون</span></td><td>#f0ece4</td><td>لون سعر المنتج.</td></tr>
+<tr><td>وصف لون النص</td><td><span class="tb tc">اللون</span></td><td>#787068</td><td>لون النص الأساسي لوصف المنتج.</td></tr>
+</tbody></table>
+<h3>الطباعة - أحجام الخطوط</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>حجم العنوان — سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>46 بيكسل</td><td>حجم خط عنوان المنتج على سطح المكتب. النطاق: 24-72 بكسل.</td></tr>
+<tr><td>حجم العنوان — المحمول</td><td><span class="tb tr">النطاق</span></td><td>32 بيكسل</td><td>حجم خط عنوان المنتج على الهاتف المحمول. النطاق: 20-52 بكسل.</td></tr>
+<tr><td>حجم السعر — سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>32 بيكسل</td><td>حجم خط السعر على سطح المكتب. النطاق: 18-60 بكسل.</td></tr>
+<tr><td>حجم السعر — المحمول</td><td><span class="tb tr">النطاق</span></td><td>26 بيكسل</td><td>حجم الخط للسعر على الهاتف المحمول. النطاق: 16-44 بكسل.</td></tr>
+<tr><td>حجم الوصف — سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>14 بيكسل</td><td>حجم خط الوصف على سطح المكتب. النطاق: 12-22 بكسل.</td></tr>
+<tr><td>حجم الوصف — المحمول</td><td><span class="tb tr">النطاق</span></td><td>14 بيكسل</td><td>حجم خط الوصف على الجوال. النطاق: 12-20 بكسل.</td></tr>
+</tbody></table>
+<h3>الأزرار</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نصف قطر زاوية الزر</td><td><span class="tb tr">النطاق</span></td><td>14 بيكسل</td><td>تقريب الزاوية لزري "إضافة إلى سلة التسوق" و"اشتر الآن". 0 = مربع، 40 = شكل الحبة كاملاً. النطاق: 0-40 بكسل.</td></tr>
+</tbody></table>
+<h3>شراء كتل الصندوق (السحب والإفلات)</h3>
+<p>تعرض منطقة معلومات المنتج المحتويات عبر الكتل. في الشريط الجانبي لمحرر السمات، انقر فوق <strong>أضف كتلة</strong> لإدراج هذه الكتل أو إعادة ترتيبها أو تخصيصها:</p>
+<table class="st st-blocks"><thead><tr><th>اسم الكتلة</th><th>الإعدادات</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td><strong>بائع</strong></td><td>—</td><td>—</td><td>يعرض اسم بائع المنتج بأحرف كبيرة صغيرة باستخدام لون البائع الذي تم تكوينه.</td></tr>
+<tr><td><strong>العنوان</strong></td><td>—</td><td>—</td><td>يعرض عنوان المنتج الرئيسي بأسلوب الطباعة الرقيق.</td></tr>
+<tr><td><strong>التقييم</strong></td><td>درجة التقييم / عدد التعليقات</td><td>4.9 / 47</td><td>يعرض تصنيفات النجوم وإجمالي عدد التقييمات باللون الذهبي الفاخر.</td></tr>
+<tr><td><strong>السعر</strong></td><td>—</td><td>—</td><td>يعرض سعر المنتج وشارات البيع والأسعار المقارنة والمعلومات الضريبية.</td></tr>
+<tr><td><strong>شارة عاجلة</strong></td><td>—</td><td>—</td><td>عداد المخزون في الوقت الحقيقي يظهر "فقط X متبقي في المخزون!" عندما ينخفض المخزون إلى ما دون الحد الأدنى.</td></tr>
+<tr><td><strong>الوصف</strong></td><td>—</td><td>—</td><td>يعرض نص وصف المنتج الرئيسي.</td></tr>
+<tr><td><strong>مقسم</strong></td><td>—</td><td>—</td><td>يرسم خطًا فاصلًا أفقيًا ذهبيًا دقيقًا بين الكتل. الحد: 3 لكل صفحة.</td></tr>
+<tr><td><strong>منتقي البديل</strong></td><td>—</td><td>—</td><td>يعرض محددات الخيارات (الحوامل أو الأزرار) للأحجام أو ألوان الحزام أو المواد.</td></tr>
+<tr><td><strong>محدد الكمية</strong></td><td>—</td><td>—</td><td>يضيف حقل إدخال بأزرار زائد/ناقص مما يسمح للمشترين بتغيير الكميات قبل إضافتها إلى سلة التسوق.</td></tr>
+<tr><td><strong>شراء الأزرار</strong></td><td>إظهار زر الخروج الديناميكي</td><td>على</td><td>إضافة زر "أضف إلى سلة التسوق" الأساسي، إلى جانب خيارات الدفع السريع (Shop Pay، وPayPal، وما إلى ذلك).</td></tr>
+<tr><td><strong>شارات الثقة</strong></td><td>رمز محدد مسبقًا / صورة مخصصة / ملصق / ملصق فرعي</td><td>الشحن / الإرجاع / الدرع • التسميات الافتراضية</td><td>تكوين ما يصل إلى 3 أعمدة ثقة أسفل زر الشراء (مثل الشحن المجاني والضمان مدى الحياة). انظر التفاصيل أدناه.</td></tr>
+<tr><td><strong>علامات تبويب الوصف</strong></td><td>—</td><td>—</td><td>يحول منطقة الوصف إلى أداة مبوبة جميلة تحتوي على "الوصف" و"المواصفات" و"الشحن".</td></tr>
+<tr><td><strong>الأكورديون</strong></td><td>العنوان / المحتوى</td><td>المواصفات / التفاصيل</td><td>يضيف درج نص منسق قابل للطي للحصول على تفاصيل قابلة للتخصيص (على سبيل المثال، تفاصيل الحركة، ومقاومة الماء).</td></tr>
+<tr><td><strong>العلامات</strong></td><td>—</td><td>—</td><td>يعرض علامات المنتج كأقراص أنيقة قابلة للنقر.</td></tr>
+<tr><td><strong>سائل مخصص</strong></td><td>رمز سائل مخصص</td><td>—</td><td>يقوم بإدخال مقتطفات سائلة مخصصة أو HTML أو برنامج نصي للتطبيق مباشرةً في مربع الشراء.</td></tr>
+</tbody></table>
+<h3>تفاصيل حظر شارات الثقة</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>رقم الشارة — أيقونة محددة مسبقًا</td><td><span class="tb ts">حدد</span></td><td>يختلف</td><td>اختر رمزًا مضمنًا: شاحنة الشحن • حلقة الإرجاع • فحص الدرع • شهادة الضمان • سماعة الرأس • القفل الآمن • Premium Star • لا يوجد رمز.</td></tr>
+<tr><td>رقم الشارة — أيقونة مخصصة</td><td><span class="tb ti">صورة</span></td><td>—</td><td>قم بتحميل صورة الأيقونة الخاصة بك (24 × 24 بكسل). يتجاوز الرمز المحدد مسبقًا عند ضبطه.</td></tr>
+<tr><td>رقم الشارة — التسمية</td><td><span class="tb tt">نص</span></td><td>شحن مجاني / إرجاع خلال 30 يومًا / أصلي</td><td>النص الغامق الرئيسي لشارة الثقة.</td></tr>
+<tr><td>رقم الشارة — علامة فرعية</td><td><span class="tb tt">نص</span></td><td>للطلبات التي تزيد عن 300 يورو…</td><td>نص وصفي أصغر يظهر أسفل التسمية.</td></tr>
+</tbody></table>
+</section>
+<section id="size-guide">
+<h2><span class="ic">📏</span>الحجم <em>دليل</em></h2>
+<span class="pb">صفحة المنتج — صندوق الشراء</span>
+<p>يتضمن Aurick جهازًا مدمجًا <strong>دليل الحجم</strong> الزر الموجود على صفحة المنتج. عند النقر عليه، فإنه يفتح نافذة منبثقة كاملة العرض تعرض صورة مخطط الحجم لهذا المنتج المحدد. يخفي الزر نفسه تلقائيًا في المنتجات التي لم يتم تكوين أي دليل فيها - ولا داعي لإدارته يدويًا.</p>
+<div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">كيف يكتشف الموضوع دليل الحجم</div><p>يتحقق الموضوع من ثلاثة مصادر بترتيب الأولوية. أول من تم العثور عليه يفوز: (1) حقل تعريف المنتج <code>custom.size_guide</code>، (2) حقل التعريف المتغير <code>custom.size_guide</code>، (3) تم ضبط النص البديل للصورة على بالضبط <code>size-guide</code>.</p></div></div>
+<h3>الطريقة الأولى – عبر Metafield (مستحسن)</h3>
+<ol class="steps">
+<li><strong>إنشاء تعريف حقل التعريف (مرة واحدة)</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">الإعدادات</span><span class="ps">›</span><span class="pc">حقول التعريف والكائنات الوصفية</span><span class="ps">›</span><span class="pc">المنتجات</span><span class="ps">›</span><span class="pc">إضافة تعريف</span></span>. مجموعة: <strong>الاسم</strong> = <code>Size Guide</code>, <strong>مساحة الاسم والمفتاح</strong> = <code>custom.size_guide</code>, <strong>اكتب</strong> = ملف → صورة. انقر <strong>حفظ</strong>.</p>
+</li>
+<li><strong>قم بتحميل الدليل لكل منتج</strong>
+<p>افتح أي منتج في المسؤول → قم بالتمرير إلى <strong>حقول التعريف</strong> اللوحة في الأسفل → ابحث <strong>دليل الحجم</strong> → قم بتحميل صورة مخطط الحجم الخاص بك (JPG أو PNG). انقر <strong>حفظ المنتج</strong>. سيظهر الآن زر دليل المقاسات على صفحة المنتج تلك تلقائيًا.</p>
+</li>
+</ol>
+</section>
+<section id="complete-look">
+<h2><span class="ic">🛍</span>أكمل الخاص بك <em>انظر</em></h2>
+<span class="pb">صفحة المنتج</span><span class="pb gr">درج العربة</span>
+<p>ربط الملحقات التكميلية (الأشرطة الإضافية، ولفائف الساعة، واللفافات) بساعة معينة. تظهر المنتجات المرتبطة أسفل مربع الشراء في صفحة المنتج وكعرض دائري للبيع المتبادل داخل درج العربة المنزلق للخارج - في مكانين في وقت واحد، دون أي عمل إضافي بعد الإعداد.</p>
+<h3>إعدادات القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>أيضا من المجموعة</td><td>يتم عرض العنوان أعلى صف منتج البيع الإضافي.</td></tr>
+<tr><td>عنوان فرعي</td><td><span class="tb tt">نص</span></td><td>قطع مختارة لتكمل اختيارك.</td><td>وصف قصير أسفل العنوان.</td></tr>
+<tr><td>الأعمدة على سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>عدد بطاقات المنتجات الملحقة لكل صف على سطح المكتب.</td></tr>
+<tr><td>الحد الأقصى من المنتجات للعرض</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>الحد الأقصى لعدد الملحقات المرتبطة التي سيتم عرضها. حتى لو تم ربط المزيد، فإن هذا العدد فقط هو الذي يظهر.</td></tr>
+<tr><td>إظهار زر الإضافة السريعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>أظهر أيقونة إضافة سريعة إلى سلة التسوق على كل بطاقة ملحقة.</td></tr>
+<tr><td>عرض بائع المنتج</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>أظهر اسم العلامة التجارية/البائع أسفل اسم كل منتج ملحق.</td></tr>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>لون خلفية قسم إكمال مظهرك.</td></tr>
+</tbody></table>
+<h3>الإعداد: ربط الملحقات بالساعة</h3>
+<ol class="steps">
+<li><strong>إنشاء تعريف حقل التعريف (مرة واحدة)</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">الإعدادات</span><span class="ps">›</span><span class="pc">حقول التعريف والكائنات الوصفية</span><span class="ps">›</span><span class="pc">المنتجات</span><span class="ps">›</span><span class="pc">إضافة تعريف</span></span>. مجموعة: <strong>الاسم</strong> = <code>Complete Look</code>, <strong>مساحة الاسم والمفتاح</strong> = <code>custom.complete_look</code>, <strong>اكتب</strong> = المنتج. تمكين <strong>قبول قائمة القيم</strong>. انقر <strong>حفظ</strong>.</p>
+</li>
+<li><strong>ربط الملحقات لكل ساعة</strong>
+<p>افتح منتج الساعة ← قم بالتمرير إلى <strong>حقول التعريف</strong> لوحة → انقر <strong>نظرة كاملة</strong> → استخدم منتقي المنتج لتحديد الملحقات (مثل الحزام الجلدي، ولفافة الساعة، وحقيبة السفر). احفظ المنتج.</p>
+</li>
+<li><strong>قم بتمكين الكتلة في محرر السمات</strong>
+<p>افتح محرر السمات → <strong>المنتج الافتراضي</strong> القالب → في قسم مربع الشراء انقر <strong>أضف كتلة</strong> → حدد <strong>أكمل مظهرك</strong>. ضعه أسفل زر الشراء. انقر <strong>حفظ</strong>.</p>
+</li>
+</ol>
+</section>
+<section id="prod-recommendations">
+<h2><span class="ic">💎</span>توصيات المنتج</h2>
+<span class="pb">صفحة المنتج</span>
+<p>يعرض المنتجات المقترحة ديناميكيًا كتوصيات أسفل صفحة المنتج لتشجيع الاكتشاف عبر الفئات.</p>
+<h3>إعدادات القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>موصى به</td><td>نص علامة صغيرة معروض فوق العنوان.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>قد ترغب أيضا</td><td>عنوان القسم الرئيسي.</td></tr>
+<tr><td>الحد الأقصى من المنتجات للعرض</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>الحد الأقصى لعدد المنتجات المعروضة في الرف الدائري. (المدى: 2-8).</td></tr>
+<tr><td>الأعمدة على سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>4</td><td>عدد الأعمدة المعروضة على إطارات عرض سطح المكتب. (المدى: 2-5).</td></tr>
+<tr><td>إظهار الإضافة السريعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>أظهر زر الإضافة السريعة إلى سلة التسوق على البطاقات.</td></tr>
+<tr><td>عرض البائع</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>يعرض تسميات بائع المنتج على بطاقات التوصية.</td></tr>
+</tbody></table>
+<h3>تكوين التوصيات - تطبيق البحث والاكتشاف</h3>
+<p>بينما يقوم Shopify بإنشاء توصيات تلقائيًا باستخدام محرك الذكاء الاصطناعي الخاص به، يمكنك تخصيصها يدويًا:</p>
+<ol class="steps">
+<li><strong>افتح تطبيق البحث والاكتشاف</strong>
+<p>في Shopify Admin، انتقل إلى **Apps** → **Shopify Search &amp; Discovery**.</p>
+</li>
+<li><strong>تكوين توصيات المنتج</strong>
+<p>انقر على **التوصيات** في القائمة اليسرى. ابحث عن المنتج الذي تريد تخصيصه وحدده.</p>
+</li>
+<li><strong>إضافة توصيات مخصصة</strong>
+<p>ضمن لوحة **التوصيات المخصصة**، حدد ملحقًا محددًا أو منتجات ساعة بديلة لعرضها. سيتم تجاوز هذه القائمة أو دمجها مع القائمة التي تم إنشاؤها تلقائيًا.</p>
+</li>
+</ol>
+</section>
+<section id="about">
+<h2><span class="ic">📖</span>حول / <em>صفحة التراث</em></h2>
+<span class="pb">لاحقة الصفحة المخصصة</span>
+<p>ال <code>page.about</code> يقدم القالب أقسامًا متحركة لسرد قصص العلامة التجارية. استخدمه لتاريخ علامتك التجارية وفلسفتها وسردها الحرفي.</p>
+<ol class="steps">
+<li><strong>قم بإنشاء الصفحة في المشرف</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">الصفحات</span><span class="ps">›</span><span class="pc">إضافة صفحة</span></span>. أطلق عليه اسم "تراثنا" أو ما شابه ذلك.</p>
+</li>
+<li><strong>تعيين القالب</strong>
+<p>اختر <code>page.about</code> من مربع اختيار القالب الموجود على اليمين. انقر **حفظ**.</p>
+</li>
+<li><strong>بناء في محرر الموضوع</strong>
+<p>انتقل إلى القالب "حول" وانقر فوق <strong>إضافة قسم</strong> لتجميع السرد من الأقسام أدناه.</p>
+</li>
+</ol>
+<h3>حول شعار البطل</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>صورة البطل</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة البانر العريض. الموصى بها: <strong>2000 × 800 بكسل</strong> صورة المناظر الطبيعية.</td></tr>
+<tr><td>ارتفاع الصورة — سطح المكتب</td><td><span class="tb tr">النطاق</span></td><td>520 بكسل</td><td>ارتفاع لافتة البطل على سطح المكتب. النطاق: 320-700 بكسل.</td></tr>
+<tr><td>عنوان الصفحة</td><td><span class="tb tt">نص</span></td><td>تراثنا</td><td>عنوان كبير يظهر فوق الصورة الرئيسية.</td></tr>
+</tbody></table>
+<h3>حول البيان</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>اقتباس البيان</td><td><span class="tb ta">منطقة النص</span></td><td>نحن لا نصنع الساعات نحن ننظم الوقت.</td><td>اقتباس نصي عالي التأثير يظهر بخط كبير من نوع serif.</td></tr>
+<tr><td>إسناد المؤلف</td><td><span class="tb tt">نص</span></td><td>هنري مورو، المؤسس · ١٩٠٢</td><td>تفاصيل نص الإسناد تظهر باللون الذهبي أسفل الاقتباس.</td></tr>
+<tr><td>صورة الخلفية</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة خلفية مع عناصر تحكم في العتامة. الموصى بها: <strong>2000 × 1200 بكسل</strong>.</td></tr>
+<tr><td>تراكب التعتيم</td><td><span class="tb tr">النطاق</span></td><td>40%</td><td>نسبة تراكب داكنة فوق الصورة الخلفية. النطاق: 0-95%.</td></tr>
+</tbody></table>
+<h3>قسم التراث الزمني</h3>
+<p>مخطط زمني متحرك بالتمرير. يتجه الخط العمودي نحو الأسفل أثناء قيام الزائر بالتمرير، ويربط بين بطاقات المعالم الرئيسية من اليسار إلى اليمين.</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>رحلتنا</td><td>تسمية بأحرف كبيرة صغيرة أعلى عنوان المخطط الزمني.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>قرن من الأوائل</td><td>العنوان الرئيسي لقسم الجدول الزمني.</td></tr>
+<tr><td>لون نقطة الجدول الزمني</td><td><span class="tb tc">اللون</span></td><td>#c9a96e</td><td>لون النقطة المتحركة وخط الموصل الرأسي.</td></tr>
+</tbody></table>
+<p>تتم إضافة كل حدث رئيسي على هيئة **كتلة معلم** مع الإعدادات: **السنة** (نص)، **العنوان** (نص)، و **الوصف** (منطقة النص).</p>
+<h3>حول الإحصائيات</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>الأرقام</td><td>تظهر تسمية الفئة الصغيرة أعلى شبكة الإحصائيات.</td></tr>
+<tr><td>لون الخلفية</td><td><span class="tb tc">اللون</span></td><td>#050508</td><td>خلفية القسم.</td></tr>
+</tbody></table>
+<p>أضف ما يصل إلى 4 **وحدات إحصائيات** تمثل الإنجازات الرئيسية. الإعدادات لكل كتلة:</p>
+<ul>
+<li><strong>عد</strong> - قيمة الرقم (على سبيل المثال. <code>120</code>).</li>
+<li><strong>إظهار بالإضافة إلى اللاحقة</strong> - خانة الاختيار لإلحاق أ <code>+</code> إلى العد.</li>
+<li><strong>لاحقة</strong> - نص لاحقة (على سبيل المثال <code>%</code> أو <code>k</code>).</li>
+<li><strong>هو عشري</strong> - خانة الاختيار لتمكين الأرقام العائمة.</li>
+<li><strong>التسمية</strong> — نص تسمية صغير أسفل الرقم (على سبيل المثال: <code>Ateliers worldwide</code>).</li>
+</ul>
+<h3>حول القيم (الركائز)</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>ما الذي يدفعنا؟</td><td>تسمية فئة صغيرة.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>الركائز الأربع لل <em>أوريك</em></td><td>عنوان كبير. التفاف الكلمات في <code>&lt;em&gt;</code> لتصفيف الذهب.</td></tr>
+</tbody></table>
+<p>أضف **الكتل الأساسية** للقيم. الإعدادات لكل كتلة: **الرقم الأساسي** (النص)، **العنوان** (النص)، **الوصف** (منطقة النص)، **تحديد الأيقونة** (القائمة المنسدلة: الدقة، والتراث، والابتكار، والحصرية، والمخصص)، و**رمز SVG المخصص** (منطقة النص لمسارات XML المضمنة).</p>
+<h3>فريق العمل / قسم الأتيليه</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>اسم العضو</td><td><span class="tb tt">نص</span></td><td>—</td><td>الاسم الكامل موضح اسفل الصورة</td></tr>
+<tr><td>دور / لقب العضو</td><td><span class="tb tt">نص</span></td><td>—</td><td>المسمى الوظيفي موضح أسفل الاسم.</td></tr>
+<tr><td>السيرة الذاتية للعضو</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>وصف قصير يظهر عند التمرير.</td></tr>
+</tbody></table>
+<h3>حول CTA</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الحاجب</td><td><span class="tb tt">نص</span></td><td>تجربة أوريك</td><td>التسمية فوق العنوان.</td></tr>
+<tr><td>العنوان</td><td><span class="tb tt">نص</span></td><td>كل ثانية من <em>كل يوم.</em></td><td>عنوان CTA.</td></tr>
+<tr><td>تسمية الزر/الرابط</td><td><span class="tb tt">نص</span> / <span class="tb tu">عنوان URL</span></td><td>اكتشف المجموعة //</td><td>تكوينات زر CTA.</td></tr>
+<tr><td>صورة الخلفية</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة خلفية بملء الشاشة لقسم CTA.</td></tr>
+</tbody></table>
+</section>
+<section id="contact">
+<h2><span class="ic">✉</span>اتصل بنا / <em>صفحة أتيليه</em></h2>
+<span class="pb">لاحقة الصفحة المخصصة</span>
+<p>ال <code>page.contact</code> يجمع القالب بين نموذج الاستفسار المتميز وبطاقات موقع المتجر.</p>
+<ol class="steps">
+<li><strong>قم بإنشاء الصفحة في المشرف</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">الصفحات</span><span class="ps">›</span><span class="pc">إضافة صفحة</span></span>. أطلق عليه اسم "اتصل بنا" أو "Atelier".</p>
+</li>
+<li><strong>تعيين القالب</strong>
+<p>اختر <code>page.contact</code> من مربع اختيار القالب الموجود على اليمين. انقر **حفظ**.</p>
+</li>
+<li><strong>بناء في محرر الموضوع</strong>
+<p>افتح محرر السمات ← انتقل إلى صفحة الاتصال التي تم إنشاؤها حديثًا باستخدام القائمة المنسدلة للقالب ← انقر <strong>إضافة قسم</strong> لتكوين كتل نموذج الاتصال والموقع.</p>
+</li>
+</ol>
+<h3>اتصل بـ Hero Banner</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>صورة البطل</td><td><span class="tb ti">صورة</span></td><td>—</td><td>صورة لافتة عريضة. الموصى بها: <strong>2000 × 800 بكسل</strong> المناظر الطبيعية.</td></tr>
+<tr><td>عنوان الصفحة</td><td><span class="tb tt">نص</span></td><td>تفضل بزيارة مشغلنا</td><td>العنوان يظهر فوق صورة البطل.</td></tr>
+</tbody></table>
+<h3>قسم نموذج الاتصال</h3>
+<p>قم بتكوين تفاصيل جهة الاتصال المكونة من عمودين وإعدادات قسم النموذج:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>عنوان النموذج</td><td><span class="tb tt">نص</span></td><td>أرسل رسالة</td><td>عنوان رئيسي كبير أعلى نموذج الاتصال.</td></tr>
+<tr><td>خيارات الموضوع</td><td><span class="tb tt">نص</span></td><td>استفسار عام، موعد خاص، عمولة مخصصة...</td><td>تظهر الخيارات المفصولة بفواصل في القائمة المنسدلة لموضوع النموذج.</td></tr>
+<tr><td>نص إخلاء المسؤولية</td><td><span class="tb tt">نص</span></td><td>يتم الاحتفاظ بمعلوماتك بسرية تامة ولا تتم مشاركتها أبدًا.</td><td>نص صغير مطبوع أسفل زر الإرسال.</td></tr>
+<tr><td>عنوان المعلومات</td><td><span class="tb tt">نص</span></td><td>الاتصال المباشر</td><td>يتم عرض تسمية الرأس أعلى لوحة معلومات جهة الاتصال.</td></tr>
+<tr><td>البريد الإلكتروني للاستفسارات العامة</td><td><span class="tb tt">نص</span></td><td>atelier@aurick.com</td><td>عنوان البريد الإلكتروني للاستفسارات العامة لمتجرك.</td></tr>
+<tr><td>اضغط على البريد الإلكتروني</td><td><span class="tb tt">نص</span></td><td>اضغط@aurick.com</td><td>البريد الإلكتروني لاستفسارات الصحافة والإعلام.</td></tr>
+<tr><td>رقم الهاتف</td><td><span class="tb tt">نص</span></td><td>+41 22 317 44 00</td><td>رقم الهاتف الذي سيتم عرضه أسفل رسائل البريد الإلكتروني.</td></tr>
+<tr><td>نص مذكرة المعلومات</td><td><span class="tb ta">منطقة النص</span></td><td>بالنسبة للطلبات الخاصة والطلبات المخصصة، ندعوك لزيارة مشغلنا في جنيف...</td><td>مربع ملاحظات إعلامي قصير يظهر تحت التفاصيل المباشرة (دعم زيارات المتجر المحلي).</td></tr>
+<tr><td>خلفية القسم</td><td><span class="tb tc">اللون</span></td><td>#040407</td><td>لون خلفية قسم نموذج الاتصال.</td></tr>
+</tbody></table>
+<h3>بطاقات الموقع</h3>
+<p>أضف كتل الموقع داخل قسم موقع الاتصال لعناوين المتجر وساعات العمل ورسائل البريد الإلكتروني وأرقام الهواتف.</p>
+</section>
+<section id="shipping-policy">
+<h2><span class="ic">🚚</span>الشحن <em>صفحة السياسة</em></h2>
+<span class="pb">لاحقة الصفحة المخصصة</span>
+<p>ال <code>page.shipping</code> يقدم القالب تخطيطًا متميزًا لعرض طرق الشحن الخاصة بك وأوقات التسليم المقدرة حسب المنطقة في شبكات وجداول نظيفة ومصممة.</p>
+<ol class="steps">
+<li><strong>قم بإنشاء الصفحة في المشرف</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">الصفحات</span><span class="ps">›</span><span class="pc">إضافة صفحة</span></span>. أطلق عليها اسم "سياسة الشحن" أو "معلومات التسليم".</p>
+</li>
+<li><strong>قم بتعيين قالب Aurick</strong>
+<p>في الشريط الجانبي الأيمن تحت <strong>قالب الموضوع</strong>، حدد <code>page.shipping</code>. انقر <strong>حفظ</strong>.</p>
+</li>
+<li><strong>تخصيص في محرر الموضوع</strong>
+<p>افتح محرر السمات ← انتقل إلى صفحة سياسة الشحن الخاصة بك باستخدام منتقي القوالب في الأعلى ← انقر <strong>إضافة قسم</strong> → حدد <strong>سياسة الشحن</strong>. يمكنك الآن إضافة وتكوين الكتل لطرق الشحن وصفوف التسليم الإقليمية.</p>
+</li>
+</ol>
+<h3>إعدادات القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>البطل – الحاجب</td><td><span class="tb tt">نص</span></td><td>سياسة أوريك</td><td>علامة صغيرة كبيرة معروضة فوق العنوان الرئيسي.</td></tr>
+<tr><td>البطل - العنوان</td><td><span class="tb tt">نص</span></td><td>سياسة الشحن</td><td>العنوان الرئيسي يظهر في الطباعة الرقيقة الكبيرة.</td></tr>
+<tr><td>البطل – الترجمة</td><td><span class="tb ta">منطقة النص</span></td><td>يتم شحن كل ساعة بالعناية التي تستحقها...</td><td>الوصف التمهيدي المعروض أسفل العنوان.</td></tr>
+<tr><td>الأساليب - العنوان</td><td><span class="tb tt">نص</span></td><td>خيارات الشحن</td><td>العنوان لقسم شبكة خيارات الشحن.</td></tr>
+<tr><td>الجدول - عرض</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتبديل ما إذا كنت تريد عرض جدول الأوقات المقدرة الإقليمية أسفل شبكة الطرق.</td></tr>
+<tr><td>الجدول - العنوان</td><td><span class="tb tt">نص</span></td><td>التسليم حسب المنطقة</td><td>العنوان معروض أعلى جدول تقديرات التسليم الإقليمي.</td></tr>
+<tr><td>الجدول – ملاحظة</td><td><span class="tb ta">منطقة النص</span></td><td>الأوقات هي تقديرات في أيام العمل...</td><td>يتم عرض نص الحاشية السفلية بخط صغير أسفل الجدول.</td></tr>
+<tr><td>CTA - العنوان / النص الفرعي</td><td><span class="tb tt">نص</span> / <span class="tb ta">منطقة النص</span></td><td>لا تزال لديك أسئلة؟ / فريقنا جاهز للمساعدة...</td><td>محتوى شعار الحث على اتخاذ إجراء في أسفل الصفحة.</td></tr>
+<tr><td>CTA - عنوان URL/التسمية لجهة الاتصال</td><td><span class="tb tu">عنوان URL</span> / <span class="tb tt">نص</span></td><td>/الصفحات/الاتصال / الاتصال بالدعم</td><td>الارتباط والتسمية لزر CTA.</td></tr>
+</tbody></table>
+<h3>كتلة طريقة الشحن</h3>
+<p>يتم عرض كل كتلة طريقة شحن على شكل بطاقة في شبكة الخيارات. انقر <strong>أضف كتلة</strong> → <strong>طريقة الشحن</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>أيقونة</td><td><span class="tb ts">حدد</span></td><td>الشاحنة (قياسية)</td><td>اختر رمزًا على شكل: شاحنة (قياسية) • صاعقة (سريعة) • كرة أرضية (دولية) • طائرة • حزمة/صندوق • درع (مؤمن عليه) • ساعة (حساسة للوقت).</td></tr>
+<tr><td>اسم الطريقة</td><td><span class="tb tt">نص</span></td><td>الشحن القياسي</td><td>عنوان بطاقة طريقة الشحن.</td></tr>
+<tr><td>الوصف</td><td><span class="tb ta">منطقة النص</span></td><td>مجاناً على جميع الطلبات التي تزيد قيمتها عن 200 دولار...</td><td>تفاصيل عما تتضمنه هذه الطريقة (التعبئة والتغليف والبريد السريع والتأمين وغيرها).</td></tr>
+<tr><td>الوقت / نص الشارة</td><td><span class="tb tt">نص</span></td><td>3-5 أيام عمل</td><td>يتم عرض نص الحالة الغامق داخل شارة البطاقة.</td></tr>
+<tr><td>ملاحظة السعر</td><td><span class="tb tt">نص</span></td><td>—</td><td>ملصق سعر اختياري مُلحق بنص الشارة (على سبيل المثال: <code>Free over $200</code>).</td></tr>
+</tbody></table>
+<h3>منطقة التسليم كتلة الصف</h3>
+<p>تقوم كل كتلة منطقة التسليم بإنشاء صف داخل جدول أوقات التسليم الإقليمية. انقر <strong>أضف كتلة</strong> → <strong>منطقة التسليم</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>المنطقة / البلد</td><td><span class="tb tt">نص</span></td><td>الولايات المتحدة</td><td>اسم البلد أو المنطقة الموضح في العمود الأيسر.</td></tr>
+<tr><td>وقت التسليم القياسي</td><td><span class="tb tt">نص</span></td><td>3-5 أيام</td><td>الوقت المقدر لعبور الشحن القياسي.</td></tr>
+<tr><td>وقت التسليم السريع</td><td><span class="tb tt">نص</span></td><td>1-2 أيام</td><td>الوقت المقدر لعبور الشحن السريع.</td></tr>
+<tr><td>ناقل (شركات) الشحن</td><td><span class="tb tt">نص</span></td><td>فيديكس / يو بي إس</td><td>السعاة المستخدمة لهذه المنطقة.</td></tr>
+</tbody></table>
+</section>
+<section id="returns-policy">
+<h2><span class="ic">↻</span>المرتجعات <em>صفحة السياسة</em></h2>
+<span class="pb">لاحقة الصفحة المخصصة</span>
+<p>ال <code>page.returns</code> يقدم القالب صفحة منظمة ومتميزة لسياسة الإرجاع تتميز بجدول زمني تفاعلي ومربعات اختيار للشروط ونظام الأسئلة الشائعة المدمج.</p>
+<ol class="steps">
+<li><strong>قم بإنشاء الصفحة في المشرف</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">الصفحات</span><span class="ps">›</span><span class="pc">إضافة صفحة</span></span>. أطلق عليه اسم "الإرجاع والاستبدال".</p>
+</li>
+<li><strong>قم بتعيين قالب Aurick</strong>
+<p>في الشريط الجانبي الأيمن تحت <strong>قالب الموضوع</strong>، حدد <code>page.returns</code>. انقر <strong>حفظ</strong>.</p>
+</li>
+<li><strong>تخصيص في محرر الموضوع</strong>
+<p>افتح محرر السمات ← انتقل إلى صفحة سياسة الإرجاع ← انقر <strong>إضافة قسم</strong> → حدد <strong>سياسة الإرجاع</strong>. قم بتخصيص الكتل لتعكس إرشادات السياسة الخاصة بك.</p>
+</li>
+</ol>
+<h3>إعدادات القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>البطل – الحاجب</td><td><span class="tb tt">نص</span></td><td>سياسة أوريك</td><td>نص علامة صغيرة فوق العنوان.</td></tr>
+<tr><td>البطل - العنوان</td><td><span class="tb tt">نص</span></td><td>سياسة الإرجاع</td><td>العنوان الرئيسي يظهر في الطباعة الرقيقة الكبيرة.</td></tr>
+<tr><td>البطل – الترجمة</td><td><span class="tb ta">منطقة النص</span></td><td>نحن نقف وراء كل ساعة...</td><td>وصف تمهيدي.</td></tr>
+<tr><td>فترة العودة (أيام)</td><td><span class="tb tr">النطاق</span></td><td>30</td><td><strong>الإعداد الحاسم:</strong> عدد الأيام المسموح بها للإرجاع. تستبدل هذه القيمة الكلمة ديناميكيًا <code>DAYS</code> (بأحرف كبيرة) أينما تمت كتابته داخل خطوات الإرجاع أو الأسئلة الشائعة أو عنوان العملية.</td></tr>
+<tr><td>عملية العودة – الحاجب</td><td><span class="tb tt">نص</span></td><td>كيف يعمل</td><td>علامة صغيرة فوق الجدول الزمني للعملية.</td></tr>
+<tr><td>عملية الإرجاع – العنوان</td><td><span class="tb tt">نص</span></td><td>أيام-يوم سياسة العودة</td><td>رأس القسم للمخطط الزمني. مغادرة <code>DAYS</code> بالأحرف الكبيرة يستبدل تلقائيًا أيام نافذة الإرجاع.</td></tr>
+<tr><td>أظهر مربع الشروط</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتبديل ما إذا كنت تريد إظهار البطاقة المميزة التي تحتوي على متطلبات السياسة أسفل المخطط الزمني.</td></tr>
+<tr><td>عرض قسم الأسئلة الشائعة</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>قم بتبديل أداة الأسئلة الشائعة للأكورديون القابلة للطي في الأسفل.</td></tr>
+</tbody></table>
+<h3>عودة كتلة الخطوة</h3>
+<p>تضيف كل كتلة خطوة إرجاع عنصرًا إلى المخطط الزمني للإرجاعات الزمنية. انقر <strong>أضف كتلة</strong> → <strong>خطوة العودة</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>أيقونة</td><td><span class="tb ts">حدد</span></td><td>البريد</td><td>اختر رمزًا على شكل: دردشة/رسالة • البريد الإلكتروني • الحزمة/الصندوق • شاحنة (سفينة) • درع (استرداد/محمي) • علامة اختيار (تم) • تحديث (تبادل) • بحث/فحص.</td></tr>
+<tr><td>تجاوز رقم الخطوة</td><td><span class="tb tt">نص</span></td><td>—</td><td>اكتب رقم الخطوة بشكل صريح (على سبيل المثال: <code>01</code>). إذا تركت فارغة، يقوم السمة بترقيمها تلقائيًا بالتسلسل.</td></tr>
+<tr><td>عنوان الخطوة</td><td><span class="tb tt">نص</span></td><td>اتصل بنا</td><td>عنوان خطوة المخطط الزمني.</td></tr>
+<tr><td>وصف الخطوة</td><td><span class="tb ta">منطقة النص</span></td><td>راسلنا عبر البريد الإلكتروني خلال أيام من التسليم...</td><td>تعليمات مفصلة. استخدم <code>DAYS</code> بأحرف كبيرة لعرض قيمة إعداد نافذة الإرجاع.</td></tr>
+</tbody></table>
+<h3>عودة كتلة الشرط</h3>
+<p>تضيف كل كتلة شرط إرجاع نقطة نقطية إلى بطاقة "شروط الإرجاع" الموجودة أسفل المخطط الزمني. انقر <strong>أضف كتلة</strong> → <strong>حالة العودة</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>نص الشرط</td><td><span class="tb tt">نص</span></td><td>يجب أن يكون المنتج غير ملبوس وفي حالته الأصلية وغير التالفة</td><td>يتم عرض بيان المتطلبات كعنصر نقطي.</td></tr>
+</tbody></table>
+<h3>الأسئلة الشائعة كتلة الأسئلة</h3>
+<p>تقوم كل مجموعة أسئلة للأسئلة الشائعة بإنشاء صف أكورديون قابل للطي داخل قائمة الأكورديون للأسئلة الشائعة. انقر <strong>أضف كتلة</strong> → <strong>سؤال شائع</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>سؤال</td><td><span class="tb tt">نص</span></td><td>هل يمكنني الاستبدال بموديل مختلف؟</td><td>عنوان الأكورديون القابل للنقر عليه.</td></tr>
+<tr><td>الإجابة</td><td><span class="tb ta">منطقة النص</span></td><td>نعم — التبادلات متاحة خلال DAYS من الأيام...</td><td>المحتوى المخفي الذي ينزلق عند النقر. يدعم <code>DAYS</code> العنصر النائب.</td></tr>
+</tbody></table>
+</section>
+<section id="privacy-policy">
+<h2><span class="ic">🛡</span>الخصوصية <em>صفحة السياسة</em></h2>
+<span class="pb">لاحقة الصفحة المخصصة</span>
+<p>ال <code>page.privacy-policy</code> يقدم القالب صفحة امتثال جميلة ومتعددة الأقسام مع شريط تنقل ثابت يتم تحديثه ديناميكيًا عند التمرير لمساعدة العملاء على تصفح شروط السياسة بسهولة.</p>
+<ol class="steps">
+<li><strong>قم بإنشاء الصفحة في المشرف</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">متجر على الانترنت</span><span class="ps">›</span><span class="pc">الصفحات</span><span class="ps">›</span><span class="pc">إضافة صفحة</span></span>. أطلق عليها اسم "سياسة الخصوصية".</p>
+</li>
+<li><strong>قم بتعيين قالب Aurick</strong>
+<p>في الشريط الجانبي الأيمن تحت <strong>قالب الموضوع</strong>، حدد <code>page.privacy-policy</code>. انقر <strong>حفظ</strong>.</p>
+</li>
+<li><strong>تخصيص في محرر الموضوع</strong>
+<p>افتح محرر السمات ← انتقل إلى صفحة سياسة الخصوصية الخاصة بك ← انقر <strong>إضافة قسم</strong> → حدد <strong>سياسة الخصوصية</strong>. إضافة وترتيب <strong>قسم السياسات</strong> كتل لبناء شروطك.</p>
+</li>
+</ol>
+<h3>إعدادات القسم</h3>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>البطل - الحاجب / العنوان</td><td><span class="tb tt">نص</span> / <span class="tb tt">نص</span></td><td>سياسة أوريك / سياسة الخصوصية</td><td>المحتوى داخل الرأس العلوي.</td></tr>
+<tr><td>البطل – الترجمة</td><td><span class="tb ta">منطقة النص</span></td><td>خصوصيتك مقدسة بالنسبة لنا...</td><td>الوصف موضح داخل الرأس.</td></tr>
+<tr><td>آخر تسمية / تاريخ تم تحديثه</td><td><span class="tb tt">نص</span> / <span class="tb tt">نص</span></td><td>آخر تحديث / يوليو 2025</td><td>يعرض طابعًا زمنيًا صغيرًا للمراجعة أسفل العنوان الفرعي.</td></tr>
+<tr><td>البريد الإلكتروني الخصوصية</td><td><span class="tb tt">نص</span></td><td>Privacy@aurick.com</td><td>دعم البريد الإلكتروني المستخدم ديناميكيًا في بطاقات الاتصال وتجاوزات الحظر.</td></tr>
+<tr><td>عنوان العمل</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>يتم استخدام عنوان الشركة ديناميكيًا داخل كتل جهات الاتصال.</td></tr>
+</tbody></table>
+<h3>كتلة قسم السياسة</h3>
+<p>تضيف كتلة قسم السياسة فئة شروط كاملة مع قرص تنقل لاصق مطابق. انقر <strong>أضف كتلة</strong> → <strong>قسم السياسات</strong>. الإعدادات لكل كتلة:</p>
+<table class="st"><thead><tr><th>الإعداد</th><th>اكتب</th><th>الافتراضي</th><th>ماذا يفعل</th></tr></thead><tbody>
+<tr><td>تسمية حبوب منع الحمل لزجة</td><td><span class="tb tt">نص</span></td><td>القسم</td><td>تظهر التسمية القصيرة في الشريط الأفقي اللاصق في الأعلى. اتركه فارغًا لإخفاء هذا القسم من شريط التنقل.</td></tr>
+<tr><td>إظهار رقم القسم</td><td><span class="tb tk">خانة الاختيار</span></td><td>على</td><td>إضافة رقم تسلسلي شفاف كبير (01، 02، إلخ) على اليسار.</td></tr>
+<tr><td>نص الحاجب / عنوان القسم</td><td><span class="tb tt">نص</span> / <span class="tb tt">نص</span></td><td>عنوان الفئة / القسم</td><td>علامات الرأس داخل بطاقة القسم.</td></tr>
+<tr><td>فقرة (فقرات) المقدمة</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>النص الأساسي الوصفي. كل فاصل أسطر يؤدي إلى إنشاء فقرة جديدة.</td></tr>
+<tr><td>قائمة نقطية</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>قائمة ذات تعداد نقطي بالمتطلبات. اكتب عنصرًا واحدًا في كل سطر.</td></tr>
+<tr><td>النص بعد الرصاص</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>يتم عرض الفقرات الاختيارية أسفل القائمة ذات التعداد النقطي.</td></tr>
+<tr><td>مربع وسيلة الشرح المميز</td><td><span class="tb ta">منطقة النص</span></td><td>—</td><td>مربع مميز بحد ذهبي سميك على اليسار للتأكيد على النص المهم.</td></tr>
+<tr><td>عنصر تخطيط إضافي</td><td><span class="tb ts">حدد</span></td><td>لا شيء</td><td>اختر إلحاق العناصر أسفل النص: <strong>لا شيء</strong> • <strong>بطاقات المعلومات (شبكة 2×2)</strong> • <strong>شرائح الميزات (شبكة ذات 3 أعمدة)</strong>.</td></tr>
+<tr><td>بطاقات المعلومات (1–4) — الملصق / النص</td><td><span class="tb tt">نص</span> / <span class="tb ta">منطقة النص</span></td><td>—</td><td>قم بتكوين ما يصل إلى 4 تسميات وأوصاف لبطاقات المعلومات (يظهر فقط عند تعيين التخطيط على بطاقات المعلومات).</td></tr>
+<tr><td>ميزة تسميات / أيقونات الشريحة</td><td><span class="tb ta">منطقة النص</span> / <span class="tb ta">منطقة النص</span></td><td>—</td><td>عنصر واحد في كل سطر (على سبيل المثال. <code>Access Your Data</code>). قم بمطابقة الرموز المقابلة بالترتيب (الخيارات: <code>eye</code>, <code>edit</code>, <code>trash</code>, <code>slash</code>, <code>upload</code>, <code>shield</code>, <code>lock</code>, <code>check</code>, <code>mail</code>).</td></tr>
+<tr><td>إظهار تفاصيل الاتصال</td><td><span class="tb tk">خانة الاختيار</span></td><td>إيقاف</td><td>قم بتبديل ما إذا كنت تريد طباعة البريد الإلكتروني الخاص بالخصوصية وعنوان العمل في أسفل هذا القسم المحدد.</td></tr>
+</tbody></table>
+</section>
+<section id="translate">
+<h2><span class="ic">🌐</span>ترجمة &amp; <em>التكيف</em></h2>
+<span class="pb">تطبيق Shopify الأصلي – مجاني</span>
+<p>يتضمن Aurick ترجمات واجهة كاملة لـ **الإنجليزية (EN)**، **الإسبانية (ES)**، و**الفرنسية (FR)**. لنشر لغات جديدة وترجمة أصول المنتج، اتبع الخطوات التالية:</p>
+<ol class="steps">
+<li><strong>أضف اللغات في الإعدادات</strong>
+<p>اذهب الى <span class="path"><span class="pc r">المشرف</span><span class="ps">›</span><span class="pc">الإعدادات</span><span class="ps">›</span><span class="pc">اللغات</span></span>، وأضف الإسبانية/الفرنسية، وانقر على **نشر**.</p>
+</li>
+<li><strong>تثبيت الترجمة والتكيف</strong>
+<p>افتح تطبيق Translate &amp; Adapt لترجمة الأوصاف والعناوين وعلامات المجموعة وعناصر القائمة جنبًا إلى جنب.</p>
+</li>
+</ol>
+</section>
+<section id="images">
+<h2><span class="ic">🖼</span>صورة <em>الأحجام</em></h2>
+<p>استخدم هذه الأبعاد الدقيقة لكل صورة في كل قسم. تحافظ الأحجام الصحيحة على وضوح الصور وتناسبها بشكل مثالي وسرعتها على كل شاشة.</p>
+<div class="ic-c"><span class="ic-n">الشعار (الرأس)</span><span class="ic-d">300 × 120 بكسل</span><span class="ic-f">شفاف PNG أو SVG</span></div>
+<div class="ic-c"><span class="ic-n">ميزات مشاهدة العرض</span><span class="ic-d">540 × 540 بكسل</span><span class="ic-f">PNG شفافة (مطلوبة لانتقالات الطيران النظيفة)</span></div>
+<div class="ic-c"><span class="ic-n">صور نمط الحياة</span><span class="ic-d">1000 × 1250 بكسل</span><span class="ic-f">JPEG • 4:5 صورة • توسيط الموضوع</span></div>
+<div class="ic-c"><span class="ic-n">لافتات المجموعة</span><span class="ic-d">2000 × 800 بكسل</span><span class="ic-f">JPEG • منظر طبيعي 2.5:1</span></div>
+</section>
+<section id="faq">
+<h2><span class="ic">❓</span>الأسئلة الشائعة</h2>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">كيف يمكنني تغيير شعار متجري؟</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>محرر الموضوع → <strong>رأس</strong> → مجموعة <strong>نوع الشعار</strong> ل <strong>صورة</strong> → قم بتحميل ملف الشعار الخاص بك. التنسيق الموصى به: PNG شفاف، 300 × 120 بكسل.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">كيف أضيف رسائل إعلانية دوارة؟</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>محرر الموضوع → <strong>شريط الإعلان</strong> → إضافة العديد من **مجموعات الإعلانات** → تمكين **إعلانات التدوير التلقائي**.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">كيف يمكنني إخفاء قسم في الصفحة الرئيسية دون حذفه؟</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>انقر فوق **رمز العين** بجوار اسم القسم داخل الشريط الجانبي لمحرر السمات. يصبح القسم غير مرئي للزائرين ولكنه يظل مهيأ للاستخدام المستقبلي.</p></div></div></div>
+</section>
+<section id="watch-svg">
+<h2><span class="ic">⚙</span>مشاهدة الصورة <em>→ موجه SVG</em></h2>
+<p>يعرض بطل صندوق الساعة Aurick 3D ساعتك كمتجه SVG نظيف داخل الصندوق المتحرك. الصق هذه المطالبة في أي مساعد AI مع صورة ساعتك للحصول على رمز SVG المخصص:</p>
+<div class="prompt-wrap">
+<div class="prompt-label">انسخ والصق في AI (مع إرفاق صورة ساعتك)</div>
+<button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    نسخة موجه
+  </button>
+<pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
+Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
+
+Follow these strict specifications:
+1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
+2. Background: Must be transparent.
+3. Viewport: The viewBox must be exactly "0 0 300 400".
+4. Vertical Alignment: The watch must be perfectly centered.
+   - The center of the watch dial must sit at (x=150, y=200).
+   - The strap must run straight vertically from y=10 to y=390.
+5. Dimension Specs:
+   - Strap Width: Exactly 60px (x=120 to x=180).
+   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
+   - Inner Dial Face Radius: Exactly 60px.
+6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
+7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
+</div>
+</section>
+<section id="support">
+<h2><span class="ic">🙋</span>يحصل <em>الدعم</em></h2>
+<p>هل تحتاج إلى مساعدة في إعداد سمة Aurick الخاصة بك؟ تواصل معنا مباشرة بالضغط أدناه:</p>
+<div class="sup-card">
+<span class="sup-icon">✉</span>
+<div class="sup-title">بحاجة الى مساعدة مع<br/>الخاص بك <em>أوريك</em> متجر؟</div>
+<p class="sup-lead">سواء كان ذلك سؤالاً بشأن الإعدادات، أو مشكلة في حقل تعريف، أو ميزة لا يمكنك العثور عليها - املأ النموذج وسنعمل على حل المشكلة معًا.</p>
+<a class="sup-btn" href="https://forms.gle/uv5eW4ULpRG2NqF58" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    افتح نموذج الدعم
+    <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</section>
+<footer class="doc-footer">
+  © 2026 Aurick Theme — دليل إعداد مالك المتجر · جميع الحقوق محفوظة.
+</footer>
+</section></section></div></main>
+<div class="toast" id="toast">✓ نسخ إلى الحافظة</div>
+<script>
+function copyPrompt() {
+  const pre = document.getElementById('svg-prompt-text');
+  const btn = document.getElementById('svg-copy-btn');
+  if (!pre || !btn) return;
+  const tmp = document.createElement('textarea');
+  tmp.value = pre.innerText;
+  document.body.appendChild(tmp);
+  tmp.select();
+  document.execCommand('copy');
+  document.body.removeChild(tmp);
+  btn.classList.add('copied');
+  btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+  setTimeout(() => {
+    btn.classList.remove('copied');
+    btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Prompt';
+  }, 2000);
+}
+
+function nav(e, hash) {
+  e.preventDefault();
+  const el = document.querySelector(hash);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth" });
+  history.pushState(null, null, hash);
+  document.querySelectorAll(".sb-a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === hash));
+}
+
+const secs = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".sb-a");
+window.addEventListener("scroll", () => {
+  let cur = "";
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = "#" + s.id; });
+  if (cur) links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === cur));
+}, { passive: true });
+
+function toggleFaq(el) {
+  const open = el.classList.contains("open");
+  document.querySelectorAll(".faq.open").forEach(f => f.classList.remove("open"));
+  if (!open) el.classList.add("open");
+}
+
+function searchDocs(q) {
+  q = q.toLowerCase().trim();
+  secs.forEach(s => {
+    const id = "#" + s.id;
+    const link = Array.from(links).find(l => l.getAttribute("href") === id);
+    const match = q === "" || s.textContent.toLowerCase().includes(q);
+    s.style.display = match ? "" : "none";
+    if (link) link.style.display = match ? "" : "none";
+  });
+  document.querySelectorAll(".sb-cat").forEach(cat => {
+    const nextLinks = [];
+    let el = cat.nextElementSibling;
+    while (el && !el.classList.contains("sb-cat")) {
+      if (el.classList.contains("sb-a")) nextLinks.push(el);
+      el = el.nextElementSibling;
+    }
+    const anyVisible = nextLinks.some(l => l.style.display !== "none");
+    cat.style.display = q === "" || anyVisible ? "" : "none";
+  });
+}
+</script>
+</body></html>
