@@ -160,6 +160,10 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   transform: translateY(-50%);
   pointer-events: none;
 }
+.sb-lang select option {
+  background: #08080d !important;
+  color: #f0ece4 !important;
+}
 </style></head><body>
 <aside class="sb">
 <div class="sb-brand">
@@ -663,30 +667,66 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <section id="feat-collection">
 <h2><span class="ic">📋</span>Colección destacada</h2>
 <span class="pb g">Página de inicio</span>
-<p>Muestra una cuadrícula receptiva de productos de una colección elegida. Ideal para mostrar los más vendidos o los recién llegados en su página de inicio.</p>
+<p>Muestra sus colecciones como tarjetas premium con inclinación 3D. Al pasar el cursor, la tarjeta se inclina hacia el puntero, revela esquinas doradas y reproduce un destello de luz sobre la superficie. Cada tarjeta enlaza a una colección. (Coincide con el diseño de Lista de colecciones / Bóveda de colección).</p>
+<h3>Encabezado de sección</h3>
 <table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
-<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>Destacado</td><td>Texto de etiqueta pequeña encima del título.</td></tr>
-<tr><td>rumbo</td><td><span class="tb tt">texto</span></td><td>Colección destacada</td><td>Título de la sección principal.</td></tr>
-<tr><td>Subtítulo</td><td><span class="tb ta">área de texto</span></td><td>—</td><td>Breve párrafo descriptivo que se muestra debajo del título.</td></tr>
-<tr><td>Colección</td><td><span class="tb tt">colección</span></td><td>—</td><td>Selector de colección de Shopify para completar productos.</td></tr>
-<tr><td>Máximo de productos para mostrar</td><td><span class="tb tr">rango</span></td><td>4</td><td>Recuento de productos mostrados en la cuadrícula (Rango: 2–12).</td></tr>
-<tr><td>Columnas en el escritorio</td><td><span class="tb tr">rango</span></td><td>4</td><td>Columnas de cuadrícula que se muestran en las vistas de escritorio (rango: 2 a 5).</td></tr>
-<tr><td>Columnas en el móvil</td><td><span class="tb ts">seleccionar</span></td><td>2</td><td>Columnas en ventanas gráficas móviles: <strong>1</strong> o <strong>2</strong>.</td></tr>
-<tr><td>Mostrar botón Agregar rápido</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Agrega un botón de carrito para agregar rápidamente dentro de las tarjetas de productos.</td></tr>
-<tr><td>Mostrar proveedor</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Muestra etiquetas de proveedores de productos en las tarjetas.</td></tr>
-<tr><td>Mostrar el botón "Ver todo"</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Muestra un botón inferior que enlaza con la página de la colección si tiene más elementos.</td></tr>
+<tr><td>Texto de cejas</td><td><span class="tb tt">texto</span></td><td>La Bóveda</td><td>Pequeña etiqueta en mayúscula encima del título de la sección.</td></tr>
+<tr><td>Titular - línea 1</td><td><span class="tb tt">texto</span></td><td>Explora Nuestro</td><td>Primera línea del título principal.</td></tr>
+<tr><td>Titular - línea 2</td><td><span class="tb tt">texto</span></td><td>Colecciones</td><td>Segunda línea. Envolver palabras en <code>&lt;em&gt;&lt;/em&gt;</code> para estilos dorados en cursiva, p. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Subtexto</td><td><span class="tb ta">área de texto</span></td><td>Cada reloj cuenta una historia...</td><td>Párrafo breve que se muestra debajo del título.</td></tr>
+<tr><td>Alineación del encabezado</td><td><span class="tb ts">seleccionar</span></td><td>Izquierda</td><td>Alineación del texto del encabezado de la sección: izquierda, centro o derecha.</td></tr>
 </tbody></table>
+<h3>Diseño</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Columnas: escritorio</td><td><span class="tb tr">rango</span></td><td>3</td><td>Tarjetas por fila en escritorio. Rango: 2–5.</td></tr>
+<tr><td>Columnas - tableta</td><td><span class="tb tr">rango</span></td><td>2</td><td>Tarjetas por fila en tableta.</td></tr>
+<tr><td>Columnas – móvil</td><td><span class="tb tr">rango</span></td><td>1</td><td>Tarjetas por fila en móvil. Se recomienda 1 para obtener la mejor experiencia móvil.</td></tr>
+<tr><td>Espacio de red</td><td><span class="tb tr">rango</span></td><td>24 píxeles</td><td>Espacio de píxeles entre tarjetas. Rango: 8–48 píxeles.</td></tr>
+<tr><td>Relación de aspecto de la tarjeta</td><td><span class="tb ts">seleccionar</span></td><td>Retrato 3:4</td><td>Retrato 3:4 • Retrato 4:5 • Cuadrado 1:1 • Paisaje 16:9.</td></tr>
+<tr><td>Radio del borde de la tarjeta</td><td><span class="tb tr">rango</span></td><td>12 píxeles</td><td>Radio de esquina redondeada de cada tarjeta. Rango: 0–32 píxeles.</td></tr>
+<tr><td>Ajuste de imagen</td><td><span class="tb ts">seleccionar</span></td><td>Portada</td><td><strong>Portada</strong> cultivos para llenar la tarjeta. <strong>contener</strong> Se ajusta a toda la imagen sin recortar.</td></tr>
+</tbody></table>
+<h3>Colores</h3>
+<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Antecedentes</td><td><span class="tb tc">color</span></td><td>#0a0906</td><td>Fondo de la sección detrás de la cuadrícula de la tarjeta.</td></tr>
+<tr><td>color de cejas</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de la etiqueta de la ceja encima del título.</td></tr>
+<tr><td>Color del título</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del título de la sección principal.</td></tr>
+<tr><td>Color de subtexto</td><td><span class="tb tc">color</span></td><td>#6b6660</td><td>Color del párrafo del subtexto.</td></tr>
+<tr><td>Acento (oro)</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de detalles dorados, brillos de bordes, partes en cursiva y revelaciones de esquinas al pasar el mouse.</td></tr>
+<tr><td>Color del nombre de la tarjeta</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color del nombre de la colección en cada tarjeta.</td></tr>
+<tr><td>Color de la descripción de la tarjeta</td><td><span class="tb tc">color</span></td><td>#8c8680</td><td>Color del texto de descripción de la colección en cada tarjeta.</td></tr>
+</tbody></table>
+<h3>Botón "Ver todo"</h3>
+<table class="st"><thead><tr><th>Ajuste</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Mostrar botón "Ver todo"</td><td><span class="tb tk">casilla</span></td><td>Activado</td><td>Alterna el botón de CTA inferior bajo las colecciones.</td></tr>
+<tr><td>Texto de botón</td><td><span class="tb tt">texto</span></td><td>Ver todas las colecciones</td><td>Etiqueta mostrada dentro del botón.</td></tr>
+<tr><td>URL de botón</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Enlace de destino (ej. /collections).</td></tr>
+<tr><td>Color de CTA</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color de acento del botón.</td></tr>
+</tbody></table>
+<h3>Bloques de colección (Hasta 12)</h3>
+<p>Cada bloque está enlazado a una colección de Shopify. Los siguientes campos del bloque son personalizables:</p>
+<table class="st st-blocks"><thead><tr><th>Campo del bloque</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td><strong>Colección</strong></td><td>Colección</td><td>Seleccione la colección a destacar. La imagen de fondo predeterminada es la Imagen de la Colección.</td></tr>
+<tr><td><strong>Sobrescribir título</strong></td><td>Texto</td><td>Título personalizado opcional para mostrar en la tarjeta en lugar del nombre de la colección.</td></tr>
+<tr><td><strong>Sobrescribir descripción</strong></td><td>Área de texto</td><td>Descripción personalizada opcional para mostrar en la tarjeta en lugar de la descripción de la colección.</td></tr>
+<tr><td><strong>Etiqueta de botón</strong></td><td>Texto</td><td>Texto mostrado en el enlace de exploración de la tarjeta (Predeterminado: <code>Explore Collection</code>).</td></tr>
+<tr><td><strong>Imagen personalizada</strong></td><td>Imagen</td><td>Imagen focal personalizada opcional para sobrescribir la imagen de la colección.</td></tr>
+</tbody></table>
+</section>
+
 <section id="featured-product-doc">
 <h2><span class="ic">🕐</span>Destacado <em>Producto</em></h2>
 <span class="pb g">Página de inicio</span>
 <p>Destaca un solo producto directamente en su página de inicio con un formulario de compra completo, una galería multimedia y menús desplegables dinámicos en forma de acordeón. Perfecto para lanzar un modelo de reloj insignia.</p>
 <h3>Configuración principal</h3>
-<table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
-<tr><td>Producto</td><td><span class="tb tt">producto</span></td><td>—</td><td>Seleccione el producto a exhibir en esta sección.</td></tr>
-<tr><td>Mostrar miniaturas de la galería</td><td><span class="tb tk">casilla de verificación</span></td><td>Apagado</td><td>Actívelo para mostrar miniaturas de medios debajo del cuadro de imagen principal.</td></tr>
-<tr><td>Radio de esquina de la galería</td><td><span class="tb tr">rango</span></td><td>8 píxeles</td><td>Redondea las esquinas de las imágenes de la galería de productos. Rango: 0–40 píxeles.</td></tr>
-<tr><td>Umbral de stock bajo</td><td><span class="tb tr">rango</span></td><td>10</td><td>Cantidad de existencias debajo de la cual se muestra una insignia de advertencia de inventario bajo. Rango: 2–20.</td></tr>
-<tr><td>Mostrar etiquetas de productos</td><td><span class="tb tk">casilla de verificación</span></td><td>encendido</td><td>Alterna si se muestran etiquetas de productos sin procesar.</td></tr>
+<table class="st"><thead><tr><th>Ajuste</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td>Producto</td><td><span class="tb tt">producto</span></td><td>—</td><td>Seleccione el producto a mostrar en esta sección.</td></tr>
+<tr><td>Diseño de miniaturas</td><td><span class="tb ts">seleccionar</span></td><td>Vertical (Izquierda)</td><td><strong>Vertical (Izquierda)</strong> &mdash; miniaturas al lado de la imagen. <strong>Abajo</strong> &mdash; tira horizontal inferior. <strong>Círculos superpuestos</strong> &mdash; puntos superpuestos.</td></tr>
+<tr><td>Mostrar miniaturas de gelería</td><td><span class="tb tk">casilla</span></td><td>Activado</td><td>Alterna la visualización de la fila de miniaturas.</td></tr>
+<tr><td>Habilitar galería fija</td><td><span class="tb tk">casilla</span></td><td>Activado</td><td>Mantiene la galería fija mientras se desplaza la columna de compra en escritorio.</td></tr>
+<tr><td>Radio de esquina de galería</td><td><span class="tb tr">rango</span></td><td>8 px</td><td>Redondea las esquinas de las imágenes de la galería del producto. Rango: 0–40 px.</td></tr>
+<tr><td>Umbral de stock bajo</td><td><span class="tb tr">rango</span></td><td>10</td><td>Cantidad de stock por debajo de la cual se muestra una advertencia de bajo inventario. Rango: 2–20.</td></tr>
+<tr><td>Mostrar etiquetas de producto</td><td><span class="tb tk">casilla</span></td><td>Activado</td><td>Alterna si se muestran las etiquetas del producto.</td></tr>
 </tbody></table>
 <h3>Tipografía y estilo</h3>
 <table class="st"><thead><tr><th>Configuración</th><th>Tipo</th><th>Predeterminado</th><th>Qué hace</th></tr></thead><tbody>
