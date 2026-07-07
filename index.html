@@ -1,10 +1,1508 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurick Store Owner Setup Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050508;--sb:#08080d;--card:rgba(255,255,255,.023);--border:rgba(201,169,110,.11);--bhi:rgba(201,169,110,.32);--gold:#c9a96e;--gd:#8b7245;--gl:#e8d5b0;--tx:#f0ece4;--td:rgba(240,236,228,.63);--tm:rgba(240,236,228,.38);--green:#5dba7d;--blue:#5fa4e6;--amber:#e6b25f;--red:#e66c5f;--teal:#2dd4bf;--purple:#c084fc;--r:12px;--rs:8px;--sw:284px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
+aside.sb{width:var(--sw);background:var(--sb);border-right:1px solid var(--border);position:fixed;top:0;left:0;bottom:0;overflow-y:auto;display:flex;flex-direction:column;z-index:100;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sb-brand{padding:1.9rem 1.6rem 1.3rem;border-bottom:1px solid var(--border)}
+.sb-name{font-family:"Cormorant Garamond",serif;font-size:1.78rem;font-weight:600;letter-spacing:.08em;color:#fff}.sb-name span{color:var(--gold)}
+.sb-sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tm);margin-top:.18rem}
+.sb-ver{display:inline-block;margin-top:.48rem;background:rgba(201,169,110,.07);color:var(--gl);border:.5px solid var(--bhi);border-radius:20px;font-size:.58rem;padding:.13rem .5rem}
+.sb-search{padding:1rem 1.3rem .7rem;border-bottom:1px solid var(--border);position:relative}
+.sb-search svg{position:absolute;left:2.1rem;top:50%;transform:translateY(-50%);color:var(--tm);pointer-events:none}
+.sb-search input{width:100%;background:rgba(0,0,0,.28);border:1px solid var(--border);border-radius:var(--rs);color:var(--tx);font-family:inherit;font-size:.76rem;padding:.52rem .7rem .52rem 2rem;outline:none;transition:border-color .2s}
+.sb-search input:focus{border-color:var(--gold)}.sb-search input::placeholder{color:var(--tm)}
+.sb-nav{padding:.7rem .85rem 2rem;flex:1}
+.sb-cat{font-size:.59rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--gd);padding:1.1rem .6rem .32rem}
+.sb-a{display:flex;align-items:center;gap:.5rem;padding:.38rem .6rem;border-radius:var(--rs);color:var(--td);font-size:.77rem;text-decoration:none;cursor:pointer;transition:all .18s}
+.sb-a:hover{color:#fff;background:rgba(255,255,255,.03)}
+.sb-a.on{color:var(--gl);background:rgba(201,169,110,.07);font-weight:500;border-left:1.5px solid var(--gold);border-radius:0 var(--rs) var(--rs) 0;padding-left:.55rem}
+.dot{width:3.5px;height:3.5px;border-radius:50%;background:var(--bhi);flex-shrink:0}.sb-a.on .dot{background:var(--gold)}
+main.main{margin-left:var(--sw);flex:1;min-width:0;padding:3.5rem 4.5rem 6rem}
+.wrap{max-width:900px;margin:0 auto}
+h2{font-family:"Cormorant Garamond",serif;font-size:1.82rem;font-weight:500;color:#fff;margin-top:4.5rem;margin-bottom:1.3rem;padding-bottom:.7rem;border-bottom:.5px solid var(--border);display:flex;align-items:center;gap:.7rem}
+h2 .ic{width:30px;height:30px;background:rgba(201,169,110,.07);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}h2 em{font-style:italic;color:var(--gold)}
+h3{font-family:"Cormorant Garamond",serif;font-size:1.22rem;font-weight:600;color:#fff;margin-top:2rem;margin-bottom:.7rem}
+h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-top:1.5rem;margin-bottom:.65rem}
+p{color:var(--td);font-size:.86rem;margin-bottom:.9rem;line-height:1.72}a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gl)}
+ul,ol{padding-left:1.35rem;margin-bottom:1rem}li{color:var(--td);font-size:.86rem;margin-bottom:.4rem;line-height:1.5}
+strong{color:#fff;font-weight:500}
+code{font-family:"JetBrains Mono",monospace;font-size:.78em;background:#010103;border:.5px solid var(--border);border-radius:4px;padding:.1em .42em;color:var(--gl)}
+table.st{width:100%;border-collapse:collapse;margin:.9rem 0 1.8rem;font-size:.79rem;border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden}
+table.st thead tr{background:rgba(0,0,0,.28)}
+table.st th{padding:.62rem .9rem;font-size:.61rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--tm);border-bottom:.5px solid var(--border);text-align:left;white-space:nowrap}
+table.st th:nth-child(2),table.st th:nth-child(3){text-align:center}
+table.st tbody tr{border-bottom:.5px solid var(--border);transition:background .14s}
+table.st tbody tr:last-child{border-bottom:none}table.st tbody tr:hover{background:rgba(201,169,110,.022)}
+table.st td{padding:.7rem .9rem;vertical-align:top}
+table.st td:first-child{color:#fff;font-weight:600;font-size:.81rem;white-space:nowrap;min-width:172px}
+table.st td:nth-child(2){text-align:center;width:90px}
+table.st td:nth-child(3){text-align:center;font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--tm);width:82px;white-space:nowrap}
+table.st td:last-child{color:var(--td);line-height:1.6}
+table.st-blocks td:nth-child(2){text-align:left;width:290px}
+table.st-blocks td:nth-child(2) ul{padding-left:1.1rem;margin-bottom:0}
+table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
+.tb{display:inline-block;font-size:.57rem;font-weight:700;padding:.13rem .45rem;border-radius:20px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.ti{background:rgba(45,212,191,.1);color:var(--teal);border:.5px solid rgba(45,212,191,.2)}.tr{background:rgba(95,164,230,.1);color:var(--blue);border:.5px solid rgba(95,164,230,.2)}.ts{background:rgba(230,178,95,.1);color:var(--amber);border:.5px solid rgba(230,178,95,.2)}.tt{background:rgba(192,132,252,.1);color:var(--purple);border:.5px solid rgba(192,132,252,.2)}.tc{background:rgba(230,108,95,.1);color:var(--red);border:.5px solid rgba(230,108,95,.2)}.tk{background:rgba(93,186,125,.1);color:var(--green);border:.5px solid rgba(93,186,125,.2)}.ta{background:rgba(192,132,252,.08);color:#d8b4fe;border:.5px solid rgba(192,132,252,.18)}.tu{background:rgba(95,164,230,.08);color:#93c5fd;border:.5px solid rgba(95,164,230,.18)}
+.note{display:flex;gap:.8rem;padding:1rem 1.3rem;border-radius:var(--rs);margin-bottom:1.3rem;border:.5px solid}
+.note .ni{flex-shrink:0;margin-top:1px}.note .nb p{margin:0;font-size:.82rem;line-height:1.62}.note .nt{font-weight:600;margin-bottom:.22rem;font-size:.83rem}
+.note p{font-size:.82rem}
+.note.info{background:rgba(95,164,230,.04);border-color:rgba(95,164,230,.2);color:#c7dff8}
+.note.tip{background:rgba(93,186,125,.04);border-color:rgba(93,186,125,.2);color:#c5f0d4}
+.note.warn{background:rgba(230,178,95,.04);border-color:rgba(230,178,95,.2);color:#f5e0c0}
+.note.crit{background:rgba(230,108,95,.04);border-color:rgba(230,108,95,.2);color:#f5c9c5}
+.steps{list-style:none;padding:0;counter-reset:s}.steps li{counter-increment:s;position:relative;padding:0 0 1.6rem 2.8rem;margin:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:700;color:var(--gl);line-height:1.75rem;text-align:center}
+.steps li::after{content:"";position:absolute;left:.875rem;top:1.75rem;bottom:0;width:.5px;background:var(--border)}
+.steps li:last-child{padding-bottom:0}.steps li:last-child::after{display:none}
+.steps li>strong{color:#fff;display:block;margin-bottom:.3rem;font-size:.88rem}.steps li p{margin:.14rem 0 0;font-size:.84rem}
+.path{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem;font-size:.74rem}
+.pc{background:rgba(201,169,110,.05);border:.5px solid var(--border);border-radius:5px;padding:.1rem .48rem;color:var(--td);font-weight:500;white-space:nowrap;font-size:.71rem}
+.pc.r{background:rgba(255,255,255,.025);color:var(--tm);font-weight:400}.ps{color:var(--gd);font-size:.6rem;opacity:.7}
+.pb{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600;background:rgba(95,164,230,.07);color:#93c5fd;border:.5px solid rgba(95,164,230,.18);border-radius:20px;padding:.2rem .58rem;margin:.15rem .3rem .15rem 0}
+.pb.g{background:rgba(201,169,110,.07);color:var(--gl);border-color:var(--bhi)}.pb.gr{background:rgba(93,186,125,.07);color:#86efac;border-color:rgba(93,186,125,.2)}
+.card{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.8rem;margin-bottom:1.6rem;transition:border-color .25s}.card:hover{border-color:rgba(201,169,110,.2)}.card h3{margin-top:0}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1.9rem}
+.fi{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.3rem;display:flex;gap:.8rem;align-items:flex-start;transition:border-color .18s}.fi:hover{border-color:var(--bhi)}
+.fi-ic{width:33px;height:33px;background:rgba(201,169,110,.06);border:.5px solid var(--border);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.fi-t{font-weight:600;font-size:.85rem;color:#fff;margin-bottom:.2rem}.fi-d{font-size:.74rem;color:var(--td);line-height:1.5}
+.ic-c{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:.8rem 1.1rem;display:flex;align-items:center;gap:1.1rem;margin-bottom:.48rem;flex-wrap:wrap;transition:border-color .2s}.ic-c:hover{border-color:var(--bhi)}
+.ic-n{font-weight:600;font-size:.82rem;color:#fff;min-width:205px}.ic-d{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--gold);min-width:148px}.ic-f{font-size:.73rem;color:var(--tm)}
+.faq{border:.5px solid var(--border);border-radius:var(--rs);margin-bottom:.55rem;overflow:hidden;transition:border-color .2s}.faq:hover{border-color:rgba(201,169,110,.2)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.3rem;cursor:pointer;background:var(--card);gap:1rem;user-select:none}
+.fqt{font-weight:500;font-size:.86rem;color:#fff;line-height:1.5}
+.fch{color:var(--gd);flex-shrink:0;transition:transform .22s;font-size:.75rem}
+.faq.open .fch{transform:rotate(180deg);color:var(--gold)}
+.fa{max-height:0;overflow:hidden;transition:max-height .32s ease;background:rgba(0,0,0,.14)}.faq.open .fa{max-height:700px}
+.fai{padding:.88rem 1.3rem 1.1rem;border-top:.5px solid var(--border)}.fai p{margin-bottom:.55rem;font-size:.84rem}.fai p:last-child{margin-bottom:0}
+.hbox{margin-bottom:3.8rem;padding-bottom:2.8rem;border-bottom:.5px solid var(--border)}
+.hbadge{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gl);background:rgba(201,169,110,.07);border:.5px solid var(--bhi);border-radius:20px;padding:.22rem .65rem;margin-bottom:1.1rem}
+.h1x{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,3.7rem);font-weight:300;color:#fff;line-height:1.07;margin-bottom:.7rem}.h1x em{font-style:italic;color:var(--gold)}
+.hlead{color:var(--td);font-size:1rem;font-weight:300;max-width:700px;line-height:1.78;margin-bottom:2.2rem}
+.hg{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.hs{background:var(--card);border:.5px solid var(--border);border-radius:var(--r);padding:1.2rem 1rem;text-align:center}
+.hs-n{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;color:var(--gold);display:block;line-height:1;margin-bottom:.3rem}.hs-l{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tm)}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--gold);color:#050508;padding:.55rem 1.1rem;border-radius:40px;font-size:.74rem;font-weight:600;opacity:0;transform:translateY(12px);transition:all .28s;pointer-events:none;z-index:9999}.toast.show{opacity:1;transform:translateY(0)}
+.doc-footer{margin-top:6rem;padding-top:1.8rem;border-top:.5px solid var(--border);text-align:center;font-size:.72rem;color:var(--tm)}
+@media(max-width:1024px){aside.sb{display:none}main.main{margin-left:0;padding:2rem}h2{margin-top:2.5rem}.feat{grid-template-columns:1fr}}
+@media(max-width:640px){.h1x{font-size:2rem}main.main{padding:1.2rem 1rem 4rem}.hg{grid-template-columns:1fr 1fr}}
+
+.prompt-wrap{position:relative;margin:1.2rem 0 1.6rem}
+.prompt-code{background:#010103;border:.5px solid var(--border);border-radius:var(--r);padding:1.5rem 1.5rem 1.5rem;font-family:"JetBrains Mono",monospace;font-size:.72rem;color:#c5d5e8;line-height:1.75;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;counter-reset:none}
+.prompt-copy{position:absolute;top:.7rem;right:.7rem;background:rgba(201,169,110,.08);border:.5px solid var(--bhi);border-radius:var(--rs);color:var(--gl);font-family:"DM Sans",sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.32rem .75rem;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:.35rem}
+.prompt-copy:hover{background:rgba(201,169,110,.14);color:#fff}
+.prompt-copy.copied{background:rgba(93,186,125,.1);border-color:rgba(93,186,125,.3);color:#86efac}
+.prompt-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--gd);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+.prompt-label::after{content:"";flex:1;height:.5px;background:var(--border)}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.4rem 0}
+.ai-card{background:var(--card);border:.5px solid var(--border);border-radius:var(--rs);padding:1rem .9rem;text-align:center;transition:border-color .18s}.ai-card:hover{border-color:var(--bhi)}
+.ai-ic{font-size:1.4rem;display:block;margin-bottom:.4rem}
+.ai-n{font-weight:600;font-size:.76rem;color:#fff;margin-bottom:.2rem}
+.ai-d{font-size:.67rem;color:var(--tm);line-height:1.45}
+@media(max-width:640px){.ai-grid{grid-template-columns:1fr 1fr}}
+.sup-card{background:linear-gradient(135deg,rgba(201,169,110,.06) 0%,rgba(201,169,110,.02) 100%);border:.5px solid var(--bhi);border-radius:var(--r);padding:2.8rem 2.4rem;text-align:center;margin:2rem 0;position:relative;overflow:hidden}
+.sup-card::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,169,110,.08) 0%,transparent 65%);pointer-events:none}
+.sup-icon{font-size:2.5rem;margin-bottom:1rem;display:block;line-height:1}
+.sup-title{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:500;color:#fff;margin-bottom:.6rem;line-height:1.15}
+.sup-title em{font-style:italic;color:var(--gold)}
+.sup-lead{color:var(--td);font-size:.9rem;max-width:520px;margin:0 auto 2rem;line-height:1.72}
+.sup-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:#050508;font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 2rem;border-radius:40px;text-decoration:none;transition:all .22s;box-shadow:0 0 0 0 rgba(201,169,110,.3)}
+.sup-btn:hover{background:var(--gl);color:#050508;box-shadow:0 0 0 6px rgba(201,169,110,.14);transform:translateY(-1px)}
+.sup-btn svg{flex-shrink:0;transition:transform .18s}
+.sup-btn:hover svg{transform:translateX(3px)}
+.sup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.sup-tip{background:rgba(255,255,255,.02);border:.5px solid var(--border);border-radius:var(--rs);padding:1.1rem 1rem;text-align:center;transition:border-color .2s}
+.sup-tip:hover{border-color:var(--bhi)}
+.sup-tip-ic{font-size:1.25rem;display:block;margin-bottom:.5rem}
+.sup-tip-t{font-weight:600;font-size:.78rem;color:#fff;margin-bottom:.25rem}
+.sup-tip-d{font-size:.72rem;color:var(--tm);line-height:1.5}
+@media(max-width:640px){.sup-grid{grid-template-columns:1fr}}
+.sb-lang {
+  margin: 1.1rem 0;
+  position: relative;
+  width: 100%;
+}
+.sb-lang select {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #a0a0a0;
+  font-size: 0.72rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sb-lang select:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  color: #fff;
+}
+.sb-lang::after {
+  content: "▼";
+  font-size: 8px;
+  color: #666;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+</style></head><body>
+<aside class="sb">
+  <div class="sb-brand">
+    <div class="sb-name">AURICK<span>.</span></div>
+    <div class="sb-sub">Store Owner Guide</div>
+    <div class="sb-ver">v1.0 &middot; OS 2.0</div>
+  </div>
+  <div class="sb-lang">
+    <select onchange="location = this.value;">
+      <option value="index.html" selected>English (EN)</option>
+      <option value="ar.html">العربية (AR)</option>
+      <option value="es.html">Español (ES)</option>
+      <option value="fr.html">Français (FR)</option>
+      <option value="de.html">Deutsch (DE)</option>
+    </select>
+  </div>
+  <div class="sb-search">
+    <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="sq" placeholder="Search&hellip;" oninput="searchDocs(this.value)">
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-cat">Getting Started</div>
+    <a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>Overview</a>
+    <a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>Installation</a>
+    
+    <div class="sb-cat">Global Settings</div>
+    <a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>Loader Screen</a>
+    <a class="sb-a" href="#header" onclick="nav(event,'#header')"><span class="dot"></span>Header &amp; Navigation</a>
+    <a class="sb-a" href="#menus-submenus" onclick="nav(event,'#menus-submenus')"><span class="dot"></span>Menus &amp; Submenus</a>
+    <a class="sb-a" href="#announce" onclick="nav(event,'#announce')"><span class="dot"></span>Announcement Bar</a>
+    <a class="sb-a" href="#search" onclick="nav(event,'#search')"><span class="dot"></span>Search Drawer</a>
+    <a class="sb-a" href="#cart-drawer-doc" onclick="nav(event,'#cart-drawer-doc')"><span class="dot"></span>Cart Drawer</a>
+    <a class="sb-a" href="#quick-view-doc" onclick="nav(event,'#quick-view-doc')"><span class="dot"></span>Quick View Modal</a>
+    <a class="sb-a" href="#pickup-availability-doc" onclick="nav(event,'#pickup-availability-doc')"><span class="dot"></span>Pickup Availability</a>
+    <a class="sb-a" href="#footer" onclick="nav(event,'#footer')"><span class="dot"></span>Footer</a>
+    
+    <div class="sb-cat">Homepage Sections</div>
+    <a class="sb-a" href="#hero" onclick="nav(event,'#hero')"><span class="dot"></span>Hero Box Slider</a>
+    <a class="sb-a" href="#features" onclick="nav(event,'#features')"><span class="dot"></span>Features Showcase</a>
+    <a class="sb-a" href="#horizontal-gallery" onclick="nav(event,'#horizontal-gallery')"><span class="dot"></span>Horizontal Gallery</a>
+    <a class="sb-a" href="#marquee" onclick="nav(event,'#marquee')"><span class="dot"></span>Marquee Ticker</a>
+    <a class="sb-a" href="#vault" onclick="nav(event,'#vault')"><span class="dot"></span>Collection Vault</a>
+    <a class="sb-a" href="#lifestyle" onclick="nav(event,'#lifestyle')"><span class="dot"></span>Lifestyle Showcase</a>
+    <a class="sb-a" href="#brand-story-doc" onclick="nav(event,'#brand-story-doc')"><span class="dot"></span>Brand Story</a>
+    <a class="sb-a" href="#feat-collection" onclick="nav(event,'#feat-collection')"><span class="dot"></span>Featured Collection</a>
+    <a class="sb-a" href="#featured-product-doc" onclick="nav(event,'#featured-product-doc')"><span class="dot"></span>Featured Product</a>
+    <a class="sb-a" href="#blog-posts" onclick="nav(event,'#blog-posts')"><span class="dot"></span>Blog Posts</a>
+    <a class="sb-a" href="#testimonials" onclick="nav(event,'#testimonials')"><span class="dot"></span>Testimonials Slider</a>
+    <a class="sb-a" href="#trusted" onclick="nav(event,'#trusted')"><span class="dot"></span>Trusted By</a>
+    <a class="sb-a" href="#social" onclick="nav(event,'#social')"><span class="dot"></span>Social Gallery</a>
+    <a class="sb-a" href="#newsletter-doc" onclick="nav(event,'#newsletter-doc')"><span class="dot"></span>Newsletter</a>
+    <a class="sb-a" href="#custom-liquid-doc" onclick="nav(event,'#custom-liquid-doc')"><span class="dot"></span>Custom Liquid</a>
+    
+    <div class="sb-cat">Collection Page</div>
+    <a class="sb-a" href="#coll-page" onclick="nav(event,'#coll-page')"><span class="dot"></span>Collection Settings</a>
+    <a class="sb-a" href="#filters" onclick="nav(event,'#filters')"><span class="dot"></span>Product Filters</a>
+    
+    <div class="sb-cat">Product Page</div>
+    <a class="sb-a" href="#product" onclick="nav(event,'#product')"><span class="dot"></span>Product Settings</a>
+    <a class="sb-a" href="#size-guide" onclick="nav(event,'#size-guide')"><span class="dot"></span>Size Guide</a>
+    <a class="sb-a" href="#complete-look" onclick="nav(event,'#complete-look')"><span class="dot"></span>Complete Your Look</a>
+    <a class="sb-a" href="#prod-recommendations" onclick="nav(event,'#prod-recommendations')"><span class="dot"></span>Product Recommendations</a>
+    
+    <div class="sb-cat">Page Templates</div>
+    <a class="sb-a" href="#about" onclick="nav(event,'#about')"><span class="dot"></span>About / Heritage</a>
+    <a class="sb-a" href="#contact" onclick="nav(event,'#contact')"><span class="dot"></span>Contact / Atelier</a>
+    
+    <div class="sb-cat">Policy Templates</div>
+    <a class="sb-a" href="#shipping-policy" onclick="nav(event,'#shipping-policy')"><span class="dot"></span>Shipping Policy</a>
+    <a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>Returns Policy</a>
+    <a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>Privacy Policy</a>
+    
+    <div class="sb-cat">Store Settings</div>
+    <a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Translate &amp; Adapt</a>
+    <a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>Image Sizes</a>
+    <a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>FAQ</a>
+    <a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Watch SVG Prompt</a>
+    <a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>Get Support</a>
+  </nav>
+</aside>
+<main class="main"><div class="wrap">
+
+<section id="overview">
+<div class="hbox">
+  <div class="hbadge">&#9670;&nbsp; Premium Shopify OS 2.0</div>
+  <h1 class="h1x">Aurick <em>Theme</em><br>Setup Guide</h1>
+  <p class="hlead">Aurick is a luxury Shopify theme built for watch boutiques. Cinematic animations, premium typography, and a complete conversion toolkit &mdash; built in from day one. This guide covers every section, every setting, and every Shopify native feature you need to run your store.</p>
+  <div class="hg">
+    <div class="hs"><span class="hs-n">58</span><span class="hs-l">Total Sections</span></div>
+    <div class="hs"><span class="hs-n">0</span><span class="hs-l">Theme-Check Errors</span></div>
+    <div class="hs"><span class="hs-n">OS 2.0</span><span class="hs-l">Architecture</span></div>
+  </div>
+</div>
+<div class="feat">
+  <div class="fi"><div class="fi-ic">&#127909;</div><div><div class="fi-t">GSAP Animations</div><div class="fi-d">ScrollTrigger, pin+scrub, word-reveal, 3D tilt &mdash; throughout every page. No apps needed.</div></div></div>
+  <div class="fi"><div class="fi-ic">&#8987;</div><div><div class="fi-t">3D Watch Box Slider</div><div class="fi-d">Full-screen animated 3D watch box hero with up to 3 customisable slides per store.</div></div></div>
+  <div class="fi"><div class="fi-ic">&#128269;</div><div><div class="fi-t">Smart Search &amp; Filters</div><div class="fi-d">Integrated drawer systems powered by Shopify Search &amp; Discovery for rich search synonyms and filters.</div></div></div>
+  <div class="fi"><div class="fi-ic">&#128717;</div><div><div class="fi-t">Complete Your Look</div><div class="fi-d">Cross-sell accessories on the product page and inside the slide-out cart drawer. No app required.</div></div></div>
+  <div class="fi"><div class="fi-ic">&#128207;</div><div><div class="fi-t">Size Guide</div><div class="fi-d">Opens an image popup per product &mdash; set via metafield or image alt tag.</div></div></div>
+  <div class="fi"><div class="fi-ic">&#127760;</div><div><div class="fi-t">Multilingual Ready</div><div class="fi-d">Pre-built EN / ES / FR locale files. Add more languages using Translate &amp; Adapt.</div></div></div>
+</div>
+</section>
+
+<section id="install">
+<h2><span class="ic">&#9881;</span>Installation</h2>
+<p>Upload the Aurick theme to Shopify in four steps. No technical knowledge required.</p>
+<ol class="steps">
+  <li><strong>Locate the theme file</strong><p>Find <code>aurick-theme.zip</code> on your computer. Do <em>not</em> unzip it.</p></li>
+  <li><strong>Go to Online Store &rarr; Themes</strong><p>In Shopify Admin: <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Themes</span></span></p></li>
+  <li><strong>Upload the ZIP</strong><p>Click <strong>Add theme</strong> &rarr; <strong>Upload zip file</strong>. Select the <code>.zip</code> and click <strong>Upload file</strong>.</p></li>
+  <li><strong>Customize &amp; Publish</strong><p>Click <strong>Customize</strong> to configure all sections in the Theme Editor, or click <strong>Publish</strong> to go live immediately.</p></li>
+</ol>
+<div class="note warn"><span class="ni">&#9888;</span><div class="nb"><div class="nt">Upload the ZIP as-is</div><p>Do not extract the file before uploading. Shopify requires the compressed format. Extracting it first will cause the upload to fail.</p></div></div>
+</section>
+
+<section id="loader">
+<h2><span class="ic">&#127916;</span>Loader Screen</h2>
+<p>Theme Editor &rarr; <strong>Loader Screen</strong>. Controls the animated entry preloader when shoppers visit your store.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Enable loader</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Turn on to show the preloader animation on initial page load.</td></tr>
+<tr><td>Logo image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Your brand logo image to display in the center of the preloader screen.</td></tr>
+<tr><td>Logo width (desktop)</td><td><span class="tb tr">range</span></td><td>160 px</td><td>Display width of the logo on desktop screens (Range: 60&ndash;400 px).</td></tr>
+<tr><td>Logo width (mobile)</td><td><span class="tb tr">range</span></td><td>120 px</td><td>Display width of the logo on mobile screens (Range: 40&ndash;300 px).</td></tr>
+<tr><td>Preloader text line 1</td><td><span class="tb tt">text</span></td><td>AURICK</td><td>First text line displayed below the logo during loading.</td></tr>
+<tr><td>Preloader text line 2</td><td><span class="tb tt">text</span></td><td>HAUTE HORLOGERIE</td><td>Second text line showing brand credentials.</td></tr>
+<tr><td>Animation duration</td><td><span class="tb tr">range</span></td><td>2.5 s</td><td>Total loading time in seconds before it fades out (Range: 1.0&ndash;5.0 s).</td></tr>
+<tr><td>Font family</td><td><span class="tb ts">select</span></td><td>Serif</td><td>Choose between <strong>Serif</strong> (luxury editorial look) or <strong>Sans-serif</strong> (modern).</td></tr>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color of the full preloader overlay screen.</td></tr>
+<tr><td>Text color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the preloader texts.</td></tr>
+<tr><td>Accent color</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of details, dots, or highlighted terms.</td></tr>
+</tbody></table>
+</section>
+
+<section id="header">
+<h2><span class="ic">&#129517;</span>Header &amp; <em>Navigation</em></h2>
+<p>Theme Editor &rarr; <strong>Header</strong>. Controls logo, nav links, icons, colors, sticky &amp; transparent behavior.</p>
+<h3>Logo</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Logo type</td><td><span class="tb ts">select</span></td><td>text</td><td>Choose <strong>Text</strong> to show your store name as styled serif text, or <strong>Image</strong> to show a logo you upload.</td></tr>
+<tr><td>Logo text</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Custom text override for the logo. Leave blank to use your Shopify store name automatically.</td></tr>
+<tr><td>Logo image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Your brand logo file. Only visible when Logo type is Image. Recommended: transparent PNG or SVG, 300 &times; 120 px.</td></tr>
+<tr><td>Logo position &mdash; desktop</td><td><span class="tb ts">select</span></td><td>Middle left</td><td><strong>Middle left</strong> &bull; <strong>Middle center</strong> (logo centered, all nav left) &bull; <strong>Top left</strong> (logo above nav bar) &bull; <strong>Top center</strong>.</td></tr>
+<tr><td>Logo position &mdash; mobile</td><td><span class="tb ts">select</span></td><td>Center</td><td>Center or Left alignment on mobile viewports.</td></tr>
+<tr><td>Logo size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>140 px</td><td>Max width of the logo on desktop. Range: 60&ndash;260 px.</td></tr>
+<tr><td>Logo size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>100 px</td><td>Max width on mobile. Range: 52&ndash;180 px.</td></tr>
+</tbody></table>
+<h3>Typography &amp; Icons</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Menu text size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>13 px</td><td>Font size of navigation links on desktop. Range: 10&ndash;18 px.</td></tr>
+<tr><td>Menu text size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>28 px</td><td>Font size inside the mobile slide-out menu. Range: 18&ndash;40 px.</td></tr>
+<tr><td>Icons size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>22 px</td><td>Size of the search, cart, and language icons on desktop. Range: 16&ndash;32 px.</td></tr>
+<tr><td>Icons size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>22 px</td><td>Size of header icons on mobile. Range: 16&ndash;32 px.</td></tr>
+</tbody></table>
+<h3>Colors</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Menu text &mdash; active / hover</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of a nav link when it is the current page or hovered.</td></tr>
+<tr><td>Menu text &mdash; default</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Default color of all nav links in their idle state.</td></tr>
+<tr><td>Logo text color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the logo text (only applies when Logo type is Text).</td></tr>
+<tr><td>Search icon color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the search icon in the header.</td></tr>
+<tr><td>Language icon color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the language/locale switcher icon. Appears automatically when multiple languages are published.</td></tr>
+<tr><td>Country icon color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the currency/country selector icon.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>The search icon in the header opens the <strong>Search Drawer</strong> overlay. See the <a href="#search" onclick="nav(event,'#search')">Search Drawer</a> section for how to configure what appears inside it using Shopify Search &amp; Discovery.</p></div></div>
+
+<h3>Collections Mega-Menu Settings</h3>
+<p>Curates a full-width sliding collection cards panel that opens automatically when hovering the matched trigger link in your main menu.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Enable collections mega menu</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Turn on to enable the collections horizontal slider mega-menu.</td></tr>
+<tr><td>Trigger nav item title</td><td><span class="tb tt">text</span></td><td>Collections</td><td>The name of the link in your Main Menu (case-insensitive) that triggers this mega-menu when hovered.</td></tr>
+<tr><td>Collections to display</td><td><span class="tb ts">select</span></td><td>&mdash;</td><td>Select up to 12 collections to display as cards inside the mega-menu grid.</td></tr>
+<tr><td>Visible cards at once (desktop)</td><td><span class="tb tr">range</span></td><td>3</td><td>Number of collections displayed on desktop before navigation arrows appear. Range: 2&ndash;6.</td></tr>
+<tr><td>"Shop now" link text</td><td><span class="tb tt">text</span></td><td>Shop now</td><td>Italic label displayed on the hover state of each collection card.</td></tr>
+<tr><td>"View all" button URL</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Destination link of the view all button. Falls back to <code>/collections</code> if blank.</td></tr>
+<tr><td>"View all" button text</td><td><span class="tb tt">text</span></td><td>View all collection</td><td>Label of the main bottom button inside the mega-menu.</td></tr>
+</tbody></table>
+
+<h3>Featured Mega-Menu (Nav + Cards) Settings</h3>
+<p>Splits the dropdown panel into a left-side navigation list (up to 3 columns) and a right-side promotions panel (up to 6 visual feature cards with staggered entrance animations).</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Enable featured mega menu</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Turn on to activate the multi-panel featured mega-menu.</td></tr>
+<tr><td>Trigger nav item title</td><td><span class="tb tt">text</span></td><td>Shop</td><td>The link title in your Main Menu (case-insensitive) that triggers this menu.</td></tr>
+<tr><td>Column 1 / 2 / 3 menu</td><td><span class="tb ts">select</span></td><td>&mdash;</td><td>Select up to 3 menus to render as navigation columns on the left. The menu title is used as the column heading.</td></tr>
+<tr><td>Card 1&ndash;6 &mdash; Image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Upload promotional images for up to 6 cards (16:10 aspect ratio recommended).</td></tr>
+<tr><td>Card 1&ndash;6 &mdash; Label</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Titles displayed below each image (e.g. <code>New Arrivals</code>, <code>Best Sellers</code>).</td></tr>
+<tr><td>Card 1&ndash;6 &mdash; Link</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>URL targets for each card. Leave image and label blank to hide a card slot.</td></tr>
+</tbody></table>
+</section>
+
+<section id="menus-submenus">
+<h2><span class="ic">&#128269;</span>Menus &amp; <em>Submenus</em></h2>
+<span class="pb g">Shopify Navigation</span>
+<p>Learn how to build drop-down menus, multi-level nested menus, and visual mega-menus in Shopify and integrate them into Aurick's header navigation.</p>
+
+<h3>Step 1: Creating Nested Menus in Shopify</h3>
+<p>Shopify supports nested navigation up to three levels deep. To create a nested structure:</p>
+<ol class="steps">
+  <li><strong>Go to Navigation settings</strong>
+    <p>In Shopify Admin, navigate to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Navigation</span></span>.</p>
+  </li>
+  <li><strong>Select or Create a Menu</strong>
+    <p>Click on **Main Menu** (or click **Add menu** to create a new one).</p>
+  </li>
+  <li><strong>Add Menu Items</strong>
+    <p>Click **Add menu item**, name it (e.g. <code>Collections</code>), and link it. Then add child items below it (e.g. <code>Chronograph</code>, <code>Automatic</code>).</p>
+  </li>
+  <li><strong>Nest Items (Drag-and-Drop)</strong>
+    <p>Click and hold the drag handle icon next to a child menu item, drag it **up and to the right** below the parent item (e.g. drag it under <code>Collections</code>). This nests the item under the parent. Repeat to add sub-items under child items (up to 3 levels).</p>
+  </li>
+  <li><strong>Click Save Menu.</strong></li>
+</ol>
+
+<h3>Step 2: Linking the Menu in Aurick's Header</h3>
+<p>To display your menu in the header:</p>
+<ol class="steps">
+  <li><strong>Open Theme Editor</strong>
+    <p>Navigate to **Online Store** &rarr; **Themes** &rarr; click **Customize** on the Aurick theme.</p>
+  </li>
+  <li><strong>Select the Header Section</strong>
+    <p>Click on the **Header** section in the left sidebar.</p>
+  </li>
+  <li><strong>Choose Menu</strong>
+    <p>Find the **Menu** setting and click **Change** &rarr; **Select menu**. Select your Main Menu and click **Save**.</p>
+  </li>
+</ol>
+</section>
+
+<section id="announce">
+<h2><span class="ic">&#128226;</span>Announcement <em>Bar</em></h2>
+<p>A slim bar displayed above the header on every page. Theme Editor &rarr; <strong>Announcement Bar</strong>.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Show announcement bar</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Master toggle. Turn on to show the bar above the header sitewide.</td></tr>
+<tr><td>Announcement text</td><td><span class="tb tt">text</span></td><td>Free shipping on orders over $100</td><td>The message shown in the bar. Each Announcement block is one message.</td></tr>
+<tr><td>Link (optional)</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>If filled in, clicking anywhere on the bar navigates the shopper to this URL.</td></tr>
+<tr><td>Auto-rotate announcements</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>When on, multiple Announcement blocks cycle through automatically one at a time.</td></tr>
+<tr><td>Change every (seconds)</td><td><span class="tb tr">range</span></td><td>5 s</td><td>How long each message stays visible before rotating to the next. Range: 2&ndash;15 s.</td></tr>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#121212</td><td>Background color of the announcement strip.</td></tr>
+<tr><td>Text color</td><td><span class="tb tc">color</span></td><td>#ffffff</td><td>Color of the announcement text.</td></tr>
+<tr><td>Font size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>13 px</td><td>Text size on desktop. Range: 10&ndash;18 px.</td></tr>
+<tr><td>Font size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>11 px</td><td>Text size on mobile. Range: 9&ndash;16 px.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">&#128161;</span><div class="nb"><p>Add multiple <strong>Announcement</strong> blocks inside this section and enable <em>Auto-rotate</em> to create a cycling banner showing shipping info, promotions, and store policies in sequence.</p></div></div>
+</section>
+
+<section id="search">
+<h2><span class="ic">&#128270;</span>Search <em>Drawer</em></h2>
+<span class="pb">Sitewide &mdash; Header Search Icon</span>
+<p>When a shopper clicks the search icon in the Aurick header, a full-screen slide-in Search Drawer opens. It displays a search input, instant results (products, collections, pages), and predictive suggestions. All of this is powered by the <strong>Shopify Search &amp; Discovery</strong> app &mdash; no theme code needed.</p>
+<h3>Search Drawer Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Title</td><td><span class="tb tt">text</span></td><td>Search Our Atelier</td><td>Large title heading shown when opening the drawer.</td></tr>
+<tr><td>Search suggestions label</td><td><span class="tb tt">text</span></td><td>Suggestions</td><td>Label shown above pre-search keywords.</td></tr>
+<tr><td>Max predictive results</td><td><span class="tb tr">range</span></td><td>6</td><td>Maximum product/collection results displayed instantly. (Range: 3&ndash;12).</td></tr>
+<tr><td>Enable suggestions</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Shows quick popular terms and categories when empty.</td></tr>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color of the drawer panel background overlay.</td></tr>
+</tbody></table>
+<h3>Configuring Search Behavior &mdash; Search &amp; Discovery App</h3>
+<ol class="steps">
+  <li><strong>Open the app</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Apps</span><span class="ps">&rsaquo;</span><span class="pc">Search &amp; Discovery</span></span>. If not installed, install it for free from the Shopify App Store.</p>
+  </li>
+  <li><strong>Set what appears in search results</strong>
+    <p>In the app click <strong>Search</strong> &rarr; <strong>Products</strong>. You can set which product fields are searched (title, description, SKU, tags, vendor, type, variants). Enable <strong>Metafield search</strong> to let shoppers find watches by case material, brand, or any other metafield you&rsquo;ve defined.</p>
+  </li>
+  <li><strong>Configure synonyms</strong>
+    <p>Click <strong>Synonyms</strong>. Add word groups so that typing &ldquo;chrono&rdquo; surfaces &ldquo;chronograph&rdquo; watches, and &ldquo;strap&rdquo; finds &ldquo;band&rdquo; products. This dramatically improves the quality of search results for luxury vocabulary.</p>
+  </li>
+  <li><strong>Boost and bury products</strong>
+    <p>Click <strong>Search results</strong> &rarr; <strong>Product boosts</strong>. Pin specific products to the top of search results for target keywords &mdash; for example, boost your hero watch when a shopper searches &ldquo;signature&rdquo;. Similarly, bury out-of-stock items to the bottom.</p>
+  </li>
+</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">Search quality improves with more product data</div><p>Fill in your product <strong>Type</strong>, <strong>Vendor</strong>, <strong>Tags</strong>, and especially your custom <strong>Metafields</strong> on every product. The more structured data Shopify has, the more accurate and relevant the search results inside the drawer will be.</p></div></div>
+</section>
+
+<section id="cart-drawer-doc">
+<h2><span class="ic">&#128717;</span>Cart Drawer</h2>
+<p>Theme Editor &rarr; <strong>Cart Drawer</strong>. Controls slide-out shopping cart layout, shipping goals, and notes.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Free shipping threshold</td><td><span class="tb tr">range</span></td><td>150</td><td>Amount in store currency needed to unlock free shipping. Set to 0 to disable (Range: 0&ndash;1000).</td></tr>
+<tr><td>Free shipping message</td><td><span class="tb tt">text</span></td><td>You are {{ amount }} away from free shipping</td><td>Message shown when the threshold is not met. Use <code>{{ amount }}</code> to display the remaining value.</td></tr>
+<tr><td>Success message</td><td><span class="tb tt">text</span></td><td>You've unlocked free shipping!</td><td>Celebration message shown when the subtotal exceeds the threshold.</td></tr>
+<tr><td>Show note</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Adds a dropdown notes textarea allowing customers to add gift wrap messages or special instructions.</td></tr>
+<tr><td>Note label</td><td><span class="tb tt">text</span></td><td>Add order note</td><td>Label text of the notes dropdown block.</td></tr>
+<tr><td>Continue shopping label</td><td><span class="tb tt">text</span></td><td>Continue Shopping</td><td>Text shown on the drawer closing button at the bottom.</td></tr>
+<tr><td>Checkout button label</td><td><span class="tb tt">text</span></td><td>Proceed to Checkout</td><td>Text shown on the checkout submission button.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>To maximize cart drawer clarity, prices are rendered in highly legible **Outfit (Sans-serif)** rather than a decorative serif font. The cross-sell slider displays linked items automatically from the <strong>Complete Your Look</strong> metafield setup.</p></div></div>
+</section>
+
+<section id="quick-view-doc">
+<h2><span class="ic">&#128065;</span>Quick View Modal</h2>
+<span class="pb y">Utility</span>
+<p>The Quick View modal overlay enables customers to view product media, options, and add products to their cart without leaving their current page.</p>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>This modal is loaded dynamically using Shopify's <strong>Section Rendering API</strong> from <code>sections/quick-view.liquid</code>, ensuring fast initial page loads. It includes a custom accent color system that evaluates product tags (e.g. adding tag <code>accent-#c9a96e</code> dynamically recolors option highlights for that product).</p></div></div>
+</section>
+
+<section id="pickup-availability-doc">
+<h2><span class="ic">&#128205;</span>Pickup Availability</h2>
+<span class="pb y">Utility</span>
+<p>Dynamic local pickup indicator required by Shopify Theme Store standards. Displays whether the current variant is in stock at nearby retail locations.</p>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Renders asynchronously using the Section Rendering API from <code>sections/pickup-availability.liquid</code>. Settings are managed natively in your Shopify Admin under <strong>Settings &rarr; Shipping and delivery &rarr; Local pickup</strong>.</p></div></div>
+</section>
+
+<section id="footer">
+<h2><span class="ic">&#9660;</span><em>Footer</em></h2>
+<p>Theme Editor &rarr; <strong>Footer</strong>. Controls brand area, navigation columns, social icons, and copyright notice.</p>
+<h3>Brand Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Brand logo</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Optional footer logo. Recommended: 200 &times; 60 px transparent PNG.</td></tr>
+<tr><td>Logo max-width</td><td><span class="tb tr">range</span></td><td>120 px</td><td>Maximum display width of the footer logo. Range: 60&ndash;300 px.</td></tr>
+<tr><td>Brand name</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Text override for the footer brand name. Leave blank to use your Shopify store name.</td></tr>
+<tr><td>Brand tagline</td><td><span class="tb tt">text</span></td><td>Crafted for those who understand time.</td><td>Italic line displayed below the brand name in the footer.</td></tr>
+<tr><td>Copyright text</td><td><span class="tb tt">text</span></td><td>&copy; {year} {brand}. All rights reserved.</td><td>Use <code>{year}</code> for the current year and <code>{brand}</code> for your store name automatically.</td></tr>
+</tbody></table>
+<h3>Colors &amp; Layout</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Footer background</td><td><span class="tb tc">color</span></td><td>#030305</td><td>Background color of the entire footer area.</td></tr>
+<tr><td>Brand name color</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of the brand name text in the footer.</td></tr>
+<tr><td>Tagline color</td><td><span class="tb tc">color</span></td><td>#3a3530</td><td>Color of the italic tagline below the brand name.</td></tr>
+<tr><td>Gold divider line</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of the decorative horizontal divider line.</td></tr>
+<tr><td>Nav links (default)</td><td><span class="tb tc">color</span></td><td>#6b6456</td><td>Default color of footer navigation link text.</td></tr>
+<tr><td>Nav links (hover)</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of nav links on hover.</td></tr>
+<tr><td>Social icons (default)</td><td><span class="tb tc">color</span></td><td>#6b6456</td><td>Color of social media icons in their idle state.</td></tr>
+<tr><td>Social icons (hover)</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of social icons when hovered.</td></tr>
+<tr><td>Copyright text</td><td><span class="tb tc">color</span></td><td>#3a3530</td><td>Color of the copyright notice at the very bottom.</td></tr>
+</tbody></table>
+<h3>Footer Blocks</h3>
+<p>Footer content is completely block-driven. Inside the Theme Editor, click <strong>Add block</strong> in the Footer section to configure blocks:</p>
+<table class="st st-blocks"><thead><tr><th>Block Type</th><th>Settings</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><strong>Nav Link</strong></td><td>
+  <ul>
+    <li><strong>Label</strong> (<span class="tb tt">text</span>): The navigation link text (e.g. <code>About</code>).</li>
+    <li><strong>URL</strong> (<span class="tb tu">url</span>): Link destination.</li>
+  </ul>
+</td><td>About / &mdash;</td><td>Creates an individual horizontal navigation link in the footer. Add as many as needed.</td></tr>
+<tr><td><strong>Social Icon</strong></td><td>
+  <ul>
+    <li><strong>Platform</strong> (<span class="tb ts">select</span>): Choose Instagram, X/Twitter, Facebook, YouTube, Pinterest, TikTok, Snapchat, LinkedIn, or <code>Custom (SVG / Image)</code>.</li>
+    <li><strong>Override URL</strong> (<span class="tb tu">url</span>): Target destination URL (overrides global Theme Settings link).</li>
+    <li><strong>Custom SVG code</strong> (<span class="tb ta">textarea</span>): Paste raw inline <code>&lt;svg&gt;&lt;/svg&gt;</code> markup here when Platform is set to Custom.</li>
+    <li><strong>Custom icon image</strong> (<span class="tb ti">image</span>): Fallback image if custom SVG code is empty. Recommended size: 64&times;64 px.</li>
+    <li><strong>Aria label</strong> (<span class="tb tt">text</span>): Accessibility text for screen readers.</li>
+  </ul>
+</td><td>Instagram / &mdash;</td><td>Creates a social media link. Choosing a platform matches the appropriate social icon automatically.</td></tr>
+<tr><td><strong>Payment Card</strong></td><td>
+  <ul>
+    <li><strong>Card Type</strong> (<span class="tb ts">select</span>): Visa, Mastercard, Amex, PayPal, Discover, Apple Pay, Google Pay, Stripe, or <code>Custom (Image/Text)</code>.</li>
+    <li><strong>Custom Card Image</strong> (<span class="tb ti">image</span>): Custom payment gateway logo (60&times;40 px recommended).</li>
+    <li><strong>Card Name</strong> (<span class="tb tt">text</span>): Accessibility text/alt attribute.</li>
+    <li><strong>Fallback Text Color</strong> (<span class="tb tc">color</span>): Used for custom card name text fallback.</li>
+    <li><strong>Custom Background</strong> (<span class="tb tc">color</span>): Background color of the payment card icon.</li>
+  </ul>
+</td><td>Visa / &mdash;</td><td>Displays a payment brand badge at the bottom of the footer. Add multiple cards to build your trust badge section.</td></tr>
+</tbody></table>
+</section>
+
+<section id="hero">
+<h2><span class="ic">&#127909;</span>Hero Box <em>Slider</em></h2>
+<span class="pb g">Homepage &mdash; First Section</span>
+<p>A full-screen slider with a 3D animated watch box on each slide. The box lid lifts open to reveal the watch with a cinematic animation on entry. Up to 3 slides, each fully independent.</p>
+<h3>Section-Level Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Desktop height mode</td><td><span class="tb ts">select</span></td><td>Full screen</td><td><strong>Full screen (100vh)</strong> fills the entire browser window. <strong>Custom height</strong> uses the pixel value you set below.</td></tr>
+<tr><td>Desktop height (px)</td><td><span class="tb tr">range</span></td><td>700 px</td><td>Only applies when Custom height is selected. Min 500 px to protect the 3D box layout.</td></tr>
+<tr><td>Mobile height mode</td><td><span class="tb ts">select</span></td><td>Full screen</td><td>Same as desktop &mdash; full screen or a fixed custom height for mobile viewports.</td></tr>
+<tr><td>Mobile height (px)</td><td><span class="tb tr">range</span></td><td>560 px</td><td>Fixed height in pixels for mobile when Custom is selected.</td></tr>
+<tr><td>Auto-slide</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Automatically cycle through slides without user interaction.</td></tr>
+<tr><td>Auto-advance (seconds)</td><td><span class="tb tr">range</span></td><td>6 s</td><td>How long each slide stays visible before advancing. Range: 3&ndash;12 s.</td></tr>
+<tr><td>Top margin</td><td><span class="tb tr">range</span></td><td>0 px</td><td>Space above the section. Useful when the header is transparent &mdash; use this to push the hero content down.</td></tr>
+<tr><td>Bottom margin</td><td><span class="tb tr">range</span></td><td>0 px</td><td>Space below the section before the next section begins.</td></tr>
+</tbody></table>
+<h3>Per-Slide Settings (Watch Block)</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Brand (lid top)</td><td><span class="tb tt">text</span></td><td>ALBA / APEX / AURUM</td><td>Brand name text engraved on the top of the watch box lid. Leave blank to use the slot default.</td></tr>
+<tr><td>Model name (inside lid)</td><td><span class="tb tt">text</span></td><td>Alba Blue / Crimson / Aurum Reserve</td><td>Watch model name shown on the inside of the opened lid. Leave blank for slot default.</td></tr>
+<tr><td>Collection subtitle</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Optional subtitle line shown below the model name inside the lid.</td></tr>
+<tr><td>Box material</td><td><span class="tb ts">select</span></td><td>Obsidian Leather</td><td>Visual style of the 3D box: <strong>Obsidian Leather</strong> (blue &mdash; slot 1), <strong>Carbon Titanium</strong> (red &mdash; slot 2), <strong>Lacquered Wood</strong> (gold &mdash; slot 3).</td></tr>
+<tr><td>Primary accent</td><td><span class="tb tc">color</span></td><td>#8ab4f8</td><td>Main accent color for the slide&rsquo;s box and typography. Keep slot defaults for best visual balance.</td></tr>
+<tr><td>Accent highlight</td><td><span class="tb tc">color</span></td><td>#f5cba7</td><td>Secondary lighter accent for highlights and gradient edges.</td></tr>
+<tr><td>Interior glow</td><td><span class="tb tc">color</span></td><td>#60a8ff</td><td>Ambient glow color inside the open box interior cushion area.</td></tr>
+<tr><td>Spotlight RGB</td><td><span class="tb tt">text</span></td><td>52, 152, 219</td><td>RGB values for the box interior spotlight overlay (e.g. <code>52, 152, 219</code>). Format: <code>r, g, b</code>.</td></tr>
+<tr><td>Built-in watch</td><td><span class="tb ts">select</span></td><td>alba-real.svg</td><td>Select one of the theme's high-fidelity built-in watch vectors: <strong>Alba Blue</strong> (slot 1), <strong>Crimson Edition</strong>, or <strong>Aurum Reserve</strong>.</td></tr>
+<tr><td>Custom watch photo</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Upload your own watch image. Overrides the built-in SVG. Recommended: <strong>400 &times; 500 px</strong> portrait with transparent background (PNG). If you wish to use a custom SVG watch vector, you can generate it using the AI assistant prompt provided in the <a href="#watch-svg">Watch Image &rarr; SVG Prompt</a> section below.</td></tr>
+</tbody></table>
+</section>
+
+<section id="features">
+<h2><span class="ic">&#10024;</span>Features <em>Showcase</em></h2>
+<span class="pb g">Homepage</span>
+<p>GSAP split-screen section. Your watch image anchors the right panel while animated feature bullets appear on the left. When the Horizontal Gallery section immediately follows, the watch image flies into the first gallery card on scroll (the flying transition).</p>
+<h3>Section Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Crafted Without Compromise</td><td>Small uppercase label appearing above the feature list.</td></tr>
+<tr><td>Showcase image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>The watch image on the right panel. Recommended: <strong>540 &times; 540 px</strong> with a transparent background (PNG) for the flying transition to work cleanly.</td></tr>
+<tr><td>Enable flying watch transition</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Animates the watch image flying into the first Horizontal Gallery card on scroll. Only works when the Gallery section is placed immediately below.</td></tr>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Background color of this entire section.</td></tr>
+<tr><td>Accent / Gold color</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of feature bullet icons and highlighted text.</td></tr>
+<tr><td>Text color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the feature titles.</td></tr>
+<tr><td>Description text color</td><td><span class="tb tc">color</span></td><td>#a8a29e</td><td>Color of the feature description paragraphs.</td></tr>
+</tbody></table>
+<h3>Feature Block (one per feature)</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Feature title</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Name of the feature, e.g. &ldquo;Sapphire Crystal Glass&rdquo;.</td></tr>
+<tr><td>Feature description</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Short paragraph explaining the feature in detail.</td></tr>
+</tbody></table>
+<section id="horizontal-gallery">
+<h2><span class="ic">&#128142;</span>Horizontal <em>Gallery</em></h2>
+<span class="pb g">Homepage</span>
+<p>A luxury horizontal-scrolling product showcase. Displays watch cards with premium dynamic backgrounds, customizable tags, inline "Quick Add" cart buttons, and dot indicators. Fully responsive with smooth mouse-wheel slide interactions powered by GSAP.</p>
+<h3>Core Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Collection</td><td><span class="tb tt">collection</span></td><td>&mdash;</td><td>The Shopify collection to pull products from.</td></tr>
+<tr><td>Maximum products to show</td><td><span class="tb tr">range</span></td><td>6</td><td>Max limit of watch cards to display in the horizontal scroll list. Range: 2&ndash;12.</td></tr>
+<tr><td>Header alignment</td><td><span class="tb ts">select</span></td><td>left</td><td>Horizontal alignment of the section title: Left &bull; Center &bull; Right.</td></tr>
+</tbody></table>
+
+<h3>Colors & Card Styles</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Section background</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Overall section background.</td></tr>
+<tr><td>Text color / Gold Accent</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#f0ece4 / #c9a96e</td><td>Primary texts and gold accent highlights.</td></tr>
+<tr><td>Eyebrow / Headline color</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / #f0ece4</td><td>Header fonts color overrides.</td></tr>
+<tr><td>Price / Compare price color</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#f0ece4 / rgba(240,236,228,0.68)</td><td>Color styles of normal and compared prices.</td></tr>
+<tr><td>Card Background (1, 2, 3)</td><td><span class="tb tc">color</span></td><td>#12111f / #07070d / #050509</td><td>Three background gradient stops for watch card surfaces.</td></tr>
+<tr><td>Card Body Background (1, 2)</td><td><span class="tb tc">color</span></td><td>#07070d / #050508</td><td>Background colors of the bottom text areas on the cards.</td></tr>
+<tr><td>Card Image Area Background</td><td><span class="tb tc">color</span></td><td>#090912</td><td>Background box color directly behind the watch image.</td></tr>
+<tr><td>Card Hover Border Color</td><td><span class="tb tc">color</span></td><td>#c9a96e (28%)</td><td>Faint border glow showing when hovering over a card.</td></tr>
+</tbody></table>
+
+<h3>Custom Product Tag Badging</h3>
+<p>Each card can display up to three styled tags based on product tags. Modify their colors, borders, and backgrounds below to fit your theme aesthetic:</p>
+<table class="st"><thead><tr><th>Tag Group</th><th>Text Color</th><th>Border Color</th><th>Background Color</th></tr></thead><tbody>
+<tr><td>Tag 1 (e.g. <code>New</code>)</td><td><span class="tb tc">color</span> (#e8d5a3)</td><td><span class="tb tc">color</span> (rgba(201,169,110,0.4))</td><td><span class="tb tc">color</span> (rgba(201,169,110,0.08))</td></tr>
+<tr><td>Tag 2 (e.g. <code>Premium</code>)</td><td><span class="tb tc">color</span> (#a1b2c6)</td><td><span class="tb tc">color</span> (rgba(138,149,165,0.4))</td><td><span class="tb tc">color</span> (rgba(138,149,165,0.08))</td></tr>
+<tr><td>Tag 3 (e.g. <code>Limited</code>)</td><td><span class="tb tc">color</span> (#f5c2c6)</td><td><span class="tb tc">color</span> (rgba(232,180,184,0.4))</td><td><span class="tb tc">color</span> (rgba(232,180,184,0.08))</td></tr>
+</tbody></table>
+
+<h3>Button & Navigation Controls</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>View Button &mdash; Normal</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / transparent</td><td>Text and background color of the "View" button.</td></tr>
+<tr><td>View Button &mdash; Hover</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#f0ece4 / #c9a96e (15%)</td><td>Text and background on hover.</td></tr>
+<tr><td>Add Button &mdash; Normal</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / transparent</td><td>Text/icon and background of the Add-to-Cart "+" button.</td></tr>
+<tr><td>Add Button &mdash; Hover</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#050508 / #dbbe80</td><td>Hover states for the Add button.</td></tr>
+<tr><td>Add Button Size</td><td><span class="tb tr">range</span></td><td>36 px / 32 px</td><td>Button diameter on Desktop (24&ndash;60px) and Mobile (24&ndash;50px).</td></tr>
+<tr><td>Add Button Icon Size</td><td><span class="tb tr">range</span></td><td>18 px / 16 px</td><td>Plus sign icon size on Desktop (10&ndash;30px) and Mobile (10&ndash;30px).</td></tr>
+<tr><td>Arrow navigation size</td><td><span class="tb tr">range</span></td><td>34 px / 30 px</td><td>Visual size of slider arrows on Desktop and Mobile.</td></tr>
+<tr><td>Dot Indicators (Active/Inactive)</td><td><span class="tb tc">color</span> / <span class="tb tc">color</span></td><td>#c9a96e / #f0ece4 (25%)</td><td>Dot scroll progress indicator states.</td></tr>
+</tbody></table>
+</section>
+
+<section id="marquee">
+<h2><span class="ic">&#128225;</span>Marquee <em>Ticker</em></h2>
+<span class="pb g">Homepage</span>
+<p>Dual-row animated text banner. Row 1 scrolls left with large serif brand names. Row 2 scrolls right with small-caps attributes. Pure CSS &mdash; no JavaScript, no performance hit.</p>
+<h3>Typography</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Row 1 size &mdash; Desktop</td><td><span class="tb tr">range</span></td><td>64 px</td><td>Font size of the large serif top row on desktop.</td></tr>
+<tr><td>Row 1 size &mdash; Mobile</td><td><span class="tb tr">range</span></td><td>38 px</td><td>Font size of the top row on mobile.</td></tr>
+<tr><td>Row 2 size &mdash; Desktop</td><td><span class="tb tr">range</span></td><td>9 px</td><td>Font size of the small-caps bottom row on desktop.</td></tr>
+<tr><td>Row 2 size &mdash; Mobile</td><td><span class="tb tr">range</span></td><td>9 px</td><td>Font size of the small-caps row on mobile.</td></tr>
+</tbody></table>
+<h3>Colors</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Background of the marquee strip.</td></tr>
+<tr><td>Gold accent color</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of the diamond separator symbols between phrases.</td></tr>
+<tr><td>Row 1 gradient &mdash; primary</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Starting color of the top-row text gradient.</td></tr>
+<tr><td>Row 1 gradient &mdash; secondary</td><td><span class="tb tc">color</span></td><td>#e4c882</td><td>Ending color of the gradient &mdash; creates a gold shimmer on the text.</td></tr>
+<tr><td>Row 2 text color</td><td><span class="tb tc">color</span></td><td>rgba(201,169,110,.4)</td><td>Default color of the small-caps bottom row.</td></tr>
+<tr><td>Row 2 text hover</td><td><span class="tb tc">color</span></td><td>rgba(201,169,110,.72)</td><td>Color of the bottom row on cursor hover.</td></tr>
+</tbody></table>
+<div class="note tip"><span class="ni">&#128161;</span><div class="nb"><p>Edit the actual phrases inside each <strong>Row 1</strong> and <strong>Row 2</strong> block. Add multiple blocks to extend the looping text sequence with brand names, materials, or attributes.</p></div></div>
+</section>
+
+<section id="vault">
+<h2><span class="ic">&#127963;</span>Collection <em>Vault</em></h2>
+<span class="pb g">Homepage</span>
+<p>Your collections displayed as premium 3D-tilt cards. Hovering tilts each card toward the cursor, reveals gold corner brackets, and plays a shimmer sweep across the surface. Each card links to a collection.</p>
+<h3>Section Header</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>The Vault</td><td>Small uppercase label above the section headline.</td></tr>
+<tr><td>Headline &mdash; line 1</td><td><span class="tb tt">text</span></td><td>Explore Our</td><td>First line of the main heading.</td></tr>
+<tr><td>Headline &mdash; line 2</td><td><span class="tb tt">text</span></td><td>Collections</td><td>Second line. Wrap words in <code>&lt;em&gt;&lt;/em&gt;</code> for italic gold styling, e.g. <code>&lt;em&gt;Collections&lt;/em&gt;</code>.</td></tr>
+<tr><td>Sub-text</td><td><span class="tb ta">textarea</span></td><td>Every timepiece tells a story&hellip;</td><td>Short paragraph displayed below the headline.</td></tr>
+<tr><td>Header alignment</td><td><span class="tb ts">select</span></td><td>Left</td><td>Alignment of section header text: Left, Center, or Right.</td></tr>
+</tbody></table>
+<h3>Layout</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Columns &mdash; desktop</td><td><span class="tb tr">range</span></td><td>3</td><td>Cards per row on desktop. Range: 2&ndash;5.</td></tr>
+<tr><td>Columns &mdash; tablet</td><td><span class="tb tr">range</span></td><td>2</td><td>Cards per row on tablet.</td></tr>
+<tr><td>Columns &mdash; mobile</td><td><span class="tb tr">range</span></td><td>1</td><td>Cards per row on mobile. 1 is recommended for best mobile experience.</td></tr>
+<tr><td>Grid gap</td><td><span class="tb tr">range</span></td><td>24 px</td><td>Pixel gap between cards. Range: 8&ndash;48 px.</td></tr>
+<tr><td>Card aspect ratio</td><td><span class="tb ts">select</span></td><td>Portrait 3:4</td><td>Portrait 3:4 &bull; Portrait 4:5 &bull; Square 1:1 &bull; Landscape 16:9.</td></tr>
+<tr><td>Card border radius</td><td><span class="tb tr">range</span></td><td>12 px</td><td>Rounded corner radius of each card. Range: 0&ndash;32 px.</td></tr>
+<tr><td>Image fit</td><td><span class="tb ts">select</span></td><td>Cover</td><td><strong>Cover</strong> crops to fill the card. <strong>Contain</strong> fits the whole image without cropping.</td></tr>
+</tbody></table>
+<h3>Colors</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Background</td><td><span class="tb tc">color</span></td><td>#0a0906</td><td>Section background behind the card grid.</td></tr>
+<tr><td>Eyebrow color</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of the eyebrow label above the headline.</td></tr>
+<tr><td>Headline color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the main section headline.</td></tr>
+<tr><td>Subtext color</td><td><span class="tb tc">color</span></td><td>#6b6660</td><td>Color of the sub-text paragraph.</td></tr>
+<tr><td>Accent (gold)</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Color of gold accents, border glows, italic portions, and corner reveals on hover.</td></tr>
+<tr><td>Card name color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the collection name on each card.</td></tr>
+<tr><td>Card description color</td><td><span class="tb tc">color</span></td><td>#8c8680</td><td>Color of the collection description text on each card.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Each card block is linked to a Shopify collection. The card background image is the <strong>Collection image</strong> set in <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Collections</span><span class="ps">&rsaquo;</span><span class="pc">Your Collection</span></span>. Recommended: <strong>800 &times; 1000 px</strong> portrait.</p></div></div>
+</section>
+
+<section id="lifestyle">
+<h2><span class="ic">&#128247;</span>Lifestyle <em>Showcase</em></h2>
+<span class="pb g">Homepage</span>
+<p>A rotated grid of portrait photos split into two rows. Each row translates in opposite directions in response to mouse movement, creating a cinematic parallax depth-of-field editorial effect.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Section headline</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Large heading displayed above the photo grid.</td></tr>
+<tr><td>Photo (per block)</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>The lifestyle image for each card. Recommended: <strong>1000 &times; 1250 px</strong> (4:5 portrait), subject centered so it stays in frame when the card is rotated.</td></tr>
+<tr><td>Caption (per block)</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Optional label shown on hover over each photo card.</td></tr>
+</tbody></table>
+</section>
+
+<section id="brand-story-doc">
+<h2><span class="ic">&#128214;</span>Brand Story</h2>
+<span class="pb g">Homepage</span>
+<p>A signature visual storytelling block with side-by-side rich text and a cinematic parallax-scrolling background image.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Since 1947</td><td>Small uppercase credential tag.</td></tr>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>A Heritage of Innovation</td><td>Main story headline. Wrap parts in <code>&lt;em&gt;</code> for italics.</td></tr>
+<tr><td>Description</td><td><span class="tb ta">textarea</span></td><td>Deep in the Swiss Jura mountains...</td><td>Narrative body text explaining brand craftsmanship.</td></tr>
+<tr><td>Background image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Parallax background visual. Recommended: <strong>2000 &times; 1200 px</strong> landscape.</td></tr>
+<tr><td>Text alignment</td><td><span class="tb ts">select</span></td><td>Left</td><td>Aligns content box text to Left, Center, or Right.</td></tr>
+<tr><td>Button label</td><td><span class="tb tt">text</span></td><td>Discover Our History</td><td>Text shown inside the call-to-action button.</td></tr>
+<tr><td>Button link</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Target URL when clicking the button.</td></tr>
+</tbody></table>
+</section>
+
+<section id="feat-collection">
+<h2><span class="ic">&#128203;</span>Featured Collection</h2>
+<span class="pb g">Homepage</span>
+<p>Displays a responsive grid of products from a chosen collection. Ideal for showcasing best sellers or new arrivals on your home page.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Featured</td><td>Small tag text above the title.</td></tr>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>Featured collection</td><td>Main section title.</td></tr>
+<tr><td>Subheading</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Short descriptive paragraph displayed below the heading.</td></tr>
+<tr><td>Collection</td><td><span class="tb tt">collection</span></td><td>&mdash;</td><td>Shopify collection picker to populate products.</td></tr>
+<tr><td>Maximum products to show</td><td><span class="tb tr">range</span></td><td>4</td><td>Count of products displayed in the grid (Range: 2&ndash;12).</td></tr>
+<tr><td>Columns on desktop</td><td><span class="tb tr">range</span></td><td>4</td><td>Grid columns displayed on desktop views (Range: 2&ndash;5).</td></tr>
+<tr><td>Columns on mobile</td><td><span class="tb ts">select</span></td><td>2</td><td>Columns on mobile viewports: <strong>1</strong> or <strong>2</strong>.</td></tr>
+<tr><td>Show Quick Add button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Adds a quick-add cart button inside product cards.</td></tr>
+<tr><td>Show vendor</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Displays product vendor labels on the cards.</td></tr>
+<tr><td>Show "View all" button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Shows a bottom button linking to the collection page if it has more items.</td></tr>
+</tbody></table>
+<section id="featured-product-doc">
+<h2><span class="ic">&#128336;</span>Featured <em>Product</em></h2>
+<span class="pb g">Homepage</span>
+<p>Highlights a single product directly on your homepage with a complete purchase form, media gallery, and dynamic accordion dropdowns. Perfect for launching a flagship watch model.</p>
+<h3>Core Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Product</td><td><span class="tb tt">product</span></td><td>&mdash;</td><td>Select the product to showcase in this section.</td></tr>
+<tr><td>Show gallery thumbnails</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Turn on to display media thumbnails below the main image box.</td></tr>
+<tr><td>Gallery corner radius</td><td><span class="tb tr">range</span></td><td>8 px</td><td>Rounds the corners of product gallery images. Range: 0&ndash;40 px.</td></tr>
+<tr><td>Low stock threshold</td><td><span class="tb tr">range</span></td><td>10</td><td>Stock quantity below which a low-inventory warning badge is shown. Range: 2&ndash;20.</td></tr>
+<tr><td>Show product tags</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle whether to show raw product tags.</td></tr>
+</tbody></table>
+
+<h3>Typography & Styling</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Section background</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Background color of the section.</td></tr>
+<tr><td>Vendor / Title / Price colour</td><td><span class="tb tc">color</span></td><td>#c9a96e / #f0ece4 / #f0ece4</td><td>Font color overrides for elements.</td></tr>
+<tr><td>Description text colour</td><td><span class="tb tc">color</span></td><td>#787068</td><td>Color of product description.</td></tr>
+<tr><td>Title font size &mdash; Desktop / Mobile</td><td><span class="tb tr">range</span></td><td>46 px / 32 px</td><td>Font sizes of the title. Range: 24&ndash;72 px / 20&ndash;52 px.</td></tr>
+<tr><td>Price font size &mdash; Desktop / Mobile</td><td><span class="tb tr">range</span></td><td>32 px / 26 px</td><td>Font sizes of the price. Range: 18&ndash;60 px / 16&ndash;44 px.</td></tr>
+<tr><td>Description size &mdash; Desktop / Mobile</td><td><span class="tb tr">range</span></td><td>14 px / 14 px</td><td>Font sizes of product descriptions. Range: 12&ndash;22 px / 12&ndash;20 px.</td></tr>
+<tr><td>Button corner radius</td><td><span class="tb tr">range</span></td><td>14 px</td><td>Corner rounding for checkout and cart buttons. Range: 0&ndash;40 px.</td></tr>
+</tbody></table>
+
+<h3>Featured Product Blocks</h3>
+<p>Merchants can structure the purchase column by dragging and dropping blocks inside the section. The following blocks are available:</p>
+<table class="st st-blocks"><thead><tr><th>Block Type</th><th>Settings & Options</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><strong>Vendor</strong></td><td>None</td><td>Displays the product brand/vendor name.</td></tr>
+<tr><td><strong>Title</strong></td><td>None</td><td>Displays the product title.</td></tr>
+<tr><td><strong>Rating</strong></td><td><code>rating_score</code> (Default: 4.9), <code>rating_count</code> (Default: 47)</td><td>Displays product stars and review count.</td></tr>
+<tr><td><strong>Price</strong></td><td>None</td><td>Displays product price and compared prices.</td></tr>
+<tr><td><strong>Urgency badge</strong></td><td>None</td><td>Displays stock urgency notices if stock is below the threshold.</td></tr>
+<tr><td><strong>Description</strong></td><td>None</td><td>Displays the short product description text.</td></tr>
+<tr><td><strong>Divider</strong></td><td>None</td><td>Puts a subtle horizontal border divider line (Limit: 3).</td></tr>
+<tr><td><strong>Variant picker</strong></td><td>None</td><td>Displays variant dropdowns or pills (e.g. strap color, dial size).</td></tr>
+<tr><td><strong>Quantity selector</strong></td><td>None</td><td>Displays number selector for products quantity.</td></tr>
+<tr><td><strong>Buy buttons</strong></td><td><code>show_dynamic_checkout</code> (Toggle dynamic checkout buttons)</td><td>Displays Add to Cart and Buy It Now buttons.</td></tr>
+<tr><td><strong>Trust badges</strong></td><td>Predefined icon dropdown (Shipping, Returns, Authenticity, Warranty, etc.), custom icon upload, label, and subtext (up to 3 badges).</td><td>Displays confidence-building icons and texts.</td></tr>
+<tr><td><strong>Description tabs</strong></td><td>None</td><td>Displays collapsible tab drawer for descriptions.</td></tr>
+<tr><td><strong>Accordion</strong></td><td><code>heading</code> (Text), <code>content</code> (Richtext)</td><td>Displays expandable accordion rows (e.g. Specifications, Warranty).</td></tr>
+<tr><td><strong>Tags</strong></td><td>None</td><td>Displays product tags.</td></tr>
+<tr><td><strong>Custom liquid</strong></td><td><code>custom_liquid</code> (Liquid text box)</td><td>Incorporate custom Liquid codes or HTML blocks.</td></tr>
+</tbody></table>
+</section>
+
+<section id="blog-posts">
+<h2><span class="ic">&#9997;</span>Blog Posts</h2>
+<span class="pb g">Homepage</span>
+<p>Highlights the latest editorial articles from your blog on the homepage in a high-fashion grid layout.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Editorial</td><td>Small tag text above the heading.</td></tr>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>Latest articles</td><td>Main section title.</td></tr>
+<tr><td>Subheading</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Short descriptive paragraph below the title.</td></tr>
+<tr><td>Blog</td><td><span class="tb tt">blog</span></td><td>&mdash;</td><td>Shopify blog picker to pull articles.</td></tr>
+<tr><td>Maximum posts to show</td><td><span class="tb tr">range</span></td><td>3</td><td>Number of articles to display (Range: 2&ndash;6).</td></tr>
+<tr><td>Columns on desktop</td><td><span class="tb tr">range</span></td><td>3</td><td>Columns displayed on desktop viewports (Range: 2&ndash;4).</td></tr>
+<tr><td>Show date</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Displays article publication dates.</td></tr>
+<tr><td>Show author</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Displays article author names.</td></tr>
+<tr><td>Show excerpt</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Displays short excerpt summaries below article titles.</td></tr>
+<tr><td>Show "View all" button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Displays a bottom link to the main blog page.</td></tr>
+</tbody></table>
+</section>
+
+<section id="testimonials">
+<h2><span class="ic">&#128172;</span>Testimonials Slider</h2>
+<span class="pb g">Homepage</span>
+<p>A clean horizontal quotes carousel to showcase customer reviews and press clippings in a beautiful luxury layout.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Section heading</td><td><span class="tb tt">text</span></td><td>Client Testimonials</td><td>Large section headline.</td></tr>
+<tr><td>Autoplay slider</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Turn on to cycle quotes automatically.</td></tr>
+<tr><td>Change quote every</td><td><span class="tb tr">range</span></td><td>6 s</td><td>Auto-rotation duration in seconds (Range: 3&ndash;12 s).</td></tr>
+</tbody></table>
+<p>Each quote is added as a **Testimonial Block** inside the section. Click <strong>Add block</strong> &rarr; <strong>Testimonial</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Quote</td><td><span class="tb ta">textarea</span></td><td>The craftsmanship is extraordinary...</td><td>The customer testimonial or review text displayed in large quotes.</td></tr>
+<tr><td>Author name</td><td><span class="tb tt">text</span></td><td>James Harrington</td><td>Full name of the client or reviewer.</td></tr>
+<tr><td>Role / Title</td><td><span class="tb tt">text</span></td><td>CEO, Harrington Group</td><td>Company, title, or credential subtitle displayed below the author name.</td></tr>
+<tr><td>Rating (stars)</td><td><span class="tb tr">range</span></td><td>5</td><td>Star rating to display. Renders as gold SVG stars (Range: 1&ndash;5).</td></tr>
+<tr><td>Card accent colour</td><td><span class="tb tc">color</span></td><td>#c9a84c</td><td>Accent color used for the gold progress line and decorative elements on this specific card.</td></tr>
+</tbody></table>
+</section>
+
+<section id="trusted">
+<h2><span class="ic">&#129309;</span>Trusted By</h2>
+<span class="pb g">Homepage</span>
+<p>Renders a row of brand, press, or certificate logos to establish store credibility.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>As Seen In</td><td>Small uppercase section label.</td></tr>
+<tr><td>Grayscale logos</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Converts logo images to grayscale to maintain premium design integration.</td></tr>
+</tbody></table>
+<p>You can add three types of blocks to build your credentials grid: Publications, Stats, and Certifications. Click <strong>Add block</strong> &rarr; select from:</p>
+<table class="st st-blocks"><thead><tr><th>Block Type</th><th>Settings</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><strong>Publication</strong></td><td>
+  <ul>
+    <li><strong>Publication name</strong> (<span class="tb tt">text</span>): Logo or label text (e.g. <code>GQ</code>, <code>Forbes</code>).</li>
+    <li><strong>Tagline</strong> (<span class="tb tt">text</span>): Short quote or credential displayed on cursor hover (e.g. <code>Watch of the Year</code>).</li>
+  </ul>
+</td><td>GQ / Watch of the Year</td><td>Creates a press logo card that reveals a quote when hovered.</td></tr>
+<tr><td><strong>Stat</strong></td><td>
+  <ul>
+    <li><strong>Icon</strong> (<span class="tb tt">text</span>): Emoji or symbol (e.g. <code>â—ˆ</code>, <code>â˜…</code>).</li>
+    <li><strong>Value</strong> (<span class="tb tt">text</span>): Number (e.g. <code>45,000</code>).</li>
+    <li><strong>Suffix</strong> (<span class="tb tt">text</span>): Symbol appended to the value (e.g. <code>+</code>, <code>%</code>).</li>
+    <li><strong>Label text</strong> (<span class="tb tt">text</span>): Description (e.g. <code>Timepieces Crafted</code>).</li>
+  </ul>
+</td><td>â—ˆ / 45,000 / + / Timepieces Crafted</td><td>Displays a prominent key performance indicator (KPI) card.</td></tr>
+<tr><td><strong>Certification</strong></td><td>
+  <ul>
+    <li><strong>Certification text</strong> (<span class="tb tt">text</span>): Authority label (e.g. <code>COSC Certified</code>, <code>Swiss Made</code>).</li>
+  </ul>
+</td><td>COSC Certified</td><td>Displays a security or certification badge in a clean gold border box.</td></tr>
+</tbody></table>
+</section>
+
+<section id="social">
+<h2><span class="ic">&#128248;</span>Social Gallery</h2>
+<span class="pb g">Homepage</span>
+<p>Displays a responsive grid of curated social media posts (like Instagram photos) linking directly to your profiles.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>Follow the Journey</td><td>Main section title.</td></tr>
+<tr><td>Account handle</td><td><span class="tb tt">text</span></td><td>@aurick_boutique</td><td>Your social handle displayed above the gallery grid.</td></tr>
+<tr><td>Account link</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Profile page URL for the handle link.</td></tr>
+</tbody></table>
+<p>Each post is added as a **Post Block**. Click <strong>Add block</strong> &rarr; <strong>Post</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>The social media photo (e.g. Instagram upload). Recommended: <strong>800 &times; 800 px</strong> square image.</td></tr>
+<tr><td>Link (optional)</td><td><span class="tb tu">url</span></td><td>&mdash;</td><td>Destination link when the user clicks the photo (e.g. your Instagram post URL).</td></tr>
+<tr><td>Alt text</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Alt accessibility description text for the image.</td></tr>
+<tr><td>Image fit</td><td><span class="tb ts">select</span></td><td>Cover (crop to fill)</td><td><strong>Cover</strong> crops to fill the grid cell, <strong>Contain</strong> fits the whole image without cropping.</td></tr>
+<tr><td>Image position</td><td><span class="tb ts">select</span></td><td>Center</td><td>Focal point: Center &bull; Top &bull; Bottom &bull; Left &bull; Right.</td></tr>
+</tbody></table>
+</section>
+
+<section id="newsletter-doc">
+<h2><span class="ic">&#128227;</span>Newsletter <em>Signup</em></h2>
+<span class="pb g">Homepage</span>
+<p>A fullscreen editorial subscription section featuring split-row text entrance animations, premium input fields, and a large customizable brand watermark (ghost background word) that dynamically shimmers on scroll.</p>
+<h3>Content & Typography</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow</td><td><span class="tb tt">text</span></td><td>Exclusive Access</td><td>Small category label shown above the main title.</td></tr>
+<tr><td>Headline line 1 &amp; 2</td><td><span class="tb tt">text</span></td><td>Stay in / the Circle.</td><td>Splits the headline text into two independent lines to allow staggered slide-up animations.</td></tr>
+<tr><td>Subtext</td><td><span class="tb ta">textarea</span></td><td>Get 10% off your first order...</td><td>Editorial paragraph shown below the headline.</td></tr>
+<tr><td>Button text</td><td><span class="tb tt">text</span></td><td>Subscribe</td><td>Label on the submission button. Clicking submits the email to your Shopify customer list with the tag <code>newsletter</code>.</td></tr>
+<tr><td>Disclaimer</td><td><span class="tb tt">text</span></td><td>No spam, ever. Unsubscribe at any time.</td><td>Fine print text displayed below the input row.</td></tr>
+<tr><td>Background word</td><td><span class="tb tt">text</span></td><td>TIME</td><td>Large background watermark word that sits behind the content panel.</td></tr>
+<tr><td>Section min-height</td><td><span class="tb tr">range</span></td><td>100 vh</td><td>Minimum height of the section relative to viewport height (Range: 50&ndash;150 vh).</td></tr>
+</tbody></table>
+
+<h3>Colors & Typography Sizes</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Section background</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Color of the background.</td></tr>
+<tr><td>Eyebrow / Headline / Subtext text color</td><td><span class="tb tc">color</span></td><td>#c9a84c / #f0ece4 / #6b6456</td><td>Color overrides for text elements.</td></tr>
+<tr><td>Input field (Border / BG / Text)</td><td><span class="tb tc">color</span></td><td>#c9a84c / #0c0b09 / #f0ece4</td><td>Aesthetics of the email text input block.</td></tr>
+<tr><td>Subscribe Button (BG / Text)</td><td><span class="tb tc">color</span></td><td>#c9a84c / #050508</td><td>Aesthetics of the subscription button.</td></tr>
+<tr><td>Ghost word size / opacity</td><td><span class="tb tr">range</span></td><td>40 vw / 4%</td><td>Sizing and visibility of the background word. Range: 10&ndash;60 vw / 0&ndash;20%.</td></tr>
+<tr><td>Headline font size &mdash; Desktop / Mobile</td><td><span class="tb tr">range</span></td><td>88 px / 52 px</td><td>Font size of the split headline. Range: 32&ndash;140 px / 28&ndash;80 px.</td></tr>
+</tbody></table>
+</section>
+
+<section id="custom-liquid-doc">
+<h2><span class="ic">&#129521;</span>Custom <em>Liquid</em></h2>
+<span class="pb g">Homepage</span>
+<p>Inject custom HTML, CSS rules, or Shopify Liquid code snippets directly inside your homepage. Ideal for embedding custom third-party app forms, banners, or video players.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Custom Liquid</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>The custom raw markup or Liquid code to render inside the section container.</td></tr>
+</tbody></table>
+</section>
+
+<section id="coll-page">
+<h2><span class="ic">&#128203;</span>Collection Page <em>Settings</em></h2>
+<span class="pb">All Collection Pages</span>
+<p>Theme Editor &rarr; <strong>Collection</strong> template. Controls the hero banner, product grid, card styles, typography, and colors for every collection page.</p>
+<h3>Collection Hero Banner</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Show collection image</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle the full-width hero banner at the top of each collection page on or off.</td></tr>
+<tr><td>Image height &mdash; desktop</td><td><span class="tb tr">range</span></td><td>480 px</td><td>Height of the hero banner on desktop. Range: 300&ndash;700 px.</td></tr>
+<tr><td>Image height &mdash; mobile</td><td><span class="tb tr">range</span></td><td>300 px</td><td>Height of the hero banner on mobile. Range: 200&ndash;400 px.</td></tr>
+</tbody></table>
+<div class="note warn"><span class="ni">&#9888;</span><div class="nb"><div class="nt">Keep the bottom-left of banner images clear</div><p>Aurick overlays the collection title, description, and breadcrumbs in the <strong>bottom-left corner</strong> of the hero banner. Keep that area dark and free of important subject matter.</p></div></div>
+<h3>Product Grid</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Products per page</td><td><span class="tb tr">range</span></td><td>12</td><td>How many products load before the &ldquo;Load More&rdquo; button appears. Range: 8&ndash;48.</td></tr>
+<tr><td>Columns &mdash; desktop</td><td><span class="tb tr">range</span></td><td>4</td><td>Product cards per row on desktop. Range: 2&ndash;5.</td></tr>
+<tr><td>Columns &mdash; mobile</td><td><span class="tb tr">range</span></td><td>2</td><td>Product cards per row on mobile. Range: 1&ndash;3.</td></tr>
+<tr><td>Grid gap</td><td><span class="tb tr">range</span></td><td>24 px</td><td>Space between product cards. Range: 8&ndash;48 px.</td></tr>
+<tr><td>Show product vendor</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Show the brand/vendor name below the product title on each card.</td></tr>
+<tr><td>Show quick add button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Show a quick-add-to-cart icon on product cards when hovered.</td></tr>
+<tr><td>Show sort dropdown</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Show the &ldquo;Sort by&rdquo; dropdown above the product grid.</td></tr>
+<tr><td>Load more text</td><td><span class="tb tt">text</span></td><td>Load More Timepieces</td><td>Label on the pagination button that loads the next page of products.</td></tr>
+</tbody></table>
+<h3>Product Card Style</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Card border radius</td><td><span class="tb tr">range</span></td><td>16 px</td><td>Corner rounding of each product card. 0 = square. Range: 0&ndash;32 px.</td></tr>
+<tr><td>Card image height</td><td><span class="tb tr">range</span></td><td>260 px</td><td>Fixed height of the image area inside each product card.</td></tr>
+<tr><td>Image fit</td><td><span class="tb ts">select</span></td><td>Contain</td><td><strong>Contain</strong> shows the full product without cropping (recommended for watches on transparent backgrounds). <strong>Cover</strong> crops to fill.</td></tr>
+<tr><td>Image position</td><td><span class="tb ts">select</span></td><td>Centre</td><td>Focal point when Cover mode is active: Centre, Top, Bottom, Left, Right.</td></tr>
+</tbody></table>
+<h3>Card Colors</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Card gradient &mdash; top</td><td><span class="tb tc">color</span></td><td>#12111f</td><td>Top color of the product card background gradient.</td></tr>
+<tr><td>Card gradient &mdash; middle</td><td><span class="tb tc">color</span></td><td>#07070d</td><td>Middle color of the three-stop gradient.</td></tr>
+<tr><td>Card gradient &mdash; bottom</td><td><span class="tb tc">color</span></td><td>#050509</td><td>Bottom color of the gradient.</td></tr>
+<tr><td>Card title color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the product title on each card.</td></tr>
+<tr><td>Price color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the product price text.</td></tr>
+<tr><td>View button text</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of the &ldquo;View&rdquo; label on product cards.</td></tr>
+<tr><td>Badge color</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Background color of the Sale / New badge pill on product cards.</td></tr>
+</tbody></table>
+<h3>Card Typography</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Card title size</td><td><span class="tb tr">range</span></td><td>20 px</td><td>Font size of the product title on each card. Range: 14&ndash;32 px.</td></tr>
+<tr><td>Price size</td><td><span class="tb tr">range</span></td><td>17 px</td><td>Font size of the price text. Range: 12&ndash;28 px.</td></tr>
+<tr><td>Description size</td><td><span class="tb tr">range</span></td><td>13 px</td><td>Font size of the short product description shown on hover. Range: 10&ndash;18 px.</td></tr>
+</tbody></table>
+</section>
+
+<section id="filters">
+<h2><span class="ic">&#128269;</span>Product List <em>Filters</em></h2>
+<span class="pb">Collection Pages &mdash; Filter Drawer</span>
+<div class="note crit"><span class="ni">&#9888;</span><div class="nb"><div class="nt">Filters are NOT configured in the Theme Editor</div><p>The filter drawer on collection pages is powered exclusively by the free <strong>Shopify Search &amp; Discovery</strong> app. All filter configuration &mdash; which attributes appear, their order, display type &mdash; is done inside that app, not in Aurick&rsquo;s theme settings.</p></div></div>
+<div class="card">
+<h3>Why Metafield Filters Beat Tag Filters</h3>
+<p>If you filter by <strong>Product Tags</strong> (the default), a shopper browsing <code>/collections/women</code> sees a &ldquo;Women&rdquo; checkbox in the filter drawer &mdash; pointless because every product already matches. With <strong>Metafield filters</strong>, Shopify&rsquo;s Search &amp; Discovery engine automatically hides any filter value that matches the current collection context. Shoppers only see filters that are genuinely useful to narrow down their choice.</p>
+</div>
+<h3>Setting Up Metafield Filters &mdash; Step by Step</h3>
+<ol class="steps">
+  <li><strong>Create metafield definitions (once)</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span> and create these definitions:</p>
+    <ul>
+      <li><strong>Brand</strong> &mdash; Namespace &amp; key: <code>custom.brand</code> &mdash; Type: Single line text</li>
+      <li><strong>Gender</strong> &mdash; Namespace &amp; key: <code>custom.gender</code> &mdash; Type: Single line text</li>
+      <li>Add any others you need: <strong>Movement</strong> (<code>custom.movement</code>), <strong>Case Material</strong> (<code>custom.case_material</code>), etc.</li>
+    </ul>
+  </li>
+  <li><strong>Fill in values on every product</strong>
+    <p>Open each product in Admin &rarr; scroll to the <strong>Metafields</strong> panel (at the bottom of the product editor) &rarr; enter Brand (e.g. <code>Rolex</code>) and Gender (e.g. <code>Women</code>). Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Install Search &amp; Discovery app</strong>
+    <p>If not already installed, go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Apps</span><span class="ps">&rsaquo;</span><span class="pc">Shopify Search &amp; Discovery</span></span>. It is free and made by Shopify.</p>
+  </li>
+  <li><strong>Configure filters in the app</strong>
+    <p>Open the app &rarr; click <strong>Filters</strong> in the left menu &rarr; click <strong>Add filter</strong>. Select your <strong>Brand</strong> and <strong>Gender</strong> metafield definitions. Choose display type: <strong>List</strong> (checkboxes) or <strong>Swatch</strong>. Remove the old <strong>Product Tag</strong> filter entry. Click <strong>Save</strong>.</p>
+  </li>
+</ol>
+<div class="note tip"><span class="ni">&#10024;</span><div class="nb"><div class="nt">Result: Context-aware filter drawer</div><p>Shoppers on <code>/collections/women</code> see only Brand and Price. On <code>/collections/rolex</code> they see only Gender and Price. The collection context is hidden automatically &mdash; exactly as expected from a luxury store.</p></div></div>
+<h3>Price Filter</h3>
+<p>The Price filter is always available by default inside Shopify Search &amp; Discovery. Enable it in the app filters list if it is not already showing. It renders as a draggable range slider in Aurick&rsquo;s filter drawer automatically.</p>
+<h3>Filter Display Options</h3>
+<table class="st"><thead><tr><th>Display Type</th><th>Best For</th><th>How to Set</th></tr></thead><tbody>
+<tr><td>List (checkboxes)</td><td>Text values like Brand, Gender, Movement type</td><td>Search &amp; Discovery &rarr; Filters &rarr; select filter &rarr; Display as List</td></tr>
+<tr><td>Swatch</td><td>Color or material visual options</td><td>Search &amp; Discovery &rarr; Filters &rarr; select filter &rarr; Display as Swatch, then assign color codes per value</td></tr>
+<tr><td>Price Range</td><td>Budget filtering</td><td>Enabled by default. Shows as a slider in Aurick&rsquo;s filter drawer.</td></tr>
+</tbody></table>
+</section>
+
+<section id="product">
+<h2><span class="ic">&#128142;</span>Product Page <em>Settings</em></h2>
+<span class="pb">All Product Pages</span>
+<p>Theme Editor &rarr; <strong>Default Product</strong> template &rarr; <strong>Product Information</strong> section. Controls the main product layout, gallery settings, typography, custom buttons, and allows you to drag-and-drop 14+ blocks to customize the buy box layout.</p>
+
+<h3>Gallery Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Gallery thumbnail layout</td><td><span class="tb ts">select</span></td><td>Vertical (Left)</td><td><strong>Vertical (Left)</strong> &mdash; thumbnails in a column beside the main image. <strong>Bottom</strong> &mdash; horizontal strip below. <strong>Overlay circles</strong> &mdash; dot indicators overlaid on the main image.</td></tr>
+<tr><td>Make gallery sticky</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Keeps the gallery fixed while the shopper scrolls the buy box and description on desktop.</td></tr>
+<tr><td>Show thumbnail strip</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle the thumbnail row. Turn off for a single-image clean view.</td></tr>
+<tr><td>Gallery corner radius</td><td><span class="tb tr">range</span></td><td>8 px</td><td>Rounded corners on the main gallery image container. Range: 0&ndash;32 px.</td></tr>
+</tbody></table>
+
+<h3>Inventory Urgency</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Low stock threshold</td><td><span class="tb tr">range</span></td><td>10</td><td>When inventory falls at or below this number, the dynamic Urgency Badge displays the exact remaining count. Range: 2&ndash;20.</td></tr>
+</tbody></table>
+
+<h3>Typography &mdash; Colors</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Vendor / Brand color</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of the brand/vendor name displayed above the product title.</td></tr>
+<tr><td>Product title color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the main product title.</td></tr>
+<tr><td>Price color</td><td><span class="tb tc">color</span></td><td>#f0ece4</td><td>Color of the product price.</td></tr>
+<tr><td>Description text color</td><td><span class="tb tc">color</span></td><td>#787068</td><td>Color of the product description body text.</td></tr>
+</tbody></table>
+
+<h3>Typography &mdash; Font Sizes</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Title size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>46 px</td><td>Font size of the product title on desktop. Range: 24&ndash;72 px.</td></tr>
+<tr><td>Title size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>32 px</td><td>Font size of the product title on mobile. Range: 20&ndash;52 px.</td></tr>
+<tr><td>Price size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>32 px</td><td>Font size of the price on desktop. Range: 18&ndash;60 px.</td></tr>
+<tr><td>Price size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>26 px</td><td>Font size of the price on mobile. Range: 16&ndash;44 px.</td></tr>
+<tr><td>Description size &mdash; desktop</td><td><span class="tb tr">range</span></td><td>14 px</td><td>Font size of the description on desktop. Range: 12&ndash;22 px.</td></tr>
+<tr><td>Description size &mdash; mobile</td><td><span class="tb tr">range</span></td><td>14 px</td><td>Font size of the description on mobile. Range: 12&ndash;20 px.</td></tr>
+</tbody></table>
+
+<h3>Buttons</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Button corner radius</td><td><span class="tb tr">range</span></td><td>14 px</td><td>Corner rounding of Add to Cart and Buy Now buttons. 0 = square, 40 = full pill shape. Range: 0&ndash;40 px.</td></tr>
+</tbody></table>
+
+<h3>Buy Box Blocks (Drag-and-Drop)</h3>
+<p>The Product Information area displays contents via blocks. In the Theme Editor sidebar, click <strong>Add block</strong> to insert, reorder, or customize these blocks:</p>
+<table class="st st-blocks"><thead><tr><th>Block Name</th><th>Settings</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><strong>Vendor</strong></td><td>&mdash;</td><td>&mdash;</td><td>Displays the product's vendor name in small capitals using the configured Vendor Color.</td></tr>
+<tr><td><strong>Title</strong></td><td>&mdash;</td><td>&mdash;</td><td>Displays the main product title in the styled serif typography.</td></tr>
+<tr><td><strong>Rating</strong></td><td>Rating score / Review count</td><td>4.9 / 47</td><td>Displays star ratings and total review counts in styled luxury gold color.</td></tr>
+<tr><td><strong>Price</strong></td><td>&mdash;</td><td>&mdash;</td><td>Displays the product price, sale badges, compare-at pricing, and tax information.</td></tr>
+<tr><td><strong>Urgency badge</strong></td><td>&mdash;</td><td>&mdash;</td><td>A real-time inventory counter showing "Only X left in stock!" when inventory drops below the threshold.</td></tr>
+<tr><td><strong>Description</strong></td><td>&mdash;</td><td>&mdash;</td><td>Renders the main product description text.</td></tr>
+<tr><td><strong>Divider</strong></td><td>&mdash;</td><td>&mdash;</td><td>Draws a subtle gold horizontal dividing line between blocks. Limit: 3 per page.</td></tr>
+<tr><td><strong>Variant picker</strong></td><td>&mdash;</td><td>&mdash;</td><td>Renders option selectors (swatches or buttons) for sizes, strap colors, or materials.</td></tr>
+<tr><td><strong>Quantity selector</strong></td><td>&mdash;</td><td>&mdash;</td><td>Adds an input field with plus/minus buttons allowing buyers to change quantities before adding to cart.</td></tr>
+<tr><td><strong>Buy buttons</strong></td><td>Show dynamic checkout button</td><td>On</td><td>Adds the primary "Add to Cart" button, along with accelerated checkout options (Shop Pay, PayPal, etc.).</td></tr>
+<tr><td><strong>Trust badges</strong></td><td>Predefined icon / Custom image / Label / Sub-label</td><td>Shipping / Returns / Shield &bull; Default labels</td><td>Configures up to 3 trust columns below the buy button (e.g. Free Shipping, Lifetime Warranty). See details below.</td></tr>
+<tr><td><strong>Description tabs</strong></td><td>&mdash;</td><td>&mdash;</td><td>Converts the description area into a beautiful tabbed widget containing "Description", "Specifications", and "Shipping".</td></tr>
+<tr><td><strong>Accordion</strong></td><td>Heading / Content</td><td>Specifications / Details</td><td>Adds a collapsible rich-text drawer for customizable details (e.g., movement details, water resistance).</td></tr>
+<tr><td><strong>Tags</strong></td><td>&mdash;</td><td>&mdash;</td><td>Displays product tags as neat clickable pills.</td></tr>
+<tr><td><strong>Custom liquid</strong></td><td>Custom liquid code</td><td>&mdash;</td><td>Injects custom liquid, HTML, or app script snippets directly into the buy box.</td></tr>
+</tbody></table>
+
+<h3>Trust Badges Block Details</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Badge # &mdash; Predefined Icon</td><td><span class="tb ts">select</span></td><td>Varies</td><td>Choose a built-in icon: Shipping Truck &bull; Return Loop &bull; Shield Check &bull; Warranty Certificate &bull; Support Headset &bull; Secure Lock &bull; Premium Star &bull; No Icon.</td></tr>
+<tr><td>Badge # &mdash; Custom Icon</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Upload your own icon image (24 &times; 24 px). Overrides the predefined icon when set.</td></tr>
+<tr><td>Badge # &mdash; Label</td><td><span class="tb tt">text</span></td><td>Free Shipping / 30-Day Returns / Authentic</td><td>Main bold text of the trust badge.</td></tr>
+<tr><td>Badge # &mdash; Sub-label</td><td><span class="tb tt">text</span></td><td>On orders over &euro;300&hellip;</td><td>Smaller descriptive text shown below the label.</td></tr>
+</tbody></table>
+</section>
+
+<section id="size-guide">
+<h2><span class="ic">&#128207;</span>Size <em>Guide</em></h2>
+<span class="pb">Product Page &mdash; Buy Box</span>
+<p>Aurick includes a built-in <strong>Size Guide</strong> button on the product page. When tapped, it opens a full-width popup modal showing a size chart image for that specific product. The button hides itself automatically on products where no guide has been configured &mdash; no need to manage it manually.</p>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">How the Theme Detects the Size Guide</div><p>The theme checks three sources in priority order. The first one found wins: (1) Product metafield <code>custom.size_guide</code>, (2) Variant metafield <code>custom.size_guide</code>, (3) Image alt text set to exactly <code>size-guide</code>.</p></div></div>
+<h3>Method 1 &mdash; Via Metafield (Recommended)</h3>
+<ol class="steps">
+  <li><strong>Create the metafield definition (once)</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span>. Set: <strong>Name</strong> = <code>Size Guide</code>, <strong>Namespace &amp; key</strong> = <code>custom.size_guide</code>, <strong>Type</strong> = File &rarr; Image. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Upload the guide per product</strong>
+    <p>Open any product in Admin &rarr; scroll to the <strong>Metafields</strong> panel at the bottom &rarr; find <strong>Size Guide</strong> &rarr; upload your size chart image (JPG or PNG). Click <strong>Save product</strong>. The Size Guide button will now appear on that product page automatically.</p>
+  </li>
+</ol>
+</section>
+
+<section id="complete-look">
+<h2><span class="ic">&#128717;</span>Complete Your <em>Look</em></h2>
+<span class="pb">Product Page</span><span class="pb gr">Cart Drawer</span>
+<p>Links complementary accessories (extra straps, watch rolls, winders) to a specific watch. Linked products appear below the buy box on the product page AND as a cross-sell carousel inside the slide-out cart drawer &mdash; in two places at once, with no extra work after setup.</p>
+<h3>Section Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>Also From the Collection</td><td>Title displayed above the cross-sell product row.</td></tr>
+<tr><td>Subheading</td><td><span class="tb tt">text</span></td><td>Handpicked pieces to complement your selection.</td><td>Short description below the heading.</td></tr>
+<tr><td>Columns on desktop</td><td><span class="tb tr">range</span></td><td>4</td><td>Number of accessory product cards per row on desktop.</td></tr>
+<tr><td>Maximum products to show</td><td><span class="tb tr">range</span></td><td>4</td><td>Maximum number of linked accessories to display. Even if more are linked, only this many show.</td></tr>
+<tr><td>Show quick add button</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Show a quick add-to-cart icon on each accessory card.</td></tr>
+<tr><td>Show product vendor</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Show the brand/vendor name below each accessory product name.</td></tr>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Background color of the Complete Your Look section.</td></tr>
+</tbody></table>
+<h3>Setup: Linking Accessories to a Watch</h3>
+<ol class="steps">
+  <li><strong>Create the metafield definition (once)</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span>. Set: <strong>Name</strong> = <code>Complete Look</code>, <strong>Namespace &amp; key</strong> = <code>custom.complete_look</code>, <strong>Type</strong> = Product. Enable <strong>Accept list of values</strong>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Link accessories per watch</strong>
+    <p>Open a watch product &rarr; scroll to the <strong>Metafields</strong> panel &rarr; click <strong>Complete Look</strong> &rarr; use the product picker to select the accessories (e.g. leather strap, watch roll, travel case). Save the product.</p>
+  </li>
+  <li><strong>Enable the block in Theme Editor</strong>
+    <p>Open Theme Editor &rarr; <strong>Default Product</strong> template &rarr; in the buy box section click <strong>Add block</strong> &rarr; select <strong>Complete Your Look</strong>. Position it below the buy button. Click <strong>Save</strong>.</p>
+  </li>
+</ol>
+</section>
+
+<section id="prod-recommendations">
+<h2><span class="ic">&#128142;</span>Product Recommendations</h2>
+<span class="pb">Product Page</span>
+<p>Displays dynamically suggested products as recommendations at the bottom of the product page to encourage cross-category discovery.</p>
+<h3>Section Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Recommended</td><td>Small tag text displayed above the title.</td></tr>
+<tr><td>Heading</td><td><span class="tb tt">text</span></td><td>You may also like</td><td>Main section title.</td></tr>
+<tr><td>Maximum products to show</td><td><span class="tb tr">range</span></td><td>4</td><td>Maximum count of products displayed in the carousel. (Range: 2&ndash;8).</td></tr>
+<tr><td>Columns on desktop</td><td><span class="tb tr">range</span></td><td>4</td><td>Number of columns displayed on desktop viewports. (Range: 2&ndash;5).</td></tr>
+<tr><td>Show Quick Add</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Show the quick add-to-cart button on cards.</td></tr>
+<tr><td>Show vendor</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Displays product vendor labels on the recommendation cards.</td></tr>
+</tbody></table>
+<h3>Configuring Recommendations &mdash; Search &amp; Discovery App</h3>
+<p>While Shopify generates recommendations automatically using their AI engine, you can customize them manually:</p>
+<ol class="steps">
+  <li><strong>Open the Search &amp; Discovery app</strong>
+    <p>In your Shopify Admin, navigate to **Apps** &rarr; **Shopify Search &amp; Discovery**.</p>
+  </li>
+  <li><strong>Configure Product Recommendations</strong>
+    <p>Click on **Recommendations** in the left menu. Find and select the product you want to customize.</p>
+  </li>
+  <li><strong>Add Custom Recommendations</strong>
+    <p>Under the **Custom recommendations** panel, select specific accessory or alternative watch products to show. These will override or merge with the auto-generated list.</p>
+  </li>
+</ol>
+</section>
+
+<section id="about">
+<h2><span class="ic">&#128214;</span>About / <em>Heritage Page</em></h2>
+<span class="pb">Custom Page Suffix</span>
+<p>The <code>page.about</code> template delivers animated brand storytelling sections. Use it for your brand history, philosophy, and craftsmanship narrative.</p>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Our Heritage&rdquo; or similar.</p>
+  </li>
+  <li><strong>Assign the template</strong>
+    <p>Select <code>page.about</code> from the template selection box on the right. Click **Save**.</p>
+  </li>
+  <li><strong>Build in Theme Editor</strong>
+    <p>Navigate to the About template and click <strong>Add Section</strong> to assemble the narrative from the sections below.</p>
+  </li>
+</ol>
+
+<h3>About Hero Banner</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Hero image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>The wide banner photo. Recommended: <strong>2000 &times; 800 px</strong> landscape image.</td></tr>
+<tr><td>Image height &mdash; desktop</td><td><span class="tb tr">range</span></td><td>520 px</td><td>Height of the hero banner on desktop. Range: 320&ndash;700 px.</td></tr>
+<tr><td>Page title</td><td><span class="tb tt">text</span></td><td>Our Heritage</td><td>Large heading shown over the hero image.</td></tr>
+</tbody></table>
+
+<h3>About Manifesto</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Manifesto Quote</td><td><span class="tb ta">textarea</span></td><td>We do not make watches. We orchestrate time.</td><td>High-impact text quote shown in large serif typography.</td></tr>
+<tr><td>Author Attribution</td><td><span class="tb tt">text</span></td><td>Henri Moreau, Founder &middot; 1902</td><td>Attribution text details shown in gold below the quote.</td></tr>
+<tr><td>Background Image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Backdrop image with opacity controls. Recommended: <strong>2000 &times; 1200 px</strong>.</td></tr>
+<tr><td>Overlay opacity</td><td><span class="tb tr">range</span></td><td>40%</td><td>Dark overlay percentage over the backdrop image. Range: 0&ndash;95%.</td></tr>
+</tbody></table>
+
+<h3>Heritage Timeline Section</h3>
+<p>A scroll-animated timeline. A vertical line draws itself downward as the visitor scrolls, connecting alternating left-right milestone cards.</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow text</td><td><span class="tb tt">text</span></td><td>Our Journey</td><td>Small uppercase label above the timeline headline.</td></tr>
+<tr><td>Headline</td><td><span class="tb tt">text</span></td><td>A Century of Firsts</td><td>Main heading for the timeline section.</td></tr>
+<tr><td>Timeline dot color</td><td><span class="tb tc">color</span></td><td>#c9a96e</td><td>Color of the animated dot and vertical connector line.</td></tr>
+</tbody></table>
+<p>Each milestone is added as a **Milestone Block** with settings: **Year** (text), **Title** (text), and **Description** (textarea).</p>
+
+<h3>About Stats</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow Text</td><td><span class="tb tt">text</span></td><td>The Numbers</td><td>Small category label shown above the stats grid.</td></tr>
+<tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Section background.</td></tr>
+</tbody></table>
+<p>Add up to 4 **Stat Blocks** representing key accomplishments. Settings per block:</p>
+<ul>
+  <li><strong>Count</strong> &mdash; The number value (e.g. <code>120</code>).</li>
+  <li><strong>Show plus suffix</strong> &mdash; Checkbox to append a <code>+</code> to the count.</li>
+  <li><strong>Suffix</strong> &mdash; Suffix text (e.g. <code>%</code> or <code>k</code>).</li>
+  <li><strong>Is decimal</strong> &mdash; Checkbox to enable floating numbers.</li>
+  <li><strong>Label</strong> &mdash; Small label text below the number (e.g. <code>Ateliers worldwide</code>).</li>
+</ul>
+
+<h3>About Values (Pillars)</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow Text</td><td><span class="tb tt">text</span></td><td>What Drives Us</td><td>Small category label.</td></tr>
+<tr><td>Headline</td><td><span class="tb tt">text</span></td><td>The Four Pillars of <em>AURICK</em></td><td>Large heading. Wrap words in <code>&lt;em&gt;</code> for gold styling.</td></tr>
+</tbody></table>
+<p>Add **Pillar Blocks** for values. Settings per block: **Pillar Number** (text), **Title** (text), **Description** (textarea), **Icon select** (dropdown: Precision, Heritage, Innovation, Exclusivity, Custom), and **Custom SVG code** (textarea for inline XML paths).</p>
+
+<h3>Team / Atelier Section</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Member name</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Full name shown below the photo.</td></tr>
+<tr><td>Member role / title</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Job title shown below the name.</td></tr>
+<tr><td>Member bio</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Short description shown on hover.</td></tr>
+</tbody></table>
+
+<h3>About CTA</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Eyebrow Text</td><td><span class="tb tt">text</span></td><td>Experience AURICK</td><td>Label above headline.</td></tr>
+<tr><td>Headline</td><td><span class="tb tt">text</span></td><td>Every second of <em>every day.</em></td><td>CTA Headline.</td></tr>
+<tr><td>Button Label / Link</td><td><span class="tb tt">text</span> / <span class="tb tu">url</span></td><td>Discover the Collection / /</td><td>CTA Button configurations.</td></tr>
+<tr><td>Background Image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Full-screen background image for the CTA section.</td></tr>
+</tbody></table>
+</section>
+
+<section id="contact">
+<h2><span class="ic">&#9993;</span>Contact / <em>Atelier Page</em></h2>
+<span class="pb">Custom Page Suffix</span>
+<p>The <code>page.contact</code> template combines a premium inquiry form with boutique location cards.</p>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Contact Us&rdquo; or &ldquo;Atelier&rdquo;.</p>
+  </li>
+  <li><strong>Assign the template</strong>
+    <p>Select <code>page.contact</code> from the template selection box on the right. Click **Save**.</p>
+  </li>
+  <li><strong>Build in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your newly created contact page using the template dropdown &rarr; click <strong>Add Section</strong> to configure the Contact Form and Location blocks.</p>
+  </li>
+</ol>
+<h3>Contact Hero Banner</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Hero image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Wide banner photo. Recommended: <strong>2000 &times; 800 px</strong> landscape.</td></tr>
+<tr><td>Page title</td><td><span class="tb tt">text</span></td><td>Visit Our Atelier</td><td>Heading shown over the hero image.</td></tr>
+</tbody></table>
+
+<h3>Contact Form Section</h3>
+<p>Configure the two-column contact details and form section settings:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Form Title</td><td><span class="tb tt">text</span></td><td>Send a Message</td><td>Large headline label above the contact form.</td></tr>
+<tr><td>Subject Options</td><td><span class="tb tt">text</span></td><td>General Inquiry, Private Appointment, Bespoke Commission...</td><td>Comma-separated options shown in the form's subject dropdown list.</td></tr>
+<tr><td>Disclaimer Text</td><td><span class="tb tt">text</span></td><td>Your information is kept strictly confidential and never shared.</td><td>Small fine print text shown below the Send button.</td></tr>
+<tr><td>Info Title</td><td><span class="tb tt">text</span></td><td>Direct Contact</td><td>Header label displayed above the contact information panel.</td></tr>
+<tr><td>General Inquiry Email</td><td><span class="tb tt">text</span></td><td>atelier@aurick.com</td><td>Your store's general enquiry email address.</td></tr>
+<tr><td>Press Email</td><td><span class="tb tt">text</span></td><td>press@aurick.com</td><td>Press and media inquiry email.</td></tr>
+<tr><td>Phone Number</td><td><span class="tb tt">text</span></td><td>+41 22 317 44 00</td><td>Phone number to display below the emails.</td></tr>
+<tr><td>Info note text</td><td><span class="tb ta">textarea</span></td><td>For private commissions and bespoke orders, we invite you to visit our Geneva Atelier...</td><td>Short informative note box shown under the direct details (supporting local boutique visits).</td></tr>
+<tr><td>Section background</td><td><span class="tb tc">color</span></td><td>#040407</td><td>Background color of the contact form section.</td></tr>
+</tbody></table>
+
+<h3>Location Cards</h3>
+<p>Add location blocks inside the Contact Location section for store addresses, operating hours, emails, and phone numbers.</p>
+</section>
+
+<section id="shipping-policy">
+<h2><span class="ic">&#128666;</span>Shipping <em>Policy Page</em></h2>
+<span class="pb">Custom Page Suffix</span>
+<p>The <code>page.shipping</code> template delivers a premium layout to present your shipping methods and estimated delivery times by region in clean, styled grids and tables.</p>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Shipping Policy&rdquo; or &ldquo;Delivery Information&rdquo;.</p>
+  </li>
+  <li><strong>Assign the Aurick template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.shipping</code>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Customize in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your Shipping Policy page using the template picker at the top &rarr; click <strong>Add section</strong> &rarr; select <strong>Shipping Policy</strong>. You can now add and configure blocks for shipping methods and regional delivery rows.</p>
+  </li>
+</ol>
+
+<h3>Section Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Hero &mdash; Eyebrow</td><td><span class="tb tt">text</span></td><td>Aurick Policy</td><td>Small uppercase tag displayed above the main title.</td></tr>
+<tr><td>Hero &mdash; Title</td><td><span class="tb tt">text</span></td><td>Shipping Policy</td><td>Main heading shown in large serif typography.</td></tr>
+<tr><td>Hero &mdash; Subtitle</td><td><span class="tb ta">textarea</span></td><td>Every timepiece is shipped with the care it deserves...</td><td>Introductory description displayed below the title.</td></tr>
+<tr><td>Methods &mdash; Title</td><td><span class="tb tt">text</span></td><td>Shipping Options</td><td>Heading for the shipping options grid section.</td></tr>
+<tr><td>Table &mdash; Show</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle whether to display the regional estimated times table below the methods grid.</td></tr>
+<tr><td>Table &mdash; Title</td><td><span class="tb tt">text</span></td><td>Delivery by Region</td><td>Title displayed above the regional delivery estimates table.</td></tr>
+<tr><td>Table &mdash; Note</td><td><span class="tb ta">textarea</span></td><td>Times are estimates in business days...</td><td>Footnote text displayed in small typography below the table.</td></tr>
+<tr><td>CTA &mdash; Headline / Sub-text</td><td><span class="tb tt">text</span> / <span class="tb ta">textarea</span></td><td>Still have questions? / Our team is ready to help...</td><td>Content for the Call to Action banner at the bottom of the page.</td></tr>
+<tr><td>CTA &mdash; Contact URL / Label</td><td><span class="tb tu">url</span> / <span class="tb tt">text</span></td><td>/pages/contact / Contact Support</td><td>Link and label for the CTA button.</td></tr>
+</tbody></table>
+
+<h3>Shipping Method Block</h3>
+<p>Each Shipping Method block displays as a card in the options grid. Click <strong>Add block</strong> &rarr; <strong>Shipping Method</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Icon</td><td><span class="tb ts">select</span></td><td>Truck (Standard)</td><td>Choose a styled icon: Truck (Standard) &bull; Lightning bolt (Express) &bull; Globe (International) &bull; Airplane &bull; Package/Box &bull; Shield (Insured) &bull; Clock (Time-sensitive).</td></tr>
+<tr><td>Method name</td><td><span class="tb tt">text</span></td><td>Standard Shipping</td><td>Headline of the shipping method card.</td></tr>
+<tr><td>Description</td><td><span class="tb ta">textarea</span></td><td>Complimentary on all orders over $200...</td><td>Details of what this method includes (packaging, courier, insurance, etc.).</td></tr>
+<tr><td>Time / badge text</td><td><span class="tb tt">text</span></td><td>3â€“5 Business Days</td><td>Bold status text displayed inside the card's badge.</td></tr>
+<tr><td>Price note</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Optional price label appended to the badge text (e.g. <code>Free over $200</code>).</td></tr>
+</tbody></table>
+
+<h3>Delivery Region Row Block</h3>
+<p>Each Delivery Region block creates a row inside the regional delivery times table. Click <strong>Add block</strong> &rarr; <strong>Delivery Region</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Region / Country</td><td><span class="tb tt">text</span></td><td>United States</td><td>The country or region name shown in the left column.</td></tr>
+<tr><td>Standard delivery time</td><td><span class="tb tt">text</span></td><td>3â€“5 days</td><td>Estimated standard shipping transit time.</td></tr>
+<tr><td>Express delivery time</td><td><span class="tb tt">text</span></td><td>1â€“2 days</td><td>Estimated express shipping transit time.</td></tr>
+<tr><td>Shipping carrier(s)</td><td><span class="tb tt">text</span></td><td>FedEx / UPS</td><td>Couriers used for this region.</td></tr>
+</tbody></table>
+</section>
+
+<section id="returns-policy">
+<h2><span class="ic">&#8635;</span>Returns <em>Policy Page</em></h2>
+<span class="pb">Custom Page Suffix</span>
+<p>The <code>page.returns</code> template delivers a structured, premium returns policy page featuring an interactive timeline, condition checkboxes, and a built-in FAQ system.</p>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Returns &amp; Exchanges&rdquo;.</p>
+  </li>
+  <li><strong>Assign the Aurick template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.returns</code>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Customize in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your Returns Policy page &rarr; click <strong>Add section</strong> &rarr; select <strong>Returns Policy</strong>. Customize the blocks to reflect your policy guidelines.</p>
+  </li>
+</ol>
+
+<h3>Section Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Hero &mdash; Eyebrow</td><td><span class="tb tt">text</span></td><td>Aurick Policy</td><td>Small tag text above title.</td></tr>
+<tr><td>Hero &mdash; Title</td><td><span class="tb tt">text</span></td><td>Returns Policy</td><td>Main heading shown in large serif typography.</td></tr>
+<tr><td>Hero &mdash; Subtitle</td><td><span class="tb ta">textarea</span></td><td>We stand behind every timepiece...</td><td>Introductory description.</td></tr>
+<tr><td>Return window (days)</td><td><span class="tb tr">range</span></td><td>30</td><td><strong>Crucial Setting:</strong> The number of days allowed for returns. This value dynamically replaces the word <code>DAYS</code> (in all-caps) wherever it is written inside return steps, FAQs, or the process title.</td></tr>
+<tr><td>Return Process &mdash; Eyebrow</td><td><span class="tb tt">text</span></td><td>How It Works</td><td>Small tag above the process timeline.</td></tr>
+<tr><td>Return Process &mdash; Title</td><td><span class="tb tt">text</span></td><td>DAYS-Day Return Policy</td><td>Section header for the timeline. Leaving <code>DAYS</code> in all-caps automatically substitutes the Return Window days.</td></tr>
+<tr><td>Show conditions box</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle whether to show the highlighted card containing policy requirements below the timeline.</td></tr>
+<tr><td>Show FAQ section</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Toggle the collapsible accordion FAQ widget at the bottom.</td></tr>
+</tbody></table>
+
+<h3>Return Step Block</h3>
+<p>Each Return Step block adds an item to the chronological returns timeline. Click <strong>Add block</strong> &rarr; <strong>Return Step</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Icon</td><td><span class="tb ts">select</span></td><td>Mail</td><td>Choose a styled icon: Chat/Message &bull; Email &bull; Package/Box &bull; Truck (Ship) &bull; Shield (Refund/Protected) &bull; Checkmark (Done) &bull; Refresh (Exchange) &bull; Search/Inspect.</td></tr>
+<tr><td>Step number override</td><td><span class="tb tt">text</span></td><td>&mdash;</td><td>Explicitly write a step number (e.g. <code>01</code>). If left blank, the theme automatically numbers them sequentially.</td></tr>
+<tr><td>Step title</td><td><span class="tb tt">text</span></td><td>Contact Us</td><td>Headline of the timeline step.</td></tr>
+<tr><td>Step description</td><td><span class="tb ta">textarea</span></td><td>Email us within DAYS days of delivery...</td><td>Detailed instructions. Use <code>DAYS</code> in all-caps to display the return window setting value.</td></tr>
+</tbody></table>
+
+<h3>Return Condition Block</h3>
+<p>Each Return Condition block adds a bullet point to the "Return Conditions" card below the timeline. Click <strong>Add block</strong> &rarr; <strong>Return Condition</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Condition text</td><td><span class="tb tt">text</span></td><td>Item must be unworn and in original, undamaged condition</td><td>The requirement statement displayed as a bullet item.</td></tr>
+</tbody></table>
+
+<h3>FAQ Question Block</h3>
+<p>Each FAQ Question block creates a collapsible accordion row inside the FAQ accordion list. Click <strong>Add block</strong> &rarr; <strong>FAQ Question</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Question</td><td><span class="tb tt">text</span></td><td>Can I exchange for a different model?</td><td>The clickable heading of the accordion.</td></tr>
+<tr><td>Answer</td><td><span class="tb ta">textarea</span></td><td>Yes &mdash; exchanges are available within DAYS days...</td><td>The hidden content that slides open on click. Supports the <code>DAYS</code> placeholder.</td></tr>
+</tbody></table>
+</section>
+
+<section id="privacy-policy">
+<h2><span class="ic">&#128737;</span>Privacy <em>Policy Page</em></h2>
+<span class="pb">Custom Page Suffix</span>
+<p>The <code>page.privacy-policy</code> template delivers a beautiful, multi-section compliance page with a sticky navigation bar that updates dynamically on scroll to help customers browse policy terms easily.</p>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Privacy Policy&rdquo;.</p>
+  </li>
+  <li><strong>Assign the Aurick template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.privacy-policy</code>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Customize in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your Privacy Policy page &rarr; click <strong>Add section</strong> &rarr; select <strong>Privacy Policy</strong>. Add and arrange <strong>Policy Section</strong> blocks to build your terms.</p>
+  </li>
+</ol>
+
+<h3>Section Settings</h3>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Hero &mdash; Eyebrow / Title</td><td><span class="tb tt">text</span> / <span class="tb tt">text</span></td><td>Aurick Policy / Privacy Policy</td><td>Content inside the top header.</td></tr>
+<tr><td>Hero &mdash; Subtitle</td><td><span class="tb ta">textarea</span></td><td>Your privacy is sacred to us...</td><td>Description shown inside the header.</td></tr>
+<tr><td>Last updated label / date</td><td><span class="tb tt">text</span> / <span class="tb tt">text</span></td><td>Last updated / July 2025</td><td>Displays a small revision timestamp below the subtitle.</td></tr>
+<tr><td>Privacy email</td><td><span class="tb tt">text</span></td><td>privacy@aurick.com</td><td>Support email used dynamically in contact cards and block overrides.</td></tr>
+<tr><td>Business address</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Corporate address used dynamically inside contact blocks.</td></tr>
+</tbody></table>
+
+<h3>Policy Section Block</h3>
+<p>A Policy Section block adds a full terms category with a matching sticky nav pill. Click <strong>Add block</strong> &rarr; <strong>Policy Section</strong>. Settings per block:</p>
+<table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
+<tr><td>Sticky nav pill label</td><td><span class="tb tt">text</span></td><td>Section</td><td>Short label shown in the sticky horizontal bar at the top. Leave blank to hide this section from the nav bar.</td></tr>
+<tr><td>Show section number</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Adds a large transparent sequential number (01, 02, etc.) on the left.</td></tr>
+<tr><td>Eyebrow text / Section title</td><td><span class="tb tt">text</span> / <span class="tb tt">text</span></td><td>Category / Section Title</td><td>Header tags inside the section card.</td></tr>
+<tr><td>Intro paragraph(s)</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Main descriptive body text. Each line break creates a new paragraph.</td></tr>
+<tr><td>Bullet list</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>A bulleted list of requirements. Write one item per line.</td></tr>
+<tr><td>Text after bullets</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Optional paragraphs displayed below the bulleted list.</td></tr>
+<tr><td>Highlighted callout box</td><td><span class="tb ta">textarea</span></td><td>&mdash;</td><td>Highlighted box with a thick left gold border to emphasize critical text.</td></tr>
+<tr><td>Extra layout element</td><td><span class="tb ts">select</span></td><td>None</td><td>Choose to append elements below text: <strong>None</strong> &bull; <strong>Info cards (2&times;2 grid)</strong> &bull; <strong>Feature chips (3-col grid)</strong>.</td></tr>
+<tr><td>Info cards (1&ndash;4) &mdash; Label / Text</td><td><span class="tb tt">text</span> / <span class="tb ta">textarea</span></td><td>&mdash;</td><td>Configure up to 4 info card labels and descriptions (only shows when layout is set to Info cards).</td></tr>
+<tr><td>Feature chip labels / icons</td><td><span class="tb ta">textarea</span> / <span class="tb ta">textarea</span></td><td>&mdash;</td><td>One item per line (e.g. <code>Access Your Data</code>). Match corresponding icons in order (options: <code>eye</code>, <code>edit</code>, <code>trash</code>, <code>slash</code>, <code>upload</code>, <code>shield</code>, <code>lock</code>, <code>check</code>, <code>mail</code>).</td></tr>
+<tr><td>Show contact details</td><td><span class="tb tk">checkbox</span></td><td>Off</td><td>Toggle whether to print the privacy email and business address at the bottom of this specific section.</td></tr>
+</tbody></table>
+</section>
+
+<section id="translate">
+<h2><span class="ic">&#127760;</span>Translate &amp; <em>Adapt</em></h2>
+<span class="pb">Shopify Native App &mdash; Free</span>
+<p>Aurick includes complete interface translations for **English (EN)**, **Spanish (ES)**, and **French (FR)**. To publish new languages and translate product assets, follow the steps:</p>
+<ol class="steps">
+  <li><strong>Add languages in Settings</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Languages</span></span>, add Spanish/French, and click **Publish**.</p>
+  </li>
+  <li><strong>Install Translate &amp; Adapt</strong>
+    <p>Open the Translate &amp; Adapt app to translate descriptions, titles, collection tags, and menu items side-by-side.</p>
+  </li>
+</ol>
+</section>
+
+<section id="images">
+<h2><span class="ic">&#128444;</span>Image <em>Sizes</em></h2>
+<p>Use these exact dimensions for every image in every section. Correct sizes keep visuals sharp, perfectly proportioned, and fast on every screen.</p>
+<div class="ic-c"><span class="ic-n">Logo (header)</span><span class="ic-d">300 &times; 120 px</span><span class="ic-f">Transparent PNG or SVG</span></div>
+<div class="ic-c"><span class="ic-n">Features Showcase Watch</span><span class="ic-d">540 &times; 540 px</span><span class="ic-f">Transparent PNG (needed for clean flight transitions)</span></div>
+<div class="ic-c"><span class="ic-n">Lifestyle Photos</span><span class="ic-d">1000 &times; 1250 px</span><span class="ic-f">JPEG &bull; 4:5 portrait &bull; subject centered</span></div>
+<div class="ic-c"><span class="ic-n">Collection Banners</span><span class="ic-d">2000 &times; 800 px</span><span class="ic-f">JPEG &bull; 2.5:1 landscape</span></div>
+</section>
+
+<section id="faq">
+<h2><span class="ic">&#10067;</span>FAQ</h2>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">How do I change my store logo?</span><span class="fch">&#9660;</span></div><div class="fa"><div class="fai"><p>Theme Editor &rarr; <strong>Header</strong> &rarr; set <strong>Logo type</strong> to <strong>Image</strong> &rarr; upload your logo file. Recommended format: transparent PNG, 300 &times; 120 px.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">How do I add rotating announcement messages?</span><span class="fch">&#9660;</span></div><div class="fa"><div class="fai"><p>Theme Editor &rarr; <strong>Announcement Bar</strong> &rarr; add multiple **Announcement blocks** &rarr; enable **Auto-rotate announcements**.</p></div></div></div>
+<div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">How do I hide a homepage section without deleting it?</span><span class="fch">&#9660;</span></div><div class="fa"><div class="fai"><p>Click the **eye icon** next to the section name inside the Theme Editor sidebar. The section becomes invisible to visitors but stays configured for future use.</p></div></div></div>
+</section>
+
+<section id="watch-svg">
+<h2><span class="ic">&#9881;</span>Watch Image <em>&rarr; SVG Prompt</em></h2>
+<p>The Aurick 3D watch box hero renders your watch as a clean SVG vector inside the animated box. Paste this prompt into any AI assistant along with your watch image to get the custom SVG code:</p>
+<div class="prompt-wrap">
+  <div class="prompt-label">Copy &amp; Paste into AI (with your watch photo attached)</div>
+  <button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+    Copy Prompt
+  </button>
+  <pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
+Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
+
+Follow these strict specifications:
+1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
+2. Background: Must be transparent.
+3. Viewport: The viewBox must be exactly "0 0 300 400".
+4. Vertical Alignment: The watch must be perfectly centered.
+   - The center of the watch dial must sit at (x=150, y=200).
+   - The strap must run straight vertically from y=10 to y=390.
+5. Dimension Specs:
+   - Strap Width: Exactly 60px (x=120 to x=180).
+   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
+   - Inner Dial Face Radius: Exactly 60px.
+6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
+7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
+</div>
+</section>
+
+<section id="support">
+<h2><span class="ic">&#128587;</span>Get <em>Support</em></h2>
+<p>Need help setting up your Aurick theme? Contact us directly by clicking below:</p>
+<div class="sup-card">
+  <span class="sup-icon">&#9993;</span>
+  <div class="sup-title">Need help with<br>your <em>Aurick</em> store?</div>
+  <p class="sup-lead">Whether it&rsquo;s a settings question, a metafield issue, or a feature you can&rsquo;t find &mdash; fill in the form and we&rsquo;ll sort it out together.</p>
+  <a class="sup-btn" href="https://forms.gle/uv5eW4ULpRG2NqF58" target="_blank" rel="noopener noreferrer">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Open Support Form
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+</section>
+
+<footer class="doc-footer">
+  &copy; 2026 Aurick Theme &mdash; Store Owner Setup Guide &middot; All rights reserved.
+</footer>
+</div></main>
+
+<div class="toast" id="toast">&#10003; Copied to clipboard</div>
+
+<script>
+function copyPrompt() {
+  const pre = document.getElementById('svg-prompt-text');
+  const btn = document.getElementById('svg-copy-btn');
+  if (!pre || !btn) return;
+  const tmp = document.createElement('textarea');
+  tmp.value = pre.innerText;
+  document.body.appendChild(tmp);
+  tmp.select();
+  document.execCommand('copy');
+  document.body.removeChild(tmp);
+  btn.classList.add('copied');
+  btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+  setTimeout(() => {
+    btn.classList.remove('copied');
+    btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Prompt';
+  }, 2000);
+}
+
+function nav(e, hash) {
+  e.preventDefault();
+  const el = document.querySelector(hash);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth" });
+  history.pushState(null, null, hash);
+  document.querySelectorAll(".sb-a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === hash));
+}
+
+const secs = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".sb-a");
+window.addEventListener("scroll", () => {
+  let cur = "";
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = "#" + s.id; });
+  if (cur) links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === cur));
+}, { passive: true });
+
+function toggleFaq(el) {
+  const open = el.classList.contains("open");
+  document.querySelectorAll(".faq.open").forEach(f => f.classList.remove("open"));
+  if (!open) el.classList.add("open");
+}
+
+function searchDocs(q) {
+  q = q.toLowerCase().trim();
+  secs.forEach(s => {
+    const id = "#" + s.id;
+    const link = Array.from(links).find(l => l.getAttribute("href") === id);
+    const match = q === "" || s.textContent.toLowerCase().includes(q);
+    s.style.display = match ? "" : "none";
+    if (link) link.style.display = match ? "" : "none";
+  });
+  document.querySelectorAll(".sb-cat").forEach(cat => {
+    const nextLinks = [];
+    let el = cat.nextElementSibling;
+    while (el && !el.classList.contains("sb-cat")) {
+      if (el.classList.contains("sb-a")) nextLinks.push(el);
+      el = el.nextElementSibling;
+    }
+    const anyVisible = nextLinks.some(l => l.style.display !== "none");
+    cat.style.display = q === "" || anyVisible ? "" : "none";
+  });
+}
+</script>
+</body></html>
+
