@@ -184,58 +184,71 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
 <input id="sq" oninput="searchDocs(this.value)" placeholder="Recherche..." type="text"/>
 </div>
-<nav class="sb-nav">
-<div class="sb-cat">Commencer</div>
-<a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>Aperçu</a>
-<a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>Mise en place</a>
-<div class="sb-cat">Paramètres globaux</div>
-<a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>Écran du chargeur</a>
-<a class="sb-a" href="#header" onclick="nav(event,'#header')"><span class="dot"></span>En-tête et navigation</a>
-<a class="sb-a" href="#menus-submenus" onclick="nav(event,'#menus-submenus')"><span class="dot"></span>Menus et sous-menus</a>
-<a class="sb-a" href="#announce" onclick="nav(event,'#announce')"><span class="dot"></span>Barre d'annonce</a>
-<a class="sb-a" href="#search" onclick="nav(event,'#search')"><span class="dot"></span>Tiroir de recherche</a>
-<a class="sb-a" href="#cart-drawer-doc" onclick="nav(event,'#cart-drawer-doc')"><span class="dot"></span>Tiroir de chariot</a>
-<a class="sb-a" href="#quick-view-doc" onclick="nav(event,'#quick-view-doc')"><span class="dot"></span>Aperçu rapide modal</a>
-<a class="sb-a" href="#pickup-availability-doc" onclick="nav(event,'#pickup-availability-doc')"><span class="dot"></span>Disponibilité de ramassage</a>
-<a class="sb-a" href="#footer" onclick="nav(event,'#footer')"><span class="dot"></span>Pied de page</a>
-<div class="sb-cat">Sections de la page d'accueil</div>
-<a class="sb-a" href="#hero" onclick="nav(event,'#hero')"><span class="dot"></span>Curseur de boîte de héros</a>
-<a class="sb-a" href="#features" onclick="nav(event,'#features')"><span class="dot"></span>Vitrine des fonctionnalités</a>
-<a class="sb-a" href="#horizontal-gallery" onclick="nav(event,'#horizontal-gallery')"><span class="dot"></span>Galerie horizontale</a>
-<a class="sb-a" href="#marquee" onclick="nav(event,'#marquee')"><span class="dot"></span>Ticker de chapiteau</a>
-<a class="sb-a" href="#vault" onclick="nav(event,'#vault')"><span class="dot"></span>Coffre-fort de collection</a>
-<a class="sb-a" href="#lifestyle" onclick="nav(event,'#lifestyle')"><span class="dot"></span>Vitrine de style de vie</a>
-<a class="sb-a" href="#brand-story-doc" onclick="nav(event,'#brand-story-doc')"><span class="dot"></span>Histoire de la marque</a>
-<a class="sb-a" href="#feat-collection" onclick="nav(event,'#feat-collection')"><span class="dot"></span>Collection en vedette</a>
-<a class="sb-a" href="#featured-product-doc" onclick="nav(event,'#featured-product-doc')"><span class="dot"></span>Produit vedette</a>
-<a class="sb-a" href="#blog-posts" onclick="nav(event,'#blog-posts')"><span class="dot"></span>Articles de blog</a>
-<a class="sb-a" href="#testimonials" onclick="nav(event,'#testimonials')"><span class="dot"></span>Curseur de témoignages</a>
-<a class="sb-a" href="#trusted" onclick="nav(event,'#trusted')"><span class="dot"></span>Approuvé par</a>
-<a class="sb-a" href="#social" onclick="nav(event,'#social')"><span class="dot"></span>Galerie sociale</a>
-<a class="sb-a" href="#newsletter-doc" onclick="nav(event,'#newsletter-doc')"><span class="dot"></span>Bulletin</a>
-<a class="sb-a" href="#custom-liquid-doc" onclick="nav(event,'#custom-liquid-doc')"><span class="dot"></span>Liquide personnalisé</a>
-<div class="sb-cat">Page de collecte</div>
-<a class="sb-a" href="#coll-page" onclick="nav(event,'#coll-page')"><span class="dot"></span>Paramètres de collecte</a>
-<a class="sb-a" href="#filters" onclick="nav(event,'#filters')"><span class="dot"></span>Filtres de produits</a>
-<div class="sb-cat">Page produit</div>
-<a class="sb-a" href="#product" onclick="nav(event,'#product')"><span class="dot"></span>Paramètres du produit</a>
-<a class="sb-a" href="#size-guide" onclick="nav(event,'#size-guide')"><span class="dot"></span>Guide des tailles</a>
-<a class="sb-a" href="#complete-look" onclick="nav(event,'#complete-look')"><span class="dot"></span>Complétez votre look</a>
-<a class="sb-a" href="#prod-recommendations" onclick="nav(event,'#prod-recommendations')"><span class="dot"></span>Recommandations de produits</a>
-<div class="sb-cat">Modèles de pages</div>
-<a class="sb-a" href="#about" onclick="nav(event,'#about')"><span class="dot"></span>À propos / Patrimoine</a>
-<a class="sb-a" href="#contact" onclick="nav(event,'#contact')"><span class="dot"></span>Contact / Atelier</a>
-<div class="sb-cat">Modèles de politique</div>
-<a class="sb-a" href="#shipping-policy" onclick="nav(event,'#shipping-policy')"><span class="dot"></span>Politique d'expédition</a>
-<a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>Politique de retour</a>
-<a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>Politique de confidentialité</a>
-<div class="sb-cat">Paramètres du magasin</div>
-<a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Traduire et adapter</a>
-<a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>Tailles des images</a>
-<a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>FAQ</a>
-<a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Regarder l'invite SVG</a>
-<a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>Obtenir de l'aide</a>
-</nav>
+  <nav class="sb-nav">
+    <div class="sb-cat">Commencer</div>
+    <a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>Aperçu</a>
+    <a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>Mise en place</a>
+    <a class="sb-a" href="#setup-menus" onclick="nav(event,'#setup-menus')"><span class="dot"></span>Configuration Navigation &amp; Menus</a>
+    <a class="sb-a" href="#setup-templates" onclick="nav(event,'#setup-templates')"><span class="dot"></span>Configuration Modèles de page</a>
+    <a class="sb-a" href="#setup-policies" onclick="nav(event,'#setup-policies')"><span class="dot"></span>Configuration Pages de politique</a>
+    <a class="sb-a" href="#setup-size-guide" onclick="nav(event,'#setup-size-guide')"><span class="dot"></span>Configuration Guide des tailles</a>
+    <a class="sb-a" href="#setup-complete-look" onclick="nav(event,'#setup-complete-look')"><span class="dot"></span>Configuration Compléter votre style</a>
+    <a class="sb-a" href="#product-description" onclick="nav(event,'#product-description')"><span class="dot"></span>Format de description produit</a>
+    <a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Invite watch image &rarr; SVG</a>
+    <a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Traduction et adaptation</a>
+    
+    <div class="sb-cat">Paramètres globaux</div>
+    <a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>Écran du chargeur</a>
+    <a class="sb-a" href="#header" onclick="nav(event,'#header')"><span class="dot"></span>En-tête et navigation</a>
+    <a class="sb-a" href="#menus-submenus" onclick="nav(event,'#menus-submenus')"><span class="dot"></span>Menus et sous-menus</a>
+    <a class="sb-a" href="#announce" onclick="nav(event,'#announce')"><span class="dot"></span>Barre d'annonce</a>
+    <a class="sb-a" href="#search" onclick="nav(event,'#search')"><span class="dot"></span>Tiroir de recherche</a>
+    <a class="sb-a" href="#cart-drawer-doc" onclick="nav(event,'#cart-drawer-doc')"><span class="dot"></span>Tiroir de chariot</a>
+    <a class="sb-a" href="#quick-view-doc" onclick="nav(event,'#quick-view-doc')"><span class="dot"></span>Aperçu rapide modal</a>
+    <a class="sb-a" href="#pickup-availability-doc" onclick="nav(event,'#pickup-availability-doc')"><span class="dot"></span>Disponibilité de ramassage</a>
+    <a class="sb-a" href="#footer" onclick="nav(event,'#footer')"><span class="dot"></span>Pied de page</a>
+    
+    <div class="sb-cat">Sections de la page d'accueil</div>
+    <a class="sb-a" href="#hero" onclick="nav(event,'#hero')"><span class="dot"></span>Curseur de boîte de héros</a>
+    <a class="sb-a" href="#features" onclick="nav(event,'#features')"><span class="dot"></span>Vitrine des fonctionnalités</a>
+    <a class="sb-a" href="#horizontal-gallery" onclick="nav(event,'#horizontal-gallery')"><span class="dot"></span>Galerie horizontale</a>
+    <a class="sb-a" href="#marquee" onclick="nav(event,'#marquee')"><span class="dot"></span>Ticker de chapiteau</a>
+    <a class="sb-a" href="#vault" onclick="nav(event,'#vault')"><span class="dot"></span>Coffre-fort de collection</a>
+    <a class="sb-a" href="#lifestyle" onclick="nav(event,'#lifestyle')"><span class="dot"></span>Vitrine de style de vie</a>
+    <a class="sb-a" href="#brand-story-doc" onclick="nav(event,'#brand-story-doc')"><span class="dot"></span>Histoire de la marque</a>
+    <a class="sb-a" href="#feat-collection" onclick="nav(event,'#feat-collection')"><span class="dot"></span>Collection en vedette</a>
+    <a class="sb-a" href="#featured-product-doc" onclick="nav(event,'#featured-product-doc')"><span class="dot"></span>Produit vedette</a>
+    <a class="sb-a" href="#blog-posts" onclick="nav(event,'#blog-posts')"><span class="dot"></span>Articles de blog</a>
+    <a class="sb-a" href="#testimonials" onclick="nav(event,'#testimonials')"><span class="dot"></span>Curseur de témoignages</a>
+    <a class="sb-a" href="#trusted" onclick="nav(event,'#trusted')"><span class="dot"></span>Approuvé par</a>
+    <a class="sb-a" href="#social" onclick="nav(event,'#social')"><span class="dot"></span>Galerie sociale</a>
+    <a class="sb-a" href="#newsletter-doc" onclick="nav(event,'#newsletter-doc')"><span class="dot"></span>Bulletin</a>
+    <a class="sb-a" href="#custom-liquid-doc" onclick="nav(event,'#custom-liquid-doc')"><span class="dot"></span>Liquide personnalisé</a>
+    
+    <div class="sb-cat">Page de collecte</div>
+    <a class="sb-a" href="#coll-page" onclick="nav(event,'#coll-page')"><span class="dot"></span>Paramètres de collecte</a>
+    <a class="sb-a" href="#filters" onclick="nav(event,'#filters')"><span class="dot"></span>Filtres de produits</a>
+    
+    <div class="sb-cat">Page produit</div>
+    <a class="sb-a" href="#product" onclick="nav(event,'#product')"><span class="dot"></span>Paramètres du produit</a>
+    <a class="sb-a" href="#size-guide" onclick="nav(event,'#size-guide')"><span class="dot"></span>Guide des tailles</a>
+    <a class="sb-a" href="#complete-look" onclick="nav(event,'#complete-look')"><span class="dot"></span>Complétez votre look</a>
+    <a class="sb-a" href="#prod-recommendations" onclick="nav(event,'#prod-recommendations')"><span class="dot"></span>Recommandations de produits</a>
+    
+    <div class="sb-cat">Modèles de pages</div>
+    <a class="sb-a" href="#about" onclick="nav(event,'#about')"><span class="dot"></span>À propos / Patrimoine</a>
+    <a class="sb-a" href="#contact" onclick="nav(event,'#contact')"><span class="dot"></span>Contact / Atelier</a>
+    
+    <div class="sb-cat">Modèles de politique</div>
+    <a class="sb-a" href="#shipping-policy" onclick="nav(event,'#shipping-policy')"><span class="dot"></span>Politique d'expédition</a>
+    <a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>Politique de retour</a>
+    <a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>Politique de confidentialité</a>
+    
+    <div class="sb-cat">Ressources &amp; Assistance</div>
+    <a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>Dimensions des images</a>
+    <a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>FAQ</a>
+    <a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>Obtenir de l'aide</a>
+  </nav>
 </aside>
 <main class="main"><div class="wrap">
 <section id="overview">
@@ -269,6 +282,310 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 </ol>
 <div class="note warn"><span class="ni">⚠</span><div class="nb"><div class="nt">Téléchargez le ZIP tel quel</div><p>N'extrayez pas le fichier avant de le télécharger. Shopify nécessite le format compressé. L’extraire en premier entraînera l’échec du téléchargement.</p></div></div>
 </section>
+
+<section id="setup-menus">
+  <h2><span class="ic">🔍</span>Configuration de la navigation et des menus</h2>
+  <span class="pb g">Navigation Shopify</span>
+  <p>Comment configurer la navigation et les menus comme sur la boutique de démonstration !</p>
+
+  <h3>Étape 1 : Configurer le menu principal dans Shopify</h3>
+  <p>Pour recréer la disposition du menu de la boutique de démonstration, suivez ces étapes :</p>
+  <ol class="steps">
+    <li><strong>Accéder aux paramètres de navigation</strong>
+      <p>Dans l'interface administrateur Shopify, allez dans <span class="path"><span class="pc r">Boutique en ligne</span><span class="ps">&rsaquo;</span><span class="pc">Navigation</span></span> (ou <span class="path"><span class="pc r">Contenu</span><span class="ps">&rsaquo;</span><span class="pc">Menus</span></span> selon votre version de Shopify).</p>
+    </li>
+    <li><strong>Sélectionner le Menu principal</strong>
+      <p>Cliquez sur le <strong>Menu principal</strong> (Main Menu) pour le modifier.</p>
+    </li>
+    <li><strong>Créer les 5 onglets principaux</strong>
+      <p>Ajoutez les 5 éléments de menu suivants à votre menu principal :</p>
+      <ul>
+        <li><strong>Shop</strong> (lien vers une collection ou tous les produits)
+          <br><small style="color:var(--tm);">💡 Conseil : Assurez-vous que ce titre correspond exactement au "Trigger nav item title" configuré dans les paramètres de la section En-tête (sous <strong>Featured Mega Menu</strong>) pour activer le menu déroulant (ex. <code>Shop</code>).</small>
+        </li>
+        <li><strong>Collection</strong> ou <strong>Collections</strong> (lien vers une collection ou la page de liste des collections)
+          <br><small style="color:var(--tm);">💡 Conseil : Assurez-vous que ce titre correspond exactement au "Trigger nav item title" configuré dans les paramètres de la section En-tête (sous <strong>Collections Mega Menu</strong>) pour activer le menu déroulant (ex. <code>Collections</code>).</small>
+        </li>
+        <li><strong>Contact</strong> (lien vers votre page de contact)</li>
+        <li><strong>About Us</strong> (lien vers votre page à propos)</li>
+        <li><strong>Pages</strong> (définissez son lien sur exactement <code>#</code>)</li>
+      </ul>
+    </li>
+    <li><strong>Créer et imbriquer les pages de politiques</strong>
+      <p>Créez 3 éléments de menu supplémentaires :</p>
+      <ul>
+        <li><strong>Return Policy</strong> (lien vers votre page de politique de retour)</li>
+        <li><strong>Shipping Policy</strong> (lien vers votre page de politique d'expédition)</li>
+        <li><strong>Privacy Policy</strong> (lien vers votre page de politique de confidentialité)</li>
+      </ul>
+      <p>Faites glisser et déposez ces 3 éléments directement sous <strong>Pages</strong> pour les imbriquer en tant que sous-éléments de menu.</p>
+    </li>
+    <li><strong>Enregistrer le menu</strong>
+      <p>Cliquez sur <strong>Enregistrer le menu</strong> pour appliquer les modifications.</p>
+    </li>
+  </ol>
+
+  <h3>Étape 2 : Associer le menu dans l'en-tête d'Aurick</h3>
+  <p>Pour afficher votre menu dans l'en-tête, associez-le via les paramètres de la section En-tête (Header) :</p>
+  <ol class="steps">
+    <li><strong>Ouvrir l'éditeur de thème</strong>
+      <p>Allez dans **Boutique en ligne** &rarr; **Thèmes** &rarr; cliquez sur **Personnaliser** sur votre thème Aurick actif.</p>
+    </li>
+    <li><strong>Ouvrir les paramètres de la section En-tête</strong>
+      <p>Dans la barre latérale gauche du personnalisateur, cliquez sur la section **En-tête** (Header).</p>
+    </li>
+    <li><strong>Sélectionner votre menu</strong>
+      <p>Dans le panneau de droite des paramètres de la section **En-tête**, recherchez le paramètre **Menu**, cliquez sur **Modifier** &rarr; **Sélectionner un menu**, choisissez votre **Menu principal**, puis cliquez sur **Enregistrer** en haut à droite.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="setup-templates">
+<h2><span class="ic">📖</span>Configuration des modèles de pages <em>(À propos &amp; Contact)</em></h2>
+<span class="pb">Pages Shopify</span>
+<p>Créez et configurez les mises en page par défaut À propos (Patrimoine) et Contact (Atelier) en utilisant les modèles premium d'Aurick.</p>
+
+<h3>Configuration de la page À propos / Patrimoine</h3>
+<ol class="steps">
+  <li><strong>Créez la page dans l'administrateur</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Nommez-la « Notre patrimoine » ou « À propos de nous ».</p>
+  </li>
+  <li><strong>Attribuez le modèle</strong>
+    <p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.about</code>. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Construisez dans l'éditeur de thème</strong>
+    <p>Ouvrez l'éditeur de thème → accédez à votre page nouvellement créée à l'aide du sélecteur de page en haut → cliquez sur <strong>Ajouter une section</strong> pour assembler la chronologie, les statistiques et le manifeste.</p>
+  </li>
+</ol>
+
+<h3>Configuration de la page Contact / Atelier</h3>
+<ol class="steps">
+  <li><strong>Créez la page dans l'administrateur</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Nommez-la « Contactez-nous » ou « Atelier ».</p>
+  </li>
+  <li><strong>Attribuez le modèle</strong>
+    <p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.contact</code>. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Construisez dans l'éditeur de thème</strong>
+    <p>Ouvrez l'éditeur de thème → accédez à votre page de contact nouvellement créée à l'aide du menu déroulant des modèles → cliquez sur <strong>Ajouter une section</strong> pour configurer le formulaire de contact et les blocs de localisation.</p>
+  </li>
+</ol>
+</section>
+
+<section id="setup-policies">
+<h2><span class="ic">🛡</span>Configuration des pages de <em>politique</em></h2>
+<span class="pb">Pages Shopify</span>
+<p>Configurez des modèles juridiques et de politique personnalisés pour les pages d'expédition, de retour et de confidentialité.</p>
+
+<h3>Configuration de la page Politique d'expédition</h3>
+<ol class="steps">
+  <li><strong>Créez la page dans l'administrateur</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Nommez-la « Politique d'expédition » ou « Informations de livraison ».</p>
+  </li>
+  <li><strong>Attribuez le modèle Aurick</strong>
+    <p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.shipping</code>. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Personnalisez dans l'éditeur de thème</strong>
+    <p>Ouvrez l'éditeur de thème → accédez à votre page Politique d'expédition à l'aide du sélecteur de modèle en haut → cliquez sur <strong>Ajouter une section</strong> → sélectionnez <strong>Politique d'expédition</strong>. Vous pouvez maintenant ajouter et configurer des blocs pour les méthodes d'expédition et les lignes de livraison régionales.</p>
+  </li>
+</ol>
+
+<h3>Configuration de la page Politique de retour</h3>
+<ol class="steps">
+  <li><strong>Créez la page dans l'administrateur</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Nommez-la « Retours et échanges ».</p>
+  </li>
+  <li><strong>Attribuez le modèle Aurick</strong>
+    <p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.returns</code>. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Personnalisez dans l'éditeur de thème</strong>
+    <p>Ouvrez l'éditeur de thème → accédez à votre page Politique de retour → cliquez sur <strong>Ajouter une section</strong> → sélectionnez <strong>Politique de retour</strong>. Personnalisez les blocs pour refléter vos directives de politique.</p>
+  </li>
+</ol>
+
+<h3>Configuration de la page Politique de confidentialité</h3>
+<ol class="steps">
+  <li><strong>Créez la page dans l'administrateur</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Nommez-la « Politique de confidentialité ».</p>
+  </li>
+  <li><strong>Attribuez le modèle Aurick</strong>
+    <p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.privacy-policy</code>. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Personnalisez dans l'éditeur de thème</strong>
+    <p>Ouvrez l'éditeur de thème → accédez à votre page de politique de confidentialité → cliquez sur <strong>Ajouter une section</strong> → sélectionnez <strong>Politique de confidentialité</strong>. Ajoutez et organisez des blocs de section de politique pour rédiger vos conditions.</p>
+  </li>
+</ol>
+</section>
+
+<section id="setup-size-guide">
+<h2><span class="ic">📏</span>Configuration du guide des <em>tailles</em></h2>
+<span class="pb">Page produit — Champs méta</span>
+<p>Créez un champ méta de guide des tailles afin de pouvoir attribuer une ou plusieurs images de tableau des tailles à des produits individuels.</p>
+
+<ol class="steps">
+  <li><strong>Créez la définition du champ méta (une seule fois)</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Paramètres</span><span class="ps">›</span><span class="pc">Métachamps et métaobjets</span><span class="ps">›</span><span class="pc">Produits</span><span class="ps">›</span><span class="pc">Ajouter une définition</span></span>. Définissez : <strong>Nom</strong> = <code>Size Guide</code>, <strong>Espace de noms et clé</strong> = <code>custom.size_guide</code>, <strong>Type</strong> = Fichier. Sous Paramètres de fichier, sélectionnez soit <strong>Une seule image</strong>, soit <strong>Liste d'images</strong> (pour permettre le téléchargement d'un seul tableau de tailles ou d'une liste de plusieurs images de tableau). Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Téléchargez le guide par produit</strong>
+    <p>Ouvrez n'importe quel produit dans l'administrateur → faites défiler jusqu'au panneau <strong>Champs méta</strong> en bas → trouvez <strong>Size Guide</strong> → téléchargez votre ou vos images de tableau des tailles (JPG ou PNG). Cliquez sur <strong>Enregistrer le produit</strong>. Le bouton Guide des tailles s'affichera désormais automatiquement sur la page de ce produit.</p>
+  </li>
+</ol>
+</section>
+
+<section id="setup-complete-look">
+<h2><span class="ic">🛍</span>Configuration de "Compléter votre <em>style</em>"</h2>
+<span class="pb">Page produit — Champs méta</span>
+<p>Configurez des accessoires de vente croisée (tels que des bracelets ou des étuis à montres) liés directement à une montre spécifique.</p>
+
+<ol class="steps">
+  <li><strong>Créez la définition du champ méta (une seule fois)</strong>
+    <p>Accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Paramètres</span><span class="ps">›</span><span class="pc">Métachamps et métaobjets</span><span class="ps">›</span><span class="pc">Produits</span><span class="ps">›</span><span class="pc">Ajouter une définition</span></span>. Définissez : <strong>Nom</strong> = <code>Complete Look</code>, <strong>Espace de noms et clé</strong> = <code>custom.complete_look</code>, <strong>Type</strong> = Produit. Cochez <strong>Accepter une liste de valeurs</strong>. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+  <li><strong>Associez des accessoires par montre</strong>
+    <p>Ouvrez une montre → faites défiler jusqu'au panneau <strong>Champs méta</strong> → cliquez sur <strong>Complete Look</strong> → utilisez le sélecteur de produits pour choisir les accessoires (ex : bracelet en cuir, étui à montres, trousse de voyage). Enregistrez le produit.</p>
+  </li>
+  <li><strong>Activez le bloc dans l'éditeur de thème</strong>
+    <p>Ouvrez l'éditeur de thème → modèle de <strong>Produit par défaut</strong> → dans la section boîte d'achat, cliquez sur <strong>Ajouter un bloc</strong> → sélectionnez <strong>Compléter votre style</strong>. Positionnez-le sous le bouton d'achat. Cliquez sur <strong>Enregistrer</strong>.</p>
+  </li>
+</ol>
+</section>
+
+<section id="product-description">
+<h2><span class="ic">&#128221;</span>Format de description <em>produit</em></h2>
+<p>Aurick interprète une syntaxe de formatage spéciale dans la description produit Shopify et la convertit automatiquement en onglets animés sur la page produit. Un texte brut s'affiche comme un paragraphe ordinaire. En utilisant les marqueurs <code>**</code> décrits ci-dessous, le thème organise la description en sections claires : Détails, Entretien, FAQ ou toute étiquette personnalisée.</p>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">Où ces onglets apparaissent-ils ?</div><p>Les onglets ne s'affichent que si le bloc <strong>Onglets de description</strong> est activé dans l'éditeur de thème. Éditeur de thème → Produit par défaut → Informations produit → Ajouter un bloc → Onglets de description.</p></div></div>
+<h3>Exemple de description complète</h3>
+<p>Saisissez la description du produit exactement ainsi dans l'éditeur Shopify (Admin → Produits → [produit] → Description) :</p>
+<pre style="background:rgba(255,255,255,0.04);border:.5px solid var(--border);border-radius:var(--rs);padding:1.25rem 1.5rem;font-family:monospace;font-size:0.82rem;color:#b8ab94;line-height:1.7;overflow-x:auto;white-space:pre-wrap;">Une montre habillée au profil discret, aussi élégante au dîner de gala qu'en salle de conseil.
+
+**Details
+— Boîtier fin en acier ou en or
+— Mouvement à quartz ou automatique
+— Bracelet en cuir ou en métal
+— Étanchéité : 30 m
+
+**Care
+Étanchéité : 30 m
+Verre : Saphir de synthèse
+Bracelet : Cuir — éviter les contacts prolongés avec l'eau
+Révision : Recommandée tous les 3 à 5 ans
+
+**FAQ
+Q: Quel est le délai de livraison ?
+A: Livraison standard en Europe : 3 à 5 jours ouvrés.
+
+Q: La montre est-elle garantie ?
+A: Oui. Chaque montre Aurick bénéficie de 2 ans de garantie internationale.</pre>
+<h3>Fonctionnement de chaque section</h3>
+<p>Chaque marqueur <code>**</code> crée un nouvel onglet. Trois noms déclenchent une logique d'affichage particulière :</p>
+<div style="display:grid;gap:1rem;margin:1.2rem 0 1.8rem;">
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**Details</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Liste à puces</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="padding:.85rem 1rem;border-right:.5px solid var(--border);"><div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Comment l'écrire</div><pre style="margin:0;font-family:monospace;font-size:.75rem;color:#b8ab94;white-space:pre-wrap;line-height:1.6;">**Details
+— Boîtier acier fin
+— Mouvement quartz
+— Étanchéité 30 m</pre></div>
+    <div style="padding:.85rem 1rem;"><div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Ce que le visiteur voit</div><p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Chaque ligne devient un élément <code>&lt;li&gt;</code>. Les caractères de puce (—, -, *, •) sont supprimés automatiquement.</p></div>
+  </div>
+</div>
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**Care</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Tableau de spécifications</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="padding:.85rem 1rem;border-right:.5px solid var(--border);"><div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Comment l'écrire</div><pre style="margin:0;font-family:monospace;font-size:.75rem;color:#b8ab94;white-space:pre-wrap;line-height:1.6;">**Care
+Étanchéité : 30 m
+Verre : Saphir
+Bracelet : Cuir</pre></div>
+    <div style="padding:.85rem 1rem;"><div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Ce que le visiteur voit</div><p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Les lignes au format <strong>Intitulé : Valeur</strong> (deux-points dans les 35 premiers caractères) s'affichent en grille à deux colonnes.</p></div>
+  </div>
+</div>
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**FAQ</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Accordéon de questions</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="padding:.85rem 1rem;border-right:.5px solid var(--border);"><div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Comment l'écrire</div><pre style="margin:0;font-family:monospace;font-size:.75rem;color:#b8ab94;white-space:pre-wrap;line-height:1.6;">**FAQ
+Q: Délai de livraison ?
+A: 3 à 5 jours ouvrés.
+
+Q: Y a-t-il une garantie ?
+A: Oui, 2 ans.</pre></div>
+    <div style="padding:.85rem 1rem;"><div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Ce que le visiteur voit</div><p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Chaque paire Q:/A: devient un élément d'accordéon dépliable dans la teinte dorée du thème.</p></div>
+  </div>
+</div>
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**N'importe quel nom</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Onglet texte libre</span>
+  </div>
+  <div style="padding:.85rem 1rem;"><p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Tout autre nom d'onglet (ex. <code>**Livraison</code>, <code>**Garantie</code>) affiche le contenu en texte enrichi. Les balises HTML sont intégralement préservées.</p></div>
+</div>
+</div>
+<h3>Règles et bonnes pratiques</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+<ol class="steps" style="margin:0;">
+  <li><strong>Texte d'accroche avant le premier **</strong><p>Ce texte s'affiche au-dessus de la barre d'onglets ; profitez-en pour une phrase d'accroche percutante.</p></li>
+  <li><strong>Pas d'espace entre ** et le nom</strong><p><code>**Details</code> ✔ correct &bull; <code>** Details</code> ✖ ne fonctionne pas.</p></li>
+  <li><strong>Les noms sont insensibles à la casse</strong><p><code>**details</code> et <code>**Details</code> sont équivalents.</p></li>
+</ol>
+<ol class="steps" style="margin:0;" start="4">
+  <li><strong>Utiliser l'éditeur HTML (&lt;&gt;)</strong><p>Évite que Shopify n'enveloppe les marqueurs dans des balises <code>&lt;p&gt;</code> et ne les rende inefficaces.</p></li>
+  <li><strong>FAQ : toujours Q: et A:</strong><p>L'analyseur reconnaît exclusivement ces préfixes.</p></li>
+  <li><strong>Care : intitulés de moins de 35 caractères</strong><p>Les deux-points doivent apparaître dans les 35 premiers caractères.</p></li>
+</ol>
+</div>
+<div class="note tip" style="margin-top:2rem;"><span class="ni">&#10024;</span><div class="nb"><div class="nt">Pas de ** ? Pas d'onglets.</div><p>Si la description ne contient aucun marqueur **, le bloc d'onglets reste invisible et le texte s'affiche comme un paragraphe ordinaire.</p></div></div>
+</section>
+
+<section id="watch-svg">
+<h2><span class="ic">⚙</span>Regarder l'image <em>→ Invite SVG</em></h2>
+<p>Le héros de la boîte de montre Aurick 3D restitue votre montre sous la forme d'un vecteur SVG propre à l'intérieur de la boîte animée. Collez cette invite dans n'importe quel assistant IA avec l'image de votre montre pour obtenir le code SVG personnalisé :</p>
+<div class="prompt-wrap">
+<div class="prompt-label">Copiez et collez dans l'IA (avec la photo de votre montre jointe)</div>
+<button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    Copier l'invite
+  </button>
+<pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
+Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
+
+Follow these strict specifications:
+1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
+2. Background: Must be transparent.
+3. Viewport: The viewBox must be exactly "0 0 300 400".
+4. Vertical Alignment: The watch must be perfectly centered.
+   - The center of the watch dial must sit at (x=150, y=200).
+   - The strap must run straight vertically from y=10 to y=390.
+5. Dimension Specs:
+   - Strap Width: Exactly 60px (x=120 to x=180).
+   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
+   - Inner Dial Face Radius: Exactly 60px.
+6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
+7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
+</div>
+</section>
+
+<section id="translate">
+<h2><span class="ic">🌐</span>Traduire et <em>S'adapter</em></h2>
+<span class="pb">Application native Shopify – Gratuite</span>
+<p>Aurick comprend des traductions complètes de l'interface pour **anglais (EN)**, **espagnol (ES)** et **français (FR)**. Pour publier de nouvelles langues et traduire les éléments du produit, suivez les étapes :</p>
+<ol class="steps">
+<li><strong>Ajouter des langues dans les paramètres</strong>
+<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Paramètres</span><span class="ps">›</span><span class="pc">Langues</span></span>, ajoutez l'espagnol/le français, puis cliquez sur **Publier**.</p>
+</li>
+<li><strong>Installer Traduire et adapter</strong>
+<p>Ouvrez l'application Traduire et adapter pour traduire côte à côte les descriptions, les titres, les balises de collection et les éléments de menu.</p>
+</li>
+</ol>
+</section>
+
 <section id="loader">
 <h2><span class="ic">🎬</span>Écran du chargeur</h2>
 <p>Éditeur de thème → <strong>Écran du chargeur</strong>. Contrôle le préchargement d'entrée animé lorsque les acheteurs visitent votre magasin.</p>
@@ -342,36 +659,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">🔍</span>Menus et <em>Sous-menus</em></h2>
 <span class="pb g">Navigation sur Shopify</span>
 <p>Apprenez à créer des menus déroulants, des menus imbriqués à plusieurs niveaux et des méga-menus visuels dans Shopify et à les intégrer dans la navigation d'en-tête d'Aurick.</p>
-<h3>Étape 1 : Création de menus imbriqués dans Shopify</h3>
-<p>Shopify prend en charge la navigation imbriquée jusqu'à trois niveaux de profondeur. Pour créer une structure imbriquée :</p>
-<ol class="steps">
-<li><strong>Accédez aux paramètres de navigation</strong>
-<p>Dans Shopify Admin, accédez à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Navigation</span></span>.</p>
-</li>
-<li><strong>Sélectionner ou créer un menu</strong>
-<p>Cliquez sur **Menu principal** (ou cliquez sur **Ajouter un menu** pour en créer un nouveau).</p>
-</li>
-<li><strong>Ajouter des éléments de menu</strong>
-<p>Cliquez sur **Ajouter un élément de menu**, nommez-le (par ex. <code>Collections</code>), et liez-le. Ajoutez ensuite les éléments enfants en dessous (par ex. <code>Chronograph</code>, <code>Automatic</code>).</p>
-</li>
-<li><strong>Imbriquer des éléments (glisser-déposer)</strong>
-<p>Cliquez et maintenez l'icône de la poignée de déplacement à côté d'un élément de menu enfant, faites-la glisser **vers le haut et vers la droite** sous l'élément parent (par exemple, faites-la glisser sous <code>Collections</code>). Cela imbrique l'élément sous le parent. Répétez l’opération pour ajouter des sous-éléments sous les éléments enfants (jusqu’à 3 niveaux).</p>
-</li>
-<li><strong>Cliquez sur Enregistrer le menu.</strong></li>
-</ol>
-<h3>Étape 2 : Lier le menu dans l'en-tête d'Aurick</h3>
-<p>Pour afficher votre menu dans l'en-tête :</p>
-<ol class="steps">
-<li><strong>Ouvrir l'éditeur de thème</strong>
-<p>Accédez à **Boutique en ligne** → **Thèmes** → cliquez sur **Personnaliser** sur le thème Aurick.</p>
-</li>
-<li><strong>Sélectionnez la section d'en-tête</strong>
-<p>Cliquez sur la section **En-tête** dans la barre latérale gauche.</p>
-</li>
-<li><strong>Choisir le menu</strong>
-<p>Recherchez le paramètre **Menu** et cliquez sur **Modifier** → **Sélectionner le menu**. Sélectionnez votre menu principal et cliquez sur **Enregistrer**.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la configuration de vos menus de navigation, reportez-vous au guide de <a href="#setup-menus" onclick="nav(event,'#setup-menus')">Configuration de la navigation et des menus</a> dans la section Commencer.</p></div></div>
 </section>
 <section id="announce">
 <h2><span class="ic">📢</span>Annonce <em>Barre</em></h2>
@@ -1025,15 +1313,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <span class="pb">Page produit — Boîte d'achat</span>
 <p>Aurick comprend un intégré <strong>Guide des tailles</strong> bouton sur la page produit. Lorsque vous appuyez dessus, il ouvre une fenêtre contextuelle pleine largeur affichant une image du tableau des tailles pour ce produit spécifique. Le bouton se cache automatiquement sur les produits pour lesquels aucun guide n'a été configuré : inutile de le gérer manuellement.</p>
 <div class="note info"><span class="ni">ℹ</span><div class="nb"><div class="nt">Comment le thème détecte le guide des tailles</div><p>Le thème vérifie trois sources par ordre de priorité. Le premier trouvé gagne : (1) Champ méta du produit <code>custom.size_guide</code>, (2) Champ méta de variante <code>custom.size_guide</code>, (3) Texte alternatif de l'image défini exactement sur <code>size-guide</code>.</p></div></div>
-<h3>Méthode 1 – Via Metafield (recommandé)</h3>
-<ol class="steps">
-<li><strong>Créer la définition du champ méta (une fois)</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Paramètres</span><span class="ps">›</span><span class="pc">Métachamps et métaobjets</span><span class="ps">›</span><span class="pc">Produits</span><span class="ps">›</span><span class="pc">Ajouter une définition</span></span>. Définir : <strong>Nom</strong> = <code>Size Guide</code>, <strong>Espace de noms et clé</strong> = <code>custom.size_guide</code>, <strong>Tapez</strong> = Fichier → Image. Cliquez <strong>Enregistrer</strong>.</p>
-</li>
-<li><strong>Téléchargez le guide par produit</strong>
-<p>Ouvrez n'importe quel produit dans Admin → faites défiler jusqu'à <strong>Champs méta</strong> panneau en bas → trouver <strong>Guide des tailles</strong> → téléchargez votre image de tableau des tailles (JPG ou PNG). Cliquez <strong>Enregistrer le produit</strong>. Le bouton Guide des tailles apparaîtra désormais automatiquement sur cette page de produit.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la configuration des guides des tailles de produits, reportez-vous au guide de <a href="#setup-size-guide" onclick="nav(event,'#setup-size-guide')">Configuration du guide des tailles</a>.</p></div></div>
 </section>
 <section id="complete-look">
 <h2><span class="ic">🛍</span>Complétez votre <em>Regardez</em></h2>
@@ -1049,18 +1329,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <tr><td>Afficher le fournisseur du produit</td><td><span class="tb tk">case à cocher</span></td><td>Sur</td><td>Affichez le nom de la marque/du fournisseur sous le nom de chaque produit accessoire.</td></tr>
 <tr><td>Couleur de fond</td><td><span class="tb tc">couleur</span></td><td>#050508</td><td>Couleur d’arrière-plan de la section Complétez votre look.</td></tr>
 </tbody></table>
-<h3>Configuration : lier des accessoires à une montre</h3>
-<ol class="steps">
-<li><strong>Créer la définition du champ méta (une fois)</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Paramètres</span><span class="ps">›</span><span class="pc">Métachamps et métaobjets</span><span class="ps">›</span><span class="pc">Produits</span><span class="ps">›</span><span class="pc">Ajouter une définition</span></span>. Définir : <strong>Nom</strong> = <code>Complete Look</code>, <strong>Espace de noms et clé</strong> = <code>custom.complete_look</code>, <strong>Tapez</strong> = Produit. Activer <strong>Accepter la liste de valeurs</strong>. Cliquez <strong>Enregistrer</strong>.</p>
-</li>
-<li><strong>Lier des accessoires par montre</strong>
-<p>Ouvrir un produit horloger → faites défiler jusqu'à <strong>Champs méta</strong> panneau → cliquez <strong>Aperçu complet</strong> → utilisez le sélecteur de produits pour sélectionner les accessoires (ex : bracelet cuir, rouleau de montre, étui de voyage). Enregistrez le produit.</p>
-</li>
-<li><strong>Activer le bloc dans l'éditeur de thème</strong>
-<p>Ouvrir l'éditeur de thème → <strong>Produit par défaut</strong> modèle → dans la section boîte d'achat, cliquez sur <strong>Ajouter un bloc</strong> → sélectionner <strong>Complétez votre look</strong>. Placez-le sous le bouton d'achat. Cliquez <strong>Enregistrer</strong>.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la configuration des ventes croisées d'accessoires, reportez-vous au guide de <a href="#setup-complete-look" onclick="nav(event,'#setup-complete-look')">Configuration de "Compléter votre style"</a>.</p></div></div>
 </section>
 <section id="prod-recommendations">
 <h2><span class="ic">💎</span>Recommandations de produits</h2>
@@ -1093,17 +1362,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">📖</span>À propos / <em>Page du patrimoine</em></h2>
 <span class="pb">Suffixe de page personnalisé</span>
 <p>Le <code>page.about</code> Le modèle propose des sections animées de narration de marque. Utilisez-le pour le récit de l’histoire, de la philosophie et du savoir-faire de votre marque.</p>
-<ol class="steps">
-<li><strong>Créer la page dans Admin</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Intitulez-le « Notre patrimoine » ou similaire.</p>
-</li>
-<li><strong>Attribuer le modèle</strong>
-<p>Sélectionnez <code>page.about</code> dans la zone de sélection de modèle à droite. Cliquez sur **Enregistrer**.</p>
-</li>
-<li><strong>Éditeur de thème intégré</strong>
-<p>Accédez au modèle À propos et cliquez sur <strong>Ajouter une section</strong> pour assembler le récit à partir des sections ci-dessous.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la configuration de vos pages À propos et Contact, reportez-vous au guide de <a href="#setup-templates" onclick="nav(event,'#setup-templates')">Configuration des modèles de pages</a>.</p></div></div>
 <h3>À propos de la bannière du héros</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
 <tr><td>Image de héros</td><td><span class="tb ti">photo</span></td><td>—</td><td>La photo en large bannière. Recommandé : <strong>2000 × 800 pixels</strong> image de paysage.</td></tr>
@@ -1162,17 +1421,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">✉</span>Contacter / <em>Page Atelier</em></h2>
 <span class="pb">Suffixe de page personnalisé</span>
 <p>Le <code>page.contact</code> Le modèle combine un formulaire de demande premium avec des cartes de localisation de boutique.</p>
-<ol class="steps">
-<li><strong>Créer la page dans Admin</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Intitulez-le « Contactez-nous » ou « Atelier ».</p>
-</li>
-<li><strong>Attribuer le modèle</strong>
-<p>Sélectionnez <code>page.contact</code> dans la zone de sélection de modèle à droite. Cliquez sur **Enregistrer**.</p>
-</li>
-<li><strong>Éditeur de thème intégré</strong>
-<p>Ouvrez l'éditeur de thème → accédez à votre page de contact nouvellement créée à l'aide de la liste déroulante des modèles → cliquez sur <strong>Ajouter une section</strong> pour configurer les blocs Formulaire de contact et Localisation.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la configuration de vos pages À propos et Contact, reportez-vous au guide de <a href="#setup-templates" onclick="nav(event,'#setup-templates')">Configuration des modèles de pages</a>.</p></div></div>
 <h3>Contacter la bannière du héros</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
 <tr><td>Image de héros</td><td><span class="tb ti">photo</span></td><td>—</td><td>Large bannière photo. Recommandé : <strong>2000 × 800 pixels</strong> paysage.</td></tr>
@@ -1198,17 +1447,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">🚚</span>Expédition <em>Page de politique</em></h2>
 <span class="pb">Suffixe de page personnalisé</span>
 <p>Le <code>page.shipping</code> Le modèle offre une mise en page haut de gamme pour présenter vos méthodes d'expédition et vos délais de livraison estimés par région dans des grilles et des tableaux épurés et stylés.</p>
-<ol class="steps">
-<li><strong>Créer la page dans Admin</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Intitulez-le « Politique d’expédition » ou « Informations de livraison ».</p>
-</li>
-<li><strong>Attribuer le modèle Aurick</strong>
-<p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.shipping</code>. Cliquez <strong>Enregistrer</strong>.</p>
-</li>
-<li><strong>Personnaliser dans l'éditeur de thème</strong>
-<p>Ouvrez l'éditeur de thème → accédez à votre page Politique d'expédition à l'aide du sélecteur de modèles en haut → cliquez sur <strong>Ajouter une rubrique</strong> → sélectionner <strong>Politique d'expédition</strong>. Vous pouvez désormais ajouter et configurer des blocs pour les méthodes d'expédition et les lignes de livraison régionales.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la création de la page de politique d'expédition, reportez-vous au guide de <a href="#setup-policies" onclick="nav(event,'#setup-policies')">Configuration des pages de politique</a>.</p></div></div>
 <h3>Paramètres des sections</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
 <tr><td>Héros — Sourcil</td><td><span class="tb tt">texte</span></td><td>Politique d'Aurick</td><td>Petite balise majuscule affichée au-dessus du titre principal.</td></tr>
@@ -1243,17 +1482,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">↻</span>Retours <em>Page de politique</em></h2>
 <span class="pb">Suffixe de page personnalisé</span>
 <p>Le <code>page.returns</code> Le modèle fournit une page de politique de retour structurée et premium comprenant une chronologie interactive, des cases à cocher de condition et un système de FAQ intégré.</p>
-<ol class="steps">
-<li><strong>Créer la page dans Admin</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Intitulez-le « Retours et échanges ».</p>
-</li>
-<li><strong>Attribuer le modèle Aurick</strong>
-<p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.returns</code>. Cliquez <strong>Enregistrer</strong>.</p>
-</li>
-<li><strong>Personnaliser dans l'éditeur de thème</strong>
-<p>Ouvrez l'éditeur de thème → accédez à votre page Politique de retour → cliquez sur <strong>Ajouter une rubrique</strong> → sélectionner <strong>Politique de retour</strong>. Personnalisez les blocs pour refléter vos directives politiques.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la création de la page de politique de retour, reportez-vous au guide de <a href="#setup-policies" onclick="nav(event,'#setup-policies')">Configuration des pages de politique</a>.</p></div></div>
 <h3>Paramètres des sections</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
 <tr><td>Héros — Sourcil</td><td><span class="tb tt">texte</span></td><td>Politique d'Aurick</td><td>Petit texte de balise au-dessus du titre.</td></tr>
@@ -1289,17 +1518,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">🛡</span>Confidentialité <em>Page de politique</em></h2>
 <span class="pb">Suffixe de page personnalisé</span>
 <p>Le <code>page.privacy-policy</code> Le modèle offre une belle page de conformité à plusieurs sections avec une barre de navigation collante qui se met à jour dynamiquement lors du défilement pour aider les clients à parcourir facilement les termes de la politique.</p>
-<ol class="steps">
-<li><strong>Créer la page dans Admin</strong>
-<p>Aller à <span class="path"><span class="pc r">Administrateur</span><span class="ps">›</span><span class="pc">Boutique en ligne</span><span class="ps">›</span><span class="pc">Pages</span><span class="ps">›</span><span class="pc">Ajouter une page</span></span>. Intitulez-le « Politique de confidentialité ».</p>
-</li>
-<li><strong>Attribuer le modèle Aurick</strong>
-<p>Dans la barre latérale droite sous <strong>Modèle de thème</strong>, sélectionnez <code>page.privacy-policy</code>. Cliquez <strong>Enregistrer</strong>.</p>
-</li>
-<li><strong>Personnaliser dans l'éditeur de thème</strong>
-<p>Ouvrez l'éditeur de thème → accédez à votre page Politique de confidentialité → cliquez sur <strong>Ajouter une rubrique</strong> → sélectionner <strong>Politique de confidentialité</strong>. Ajouter et organiser <strong>Section des politiques</strong> des blocs pour construire vos termes.</p>
-</li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>Pour obtenir des instructions étape par étape sur la création de la page de politique de confidentialité, reportez-vous au guide de <a href="#setup-policies" onclick="nav(event,'#setup-policies')">Configuration des pages de politique</a>.</p></div></div>
 <h3>Paramètres des sections</h3>
 <table class="st"><thead><tr><th>Paramètre</th><th>Tapez</th><th>Par défaut</th><th>Ce qu'il fait</th></tr></thead><tbody>
 <tr><td>Héros — Sourcil / Titre</td><td><span class="tb tt">texte</span> / <span class="tb tt">texte</span></td><td>Politique d'Aurick / Politique de confidentialité</td><td>Contenu à l'intérieur de l'en-tête supérieur.</td></tr>
@@ -1338,45 +1557,83 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 </ol>
 </section>
 <section id="images">
-<h2><span class="ic">🖼</span>Images <em>Tailles</em></h2>
-<p>Utilisez ces dimensions exactes pour chaque image dans chaque section. Les tailles correctes garantissent des visuels nets, parfaitement proportionnés et rapides sur chaque écran.</p>
-<div class="ic-c"><span class="ic-n">Logo (en-tête)</span><span class="ic-d">300 × 120 pixels</span><span class="ic-f">PNG ou SVG transparents</span></div>
-<div class="ic-c"><span class="ic-n">Caractéristiques Montre vitrine</span><span class="ic-d">540 × 540 pixels</span><span class="ic-f">PNG transparent (nécessaire pour des transitions de vol propres)</span></div>
-<div class="ic-c"><span class="ic-n">Photos de style de vie</span><span class="ic-d">1 000 × 1 250 px</span><span class="ic-f">JPEG • Portrait 4:5 • Sujet centré</span></div>
-<div class="ic-c"><span class="ic-n">Bannières de collecte</span><span class="ic-d">2000 × 800 pixels</span><span class="ic-f">JPEG • Paysage 2,5:1</span></div>
+<h2><span class="ic">&#128444;</span>Dimensions des <em>images</em></h2>
+<p>Ce guide recense tous les emplacements d'image du thème Aurick avec leurs dimensions idéales, afin que chaque visuel soit parfaitement net, bien cadré et rapide à charger sur tous les appareils. Shopify génère automatiquement des variantes adaptées aux mobiles.</p>
+<div class="note tip"><span class="ni">&#10024;</span><div class="nb"><div class="nt">La règle d'or</div><p>Téléversez toujours la taille maximale recommandée ; le CDN Shopify se charge de la mise à l'échelle. Exportez toutes vos images en <strong>72 dpi</strong> pour le web.</p></div></div>
+
+<h3>Logo et en-tête</h3>
+<table class="st"><thead><tr><th>Emplacement</th><th>Dimensions</th><th>Format</th><th>Remarques</th></tr></thead><tbody>
+<tr><td>Logo de l'en-tête</td><td><strong>300 × 120 px</strong></td><td>PNG (fond transparent) ou SVG</td><td>Affiché entre 60 et 300 px de large selon le curseur de largeur du logo. Supprimez tout espace vide autour du logo.</td></tr>
+<tr><td>Favicon du site</td><td><strong>32 × 32 px</strong></td><td>PNG ou ICO</td><td>Shopify le génère automatiquement depuis : Boutique en ligne → Préférences → Favicon.</td></tr>
+</tbody></table>
+
+<h3>Hero Box Slider (page d'accueil)</h3>
+<table class="st"><thead><tr><th>Emplacement</th><th>Dimensions</th><th>Format</th><th>Remarques</th></tr></thead><tbody>
+<tr><td>Image d'arrière-plan (par diapositive)</td><td><strong>1920 × 1080 px</strong></td><td>JPEG</td><td>Occupe toute la largeur de l'écran derrière le hero box. Gardez le sujet à l'écart du centre-gauche, là où repose le hero box.</td></tr>
+<tr><td>Photo de montre personnalisée (par diapositive)</td><td><strong>400 × 500 px</strong> portrait</td><td>PNG (fond transparent)</td><td>Remplace le vecteur SVG intégré. Le fond transparent est indispensable. Taille d'affichage : 224 × 296 px — téléversez en double résolution pour les écrans Retina.</td></tr>
+</tbody></table>
+<div class="note warn"><span class="ni">&#9888;</span><div class="nb"><div class="nt">Les photos de montres doivent impérativement avoir un fond transparent</div><p>Un fond blanc ou coloré masque l'animation du hero box et l'effet spotlight. Détourez avec Photoshop ou <strong>remove.bg</strong>.</p></div></div>
+
+<h3>Lifestyle Showcase – Brand Story – Collection vedette – Galeries</h3>
+<table class="st"><thead><tr><th>Emplacement</th><th>Dimensions</th><th>Format</th><th>Remarques</th></tr></thead><tbody>
+<tr><td>Image de bloc lifestyle</td><td><strong>1000 × 1250 px</strong></td><td>JPEG</td><td>Affichée à 800 px de large. Format portrait 4:5. Centrez le sujet.</td></tr>
+<tr><td>Image de chapitre Brand Story — ordinateur</td><td><strong>1200 × 900 px</strong></td><td>JPEG</td><td>Largeur d'affichage : 40 vw. Le format paysage ou carré convient le mieux.</td></tr>
+<tr><td>Image de chapitre Brand Story — mobile</td><td><strong>800 × 600 px</strong></td><td>JPEG</td><td>Même champ d'image, servi à 800 px sur les écrans étroits.</td></tr>
+<tr><td>Image de carte produit (Collection vedette)</td><td>Selon le ratio d'aspect</td><td>JPEG ou PNG (fond transparent)</td><td><strong>3:4</strong> → 900×1200 &bull; <strong>4:5</strong> → 900×1125 &bull; <strong>1:1</strong> → 900×900 &bull; <strong>16:9</strong> → 1600×900 px.</td></tr>
+<tr><td>Cartes produit (Galerie horizontale)</td><td><strong>800 × 1000 px</strong></td><td>JPEG ou PNG</td><td>Les cartes s'affichent à environ 28 vw de large sur ordinateur.</td></tr>
+<tr><td>Publication de la galerie sociale (par bloc)</td><td><strong>800 × 800 px</strong></td><td>JPEG ou PNG</td><td>Cellules carrées 1:1. « Cover » recadre pour remplir ; « Contain » affiche l'image entière.</td></tr>
+</tbody></table>
+
+<h3>Méga-menu — Cartes vedettes (en-tête)</h3>
+<table class="st"><thead><tr><th>Nombre de cartes</th><th>Dimensions</th><th>Format</th><th>Remarques</th></tr></thead><tbody>
+<tr><td>1 carte (spotlight)</td><td><strong>600 × 800 px</strong> portrait</td><td>JPEG ou PNG</td><td>Carte spotlight pleine largeur, ratio 3:4.</td></tr>
+<tr><td>2 cartes (paire)</td><td><strong>600 × 750 px</strong> portrait</td><td>JPEG ou PNG</td><td>Paire côte à côte, ratio 4:5.</td></tr>
+<tr><td>3–6 cartes (mosaïque)</td><td><strong>800 × 500 px</strong> paysage</td><td>JPEG ou PNG</td><td>Mosaïque paysage, ratio 16:10.</td></tr>
+</tbody></table>
+
+<h3>Page de collection — Galerie produit</h3>
+<table class="st"><thead><tr><th>Emplacement</th><th>Dimensions</th><th>Format</th><th>Remarques</th></tr></thead><tbody>
+<tr><td>Bannière hero de la collection</td><td><strong>2000 × 700 px</strong></td><td>JPEG</td><td>Bannière pleine largeur. <strong>Laissez le coin inférieur gauche dégagé</strong> : le titre de la collection s'y superpose.</td></tr>
+<tr><td>Images de carte produit</td><td><strong>900 × 900</strong> à <strong>900 × 1200 px</strong></td><td>JPEG ou PNG (fond transparent)</td><td>Le mode « Contain » est recommandé pour les montres détourées.</td></tr>
+<tr><td>Images principales du produit</td><td><strong>1600 × 1600 px</strong></td><td>JPEG ou PNG (fond transparent)</td><td>Shopify sert un srcset à 600/900/1200/1600 px. Le format carré 1:1 s'intègre parfaitement à la galerie standard.</td></tr>
+<tr><td>Icône de badge de confiance</td><td><strong>48 × 48 px</strong></td><td>PNG (fond transparent)</td><td>Affichée à 24 × 24 px. Téléversez en double résolution pour les écrans Retina.</td></tr>
+<tr><td>Image du guide des tailles</td><td><strong>1400 × 900 px</strong></td><td>JPEG ou PNG</td><td>Via le champ méta <code>custom.size_guide</code> ou une image produit avec le texte alternatif <code>size-guide</code>.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">Image de collection = bannière hero</div><p>Shopify utilise automatiquement l'<strong>image de la collection</strong> (Admin → Collections → Image de la collection) comme bannière hero. Inutile d'en téléverser une séparément dans l'éditeur de thème.</p></div></div>
+
+<h3>Page À propos — Contact — Blog</h3>
+<table class="st"><thead><tr><th>Emplacement</th><th>Dimensions</th><th>Format</th><th>Remarques</th></tr></thead><tbody>
+<tr><td>Bannière hero À propos / Contact</td><td><strong>2000 × 800 px</strong></td><td>JPEG</td><td>Bannière pleine largeur. Laissez le coin inférieur gauche dégagé pour le texte en superposition.</td></tr>
+<tr><td>Arrière-plan du manifeste</td><td><strong>2000 × 1200 px</strong></td><td>JPEG</td><td>Une couche sombre est appliquée par-dessus. Optez pour une image dramatique et contrastée pour un effet maximal.</td></tr>
+<tr><td>Photo d'un membre de l'équipe (par bloc)</td><td><strong>600 × 800 px</strong> portrait</td><td>JPEG</td><td>Carte portrait 3:4. Placez le visage dans la moitié supérieure du cadre.</td></tr>
+<tr><td>Arrière-plan du bloc CTA</td><td><strong>1920 × 1080 px</strong></td><td>JPEG</td><td>Image plein écran pour la section de clôture.</td></tr>
+<tr><td>Image mise en avant de l'article de blog</td><td><strong>1200 × 800 px</strong></td><td>JPEG</td><td>Affichée jusqu'à 800 px de large dans la grille du blog. Le format paysage 3:2 fonctionne à tous les points de rupture.</td></tr>
+</tbody></table>
+
+<h3>Récapitulatif — Toutes les dimensions en un coup d'œil</h3>
+<div class="ic-c"><span class="ic-n">Logo de l'en-tête</span><span class="ic-d">300 × 120 px</span><span class="ic-f">PNG (fond transparent) ou SVG</span></div>
+<div class="ic-c"><span class="ic-n">Arrière-plan hero (par diapositive)</span><span class="ic-d">1920 × 1080 px</span><span class="ic-f">JPEG &bull; dégagez le centre-gauche</span></div>
+<div class="ic-c"><span class="ic-n">Photo de montre (par diapositive)</span><span class="ic-d">400 × 500 px</span><span class="ic-f">PNG transparent &bull; détouré</span></div>
+<div class="ic-c"><span class="ic-n">Bloc Lifestyle Showcase</span><span class="ic-d">1000 × 1250 px</span><span class="ic-f">JPEG &bull; portrait 4:5</span></div>
+<div class="ic-c"><span class="ic-n">Chapitre Brand Story — ordinateur</span><span class="ic-d">1200 × 900 px</span><span class="ic-f">JPEG &bull; paysage ou carré</span></div>
+<div class="ic-c"><span class="ic-n">Publication galerie sociale</span><span class="ic-d">800 × 800 px</span><span class="ic-f">JPEG ou PNG &bull; carré 1:1</span></div>
+<div class="ic-c"><span class="ic-n">Carte méga-menu (3–6 cartes)</span><span class="ic-d">800 × 500 px</span><span class="ic-f">JPEG ou PNG &bull; paysage 16:10</span></div>
+<div class="ic-c"><span class="ic-n">Carte méga-menu (1–2 cartes)</span><span class="ic-d">600 × 800 px</span><span class="ic-f">JPEG ou PNG &bull; portrait</span></div>
+<div class="ic-c"><span class="ic-n">Bannière hero de la collection</span><span class="ic-d">2000 × 700 px</span><span class="ic-f">JPEG &bull; coin inférieur gauche dégagé</span></div>
+<div class="ic-c"><span class="ic-n">Image principale du produit</span><span class="ic-d">1600 × 1600 px</span><span class="ic-f">JPEG ou PNG transparent &bull; 1:1</span></div>
+<div class="ic-c"><span class="ic-n">Image guide des tailles</span><span class="ic-d">1400 × 900 px</span><span class="ic-f">JPEG ou PNG &bull; alt text : <code>size-guide</code></span></div>
+<div class="ic-c"><span class="ic-n">Icône badge de confiance</span><span class="ic-d">48 × 48 px</span><span class="ic-f">PNG transparent &bull; 2× pour Retina</span></div>
+<div class="ic-c"><span class="ic-n">Bannière hero À propos / Contact</span><span class="ic-d">2000 × 800 px</span><span class="ic-f">JPEG &bull; coin inférieur gauche dégagé</span></div>
+<div class="ic-c"><span class="ic-n">Arrière-plan du manifeste</span><span class="ic-d">2000 × 1200 px</span><span class="ic-f">JPEG &bull; dramatique et contrasté</span></div>
+<div class="ic-c"><span class="ic-n">Photo du membre de l'équipe</span><span class="ic-d">600 × 800 px</span><span class="ic-f">JPEG &bull; portrait 3:4 &bull; visage en haut</span></div>
+<div class="ic-c"><span class="ic-n">Image mise en avant de l'article</span><span class="ic-d">1200 × 800 px</span><span class="ic-f">JPEG &bull; paysage 3:2</span></div>
 </section>
+
 <section id="faq">
 <h2><span class="ic">❓</span>FAQ</h2>
 <div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">Comment changer le logo de mon magasin ?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Éditeur de thème → <strong>En-tête</strong> → définir <strong>Type de logo</strong> à <strong>Images</strong> → téléchargez votre fichier de logo. Format recommandé : PNG transparent, 300 × 120 px.</p></div></div></div>
 <div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">Comment ajouter des messages d'annonce en rotation ?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Éditeur de thème → <strong>Barre d'annonce</strong> → ajoutez plusieurs **Blocs d'annonces** → activez les **annonces à rotation automatique**.</p></div></div></div>
 <div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">Comment masquer une section de la page d’accueil sans la supprimer ?</span><span class="fch">▼</span></div><div class="fa"><div class="fai"><p>Cliquez sur l'**icône en forme d'œil** à côté du nom de la section dans la barre latérale de l'éditeur de thème. La section devient invisible pour les visiteurs mais reste configurée pour une utilisation future.</p></div></div></div>
-</section>
-<section id="watch-svg">
-<h2><span class="ic">⚙</span>Regarder l'image <em>→ Invite SVG</em></h2>
-<p>Le héros de la boîte de montre Aurick 3D restitue votre montre sous la forme d'un vecteur SVG propre à l'intérieur de la boîte animée. Collez cette invite dans n'importe quel assistant IA avec l'image de votre montre pour obtenir le code SVG personnalisé :</p>
-<div class="prompt-wrap">
-<div class="prompt-label">Copiez et collez dans l'IA (avec la photo de votre montre jointe)</div>
-<button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
-<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-    Copier l'invite
-  </button>
-<pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
-Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
-
-Follow these strict specifications:
-1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
-2. Background: Must be transparent.
-3. Viewport: The viewBox must be exactly "0 0 300 400".
-4. Vertical Alignment: The watch must be perfectly centered.
-   - The center of the watch dial must sit at (x=150, y=200).
-   - The strap must run straight vertically from y=10 to y=390.
-5. Dimension Specs:
-   - Strap Width: Exactly 60px (x=120 to x=180).
-   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
-   - Inner Dial Face Radius: Exactly 60px.
-6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
-7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
-</div>
 </section>
 <section id="support">
 <h2><span class="ic">🙋</span>Obtenir <em>Assistance</em></h2>
@@ -1385,7 +1642,7 @@ Follow these strict specifications:
 <span class="sup-icon">✉</span>
 <div class="sup-title">Besoin d'aide avec<br/>votre <em>Aurick</em> magasin ?</div>
 <p class="sup-lead">Qu'il s'agisse d'une question de paramètres, d'un problème de champ méta ou d'une fonctionnalité que vous ne trouvez pas, remplissez le formulaire et nous réglerons le problème ensemble.</p>
-<a class="sup-btn" href="https://forms.gle/uv5eW4ULpRG2NqF58" rel="noopener noreferrer" target="_blank">
+<a class="sup-btn" href="https://form.jotform.com/261935330118049" rel="noopener noreferrer" target="_blank">
 <svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
     Ouvrir le formulaire d'assistance
     <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
