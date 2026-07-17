@@ -191,6 +191,14 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
     <div class="sb-cat">Getting Started</div>
     <a class="sb-a on" href="#overview" onclick="nav(event,'#overview')"><span class="dot"></span>Overview</a>
     <a class="sb-a" href="#install" onclick="nav(event,'#install')"><span class="dot"></span>Installation</a>
+    <a class="sb-a" href="#setup-menus" onclick="nav(event,'#setup-menus')"><span class="dot"></span>Navigation &amp; Menus Setup</a>
+    <a class="sb-a" href="#setup-templates" onclick="nav(event,'#setup-templates')"><span class="dot"></span>Page Templates Setup</a>
+    <a class="sb-a" href="#setup-policies" onclick="nav(event,'#setup-policies')"><span class="dot"></span>Policy Pages Setup</a>
+    <a class="sb-a" href="#setup-size-guide" onclick="nav(event,'#setup-size-guide')"><span class="dot"></span>Size Guide Setup</a>
+    <a class="sb-a" href="#setup-complete-look" onclick="nav(event,'#setup-complete-look')"><span class="dot"></span>Complete Your Look Setup</a>
+    <a class="sb-a" href="#product-description" onclick="nav(event,'#product-description')"><span class="dot"></span>Product Description Format</a>
+    <a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Watch SVG Prompt</a>
+    <a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Translate &amp; Adapt</a>
     
     <div class="sb-cat">Global Settings</div>
     <a class="sb-a" href="#loader" onclick="nav(event,'#loader')"><span class="dot"></span>Loader Screen</a>
@@ -239,11 +247,9 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
     <a class="sb-a" href="#returns-policy" onclick="nav(event,'#returns-policy')"><span class="dot"></span>Returns Policy</a>
     <a class="sb-a" href="#privacy-policy" onclick="nav(event,'#privacy-policy')"><span class="dot"></span>Privacy Policy</a>
     
-    <div class="sb-cat">Store Settings</div>
-    <a class="sb-a" href="#translate" onclick="nav(event,'#translate')"><span class="dot"></span>Translate &amp; Adapt</a>
+    <div class="sb-cat">Resources &amp; Support</div>
     <a class="sb-a" href="#images" onclick="nav(event,'#images')"><span class="dot"></span>Image Sizes</a>
     <a class="sb-a" href="#faq" onclick="nav(event,'#faq')"><span class="dot"></span>FAQ</a>
-    <a class="sb-a" href="#watch-svg" onclick="nav(event,'#watch-svg')"><span class="dot"></span>Watch SVG Prompt</a>
     <a class="sb-a" href="#support" onclick="nav(event,'#support')"><span class="dot"></span>Get Support</a>
   </nav>
 </aside>
@@ -280,6 +286,362 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
   <li><strong>Customize &amp; Publish</strong><p>Click <strong>Customize</strong> to configure all sections in the Theme Editor, or click <strong>Publish</strong> to go live immediately.</p></li>
 </ol>
 <div class="note warn"><span class="ni">&#9888;</span><div class="nb"><div class="nt">Upload the ZIP as-is</div><p>Do not extract the file before uploading. Shopify requires the compressed format. Extracting it first will cause the upload to fail.</p></div></div>
+</section>
+
+<section id="setup-menus">
+  <h2><span class="ic">🔍</span>Navigation &amp; Menus <em>Setup</em></h2>
+  <span class="pb g">Shopify Navigation</span>
+  <p>How to set up Navigation &amp; Menus like the demo store!</p>
+
+  <h3>Step 1: Set up the Main Menu in Shopify</h3>
+  <p>To recreate the demo store's menu layout, follow these steps:</p>
+  <ol class="steps">
+    <li><strong>Go to Navigation Settings</strong>
+      <p>In Shopify Admin, go to <span class="path"><span class="pc r">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Navigation</span></span> (or <span class="path"><span class="pc r">Content</span><span class="ps">&rsaquo;</span><span class="pc">Menus</span></span> depending on your Shopify version).</p>
+    </li>
+    <li><strong>Select Main Menu</strong>
+      <p>Click on the <strong>Main Menu</strong> to edit it.</p>
+    </li>
+    <li><strong>Create the 5 Main Tabs</strong>
+      <p>Add the following 5 menu items to your Main Menu:</p>
+      <ul>
+        <li><strong>Shop</strong> (link to a collection or all products)
+          <br><small style="color:var(--tm);">💡 Hint: Make sure this title matches exactly with the "Trigger nav item title" configured in the Header section settings (under <strong>Featured Mega Menu</strong>) to activate the dropdown (e.g., <code>Shop</code>).</small>
+        </li>
+        <li><strong>Collection</strong> or <strong>Collections</strong> (link to a collection or collections list page)
+          <br><small style="color:var(--tm);">💡 Hint: Make sure this title matches exactly with the "Trigger nav item title" configured in the Header section settings (under <strong>Collections Mega Menu</strong>) to activate the dropdown (e.g., <code>Collections</code>).</small>
+        </li>
+        <li><strong>Contact</strong> (link to your Contact page)</li>
+        <li><strong>About Us</strong> (link to your About page)</li>
+        <li><strong>Pages</strong> (set its link to exactly <code>#</code>)</li>
+      </ul>
+    </li>
+    <li><strong>Create and Nest Policy Pages</strong>
+      <p>Create 3 additional menu items:</p>
+      <ul>
+        <li><strong>Return Policy</strong> (link to your Return Policy page)</li>
+        <li><strong>Shipping Policy</strong> (link to your Shipping Policy page)</li>
+        <li><strong>Privacy Policy</strong> (link to your Privacy Policy page)</li>
+      </ul>
+      <p>Drag and drop these 3 items to place them directly under <strong>Pages</strong>, nesting them as sub-menu items.</p>
+    </li>
+    <li><strong>Save Menu</strong>
+      <p>Click <strong>Save Menu</strong> to apply the changes.</p>
+    </li>
+  </ol>
+
+  <h3>Step 2: Linking the Menu in Aurick's Header</h3>
+  <p>To display your menu in the header, link it through the Header section settings:</p>
+  <ol class="steps">
+    <li><strong>Open Theme Editor</strong>
+      <p>Go to **Online Store** &rarr; **Themes** &rarr; click **Customize** on your active Aurick theme.</p>
+    </li>
+    <li><strong>Open Header Section Settings</strong>
+      <p>In the left sidebar of the customizer, click on the **Header** section.</p>
+    </li>
+    <li><strong>Select Your Menu</strong>
+      <p>In the **Header** section settings panel on the right, find the **Menu** setting, click **Change** &rarr; **Select menu**, choose your **Main Menu**, and click **Save** at the top right.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="setup-templates">
+<h2><span class="ic">&#128214;</span>Page Templates <em>Setup (About &amp; Contact)</em></h2>
+<span class="pb">Shopify Pages</span>
+<p>Create and configure the default About (Heritage) and Contact (Atelier) page layouts using Aurick's premium templates.</p>
+
+<h3>Setting up the About / Heritage Page</h3>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Our Heritage&rdquo; or &ldquo;About Us&rdquo;.</p>
+  </li>
+  <li><strong>Assign the template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.about</code> from the template selection dropdown. Click **Save**.</p>
+  </li>
+  <li><strong>Build in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your newly created page using the page selector dropdown at the top &rarr; click <strong>Add Section</strong> to assemble the timeline, stats, and manifesto narrative.</p>
+  </li>
+</ol>
+
+<h3>Setting up the Contact / Atelier Page</h3>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Contact Us&rdquo; or &ldquo;Atelier&rdquo;.</p>
+  </li>
+  <li><strong>Assign the template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.contact</code> from the template selection dropdown. Click **Save**.</p>
+  </li>
+  <li><strong>Build in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your newly created contact page using the template dropdown &rarr; click <strong>Add Section</strong> to configure the Contact Form and Location blocks.</p>
+  </li>
+</ol>
+</section>
+
+<section id="setup-policies">
+<h2><span class="ic">&#128737;</span>Policy Pages <em>Setup</em></h2>
+<span class="pb">Shopify Pages</span>
+<p>Configure custom-styled legal and policy templates for shipping, returns, and privacy pages.</p>
+
+<h3>Setting up the Shipping Policy Page</h3>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Shipping Policy&rdquo; or &ldquo;Delivery Information&rdquo;.</p>
+  </li>
+  <li><strong>Assign the Aurick template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.shipping</code>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Customize in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your Shipping Policy page using the template picker at the top &rarr; click <strong>Add section</strong> &rarr; select <strong>Shipping Policy</strong>. You can now add and configure blocks for shipping methods and regional delivery rows.</p>
+  </li>
+</ol>
+
+<h3>Setting up the Returns Policy Page</h3>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Returns &amp; Exchanges&rdquo;.</p>
+  </li>
+  <li><strong>Assign the Aurick template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.returns</code>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Customize in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your Returns Policy page &rarr; click <strong>Add section</strong> &rarr; select <strong>Returns Policy</strong>. Customize the blocks to reflect your policy guidelines.</p>
+  </li>
+</ol>
+
+<h3>Setting up the Privacy Policy Page</h3>
+<ol class="steps">
+  <li><strong>Create the page in Admin</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Privacy Policy&rdquo;.</p>
+  </li>
+  <li><strong>Assign the Aurick template</strong>
+    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.privacy-policy</code>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Customize in Theme Editor</strong>
+    <p>Open the Theme Editor &rarr; navigate to your Privacy Policy page &rarr; click <strong>Add section</strong> &rarr; select <strong>Privacy Policy</strong>. Add and arrange <strong>Policy Section</strong> blocks to build your terms.</p>
+  </li>
+</ol>
+</section>
+
+<section id="setup-size-guide">
+<h2><span class="ic">&#128207;</span>Size Guide <em>Setup</em></h2>
+<span class="pb">Product Page &mdash; Metafields</span>
+<p>Create a size guide metafield so you can assign single or multiple size chart images to individual products.</p>
+
+<ol class="steps">
+  <li><strong>Create the metafield definition (once)</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span>. Set: <strong>Name</strong> = <code>Size Guide</code>, <strong>Namespace &amp; key</strong> = <code>custom.size_guide</code>, <strong>Type</strong> = File. Under File settings, select either <strong>One file</strong> or <strong>List of files</strong> (to allow uploading a single size chart or a list of multiple size chart images). Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Upload the guide per product</strong>
+    <p>Open any product in Admin &rarr; scroll to the <strong>Metafields</strong> panel at the bottom &rarr; find <strong>Size Guide</strong> &rarr; upload your size chart image(s) (JPG or PNG). Click <strong>Save product</strong>. The Size Guide button will now appear on that product page automatically.</p>
+  </li>
+</ol>
+</section>
+
+<section id="setup-complete-look">
+<h2><span class="ic">&#128717;</span>Complete Your Look <em>Setup</em></h2>
+<span class="pb">Product Page &mdash; Metafields</span>
+<p>Configure cross-sell accessories (such as watch straps or rolls) linked directly to a specific watch.</p>
+
+<ol class="steps">
+  <li><strong>Create the metafield definition (once)</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span>. Set: <strong>Name</strong> = <code>Complete Look</code>, <strong>Namespace &amp; key</strong> = <code>custom.complete_look</code>, <strong>Type</strong> = Product. Enable <strong>Accept list of values</strong>. Click <strong>Save</strong>.</p>
+  </li>
+  <li><strong>Link accessories per watch</strong>
+    <p>Open a watch product &rarr; scroll to the <strong>Metafields</strong> panel &rarr; click <strong>Complete Look</strong> &rarr; use the product picker to select the accessories (e.g. leather strap, watch roll, travel case). Save the product.</p>
+  </li>
+  <li><strong>Enable the block in Theme Editor</strong>
+    <p>Open Theme Editor &rarr; <strong>Default Product</strong> template &rarr; in the buy box section click <strong>Add block</strong> &rarr; select <strong>Complete Your Look</strong>. Position it below the buy button. Click <strong>Save</strong>.</p>
+  </li>
+</ol>
+</section>
+
+<section id="product-description">
+<h2><span class="ic">&#128221;</span>Product Description <em>Format</em></h2>
+<p>Aurick reads a special formatting syntax inside the Shopify product description to automatically generate a tabbed interface directly on the product page. If you write the description in plain text only, it appears as a single paragraph. If you use the <code>**</code> section markers below, the theme splits it into premium animated tabs (Details, Care, FAQ &mdash; or any custom label you choose).</p>
+
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">Where this appears</div><p>This only works when the <strong>Description Tabs</strong> block is added to the Product Information section in the Theme Editor. Go to Theme Editor &rarr; Default Product &rarr; Product Information &rarr; Add block &rarr; Description tabs.</p></div></div>
+
+<h3>Full Description Template</h3>
+<p>Write the product description exactly like this in the Shopify product editor (Admin &rarr; Products &rarr; [product] &rarr; Description):</p>
+<pre style="background:rgba(255,255,255,0.04);border:.5px solid var(--border);border-radius:var(--rs);padding:1.25rem 1.5rem;font-family:monospace;font-size:0.82rem;color:#b8ab94;line-height:1.7;overflow-x:auto;white-space:pre-wrap;">A slim, understated dress watch built for evenings and boardrooms alike.
+
+**Details
+&mdash; Slim steel or gold case
+&mdash; Quartz or automatic movement
+&mdash; Leather strap or bracelet
+&mdash; Water resistant to 30m
+
+**Care
+Water Resistance: 30m &mdash; rinse after saltwater exposure
+Crystal: Sapphire &mdash; wipe with a soft cloth
+Strap Care: Leather &mdash; avoid prolonged moisture
+Service: Recommended every 3&ndash;5 years
+
+**FAQ
+Q: How long does delivery take?
+A: Standard delivery within Europe takes 3&ndash;5 business days. Express options are available at checkout.
+
+Q: Is the watch covered by a warranty?
+A: Yes. All Aurick timepieces carry a 2-year international warranty covering manufacturing defects.</pre>
+
+<h3>How Each Section Works</h3>
+<p>Each <code>**</code> marker creates one tab. The tab name immediately follows the marker. Three names have special rendering logic:</p>
+
+<div style="display:grid;gap:1rem;margin:1.2rem 0 1.8rem;">
+
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**Details</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Bullet List Tab</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="padding:.85rem 1rem;border-right:.5px solid var(--border);">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Write like this</div>
+      <pre style="margin:0;font-family:monospace;font-size:.75rem;color:#b8ab94;white-space:pre-wrap;line-height:1.6;">**Details
+&mdash; Slim steel case
+&mdash; Quartz movement
+&mdash; Water resistant 30m</pre>
+    </div>
+    <div style="padding:.85rem 1rem;">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Result on page</div>
+      <p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Each line becomes a styled bullet <code>&lt;li&gt;</code>. Any leading bullet character (<code>&mdash;</code> <code>-</code> <code>*</code> <code>&bull;</code>) is stripped automatically.</p>
+    </div>
+  </div>
+</div>
+
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**Care</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Specification Grid Tab</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="padding:.85rem 1rem;border-right:.5px solid var(--border);">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Write like this</div>
+      <pre style="margin:0;font-family:monospace;font-size:.75rem;color:#b8ab94;white-space:pre-wrap;line-height:1.6;">**Care
+Water Resistance: 30m
+Crystal: Sapphire
+Strap: Leather
+Service: Every 3&ndash;5 years</pre>
+    </div>
+    <div style="padding:.85rem 1rem;">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Result on page</div>
+      <p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Lines with <strong>Label: Value</strong> format (colon within 35 characters) become a two-column specification grid. Lines without a colon render as intro text above the grid.</p>
+    </div>
+  </div>
+</div>
+
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**FAQ</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Accordion Tab</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+    <div style="padding:.85rem 1rem;border-right:.5px solid var(--border);">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Write like this</div>
+      <pre style="margin:0;font-family:monospace;font-size:.75rem;color:#b8ab94;white-space:pre-wrap;line-height:1.6;">**FAQ
+Q: How long does delivery take?
+A: 3&ndash;5 business days in Europe.
+
+Q: Do you offer a warranty?
+A: Yes, 2 years on all pieces.</pre>
+    </div>
+    <div style="padding:.85rem 1rem;">
+      <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:.5rem;">Result on page</div>
+      <p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Each <code>Q:</code>/<code>A:</code> pair becomes a collapsible gold accordion item. Only one answer is open at a time. Multi-line answers are supported.</p>
+    </div>
+  </div>
+</div>
+
+<div style="border:.5px solid var(--border);border-radius:var(--rs);overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:rgba(0,0,0,.28);border-bottom:.5px solid var(--border);">
+    <code style="font-size:.78rem;color:var(--gl);background:rgba(201,169,78,.12);border:.5px solid rgba(201,169,78,.25);padding:.2rem .55rem;border-radius:4px;">**Anything</code>
+    <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);">Custom Rich-Text Tab</span>
+  </div>
+  <div style="padding:.85rem 1rem;">
+    <p style="margin:0;font-size:.79rem;color:var(--td);line-height:1.55;">Any other tab name (e.g. <code>**Shipping</code>, <code>**Warranty</code>, <code>**Specs</code>) renders the content as free-form rich text. HTML tags inside the content are preserved.</p>
+  </div>
+</div>
+
+</div>
+
+<h3>Rules &amp; Best Practices</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+<ol class="steps" style="margin:0;">
+  <li><strong>Intro paragraph first</strong><p>Text before the first <code>**</code> is the hook shown above tabs.</p></li>
+  <li><strong>No space between <code>**</code> and name</strong><p><code>**Details</code> correct &bull; <code>** Details</code> incorrect.</p></li>
+  <li><strong>Case-insensitive names</strong><p><code>**details</code>, <code>**Details</code>, <code>**DETAILS</code> are identical.</p></li>
+</ol>
+<ol class="steps" style="margin:0;" start="4">
+  <li><strong>Use HTML editor (<code>&lt;&gt;</code>)</strong><p>Prevents Shopify from wrapping markers in <code>&lt;p&gt;</code> tags.</p></li>
+  <li><strong>FAQ: use <code>Q:</code> and <code>A:</code></strong><p>Parser detects these prefixes specifically.</p></li>
+  <li><strong>Care: keep labels short</strong><p>Colon must be within the first 35 characters.</p></li>
+</ol>
+</div>
+
+<div class="note tip" style="margin-top:2rem;"><span class="ni">&#10024;</span><div class="nb"><div class="nt">No <code>**</code>? No tabs.</div><p>If the product description has no <code>**</code> characters, the Description Tabs block stays hidden and the description renders as a normal paragraph. Products with and without tabs can be mixed freely.</p></div></div>
+
+<h3>Example: Completed Product (Shopify HTML Editor)</h3>
+<pre style="background:rgba(255,255,255,0.04);border:.5px solid var(--border);border-radius:var(--rs);padding:1.25rem 1.5rem;font-family:monospace;font-size:0.80rem;color:#b8ab94;line-height:1.7;overflow-x:auto;white-space:pre-wrap;">&lt;p&gt;A slim, understated dress watch built for evenings and boardrooms alike.&lt;/p&gt;
+
+**Details
+&mdash; Slim steel or gold case
+&mdash; Quartz or automatic movement
+&mdash; Leather strap or bracelet
+
+**Care
+Water Resistance: 30m
+Crystal: Sapphire
+Strap: Leather &mdash; keep dry
+Service: Every 3&ndash;5 years
+
+**FAQ
+Q: How long does delivery take?
+A: Standard delivery within Europe takes 3&ndash;5 business days.
+
+Q: Do you ship internationally?
+A: Yes, we ship worldwide. Duties and taxes may apply depending on your country.</pre>
+</section>
+
+<section id="watch-svg">
+<h2><span class="ic">&#9881;</span>Watch Image <em>&rarr; SVG Prompt</em></h2>
+<p>The Aurick 3D watch box hero renders your watch as a clean SVG vector inside the animated box. Paste this prompt into any AI assistant along with your watch image to get the custom SVG code:</p>
+<div class="prompt-wrap">
+  <div class="prompt-label">Copy &amp; Paste into AI (with your watch photo attached)</div>
+  <button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+    Copy Prompt
+  </button>
+  <pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
+Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
+
+Follow these strict specifications:
+1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
+2. Background: Must be transparent.
+3. Viewport: The viewBox must be exactly "0 0 300 400".
+4. Vertical Alignment: The watch must be perfectly centered.
+   - The center of the watch dial must sit at (x=150, y=200).
+   - The strap must run straight vertically from y=10 to y=390.
+5. Dimension Specs:
+   - Strap Width: Exactly 60px (x=120 to x=180).
+   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
+   - Inner Dial Face Radius: Exactly 60px.
+6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
+7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
+</div>
+</section>
+
+<section id="translate">
+<h2><span class="ic">&#127760;</span>Translate &amp; <em>Adapt</em></h2>
+<span class="pb">Shopify Native App &mdash; Free</span>
+<p>Aurick includes complete interface translations for **English (EN)**, **Spanish (ES)**, and **French (FR)**. To publish new languages and translate product assets, follow the steps:</p>
+<ol class="steps">
+  <li><strong>Add languages in Settings</strong>
+    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Languages</span></span>, add Spanish/French, and click **Publish**.</p>
+  </li>
+  <li><strong>Install Translate &amp; Adapt</strong>
+    <p>Open the Translate &amp; Adapt app to translate descriptions, titles, collection tags, and menu items side-by-side.</p>
+  </li>
+</ol>
 </section>
 
 <section id="loader">
@@ -359,38 +721,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#128269;</span>Menus &amp; <em>Submenus</em></h2>
 <span class="pb g">Shopify Navigation</span>
 <p>Learn how to build drop-down menus, multi-level nested menus, and visual mega-menus in Shopify and integrate them into Aurick's header navigation.</p>
-
-<h3>Step 1: Creating Nested Menus in Shopify</h3>
-<p>Shopify supports nested navigation up to three levels deep. To create a nested structure:</p>
-<ol class="steps">
-  <li><strong>Go to Navigation settings</strong>
-    <p>In Shopify Admin, navigate to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Navigation</span></span>.</p>
-  </li>
-  <li><strong>Select or Create a Menu</strong>
-    <p>Click on **Main Menu** (or click **Add menu** to create a new one).</p>
-  </li>
-  <li><strong>Add Menu Items</strong>
-    <p>Click **Add menu item**, name it (e.g. <code>Collections</code>), and link it. Then add child items below it (e.g. <code>Chronograph</code>, <code>Automatic</code>).</p>
-  </li>
-  <li><strong>Nest Items (Drag-and-Drop)</strong>
-    <p>Click and hold the drag handle icon next to a child menu item, drag it **up and to the right** below the parent item (e.g. drag it under <code>Collections</code>). This nests the item under the parent. Repeat to add sub-items under child items (up to 3 levels).</p>
-  </li>
-  <li><strong>Click Save Menu.</strong></li>
-</ol>
-
-<h3>Step 2: Linking the Menu in Aurick's Header</h3>
-<p>To display your menu in the header:</p>
-<ol class="steps">
-  <li><strong>Open Theme Editor</strong>
-    <p>Navigate to **Online Store** &rarr; **Themes** &rarr; click **Customize** on the Aurick theme.</p>
-  </li>
-  <li><strong>Select the Header Section</strong>
-    <p>Click on the **Header** section in the left sidebar.</p>
-  </li>
-  <li><strong>Choose Menu</strong>
-    <p>Find the **Menu** setting and click **Change** &rarr; **Select menu**. Select your Main Menu and click **Save**.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on setting up your navigation menus, see the <a href="#setup-menus" onclick="nav(event,'#setup-menus')">Navigation &amp; Menus Setup</a> guide in the Getting Started section.</p></div></div>
 </section>
 
 <section id="announce">
@@ -1079,16 +1410,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#128207;</span>Size <em>Guide</em></h2>
 <span class="pb">Product Page &mdash; Buy Box</span>
 <p>Aurick includes a built-in <strong>Size Guide</strong> button on the product page. When tapped, it opens a full-width popup modal showing a size chart image for that specific product. The button hides itself automatically on products where no guide has been configured &mdash; no need to manage it manually.</p>
-<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">How the Theme Detects the Size Guide</div><p>The theme checks three sources in priority order. The first one found wins: (1) Product metafield <code>custom.size_guide</code>, (2) Variant metafield <code>custom.size_guide</code>, (3) Image alt text set to exactly <code>size-guide</code>.</p></div></div>
-<h3>Method 1 &mdash; Via Metafield (Recommended)</h3>
-<ol class="steps">
-  <li><strong>Create the metafield definition (once)</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span>. Set: <strong>Name</strong> = <code>Size Guide</code>, <strong>Namespace &amp; key</strong> = <code>custom.size_guide</code>, <strong>Type</strong> = File &rarr; Image. Click <strong>Save</strong>.</p>
-  </li>
-  <li><strong>Upload the guide per product</strong>
-    <p>Open any product in Admin &rarr; scroll to the <strong>Metafields</strong> panel at the bottom &rarr; find <strong>Size Guide</strong> &rarr; upload your size chart image (JPG or PNG). Click <strong>Save product</strong>. The Size Guide button will now appear on that product page automatically.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">How the Theme Detects the Size Guide</div><p>The theme checks three sources in priority order. The first one found wins: (1) Product metafield <code>custom.size_guide</code>, (2) Variant metafield <code>custom.size_guide</code>, (3) Image alt text set to exactly <code>size-guide</code>. For step-by-step setup instructions, see the <a href="#setup-size-guide" onclick="nav(event,'#setup-size-guide')">Size Guide Setup</a> guide.</p></div></div>
 </section>
 
 <section id="complete-look">
@@ -1105,18 +1427,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <tr><td>Show product vendor</td><td><span class="tb tk">checkbox</span></td><td>On</td><td>Show the brand/vendor name below each accessory product name.</td></tr>
 <tr><td>Background color</td><td><span class="tb tc">color</span></td><td>#050508</td><td>Background color of the Complete Your Look section.</td></tr>
 </tbody></table>
-<h3>Setup: Linking Accessories to a Watch</h3>
-<ol class="steps">
-  <li><strong>Create the metafield definition (once)</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Metafields and metaobjects</span><span class="ps">&rsaquo;</span><span class="pc">Products</span><span class="ps">&rsaquo;</span><span class="pc">Add definition</span></span>. Set: <strong>Name</strong> = <code>Complete Look</code>, <strong>Namespace &amp; key</strong> = <code>custom.complete_look</code>, <strong>Type</strong> = Product. Enable <strong>Accept list of values</strong>. Click <strong>Save</strong>.</p>
-  </li>
-  <li><strong>Link accessories per watch</strong>
-    <p>Open a watch product &rarr; scroll to the <strong>Metafields</strong> panel &rarr; click <strong>Complete Look</strong> &rarr; use the product picker to select the accessories (e.g. leather strap, watch roll, travel case). Save the product.</p>
-  </li>
-  <li><strong>Enable the block in Theme Editor</strong>
-    <p>Open Theme Editor &rarr; <strong>Default Product</strong> template &rarr; in the buy box section click <strong>Add block</strong> &rarr; select <strong>Complete Your Look</strong>. Position it below the buy button. Click <strong>Save</strong>.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on linking accessories, see the <a href="#setup-complete-look" onclick="nav(event,'#setup-complete-look')">Complete Your Look Setup</a> guide.</p></div></div>
 </section>
 
 <section id="prod-recommendations">
@@ -1151,18 +1462,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#128214;</span>About / <em>Heritage Page</em></h2>
 <span class="pb">Custom Page Suffix</span>
 <p>The <code>page.about</code> template delivers animated brand storytelling sections. Use it for your brand history, philosophy, and craftsmanship narrative.</p>
-<ol class="steps">
-  <li><strong>Create the page in Admin</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Our Heritage&rdquo; or similar.</p>
-  </li>
-  <li><strong>Assign the template</strong>
-    <p>Select <code>page.about</code> from the template selection box on the right. Click **Save**.</p>
-  </li>
-  <li><strong>Build in Theme Editor</strong>
-    <p>Navigate to the About template and click <strong>Add Section</strong> to assemble the narrative from the sections below.</p>
-  </li>
-</ol>
-
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on creating the About page and assigning the template, see the <a href="#setup-templates" onclick="nav(event,'#setup-templates')">Page Templates Setup</a> guide.</p></div></div>
 <h3>About Hero Banner</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
 <tr><td>Hero image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>The wide banner photo. Recommended: <strong>2000 &times; 800 px</strong> landscape image.</td></tr>
@@ -1228,17 +1528,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#9993;</span>Contact / <em>Atelier Page</em></h2>
 <span class="pb">Custom Page Suffix</span>
 <p>The <code>page.contact</code> template combines a premium inquiry form with boutique location cards.</p>
-<ol class="steps">
-  <li><strong>Create the page in Admin</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Contact Us&rdquo; or &ldquo;Atelier&rdquo;.</p>
-  </li>
-  <li><strong>Assign the template</strong>
-    <p>Select <code>page.contact</code> from the template selection box on the right. Click **Save**.</p>
-  </li>
-  <li><strong>Build in Theme Editor</strong>
-    <p>Open the Theme Editor &rarr; navigate to your newly created contact page using the template dropdown &rarr; click <strong>Add Section</strong> to configure the Contact Form and Location blocks.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on creating the Contact page and assigning the template, see the <a href="#setup-templates" onclick="nav(event,'#setup-templates')">Page Templates Setup</a> guide.</p></div></div>
 <h3>Contact Hero Banner</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
 <tr><td>Hero image</td><td><span class="tb ti">image</span></td><td>&mdash;</td><td>Wide banner photo. Recommended: <strong>2000 &times; 800 px</strong> landscape.</td></tr>
@@ -1267,17 +1557,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#128666;</span>Shipping <em>Policy Page</em></h2>
 <span class="pb">Custom Page Suffix</span>
 <p>The <code>page.shipping</code> template delivers a premium layout to present your shipping methods and estimated delivery times by region in clean, styled grids and tables.</p>
-<ol class="steps">
-  <li><strong>Create the page in Admin</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Shipping Policy&rdquo; or &ldquo;Delivery Information&rdquo;.</p>
-  </li>
-  <li><strong>Assign the Aurick template</strong>
-    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.shipping</code>. Click <strong>Save</strong>.</p>
-  </li>
-  <li><strong>Customize in Theme Editor</strong>
-    <p>Open the Theme Editor &rarr; navigate to your Shipping Policy page using the template picker at the top &rarr; click <strong>Add section</strong> &rarr; select <strong>Shipping Policy</strong>. You can now add and configure blocks for shipping methods and regional delivery rows.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on creating the Shipping policy page, see the <a href="#setup-policies" onclick="nav(event,'#setup-policies')">Policy Pages Setup</a> guide.</p></div></div>
 
 <h3>Section Settings</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
@@ -1316,17 +1596,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#8635;</span>Returns <em>Policy Page</em></h2>
 <span class="pb">Custom Page Suffix</span>
 <p>The <code>page.returns</code> template delivers a structured, premium returns policy page featuring an interactive timeline, condition checkboxes, and a built-in FAQ system.</p>
-<ol class="steps">
-  <li><strong>Create the page in Admin</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Returns &amp; Exchanges&rdquo;.</p>
-  </li>
-  <li><strong>Assign the Aurick template</strong>
-    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.returns</code>. Click <strong>Save</strong>.</p>
-  </li>
-  <li><strong>Customize in Theme Editor</strong>
-    <p>Open the Theme Editor &rarr; navigate to your Returns Policy page &rarr; click <strong>Add section</strong> &rarr; select <strong>Returns Policy</strong>. Customize the blocks to reflect your policy guidelines.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on creating the Returns policy page, see the <a href="#setup-policies" onclick="nav(event,'#setup-policies')">Policy Pages Setup</a> guide.</p></div></div>
 
 <h3>Section Settings</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
@@ -1367,17 +1637,7 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <h2><span class="ic">&#128737;</span>Privacy <em>Policy Page</em></h2>
 <span class="pb">Custom Page Suffix</span>
 <p>The <code>page.privacy-policy</code> template delivers a beautiful, multi-section compliance page with a sticky navigation bar that updates dynamically on scroll to help customers browse policy terms easily.</p>
-<ol class="steps">
-  <li><strong>Create the page in Admin</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Online Store</span><span class="ps">&rsaquo;</span><span class="pc">Pages</span><span class="ps">&rsaquo;</span><span class="pc">Add page</span></span>. Title it &ldquo;Privacy Policy&rdquo;.</p>
-  </li>
-  <li><strong>Assign the Aurick template</strong>
-    <p>In the right sidebar under <strong>Theme template</strong>, select <code>page.privacy-policy</code>. Click <strong>Save</strong>.</p>
-  </li>
-  <li><strong>Customize in Theme Editor</strong>
-    <p>Open the Theme Editor &rarr; navigate to your Privacy Policy page &rarr; click <strong>Add section</strong> &rarr; select <strong>Privacy Policy</strong>. Add and arrange <strong>Policy Section</strong> blocks to build your terms.</p>
-  </li>
-</ol>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><p>For step-by-step instructions on creating the Privacy policy page, see the <a href="#setup-policies" onclick="nav(event,'#setup-policies')">Policy Pages Setup</a> guide.</p></div></div>
 
 <h3>Section Settings</h3>
 <table class="st"><thead><tr><th>Setting</th><th>Type</th><th>Default</th><th>What It Does</th></tr></thead><tbody>
@@ -1405,27 +1665,108 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 </tbody></table>
 </section>
 
-<section id="translate">
-<h2><span class="ic">&#127760;</span>Translate &amp; <em>Adapt</em></h2>
-<span class="pb">Shopify Native App &mdash; Free</span>
-<p>Aurick includes complete interface translations for **English (EN)**, **Spanish (ES)**, and **French (FR)**. To publish new languages and translate product assets, follow the steps:</p>
-<ol class="steps">
-  <li><strong>Add languages in Settings</strong>
-    <p>Go to <span class="path"><span class="pc r">Admin</span><span class="ps">&rsaquo;</span><span class="pc">Settings</span><span class="ps">&rsaquo;</span><span class="pc">Languages</span></span>, add Spanish/French, and click **Publish**.</p>
-  </li>
-  <li><strong>Install Translate &amp; Adapt</strong>
-    <p>Open the Translate &amp; Adapt app to translate descriptions, titles, collection tags, and menu items side-by-side.</p>
-  </li>
-</ol>
-</section>
-
 <section id="images">
 <h2><span class="ic">&#128444;</span>Image <em>Sizes</em></h2>
-<p>Use these exact dimensions for every image in every section. Correct sizes keep visuals sharp, perfectly proportioned, and fast on every screen.</p>
-<div class="ic-c"><span class="ic-n">Logo (header)</span><span class="ic-d">300 &times; 120 px</span><span class="ic-f">Transparent PNG or SVG</span></div>
-<div class="ic-c"><span class="ic-n">Features Showcase Watch</span><span class="ic-d">540 &times; 540 px</span><span class="ic-f">Transparent PNG (needed for clean flight transitions)</span></div>
-<div class="ic-c"><span class="ic-n">Lifestyle Photos</span><span class="ic-d">1000 &times; 1250 px</span><span class="ic-f">JPEG &bull; 4:5 portrait &bull; subject centered</span></div>
-<div class="ic-c"><span class="ic-n">Collection Banners</span><span class="ic-d">2000 &times; 800 px</span><span class="ic-f">JPEG &bull; 2.5:1 landscape</span></div>
+<p>Complete reference for every image slot in the Aurick theme. Use these dimensions so every visual is sharp, correctly proportioned, and loads fast on all devices. Shopify automatically serves optimised smaller versions on mobile &mdash; you only need to upload once at the dimensions below.</p>
+
+<div class="note tip"><span class="ni">&#10024;</span><div class="nb"><div class="nt">Golden rule for all images</div><p>Always upload the largest recommended size. Shopify CDN downscales automatically. Never upload smaller than the minimum and always export at <strong>72 dpi</strong> for the web (file size, not print quality, matters).</p></div></div>
+
+<h3>Global &amp; Header</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Header Logo</td><td><strong>300 &times; 120 px</strong></td><td>Transparent PNG or SVG</td><td>Shown at 60&ndash;300 px wide (controlled by the Logo width slider). Keep the canvas tight to the artwork with no extra whitespace.</td></tr>
+<tr><td>Favicon</td><td><strong>32 &times; 32 px</strong></td><td>PNG or ICO</td><td>Shopify automatically generates the favicon from the image set in Online Store &rarr; Preferences &rarr; Favicon.</td></tr>
+</tbody></table>
+
+<h3>Hero Box Slider (Homepage)</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Background / Lifestyle image (per slide)</td><td><strong>1920 &times; 1080 px</strong></td><td>JPEG</td><td>Full-bleed behind the box. Keep the subject away from the left-centre area where the hero box sits.</td></tr>
+<tr><td>Custom watch photo (per slide)</td><td><strong>400 &times; 500 px</strong> portrait</td><td>Transparent PNG</td><td>Overrides the built-in SVG watch vector. Must have a transparent background so the box drop-shadow renders cleanly. The display canvas is 224 &times; 296 px &mdash; upload at 2&times; for retina sharpness.</td></tr>
+</tbody></table>
+<div class="note warn"><span class="ni">&#9888;</span><div class="nb"><div class="nt">Watch images must have a transparent background</div><p>If you upload a watch photo with a white or coloured background it will block the box animation and spotlight effect. Use Photoshop, Canva Pro, or <strong>remove.bg</strong> to cut out the background before uploading.</p></div></div>
+
+<h3>Lifestyle Showcase (Homepage)</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Lifestyle block image (per block)</td><td><strong>1000 &times; 1250 px</strong></td><td>JPEG</td><td>Displayed at 800 px served width. 4:5 portrait ratio. Subject should be centred; the section crops to a fixed height on smaller screens.</td></tr>
+</tbody></table>
+
+<h3>Brand Story (Homepage)</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Chapter image &mdash; Desktop</td><td><strong>1200 &times; 900 px</strong></td><td>JPEG</td><td>Rendered at 40 vw wide on desktop. Landscape or square works best. The section alternates left/right layout per chapter block.</td></tr>
+<tr><td>Chapter image &mdash; Mobile</td><td><strong>800 &times; 600 px</strong></td><td>JPEG</td><td>Same image field, served at 800 px on narrow viewports. If you need a very different crop for mobile, consider setting the image position (Top / Center) in the block settings.</td></tr>
+</tbody></table>
+
+<h3>Featured Collection (Homepage)</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Product card image (Shopify product media)</td><td>Depends on selected aspect ratio</td><td>JPEG or Transparent PNG</td><td>The card aspect ratio is set per section: <strong>3:4 Portrait</strong> &rarr; 900 &times; 1200 px &bull; <strong>4:5 Portrait</strong> &rarr; 900 &times; 1125 px &bull; <strong>1:1 Square</strong> &rarr; 900 &times; 900 px &bull; <strong>16:9 Landscape</strong> &rarr; 1600 &times; 900 px. Upload product images at the closest ratio to avoid cropping.</td></tr>
+</tbody></table>
+
+<h3>Horizontal Gallery (Homepage)</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Product card images</td><td><strong>800 &times; 1000 px</strong></td><td>JPEG or Transparent PNG</td><td>Cards are displayed at ~28 vw wide on desktop. Image fit and position are configurable per section (Cover or Contain).</td></tr>
+</tbody></table>
+
+<h3>Social Gallery (Homepage)</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Post image (per block)</td><td><strong>800 &times; 800 px</strong></td><td>JPEG or PNG</td><td>Square 1:1 grid cells. Cover mode crops to fill; Contain shows the whole image with padding. Use square exports from Instagram for perfect results.</td></tr>
+</tbody></table>
+
+<h3>Mega Menu &mdash; Featured Cards (Header)</h3>
+<table class="st"><thead><tr><th>Card Count</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>1 card (spotlight)</td><td><strong>600 &times; 800 px</strong> portrait</td><td>JPEG or PNG</td><td>Displayed as a full-width portrait spotlight at 3:4 ratio.</td></tr>
+<tr><td>2 cards (pair)</td><td><strong>600 &times; 750 px</strong> portrait</td><td>JPEG or PNG</td><td>Displayed as a side-by-side pair at 4:5 ratio with editorial stagger.</td></tr>
+<tr><td>3&ndash;6 cards (tiles)</td><td><strong>800 &times; 500 px</strong> landscape</td><td>JPEG or PNG</td><td>Displayed as landscape tiles at 16:10 ratio in a responsive grid.</td></tr>
+</tbody></table>
+
+<h3>Collection Page</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Collection hero banner</td><td><strong>2000 &times; 700 px</strong></td><td>JPEG</td><td>Full-width banner at the top of every collection page. Desktop height is configurable (default 480 px). Keep the <strong>bottom-left area clear</strong> &mdash; the collection title and breadcrumb overlay sits there.</td></tr>
+<tr><td>Product card images</td><td><strong>900 &times; 900 px</strong> to <strong>900 &times; 1200 px</strong></td><td>JPEG or Transparent PNG</td><td>Card image height is configurable (default 260 px). Image fit defaults to <strong>Contain</strong> (recommended for watches on transparent backgrounds). Use Cover for lifestyle/fashion images that should fill the card.</td></tr>
+</tbody></table>
+<div class="note info"><span class="ni">&#8505;</span><div class="nb"><div class="nt">Collection image vs. banner image</div><p>Shopify uses the <strong>Collection image</strong> (set in Admin &rarr; Collections &rarr; [collection] &rarr; Collection image) as the hero banner automatically. You do not upload a separate banner in the Theme Editor &mdash; just set the collection image to 2000 &times; 700 px there.</p></div></div>
+
+<h3>Product Page Gallery</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Main product images</td><td><strong>1600 &times; 1600 px</strong></td><td>JPEG or Transparent PNG</td><td>Shopify serves srcset widths at 600 / 900 / 1200 / 1600 px. The theme requests up to 1600 px for the main viewer. Square 1:1 images work best for the default vertical-thumb gallery layout.</td></tr>
+<tr><td>Gallery thumbnails</td><td>Same as main images</td><td>JPEG or PNG</td><td>Thumbnails are cropped and displayed at 80 &times; 80 px. The same product media is reused &mdash; no separate thumbnail upload needed. Up to 8 thumbnails are shown.</td></tr>
+<tr><td>Trust badge custom icon (per badge)</td><td><strong>48 &times; 48 px</strong></td><td>Transparent PNG</td><td>Displayed at 24 &times; 24 px. Upload at 2&times; for retina. Only needed if you override the built-in SVG icons.</td></tr>
+<tr><td>Size guide image (per product)</td><td><strong>1400 &times; 900 px</strong></td><td>JPEG or PNG</td><td>Uploaded via the <code>custom.size_guide</code> product metafield (recommended), or by adding an image to the product media with alt text set to exactly <code>size-guide</code>. The popup modal scales to fit the screen.</td></tr>
+</tbody></table>
+
+<h3>About / Heritage Page</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>About hero banner</td><td><strong>2000 &times; 800 px</strong></td><td>JPEG</td><td>Full-width banner at the top of the About page. Keep subject away from bottom-left.</td></tr>
+<tr><td>About manifesto background</td><td><strong>2000 &times; 1200 px</strong></td><td>JPEG</td><td>A dark overlay is applied on top (configurable opacity). Use a dramatic, moody image for maximum impact.</td></tr>
+<tr><td>Team / Atelier member photo (per block)</td><td><strong>600 &times; 800 px</strong> portrait</td><td>JPEG</td><td>Displayed in a 3:4 portrait card. Member bio text appears on hover. Keep the face in the upper half of the frame.</td></tr>
+<tr><td>About CTA background</td><td><strong>1920 &times; 1080 px</strong></td><td>JPEG</td><td>Full-screen background for the closing call-to-action section.</td></tr>
+</tbody></table>
+
+<h3>Contact / Atelier Page</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Contact hero banner</td><td><strong>2000 &times; 800 px</strong></td><td>JPEG</td><td>Same spec as the About hero. Wide landscape, keep bottom-left clear for the overlay text.</td></tr>
+</tbody></table>
+
+<h3>Blog &amp; Articles</h3>
+<table class="st"><thead><tr><th>Image Slot</th><th>Recommended Size</th><th>Format</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Article featured image</td><td><strong>1200 &times; 800 px</strong></td><td>JPEG</td><td>Displayed in the Blog Posts grid at up to 800 px wide (33 vw on desktop, 50 vw on tablet, 100 vw on mobile). 3:2 landscape works well for all breakpoints.</td></tr>
+</tbody></table>
+
+<h3>Quick Reference &mdash; All Image Sizes</h3>
+<div class="ic-c"><span class="ic-n">Header Logo</span><span class="ic-d">300 &times; 120 px</span><span class="ic-f">Transparent PNG or SVG</span></div>
+<div class="ic-c"><span class="ic-n">Hero Background (per slide)</span><span class="ic-d">1920 &times; 1080 px</span><span class="ic-f">JPEG &bull; keep centre clear</span></div>
+<div class="ic-c"><span class="ic-n">Hero Watch Image (per slide)</span><span class="ic-d">400 &times; 500 px</span><span class="ic-f">Transparent PNG &bull; no background</span></div>
+<div class="ic-c"><span class="ic-n">Lifestyle Showcase Block</span><span class="ic-d">1000 &times; 1250 px</span><span class="ic-f">JPEG &bull; 4:5 portrait</span></div>
+<div class="ic-c"><span class="ic-n">Brand Story Chapter &mdash; Desktop</span><span class="ic-d">1200 &times; 900 px</span><span class="ic-f">JPEG &bull; landscape or square</span></div>
+<div class="ic-c"><span class="ic-n">Social Gallery Post</span><span class="ic-d">800 &times; 800 px</span><span class="ic-f">JPEG or PNG &bull; square 1:1</span></div>
+<div class="ic-c"><span class="ic-n">Mega Menu Card (3&ndash;6 cards)</span><span class="ic-d">800 &times; 500 px</span><span class="ic-f">JPEG or PNG &bull; 16:10 landscape</span></div>
+<div class="ic-c"><span class="ic-n">Mega Menu Card (1&ndash;2 cards)</span><span class="ic-d">600 &times; 800 px</span><span class="ic-f">JPEG or PNG &bull; portrait</span></div>
+<div class="ic-c"><span class="ic-n">Collection Hero Banner</span><span class="ic-d">2000 &times; 700 px</span><span class="ic-f">JPEG &bull; bottom-left clear</span></div>
+<div class="ic-c"><span class="ic-n">Product Gallery Image</span><span class="ic-d">1600 &times; 1600 px</span><span class="ic-f">JPEG or Transparent PNG &bull; 1:1 square</span></div>
+<div class="ic-c"><span class="ic-n">Size Guide Image</span><span class="ic-d">1400 &times; 900 px</span><span class="ic-f">JPEG or PNG &bull; alt text: <code>size-guide</code></span></div>
+<div class="ic-c"><span class="ic-n">Trust Badge Custom Icon</span><span class="ic-d">48 &times; 48 px</span><span class="ic-f">Transparent PNG &bull; 2&times; retina</span></div>
+<div class="ic-c"><span class="ic-n">About / Contact Hero Banner</span><span class="ic-d">2000 &times; 800 px</span><span class="ic-f">JPEG &bull; bottom-left clear</span></div>
+<div class="ic-c"><span class="ic-n">About Manifesto Background</span><span class="ic-d">2000 &times; 1200 px</span><span class="ic-f">JPEG &bull; dark moody recommended</span></div>
+<div class="ic-c"><span class="ic-n">Team Member Photo</span><span class="ic-d">600 &times; 800 px</span><span class="ic-f">JPEG &bull; 3:4 portrait &bull; face upper half</span></div>
+<div class="ic-c"><span class="ic-n">Article Featured Image</span><span class="ic-d">1200 &times; 800 px</span><span class="ic-f">JPEG &bull; 3:2 landscape</span></div>
 </section>
 
 <section id="faq">
@@ -1435,34 +1776,6 @@ table.st-blocks td:nth-child(2) li{line-height:1.45;margin-bottom:.55rem}
 <div class="faq" onclick="toggleFaq(this)"><div class="fq"><span class="fqt">How do I hide a homepage section without deleting it?</span><span class="fch">&#9660;</span></div><div class="fa"><div class="fai"><p>Click the **eye icon** next to the section name inside the Theme Editor sidebar. The section becomes invisible to visitors but stays configured for future use.</p></div></div></div>
 </section>
 
-<section id="watch-svg">
-<h2><span class="ic">&#9881;</span>Watch Image <em>&rarr; SVG Prompt</em></h2>
-<p>The Aurick 3D watch box hero renders your watch as a clean SVG vector inside the animated box. Paste this prompt into any AI assistant along with your watch image to get the custom SVG code:</p>
-<div class="prompt-wrap">
-  <div class="prompt-label">Copy &amp; Paste into AI (with your watch photo attached)</div>
-  <button class="prompt-copy" id="svg-copy-btn" onclick="copyPrompt()">
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-    Copy Prompt
-  </button>
-  <pre class="prompt-code" id="svg-prompt-text">You are an expert SVG designer. Examine the attached watch image closely.
-Your goal is to recreate ONLY the watch (the case, dial, and strap) as a clean, highly polished, responsive SVG vector file. Do NOT draw any boxes, cases, props, or backgrounds.
-
-Follow these strict specifications:
-1. Output ONLY valid, clean SVG code inside a ```xml ``` code block. Do not write any markdown explanation.
-2. Background: Must be transparent.
-3. Viewport: The viewBox must be exactly "0 0 300 400".
-4. Vertical Alignment: The watch must be perfectly centered.
-   - The center of the watch dial must sit at (x=150, y=200).
-   - The strap must run straight vertically from y=10 to y=390.
-5. Dimension Specs:
-   - Strap Width: Exactly 60px (x=120 to x=180).
-   - Outer Bezel Radius: Exactly 70px (centered at 150, 200).
-   - Inner Dial Face Radius: Exactly 60px.
-6. Materials &amp; Aesthetics: Recreate case metal textures using linearGradients with stops for metallic reflections. Use radialGradients on the dial face for sunburst finishes.
-7. Dial Details: Recreate hour indices, hands, minute track ticks, logos, and subdials as positioned in the reference image.</pre>
-</div>
-</section>
-
 <section id="support">
 <h2><span class="ic">&#128587;</span>Get <em>Support</em></h2>
 <p>Need help setting up your Aurick theme? Contact us directly by clicking below:</p>
@@ -1470,7 +1783,7 @@ Follow these strict specifications:
   <span class="sup-icon">&#9993;</span>
   <div class="sup-title">Need help with<br>your <em>Aurick</em> store?</div>
   <p class="sup-lead">Whether it&rsquo;s a settings question, a metafield issue, or a feature you can&rsquo;t find &mdash; fill in the form and we&rsquo;ll sort it out together.</p>
-  <a class="sup-btn" href="https://forms.gle/uv5eW4ULpRG2NqF58" target="_blank" rel="noopener noreferrer">
+  <a class="sup-btn" href="https://form.jotform.com/261935330118049" target="_blank" rel="noopener noreferrer">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     Open Support Form
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
